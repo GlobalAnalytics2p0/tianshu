@@ -77,23 +77,47 @@ button {
 
 .brand,
 .mobile-brand {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 4px;
+  display: inline-grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
   text-decoration: none;
   color: var(--text);
 }
 
 .brand {
-  padding: 0 10px 18px;
+  padding: 0 4px 18px;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brand-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .brand-title {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0;
   text-shadow: 0 0 14px rgba(255, 211, 123, 0.14);
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -444,6 +468,98 @@ button {
   position: absolute;
   top: -2px;
   right: 13px;
+}
+
+.channel-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 18px;
+  align-items: center;
+  margin: 0 0 16px;
+  border: 1px solid rgba(255, 211, 123, 0.18);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(90deg, rgba(255, 211, 123, 0.12), rgba(255, 47, 78, 0.08) 46%, rgba(69, 228, 226, 0.07)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  padding: 12px 14px;
+}
+
+.channel-strip__identity {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.channel-strip__avatar {
+  width: 58px;
+  height: 58px;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.38);
+}
+
+.channel-strip__eyebrow {
+  display: block;
+  margin-bottom: 3px;
+  color: #ff8a94;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.channel-strip h2 {
+  margin: 0 0 5px;
+  color: #fff4d4;
+  font-size: 20px;
+  line-height: 1.12;
+  font-weight: 900;
+}
+
+.channel-strip p {
+  max-width: 620px;
+  margin: 0;
+  color: #aeb3c0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.channel-strip__points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.channel-strip__points span {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d6d9e2;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 8px;
+  white-space: nowrap;
+}
+
+.channel-strip__button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 106, 112, 0.48);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 60, 80, 0.28), rgba(255, 60, 80, 0.12));
+  color: #fff2ef;
+  cursor: pointer;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .panel {
@@ -1147,6 +1263,15 @@ button {
   .ai-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .channel-strip {
+    grid-template-columns: 1fr auto;
+  }
+
+  .channel-strip__points {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 780px) {
@@ -1176,7 +1301,12 @@ button {
   }
 
   .mobile-brand {
-    display: inline-flex;
+    display: inline-grid;
+  }
+
+  .mobile-brand .brand-mark {
+    width: 42px;
+    height: 42px;
   }
 
   .mobile-brand .brand-title {
@@ -1304,6 +1434,45 @@ button {
     width: 31px;
     height: 31px;
     border-radius: 9px;
+  }
+
+  .channel-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding: 12px;
+  }
+
+  .channel-strip__identity {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .channel-strip__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+
+  .channel-strip h2 {
+    font-size: 18px;
+  }
+
+  .channel-strip p {
+    font-size: 11px;
+  }
+
+  .channel-strip__points {
+    justify-content: flex-start;
+  }
+
+  .channel-strip__points span {
+    font-size: 10px;
+    padding: 5px 7px;
+  }
+
+  .channel-strip__button {
+    width: 100%;
   }
 
   .ranking-panel,
@@ -1539,6 +1708,20 @@ button {
 
   .mobile-tabs {
     gap: 18px;
+  }
+
+  .mobile-brand {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .mobile-brand .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-brand .brand-title {
+    font-size: 22px;
   }
 
   .hero__copy {
