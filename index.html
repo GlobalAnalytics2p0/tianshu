@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天書小說 AI 劇場 - AI 每日原創連載</title>
+    <meta
+      name="description"
+      content="天書小說 AI 劇場每日更新 40 本原創連載，收錄爆款鉤子、章節閱讀、分類榜單與 YouTube 頻道企劃。"
+    />
+    <meta name="theme-color" content="#05060a" />
+    <link rel="icon" href="public/assets/tianshu-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="shell">
+      <aside class="sidebar" aria-label="主要導覽">
+        <a class="brand" href="#" aria-label="天書小說首頁">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="public/assets/tianshu-mark.svg" alt="" />
+          </span>
+          <span class="brand-copy">
+            <span class="brand-title">天書小說</span>
+            <span class="brand-subtitle">AI 每日原創連載</span>
+          </span>
+        </a>
+
+        <nav class="side-nav" aria-label="桌面導覽">
+          <button class="side-nav__item is-active" type="button" data-nav-target="home" aria-label="首頁">
+            <span class="icon" data-icon="home"></span>
+            <span>首頁</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="ranking" aria-label="AI 小說榜">
+            <span class="icon" data-icon="trophy"></span>
+            <span>AI 小說榜</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="ai" aria-label="AI 創作區">
+            <span class="icon" data-icon="bot"></span>
+            <span>AI 創作區</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="youtube" aria-label="YouTube 頻道">
+            <span class="icon" data-icon="youtube"></span>
+            <span>YouTube 頻道</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="categories" aria-label="分類">
+            <span class="icon" data-icon="grid"></span>
+            <span>分類</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="shelf" aria-label="書架">
+            <span class="icon" data-icon="book"></span>
+            <span>書架</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="history" aria-label="歷史紀錄">
+            <span class="icon" data-icon="clock"></span>
+            <span>歷史紀錄</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="alerts" aria-label="追更提醒">
+            <span class="icon" data-icon="bell"></span>
+            <span>追更提醒</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="events" aria-label="活動中心">
+            <span class="icon" data-icon="gift"></span>
+            <span>活動中心</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="login-placeholder">
+          <div class="login-placeholder__avatar">書</div>
+          <div>
+            <strong>登入佔位</strong>
+            <span>頻道與會員後續接入</span>
+          </div>
+        </div>
+
+        <nav class="side-nav side-nav--compact" aria-label="設定導覽">
+          <button class="side-nav__item" type="button" data-nav-target="settings" aria-label="設定">
+            <span class="icon" data-icon="settings"></span>
+            <span>設定</span>
+          </button>
+          <button class="side-nav__item" type="button" data-nav-target="help" aria-label="幫助中心">
+            <span class="icon" data-icon="help"></span>
+            <span>幫助中心</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <a class="mobile-brand" href="#" aria-label="天書小說首頁">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="public/assets/tianshu-mark.svg" alt="" />
+            </span>
+            <span class="brand-copy">
+              <span class="brand-title">天書小說</span>
+              <span class="brand-subtitle">AI 每日原創連載</span>
+            </span>
+          </a>
+
+          <label class="search" aria-label="搜尋書名、作者或關鍵字">
+            <span class="icon" data-icon="search"></span>
+            <input id="searchInput" type="search" placeholder="搜尋書名 / 作者 / 關鍵字" autocomplete="off" />
+          </label>
+
+          <button class="login-button" type="button" id="loginButton">
+            <span class="login-button__avatar">書</span>
+            <span>登入</span>
+            <span class="icon" data-icon="chevron-down"></span>
+          </button>
+        </header>
+
+        <nav class="mobile-tabs" aria-label="手機導覽">
+          <button class="is-active" type="button" data-nav-target="home">推薦</button>
+          <button type="button" data-nav-target="ranking">AI 榜單</button>
+          <button type="button" data-nav-target="ai">AI 創作區</button>
+          <button type="button" data-nav-target="categories">分類</button>
+          <button type="button" data-nav-target="youtube">YouTube</button>
+        </nav>
+
+        <section class="hero" aria-label="今日 AI 爆款">
+          <div class="hero__copy">
+            <span class="hero__badge">
+              <span class="icon" data-icon="flame"></span>
+              AI 今日爆款 NO.1
+            </span>
+            <h1 id="heroTitle">星骸王座</h1>
+            <p id="heroDescription">AI 原創連載每日更新，主打強鉤子、深世界觀與章末懸念。</p>
+            <div class="hero__tags" id="heroTags"></div>
+          </div>
+          <button class="hero__meta" type="button" id="heroOpenButton">
+            <span class="icon" data-icon="flame"></span>
+            <span id="heroHeat">人氣 328 萬</span>
+          </button>
+          <div class="hero__dots" aria-hidden="true">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+
+        <section class="quick-actions" aria-label="快捷入口">
+          <button type="button" data-nav-target="ranking">
+            <span class="quick-actions__icon quick-actions__icon--gold">
+              <span class="icon" data-icon="trophy"></span>
+            </span>
+            <span>AI 小說榜</span>
+          </button>
+          <button type="button" data-nav-target="ai">
+            <span class="quick-actions__icon quick-actions__icon--blue">
+              <span class="icon" data-icon="bot"></span>
+            </span>
+            <span>AI 創作榜</span>
+          </button>
+          <button type="button" data-nav-target="ranking">
+            <span class="quick-actions__icon quick-actions__icon--red">
+              <span class="icon" data-icon="flame"></span>
+            </span>
+            <span>今日 AI 爆款</span>
+          </button>
+          <button type="button" data-nav-target="new">
+            <span class="quick-actions__icon quick-actions__icon--violet">
+              <span class="icon" data-icon="spark"></span>
+            </span>
+            <span>新題材速遞</span>
+          </button>
+          <button type="button" data-nav-target="finished">
+            <span class="quick-actions__icon quick-actions__icon--blue">
+              <span class="icon" data-icon="grid"></span>
+            </span>
+            <span>長篇潛力</span>
+          </button>
+          <button type="button" data-nav-target="categories">
+            <span class="quick-actions__icon quick-actions__icon--teal">
+              <span class="icon" data-icon="bag"></span>
+            </span>
+            <span>全部分類</span>
+          </button>
+          <button type="button" data-nav-target="ai">
+            <span class="quick-actions__icon quick-actions__icon--indigo">
+              <span class="icon" data-icon="wave"></span>
+            </span>
+            <span>AI 小說區</span>
+            <span class="new-badge">NEW</span>
+          </button>
+        </section>
+
+        <section class="channel-strip" id="youtube" aria-label="YouTube 頻道企劃">
+          <div class="channel-strip__identity">
+            <img class="channel-strip__avatar" src="public/assets/tianshu-mark.svg" alt="" />
+            <div>
+              <span class="channel-strip__eyebrow">YouTube Channel</span>
+              <h2>天書小說 AI 劇場</h2>
+              <p>@TianshuNovel · 每日 AI 原創連載、爆款鉤子、有聲短劇</p>
+            </div>
+          </div>
+          <div class="channel-strip__points" aria-label="頻道內容">
+            <span>40 本原創題材</span>
+            <span>每日 09:00 更新</span>
+            <span>短影音預告</span>
+          </div>
+          <button class="channel-strip__button" id="youtubePlanButton" type="button">
+            <span class="icon" data-icon="youtube"></span>
+            頻道帳號建議
+          </button>
+        </section>
+
+        <section class="panel ranking-panel" id="ranking">
+          <div class="section-heading">
+            <h2>AI 小說榜</h2>
+            <div class="tabs" role="tablist" aria-label="AI 小說榜切換">
+              <button class="is-active" type="button" data-rank-tab="recommended">推薦榜</button>
+              <button type="button" data-rank-tab="hot">人氣榜</button>
+              <button type="button" data-rank-tab="hook">鉤子榜</button>
+              <button type="button" data-rank-tab="longform">長篇潛力</button>
+              <button type="button" data-rank-tab="new">新題材</button>
+            </div>
+            <button class="ghost-link" type="button" data-nav-target="ranking">查看更多</button>
+          </div>
+          <div id="rankingList" class="book-strip"></div>
+        </section>
+
+        <section class="categories" id="categories" aria-label="熱門分類">
+          <div class="section-heading section-heading--simple">
+            <h2>AI 熱門分類</h2>
+            <button class="ghost-link" type="button" data-nav-target="categories">查看更多</button>
+          </div>
+          <div id="categoryList" class="category-grid"></div>
+        </section>
+
+        <section class="panel ai-panel" id="ai">
+          <div class="section-heading">
+            <h2>AI 原創連載</h2>
+            <span class="ai-note">40 本每日一章</span>
+            <span class="new-badge">NEW</span>
+            <button class="ghost-link" type="button" data-nav-target="ai">查看更多</button>
+          </div>
+          <div id="aiNovelList" class="ai-grid"></div>
+        </section>
+
+        <section class="feature-row" aria-label="平台特性">
+          <article>
+            <span class="feature-row__icon">
+              <span class="icon" data-icon="sync"></span>
+            </span>
+            <div>
+              <h3>每日更新</h3>
+              <p>40 本 AI 原創每日 09:00 更新</p>
+            </div>
+          </article>
+          <article>
+            <span class="feature-row__icon feature-row__icon--violet">
+              <span class="icon" data-icon="spark"></span>
+            </span>
+            <div>
+              <h3>AI 創作支援</h3>
+              <p>長篇大綱、角色弧線、章末鉤子</p>
+            </div>
+          </article>
+          <article>
+            <span class="feature-row__icon feature-row__icon--gold">
+              <span class="icon" data-icon="message"></span>
+            </span>
+            <div>
+              <h3>社群互動</h3>
+              <p>留言、討論、交友，發現同好</p>
+            </div>
+          </article>
+          <article>
+            <span class="feature-row__icon feature-row__icon--green">
+              <span class="icon" data-icon="devices"></span>
+            </span>
+            <div>
+              <h3>多裝置同步</h3>
+              <p>書架、進度、收藏，隨時同步</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="底部導覽">
+        <button class="is-active" type="button" data-nav-target="home">
+          <span class="icon" data-icon="home"></span>
+          <span>首頁</span>
+        </button>
+        <button type="button" data-nav-target="shelf">
+          <span class="icon" data-icon="book"></span>
+          <span>書架</span>
+        </button>
+        <button type="button" data-nav-target="discover">
+          <span class="icon" data-icon="compass"></span>
+          <span>發現</span>
+        </button>
+        <button type="button" data-nav-target="comments">
+          <span class="icon" data-icon="youtube"></span>
+          <span>頻道</span>
+        </button>
+        <button type="button" data-nav-target="account">
+          <span class="icon" data-icon="user"></span>
+          <span>我的</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal" id="bookModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <article class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" type="button" data-close-modal aria-label="關閉">
+          <span class="icon" data-icon="close"></span>
+        </button>
+        <div id="modalContent"></div>
+      </article>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

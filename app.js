@@ -1,0 +1,503 @@
+const icons = {
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h5v-5h3v5h5v-9.5"/></svg>',
+  trophy: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4v2a4 4 0 0 0 4 4"/><path d="M16 6h4v2a4 4 0 0 1-4 4"/><path d="M12 12v5"/><path d="M8 20h8"/><path d="M9 17h6"/></svg>',
+  bot: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4"/><circle cx="9" cy="13.5" r="1"/><circle cx="15" cy="13.5" r="1"/><path d="M9.5 17h5"/></svg>',
+  grid: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="4" width="6" height="6" rx="1.4"/><rect x="14" y="4" width="6" height="6" rx="1.4"/><rect x="4" y="14" width="6" height="6" rx="1.4"/><rect x="14" y="14" width="6" height="6" rx="1.4"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z"/><path d="M5 5.5A2.5 2.5 0 0 0 2.5 3H4"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></svg>',
+  bell: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 7h18s-3 0-3-7"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>',
+  gift: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M12 9v11"/><path d="M4 13h16"/><path d="M12 9H8.5A2.5 2.5 0 1 1 11 6.5V9Z"/><path d="M12 9h3.5A2.5 2.5 0 1 0 13 6.5V9Z"/></svg>',
+  settings: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7.7 7.7 0 0 0-.1-1l2-1.5-2-3.4-2.4 1a8 8 0 0 0-1.7-1L14.5 3h-5l-.3 3a8 8 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.5a7.7 7.7 0 0 0 0 2l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 1.7 1l.3 3h5l.3-3a8 8 0 0 0 1.7-1l2.4 1 2-3.4-2-1.5c.1-.3.1-.7.1-1Z"/></svg>',
+  help: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M9.7 9.3a2.5 2.5 0 1 1 4.2 2c-.9.6-1.5 1.1-1.5 2.2"/><path d="M12 17h.01"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>',
+  "chevron-down": '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>',
+  flame: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21c3.8 0 6.5-2.6 6.5-6.2 0-2.4-1.4-4.5-3.3-5.7.2 1.8-.7 3-2.1 3.7.3-2.9-1.2-5.4-4-7.8.1 3.2-1.8 4.9-3 6.7A6 6 0 0 0 12 21Z"/></svg>',
+  spark: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M13 3 9.8 9.8 3 13l6.8 3.2L13 23l3.2-6.8L23 13l-6.8-3.2L13 3Z"/></svg>',
+  bag: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg>',
+  wave: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 13c2.4 0 2.4-6 4.8-6s2.4 10 4.8 10S15 7 17.4 7 19.8 17 22 17"/></svg>',
+  youtube: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="6.5" width="18" height="11" rx="3"/><path d="m10.5 10 5 2-5 2.5V10Z" fill="currentColor" stroke="none"/></svg>',
+  sync: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 2v5h-5"/><path d="M19 9A7 7 0 0 0 6.4 5.8"/><path d="M7 22v-5h5"/><path d="M5 15a7 7 0 0 0 12.6 3.2"/></svg>',
+  message: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 5h14v10H8l-4 4V6a1 1 0 0 1 1-1Z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>',
+  devices: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="13" height="10" rx="1.5"/><rect x="17" y="8" width="4" height="11" rx="1.2"/><path d="M7 19h5"/></svg>',
+  compass: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="m15 9-2 5-5 2 2-5 5-2Z"/></svg>',
+  user: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>',
+  close: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>',
+  download: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v11"/><path d="m8 10 4 4 4-4"/><path d="M5 19h14"/></svg>',
+  reader: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H20v14H7a3 3 0 0 0-3 3V6.5Z"/><path d="M8 8h8"/><path d="M8 12h6"/></svg>',
+  info: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 10v6"/><path d="M12 7h.01"/></svg>'
+};
+
+let categories = [
+  { id: "玄幻", name: "玄幻", count: 8, rgb: "98, 124, 255", icon: "wave" },
+  { id: "奇幻", name: "奇幻", count: 8, rgb: "153, 109, 255", icon: "spark" },
+  { id: "武俠", name: "武俠", count: 8, rgb: "126, 192, 126", icon: "compass" },
+  { id: "都市", name: "都市", count: 8, rgb: "167, 106, 255", icon: "devices" },
+  { id: "歷史", name: "歷史", count: 8, rgb: "218, 147, 83", icon: "book" }
+];
+
+const coverPalettes = [
+  ["#102140", "#315d9f"],
+  ["#24183d", "#6a74c8"],
+  ["#0e3157", "#1f7cc9"],
+  ["#1d143d", "#6842bd"],
+  ["#263445", "#8fa6c9"],
+  ["#271d19", "#a86539"],
+  ["#102a26", "#3e9c90"],
+  ["#331628", "#b74d8d"],
+  ["#1e2a19", "#739052"],
+  ["#16223c", "#7c8dcc"]
+];
+
+const resourceManifestPath = "src/resource/manifest.json";
+
+let allBooks = [];
+
+let currentRankTab = "recommended";
+let currentModalBook = null;
+let currentChapterIndex = 0;
+let toastTimer = null;
+
+function buildSummary(book) {
+  return `AI 原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
+}
+
+function resourceUrl(path) {
+  return new URL(encodeURI(path), window.location.href).href;
+}
+
+function chapterDisplayTitle(chapter) {
+  const chapterNumber = Number(chapter.number);
+  if (!Number.isFinite(chapterNumber)) return chapter.title;
+  return `第${String(chapterNumber).padStart(2, "0")}章 ${chapter.title}`;
+}
+
+async function fetchTextFile(path) {
+  const response = await fetch(resourceUrl(path), { cache: "no-store" });
+  if (!response.ok) {
+    const error = new Error(`Unable to load ${path}`);
+    error.resourcePath = path;
+    error.status = response.status;
+    throw error;
+  }
+  return response.text();
+}
+
+function syncCategoryCounts() {
+  const counts = allBooks.reduce((result, book) => {
+    result[book.category] = (result[book.category] || 0) + 1;
+    return result;
+  }, {});
+
+  categories = categories.map((category) => ({
+    ...category,
+    count: counts[category.id] || category.count
+  }));
+}
+
+async function loadLibrary() {
+  const response = await fetch(resourceUrl(resourceManifestPath), { cache: "no-store" });
+  if (!response.ok) {
+    const error = new Error("Unable to load resource manifest");
+    error.resourcePath = resourceManifestPath;
+    error.status = response.status;
+    throw error;
+  }
+
+  const manifest = await response.json();
+  allBooks = await Promise.all((manifest.books || []).map(async (book, index) => {
+    const chapters = await Promise.all((book.chapters || []).map(async (chapter) => {
+      const content = await fetchTextFile(chapter.path);
+      return {
+        ...chapter,
+        displayTitle: chapterDisplayTitle(chapter),
+        content: content.trim()
+      };
+    }));
+
+    return {
+      ...book,
+      cover: coverPalettes[index % coverPalettes.length],
+      summary: buildSummary(book),
+      chapters,
+      contentStatus: "AI 原創連載"
+    };
+  }));
+
+  syncCategoryCounts();
+}
+
+function hydrateIcons(root = document) {
+  root.querySelectorAll("[data-icon]").forEach((node) => {
+    const name = node.dataset.icon;
+    if (icons[name]) node.innerHTML = icons[name];
+  });
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatCount(value) {
+  return Number(value).toLocaleString("zh-Hant-TW");
+}
+
+function parseHeat(heat) {
+  return Number(String(heat).replace(/[^\d]/g, "")) || 0;
+}
+
+function coverStyle(book) {
+  return `--cover-a:${book.cover[0]};--cover-b:${book.cover[1]}`;
+}
+
+function coverTitle(title) {
+  const compactTitle = String(title).replace(/[：:，,、\s]/g, "");
+  return compactTitle.length > 5 ? compactTitle.slice(0, 5) : compactTitle;
+}
+
+function renderBookCover(book, rank = "") {
+  return `
+    <span class="book-card__cover" style="${coverStyle(book)}">
+      ${rank ? `<span class="book-card__rank">${rank}</span>` : ""}
+      <span class="book-card__title-art">${escapeHtml(coverTitle(book.title))}</span>
+    </span>
+  `;
+}
+
+function getRankedBooks(tab) {
+  if (tab === "hot") return [...allBooks].sort((a, b) => parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "hook") return [...allBooks].sort((a, b) => b.tags.length - a.tags.length || parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "new") return [...allBooks].slice().reverse();
+  if (tab === "longform") return [...allBooks].sort((a, b) => b.summary.length - a.summary.length);
+  return allBooks;
+}
+
+function renderRanking() {
+  const list = document.getElementById("rankingList");
+  const query = document.getElementById("searchInput").value.trim().toLowerCase();
+  let books = getRankedBooks(currentRankTab);
+
+  if (query) {
+    books = allBooks.filter((book) => {
+      const haystack = `${book.title} ${book.author} ${book.category} ${book.tags.join(" ")} ${book.premise}`.toLowerCase();
+      return haystack.includes(query);
+    });
+  }
+
+  list.innerHTML = books.slice(0, 5).map((book, index) => `
+    <button class="book-card" type="button" data-book-id="${book.id}">
+      ${renderBookCover(book, index + 1)}
+      <span class="book-card__body">
+        <h3>${escapeHtml(book.title)}</h3>
+        <span class="book-card__author">${escapeHtml(book.author)}</span>
+        <span class="book-card__category">${escapeHtml(book.category)}</span>
+        <span class="book-card__score">${escapeHtml(book.score)}分</span>
+        <span class="book-card__heat">
+          <span class="icon" data-icon="flame"></span>
+          ${escapeHtml(book.heat)}
+        </span>
+      </span>
+    </button>
+  `).join("");
+
+  hydrateIcons(list);
+  list.querySelectorAll("[data-book-id]").forEach((button) => {
+    button.addEventListener("click", () => openBook(button.dataset.bookId));
+  });
+}
+
+function renderCategories() {
+  const list = document.getElementById("categoryList");
+  list.innerHTML = categories.map((category) => `
+    <button class="category-chip" type="button" style="--chip-rgb:${category.rgb}" data-category="${category.id}">
+      <span class="category-chip__icon"><span class="icon" data-icon="${category.icon}"></span></span>
+      <span>
+        <strong>${escapeHtml(category.name)}</strong>
+        <span>${formatCount(category.count)} 本 AI 原創</span>
+      </span>
+    </button>
+  `).join("");
+
+  hydrateIcons(list);
+  list.querySelectorAll("[data-category]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
+      document.getElementById("searchInput").value = category;
+      renderRanking();
+      renderAiNovels(category);
+      scrollToTarget("ranking");
+      showToast(`已篩選「${category}」AI 原創，共 8 本。`);
+    });
+  });
+}
+
+function renderAiNovels(category = "") {
+  const list = document.getElementById("aiNovelList");
+  const books = (category ? allBooks.filter((book) => book.category === category) : allBooks).slice(0, 8);
+  list.innerHTML = books.map((book) => `
+    <button class="ai-card" type="button" data-book-id="${book.id}">
+      ${renderBookCover(book)}
+      <span>
+        <span class="ai-card__tag">AI 原創</span>
+        <h3>${escapeHtml(book.title)}</h3>
+        <p>${escapeHtml(book.summary)}</p>
+        <span class="ai-card__actions">
+          <span>每日一章</span>
+          <span>深度連載</span>
+          <span>強鉤子</span>
+        </span>
+      </span>
+    </button>
+  `).join("");
+
+  hydrateIcons(list);
+  list.querySelectorAll("[data-book-id]").forEach((button) => {
+    button.addEventListener("click", () => openBook(button.dataset.bookId));
+  });
+}
+
+function openBook(bookId) {
+  const book = allBooks.find((item) => item.id === bookId) || allBooks[0];
+  if (!book) {
+    showToast("AI 小說資料尚未載入完成。");
+    return;
+  }
+
+  currentModalBook = book;
+  currentChapterIndex = 0;
+  renderModal();
+
+  const modal = document.getElementById("bookModal");
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function renderModal() {
+  if (!currentModalBook) return;
+  const book = currentModalBook;
+  const activeChapter = book.chapters[currentChapterIndex] || book.chapters[0];
+  const content = document.getElementById("modalContent");
+
+  content.innerHTML = `
+    <div class="modal-layout">
+      <section class="modal-hero">
+        <span class="modal-cover" style="${coverStyle(book)}">
+          <span class="book-card__title-art">${escapeHtml(coverTitle(book.title))}</span>
+        </span>
+        <div class="modal-meta">
+          <h2 id="modalTitle">${escapeHtml(book.title)}</h2>
+          <div class="modal-meta__line">
+            <span>${escapeHtml(book.author)}</span>
+            <span>${escapeHtml(book.category)}</span>
+            <span>${escapeHtml(book.status)}</span>
+            <span>${escapeHtml(book.score)}分</span>
+            <span>人氣 ${escapeHtml(book.heat)}</span>
+          </div>
+          <div class="modal-tags">
+            ${book.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
+          </div>
+          <p class="modal-summary">${escapeHtml(book.summary)}</p>
+          <div class="modal-actions">
+            <button class="primary-action" type="button" id="readFirstChapter">
+              <span class="icon" data-icon="reader"></span>
+              開始閱讀
+            </button>
+            <button class="secondary-action" type="button" id="downloadBook">
+              <span class="icon" data-icon="download"></span>
+              下載整本小說
+            </button>
+          </div>
+          <div class="status-note">
+            <span class="icon" data-icon="info"></span>
+            <span>${escapeHtml(book.updateNote)}</span>
+          </div>
+        </div>
+      </section>
+      <section class="modal-sections">
+        <div class="chapter-list">
+          <h3>章節閱讀</h3>
+          ${book.chapters.map((chapter, index) => `
+            <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}">
+              ${escapeHtml(chapter.displayTitle)}
+            </button>
+          `).join("")}
+        </div>
+        <div class="reader-pane">
+          <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
+          <div class="reader-text">${escapeHtml(activeChapter.content)}</div>
+        </div>
+      </section>
+    </div>
+  `;
+
+  hydrateIcons(content);
+
+  document.getElementById("readFirstChapter").addEventListener("click", () => {
+    currentChapterIndex = 0;
+    renderModal();
+  });
+
+  document.getElementById("downloadBook").addEventListener("click", () => {
+    downloadBook(book);
+  });
+
+  content.querySelectorAll("[data-chapter-index]").forEach((button) => {
+    button.addEventListener("click", () => {
+      currentChapterIndex = Number(button.dataset.chapterIndex);
+      renderModal();
+    });
+  });
+}
+
+function closeModal() {
+  const modal = document.getElementById("bookModal");
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  currentModalBook = null;
+}
+
+function downloadBook(book) {
+  const chapterText = book.chapters.map((chapter) => {
+    return `\n\n${chapter.displayTitle}\n${"=".repeat(24)}\n${chapter.content}`;
+  }).join("");
+  const text = `天書小說 AI 原創文本\n書名：${book.title}\n作者：${book.author}\n分類：${book.category}\n更新：${book.status}\n內容狀態：${book.contentStatus}\n\n${book.summary}${chapterText}\n`;
+  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `${book.title}-AI原創章節.txt`;
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+  URL.revokeObjectURL(url);
+  showToast(`已下載《${book.title}》AI 原創章節。`);
+}
+
+function scrollToTarget(target) {
+  if (target === "home") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return true;
+  }
+
+  const el = document.getElementById(target);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    return true;
+  }
+
+  return false;
+}
+
+function setActiveNav(target) {
+  document.querySelectorAll("[data-nav-target]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.navTarget === target);
+  });
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  window.clearTimeout(toastTimer);
+  toastTimer = window.setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 2600);
+}
+
+function initEvents() {
+  document.getElementById("searchInput").addEventListener("input", () => {
+    renderRanking();
+    renderAiNovels();
+  });
+
+  document.getElementById("loginButton").addEventListener("click", () => {
+    showToast("登入介面目前為佔位，後續可接 OAuth、會員系統或自家 API。");
+  });
+
+  document.getElementById("youtubePlanButton").addEventListener("click", () => {
+    showToast("YouTube 頻道建議：名稱「天書小說 AI 劇場」，Handle「@TianshuNovel」。建立帳號後可接入正式網址。");
+  });
+
+  document.getElementById("heroOpenButton").addEventListener("click", () => {
+    if (allBooks[0]) openBook(allBooks[0].id);
+    else showToast("AI 小說資料尚未載入完成。");
+  });
+
+  document.querySelector(".hero").addEventListener("click", (event) => {
+    if (event.target.closest("#heroOpenButton")) return;
+    if (allBooks[0]) openBook(allBooks[0].id);
+    else showToast("AI 小說資料尚未載入完成。");
+  });
+
+  document.querySelectorAll("[data-rank-tab]").forEach((button) => {
+    button.addEventListener("click", () => {
+      currentRankTab = button.dataset.rankTab;
+      document.querySelectorAll("[data-rank-tab]").forEach((tab) => {
+        tab.classList.toggle("is-active", tab === button);
+      });
+      renderRanking();
+    });
+  });
+
+  document.querySelectorAll("[data-nav-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.navTarget;
+      setActiveNav(target);
+      const moved = scrollToTarget(target);
+      if (!moved) showToast("此功能頁後續接入，目前先保留入口佔位。");
+    });
+  });
+
+  document.querySelectorAll("[data-close-modal]").forEach((node) => {
+    node.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.getElementById("bookModal").classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}
+
+function initHero() {
+  const heroBook = allBooks[0];
+  if (!heroBook) return;
+  document.getElementById("heroTitle").textContent = heroBook.title;
+  document.getElementById("heroDescription").textContent = heroBook.premise;
+  document.getElementById("heroHeat").textContent = `人氣 ${heroBook.heat}`;
+  document.getElementById("heroTags").innerHTML = heroBook.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+}
+
+function showLoadError(error) {
+  console.error(error);
+  const detail = window.location.protocol === "file:"
+    ? "目前是直接用 file:// 開啟，瀏覽器會擋掉本機 JSON/TXT fetch。"
+    : `讀取失敗：${error.resourcePath || resourceManifestPath}${error.status ? `（HTTP ${error.status}）` : ""}`;
+  const message = `無法讀取 AI 小說資料。${detail}請從專案根目錄啟動本機伺服器，並開啟 http://127.0.0.1:4173/。`;
+  document.getElementById("heroDescription").textContent = message;
+  document.getElementById("rankingList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
+  document.getElementById("aiNovelList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
+  showToast(message);
+}
+
+async function init() {
+  hydrateIcons();
+  initEvents();
+  try {
+    await loadLibrary();
+    initHero();
+    renderRanking();
+    renderCategories();
+    renderAiNovels();
+  } catch (error) {
+    showLoadError(error);
+  }
+}
+
+init();

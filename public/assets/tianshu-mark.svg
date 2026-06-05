@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">天書小說品牌圖示</title>
+  <desc id="desc">深色圓角方形中的金色天書、星芒與 AI 節點，用於網站 favicon 與 YouTube 頻道頭像。</desc>
+  <defs>
+    <linearGradient id="bg" x1="158" y1="90" x2="860" y2="926" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151724"/>
+      <stop offset=".45" stop-color="#070912"/>
+      <stop offset="1" stop-color="#020307"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="184" y1="204" x2="772" y2="816" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff4bd"/>
+      <stop offset=".42" stop-color="#ffd37b"/>
+      <stop offset="1" stop-color="#d88425"/>
+    </linearGradient>
+    <linearGradient id="page" x1="260" y1="355" x2="724" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff4cf"/>
+      <stop offset=".52" stop-color="#eabf69"/>
+      <stop offset="1" stop-color="#8c5120"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1 0 1 0 0 .74 0 0 1 0 .32 0 0 0 .45 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1 0 1 0 0 .26 0 0 1 0 .32 0 0 0 .55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="212" fill="#030408"/>
+  <rect x="38" y="38" width="948" height="948" rx="188" fill="url(#bg)" stroke="rgba(255,211,123,.34)" stroke-width="18"/>
+  <path d="M129 776C248 669 347 632 512 632s264 37 383 144" fill="none" stroke="#23283a" stroke-width="38" stroke-linecap="round"/>
+  <path d="M166 284h96M758 284h96M258 148l46 46M766 148l-46 46M146 512h70M808 512h70" fill="none" stroke="#2d344b" stroke-width="18" stroke-linecap="round"/>
+
+  <g filter="url(#softGlow)">
+    <path d="M512 258l47 112 119 10-91 78 28 118-103-62-103 62 28-118-91-78 119-10 47-112Z" fill="url(#gold)" opacity=".96"/>
+    <path d="M512 294l31 73 78 7-60 51 19 78-68-41-68 41 19-78-60-51 78-7 31-73Z" fill="#171019" opacity=".85"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path d="M219 410c116 0 204 25 283 84v290c-75-55-166-84-283-84-28 0-51-23-51-51V461c0-28 23-51 51-51Z" fill="url(#page)"/>
+    <path d="M805 410c-116 0-204 25-283 84v290c75-55 166-84 283-84 28 0 51-23 51-51V461c0-28-23-51-51-51Z" fill="url(#page)"/>
+    <path d="M512 493v291" stroke="#fff1be" stroke-width="18" stroke-linecap="round"/>
+    <path d="M256 492c74 6 136 25 192 56M256 572c74 6 136 25 192 56M768 492c-74 6-136 25-192 56M768 572c-74 6-136 25-192 56" fill="none" stroke="#7b3f1a" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M267 328v-58h86M757 328v-58h-86M267 721v58h86M757 721v58h-86" stroke="#45e4e2" stroke-width="22" opacity=".84"/>
+    <path d="M353 270l40 40M671 270l-40 40M353 779l40-40M671 779l-40-40" stroke="#45e4e2" stroke-width="16" opacity=".72"/>
+    <circle cx="267" cy="270" r="18" fill="#45e4e2" stroke="none"/>
+    <circle cx="757" cy="270" r="18" fill="#45e4e2" stroke="none"/>
+    <circle cx="267" cy="779" r="18" fill="#45e4e2" stroke="none"/>
+    <circle cx="757" cy="779" r="18" fill="#45e4e2" stroke="none"/>
+  </g>
+
+  <g filter="url(#redGlow)">
+    <path d="M743 231c50 0 91 41 91 91s-41 91-91 91-91-41-91-91 41-91 91-91Z" fill="#ff3e53"/>
+    <path d="M713 326h88M757 282l44 44-44 44" fill="none" stroke="#fff1de" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="512" y="845" text-anchor="middle" fill="#fff1be" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="92" font-weight="900" letter-spacing="0">天書</text>
+</svg>
