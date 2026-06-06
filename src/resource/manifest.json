@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T17:34:54.572Z",
+  "generatedAt": "2026-06-06T02:24:23Z",
   "policy": "AI-only original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -27,6 +27,13 @@
           "path": "src/resource/星骸王座/第01章 星核在雨夜說謊.txt",
           "charCount": 4115,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "暗縫裡的舊雪",
+          "path": "src/resource/星骸王座/第02章 暗縫裡的舊雪.txt",
+          "charCount": 4257,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -56,6 +63,13 @@
           "path": "src/resource/萬相骨匣/第01章 骨匣吐出我的臉.txt",
           "charCount": 4163,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "新屍入土",
+          "path": "src/resource/萬相骨匣/第02章 新屍入土.txt",
+          "charCount": 4699,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -85,6 +99,13 @@
           "path": "src/resource/燼天錄/第01章 灰燼裡的刪頁.txt",
           "charCount": 4174,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "灰城第一碑",
+          "path": "src/resource/燼天錄/第02章 灰城第一碑.txt",
+          "charCount": 4885,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -114,6 +135,13 @@
           "path": "src/resource/九劫龍印/第01章 第一枚龍印發燙.txt",
           "charCount": 4115,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "白龍淵邊的孩子",
+          "path": "src/resource/九劫龍印/第02章 白龍淵邊的孩子.txt",
+          "charCount": 4940,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -143,6 +171,13 @@
           "path": "src/resource/逆命星河/第01章 名字從星圖剝落.txt",
           "charCount": 4151,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "留痕於將滅之名",
+          "path": "src/resource/逆命星河/第02章 留痕於將滅之名.txt",
+          "charCount": 4180,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -172,6 +207,13 @@
           "path": "src/resource/神墟拾荒人/第01章 神心在布袋裡跳動.txt",
           "charCount": 4153,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "屍骨堆裡的買賣",
+          "path": "src/resource/神墟拾荒人/第02章 屍骨堆裡的買賣.txt",
+          "charCount": 4917,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -201,6 +243,13 @@
           "path": "src/resource/青冥契/第01章 劍靈要我弒師.txt",
           "charCount": 4165,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "塚中舊物",
+          "path": "src/resource/青冥契/第02章 塚中舊物.txt",
+          "charCount": 4535,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -230,6 +279,13 @@
           "path": "src/resource/無盡丹城/第01章 丹爐裡有人呼吸.txt",
           "charCount": 4147,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "藥棚深處的第二口氣",
+          "path": "src/resource/無盡丹城/第02章 藥棚深處的第二口氣.txt",
+          "charCount": 4861,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -259,6 +315,13 @@
           "path": "src/resource/灰塔觀測者/第01章 黑點吞掉晨光.txt",
           "charCount": 4161,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "黑痕所指之層",
+          "path": "src/resource/灰塔觀測者/第02章 黑痕所指之層.txt",
+          "charCount": 4457,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -288,6 +351,13 @@
           "path": "src/resource/霧港第十三鐘/第01章 第十三聲鐘響.txt",
           "charCount": 4110,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "夜渡船上的錯名者",
+          "path": "src/resource/霧港第十三鐘/第02章 夜渡船上的錯名者.txt",
+          "charCount": 4583,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -317,6 +387,13 @@
           "path": "src/resource/月鯨航線/第01章 月背來信.txt",
           "charCount": 4160,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "霧海下的鳴聲",
+          "path": "src/resource/月鯨航線/第02章 霧海下的鳴聲.txt",
+          "charCount": 4639,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -346,6 +423,13 @@
           "path": "src/resource/銀燭書店/第01章 買走明日結局.txt",
           "charCount": 4105,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "明天退貨",
+          "path": "src/resource/銀燭書店/第02章 明天退貨.txt",
+          "charCount": 4561,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -375,6 +459,13 @@
           "path": "src/resource/王冠下的烏鴉/第01章 烏鴉落在肩上.txt",
           "charCount": 4168,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "舊廚房的銀灰",
+          "path": "src/resource/王冠下的烏鴉/第02章 舊廚房的銀灰.txt",
+          "charCount": 4861,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -404,6 +495,13 @@
           "path": "src/resource/深藍魔女法庭/第01章 潮汐翻供.txt",
           "charCount": 4106,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "深藍停審",
+          "path": "src/resource/深藍魔女法庭/第02章 深藍停審.txt",
+          "charCount": 4524,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -433,6 +531,13 @@
           "path": "src/resource/暮色龍語師/第01章 龍在死前唱童謠.txt",
           "charCount": 4183,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "童謠續在陌生人喉間",
+          "path": "src/resource/暮色龍語師/第02章 童謠續在陌生人喉間.txt",
+          "charCount": 4948,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -462,6 +567,13 @@
           "path": "src/resource/白鹿與黑書/第01章 白鹿踩過黑頁.txt",
           "charCount": 4162,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "禁書林的雪痕",
+          "path": "src/resource/白鹿與黑書/第02章 禁書林的雪痕.txt",
+          "charCount": 4088,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -491,6 +603,13 @@
           "path": "src/resource/雪刃照孤城/第01章 雪夜聽見刀聲.txt",
           "charCount": 4160,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "暗道藏鋒",
+          "path": "src/resource/雪刃照孤城/第02章 暗道藏鋒.txt",
+          "charCount": 4410,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -520,6 +639,13 @@
           "path": "src/resource/長安不夜劍/第01章 買下一柄記仇劍.txt",
           "charCount": 4112,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "燈市舊帳",
+          "path": "src/resource/長安不夜劍/第02章 燈市舊帳.txt",
+          "charCount": 4852,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -549,6 +675,13 @@
           "path": "src/resource/桃花渡口/第01章 同船的仇人.txt",
           "charCount": 4121,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "不能落水的包裹",
+          "path": "src/resource/桃花渡口/第02章 不能落水的包裹.txt",
+          "charCount": 4905,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -578,6 +711,13 @@
           "path": "src/resource/無名鏢局/第01章 箱中多了一口氣.txt",
           "charCount": 4176,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "荒沙一口活氣",
+          "path": "src/resource/無名鏢局/第02章 荒沙一口活氣.txt",
+          "charCount": 4792,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -607,6 +747,13 @@
           "path": "src/resource/刀藏春水/第01章 白水客人拔刀.txt",
           "charCount": 4151,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "白水試路",
+          "path": "src/resource/刀藏春水/第02章 白水試路.txt",
+          "charCount": 4609,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -636,6 +783,13 @@
           "path": "src/resource/雲夢舊盟/第01章 盟約背面的死名.txt",
           "charCount": 4172,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "封堂夜燈",
+          "path": "src/resource/雲夢舊盟/第02章 封堂夜燈.txt",
+          "charCount": 4607,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -665,6 +819,13 @@
           "path": "src/resource/青衣捕快/第01章 錯帳簿露出盟主名.txt",
           "charCount": 4166,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "城門前另取證",
+          "path": "src/resource/青衣捕快/第02章 城門前另取證.txt",
+          "charCount": 4990,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -694,6 +855,13 @@
           "path": "src/resource/斷橋聽雨/第01章 雨裡排隊尋仇.txt",
           "charCount": 4130,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "橋心點名",
+          "path": "src/resource/斷橋聽雨/第02章 橋心點名.txt",
+          "charCount": 4472,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -723,6 +891,13 @@
           "path": "src/resource/凌晨三點的演算法/第01章 三點推送我的死訊.txt",
           "charCount": 4110,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "權重留下指紋",
+          "path": "src/resource/凌晨三點的演算法/第02章 權重留下指紋.txt",
+          "charCount": 4921,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -752,6 +927,13 @@
           "path": "src/resource/逆光合夥人/第01章 廣告改掉一段記憶.txt",
           "charCount": 4171,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "底片醒來時",
+          "path": "src/resource/逆光合夥人/第02章 底片醒來時.txt",
+          "charCount": 4922,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -781,6 +963,13 @@
           "path": "src/resource/租屋處有個時間洞/第01章 裂縫吐出求救便利貼.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "今晚讓誰過來",
+          "path": "src/resource/租屋處有個時間洞/第02章 今晚讓誰過來.txt",
+          "charCount": 4874,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -810,6 +999,13 @@
           "path": "src/resource/失眠便利店/第01章 貨架上販售夢境.txt",
           "charCount": 4107,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "少了一格睡意",
+          "path": "src/resource/失眠便利店/第02章 少了一格睡意.txt",
+          "charCount": 4832,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -839,6 +1035,13 @@
           "path": "src/resource/第七份離職信/第01章 第七份離職信未送出.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "清晨會議室的第七個席位",
+          "path": "src/resource/第七份離職信/第02章 清晨會議室的第七個席位.txt",
+          "charCount": 4499,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -868,6 +1071,13 @@
           "path": "src/resource/雨城心理師/第01章 患者夢裡坐著我.txt",
           "charCount": 4111,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "診間滲夢",
+          "path": "src/resource/雨城心理師/第02章 診間滲夢.txt",
+          "charCount": 4228,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -897,6 +1107,13 @@
           "path": "src/resource/熱搜之外/第01章 熱搜寫出我的人生.txt",
           "charCount": 4148,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "標題替我開門",
+          "path": "src/resource/熱搜之外/第02章 標題替我開門.txt",
+          "charCount": 4226,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -926,6 +1143,13 @@
           "path": "src/resource/零點地鐵站/第01章 末班車載滿明天.txt",
           "charCount": 4103,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "多坐一站",
+          "path": "src/resource/零點地鐵站/第02章 多坐一站.txt",
+          "charCount": 4846,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -955,6 +1179,13 @@
           "path": "src/resource/大明墨工/第01章 墨線畫出不存在的河.txt",
           "charCount": 4103,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "真地形上的墨痕",
+          "path": "src/resource/大明墨工/第02章 真地形上的墨痕.txt",
+          "charCount": 4993,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -984,6 +1215,13 @@
           "path": "src/resource/長河鹽商/第01章 密信比鹽更重.txt",
           "charCount": 4166,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "離岸三尺",
+          "path": "src/resource/長河鹽商/第02章 離岸三尺.txt",
+          "charCount": 4946,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -1013,6 +1251,13 @@
           "path": "src/resource/邊關雪信/第01章 不能送達的家書.txt",
           "charCount": 4133,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "夜過雪關",
+          "path": "src/resource/邊關雪信/第02章 夜過雪關.txt",
+          "charCount": 4493,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -1042,6 +1287,13 @@
           "path": "src/resource/洛陽紙貴局/第01章 暢銷書暗中調兵.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "改句試兵",
+          "path": "src/resource/洛陽紙貴局/第02章 改句試兵.txt",
+          "charCount": 4216,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
@@ -1071,6 +1323,13 @@
           "path": "src/resource/山河小吏/第01章 河道被人買走.txt",
           "charCount": 4141,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "命根在河床",
+          "path": "src/resource/山河小吏/第02章 命根在河床.txt",
+          "charCount": 4931,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "深沉"
@@ -1100,6 +1359,13 @@
           "path": "src/resource/金陵夜航/第01章 客人帶來傳國玉印.txt",
           "charCount": 4154,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "禁河問印",
+          "path": "src/resource/金陵夜航/第02章 禁河問印.txt",
+          "charCount": 4343,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "爽感"
@@ -1129,6 +1395,13 @@
           "path": "src/resource/烽火茶樓/第01章 敵將點出亡妻茶名.txt",
           "charCount": 4116,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "私茶暗線",
+          "path": "src/resource/烽火茶樓/第02章 私茶暗線.txt",
+          "charCount": 4690,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "懸疑"
@@ -1158,6 +1431,13 @@
           "path": "src/resource/青史未署名/第01章 空白處浮出姓名.txt",
           "charCount": 4102,
           "generatedAt": "2026-06-05T17:34:54.572Z"
+        },
+        {
+          "number": 2,
+          "title": "以名換白",
+          "path": "src/resource/青史未署名/第02章 以名換白.txt",
+          "charCount": 4715,
+          "generatedAt": "2026-06-06T02:24:23Z"
         }
       ],
       "tone": "情緒"
