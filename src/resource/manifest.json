@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T16:46:42.196Z",
-  "policy": "AI-only original fiction. Each novel has its own folder under src/resource. Chapters are stored as independent txt files. Each generation must read existing chapters before appending the next one.",
+  "generatedAt": "2026-06-05T17:34:54.572Z",
+  "policy": "AI-only original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
       "id": "ai-01",
@@ -17,7 +17,7 @@
       "role": "觀星流放者",
       "setting": "霜河邊境",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "328 萬",
       "chapters": [
@@ -25,10 +25,11 @@
           "number": 1,
           "title": "星核在雨夜說謊",
           "path": "src/resource/星骸王座/第01章 星核在雨夜說謊.txt",
-          "charCount": 4035,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4115,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-02",
@@ -45,7 +46,7 @@
       "role": "外門守匣人",
       "setting": "萬相山後禁谷",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "323 萬",
       "chapters": [
@@ -53,10 +54,11 @@
           "number": 1,
           "title": "骨匣吐出我的臉",
           "path": "src/resource/萬相骨匣/第01章 骨匣吐出我的臉.txt",
-          "charCount": 4035,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4163,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-03",
@@ -73,7 +75,7 @@
       "role": "抄書童",
       "setting": "燼都廢墟",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "318 萬",
       "chapters": [
@@ -81,10 +83,11 @@
           "number": 1,
           "title": "灰燼裡的刪頁",
           "path": "src/resource/燼天錄/第01章 灰燼裡的刪頁.txt",
-          "charCount": 4030,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4174,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-04",
@@ -101,7 +104,7 @@
       "role": "龍印承劫者",
       "setting": "白龍淵",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "313 萬",
       "chapters": [
@@ -109,10 +112,11 @@
           "number": 1,
           "title": "第一枚龍印發燙",
           "path": "src/resource/九劫龍印/第01章 第一枚龍印發燙.txt",
-          "charCount": 4012,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4115,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-05",
@@ -129,7 +133,7 @@
       "role": "無命格星算師",
       "setting": "天璇城",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "308 萬",
       "chapters": [
@@ -137,10 +141,11 @@
           "number": 1,
           "title": "名字從星圖剝落",
           "path": "src/resource/逆命星河/第01章 名字從星圖剝落.txt",
-          "charCount": 4022,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4151,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-06",
@@ -157,7 +162,7 @@
       "role": "神墟拾荒人",
       "setting": "墜神荒原",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "303 萬",
       "chapters": [
@@ -165,10 +170,11 @@
           "number": 1,
           "title": "神心在布袋裡跳動",
           "path": "src/resource/神墟拾荒人/第01章 神心在布袋裡跳動.txt",
-          "charCount": 4018,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4153,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-07",
@@ -185,7 +191,7 @@
       "role": "劍骨少年",
       "setting": "青冥劍塚",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "298 萬",
       "chapters": [
@@ -193,10 +199,11 @@
           "number": 1,
           "title": "劍靈要我弒師",
           "path": "src/resource/青冥契/第01章 劍靈要我弒師.txt",
-          "charCount": 4027,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4165,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-08",
@@ -213,7 +220,7 @@
       "role": "採藥少年",
       "setting": "無盡丹城",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "293 萬",
       "chapters": [
@@ -221,10 +228,11 @@
           "number": 1,
           "title": "丹爐裡有人呼吸",
           "path": "src/resource/無盡丹城/第01章 丹爐裡有人呼吸.txt",
-          "charCount": 4056,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4147,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-09",
@@ -241,7 +249,7 @@
       "role": "灰塔書記員",
       "setting": "北境灰塔",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "288 萬",
       "chapters": [
@@ -249,10 +257,11 @@
           "number": 1,
           "title": "黑點吞掉晨光",
           "path": "src/resource/灰塔觀測者/第01章 黑點吞掉晨光.txt",
-          "charCount": 4003,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4161,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-10",
@@ -269,7 +278,7 @@
       "role": "守鐘學徒",
       "setting": "霧港鐘樓",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "283 萬",
       "chapters": [
@@ -277,10 +286,11 @@
           "number": 1,
           "title": "第十三聲鐘響",
           "path": "src/resource/霧港第十三鐘/第01章 第十三聲鐘響.txt",
-          "charCount": 4005,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4110,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-11",
@@ -297,7 +307,7 @@
       "role": "空艇船長",
       "setting": "雲海航道",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "278 萬",
       "chapters": [
@@ -305,10 +315,11 @@
           "number": 1,
           "title": "月背來信",
           "path": "src/resource/月鯨航線/第01章 月背來信.txt",
-          "charCount": 4002,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4160,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-12",
@@ -325,7 +336,7 @@
       "role": "雨夜書店代理人",
       "setting": "舊城銀燭街",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "273 萬",
       "chapters": [
@@ -333,10 +344,11 @@
           "number": 1,
           "title": "買走明日結局",
           "path": "src/resource/銀燭書店/第01章 買走明日結局.txt",
-          "charCount": 4016,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4105,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-13",
@@ -353,7 +365,7 @@
       "role": "洗衣坊女孩",
       "setting": "黑冠王都",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "268 萬",
       "chapters": [
@@ -361,10 +373,11 @@
           "number": 1,
           "title": "烏鴉落在肩上",
           "path": "src/resource/王冠下的烏鴉/第01章 烏鴉落在肩上.txt",
-          "charCount": 4004,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4168,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-14",
@@ -381,7 +394,7 @@
       "role": "海國辯護人",
       "setting": "深藍法庭",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "263 萬",
       "chapters": [
@@ -389,10 +402,11 @@
           "number": 1,
           "title": "潮汐翻供",
           "path": "src/resource/深藍魔女法庭/第01章 潮汐翻供.txt",
-          "charCount": 4013,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4106,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-15",
@@ -409,7 +423,7 @@
       "role": "龍語學徒",
       "setting": "暮色邊境",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "258 萬",
       "chapters": [
@@ -417,10 +431,11 @@
           "number": 1,
           "title": "龍在死前唱童謠",
           "path": "src/resource/暮色龍語師/第01章 龍在死前唱童謠.txt",
-          "charCount": 4047,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4183,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-16",
@@ -437,7 +452,7 @@
       "role": "新任守書人",
       "setting": "冬林聖所",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "253 萬",
       "chapters": [
@@ -445,10 +460,11 @@
           "number": 1,
           "title": "白鹿踩過黑頁",
           "path": "src/resource/白鹿與黑書/第01章 白鹿踩過黑頁.txt",
-          "charCount": 4018,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4162,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-17",
@@ -465,7 +481,7 @@
       "role": "失明琴師",
       "setting": "北雪孤城",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "248 萬",
       "chapters": [
@@ -473,10 +489,11 @@
           "number": 1,
           "title": "雪夜聽見刀聲",
           "path": "src/resource/雪刃照孤城/第01章 雪夜聽見刀聲.txt",
-          "charCount": 4054,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4160,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-18",
@@ -493,7 +510,7 @@
       "role": "夜市劍徒",
       "setting": "長安不夜巷",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "243 萬",
       "chapters": [
@@ -501,10 +518,11 @@
           "number": 1,
           "title": "買下一柄記仇劍",
           "path": "src/resource/長安不夜劍/第01章 買下一柄記仇劍.txt",
-          "charCount": 4050,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4112,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-19",
@@ -521,7 +539,7 @@
       "role": "渡口船娘",
       "setting": "桃花渡",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "238 萬",
       "chapters": [
@@ -529,10 +547,11 @@
           "number": 1,
           "title": "同船的仇人",
           "path": "src/resource/桃花渡口/第01章 同船的仇人.txt",
-          "charCount": 4006,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4121,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-20",
@@ -549,7 +568,7 @@
       "role": "鏢局少掌櫃",
       "setting": "荒沙官道",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "233 萬",
       "chapters": [
@@ -557,10 +576,11 @@
           "number": 1,
           "title": "箱中多了一口氣",
           "path": "src/resource/無名鏢局/第01章 箱中多了一口氣.txt",
-          "charCount": 4061,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4176,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-21",
@@ -577,7 +597,7 @@
       "role": "茶樓掌櫃",
       "setting": "春水樓",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "228 萬",
       "chapters": [
@@ -585,10 +605,11 @@
           "number": 1,
           "title": "白水客人拔刀",
           "path": "src/resource/刀藏春水/第01章 白水客人拔刀.txt",
-          "charCount": 4037,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4151,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-22",
@@ -605,7 +626,7 @@
       "role": "雲夢盟後人",
       "setting": "雲夢澤",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "223 萬",
       "chapters": [
@@ -613,10 +634,11 @@
           "number": 1,
           "title": "盟約背面的死名",
           "path": "src/resource/雲夢舊盟/第01章 盟約背面的死名.txt",
-          "charCount": 4002,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4172,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-23",
@@ -633,7 +655,7 @@
       "role": "縣衙捕快",
       "setting": "青石縣",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "218 萬",
       "chapters": [
@@ -641,10 +663,11 @@
           "number": 1,
           "title": "錯帳簿露出盟主名",
           "path": "src/resource/青衣捕快/第01章 錯帳簿露出盟主名.txt",
-          "charCount": 4029,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4166,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-24",
@@ -661,7 +684,7 @@
       "role": "說書人徒弟",
       "setting": "斷橋茶棚",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "213 萬",
       "chapters": [
@@ -669,10 +692,11 @@
           "number": 1,
           "title": "雨裡排隊尋仇",
           "path": "src/resource/斷橋聽雨/第01章 雨裡排隊尋仇.txt",
-          "charCount": 4009,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4130,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-25",
@@ -689,7 +713,7 @@
       "role": "產品經理",
       "setting": "海城科技園",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "208 萬",
       "chapters": [
@@ -697,10 +721,11 @@
           "number": 1,
           "title": "三點推送我的死訊",
           "path": "src/resource/凌晨三點的演算法/第01章 三點推送我的死訊.txt",
-          "charCount": 4044,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4110,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-26",
@@ -717,7 +742,7 @@
       "role": "影像公司合夥人",
       "setting": "南港創業街",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "203 萬",
       "chapters": [
@@ -725,10 +750,11 @@
           "number": 1,
           "title": "廣告改掉一段記憶",
           "path": "src/resource/逆光合夥人/第01章 廣告改掉一段記憶.txt",
-          "charCount": 4039,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4171,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-27",
@@ -745,7 +771,7 @@
       "role": "北漂設計師",
       "setting": "老公寓四樓",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "198 萬",
       "chapters": [
@@ -753,10 +779,11 @@
           "number": 1,
           "title": "裂縫吐出求救便利貼",
           "path": "src/resource/租屋處有個時間洞/第01章 裂縫吐出求救便利貼.txt",
-          "charCount": 4043,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4179,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-28",
@@ -773,7 +800,7 @@
       "role": "夜班店員",
       "setting": "雨城便利店",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "193 萬",
       "chapters": [
@@ -781,10 +808,11 @@
           "number": 1,
           "title": "貨架上販售夢境",
           "path": "src/resource/失眠便利店/第01章 貨架上販售夢境.txt",
-          "charCount": 4055,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4107,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-29",
@@ -801,7 +829,7 @@
       "role": "法務專員",
       "setting": "昭明大廈",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "188 萬",
       "chapters": [
@@ -809,10 +837,11 @@
           "number": 1,
           "title": "第七份離職信未送出",
           "path": "src/resource/第七份離職信/第01章 第七份離職信未送出.txt",
-          "charCount": 4041,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4179,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-30",
@@ -829,7 +858,7 @@
       "role": "心理師",
       "setting": "雨城診所",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "183 萬",
       "chapters": [
@@ -837,10 +866,11 @@
           "number": 1,
           "title": "患者夢裡坐著我",
           "path": "src/resource/雨城心理師/第01章 患者夢裡坐著我.txt",
-          "charCount": 4017,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4111,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-31",
@@ -857,7 +887,7 @@
       "role": "過氣記者",
       "setting": "星河傳媒樓",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "178 萬",
       "chapters": [
@@ -865,10 +895,11 @@
           "number": 1,
           "title": "熱搜寫出我的人生",
           "path": "src/resource/熱搜之外/第01章 熱搜寫出我的人生.txt",
-          "charCount": 4050,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4148,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-32",
@@ -885,7 +916,7 @@
       "role": "地鐵站務員",
       "setting": "零點地鐵站",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "173 萬",
       "chapters": [
@@ -893,10 +924,11 @@
           "number": 1,
           "title": "末班車載滿明天",
           "path": "src/resource/零點地鐵站/第01章 末班車載滿明天.txt",
-          "charCount": 4064,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4103,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-33",
@@ -913,7 +945,7 @@
       "role": "輿圖墨工",
       "setting": "大明工部",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "168 萬",
       "chapters": [
@@ -921,10 +953,11 @@
           "number": 1,
           "title": "墨線畫出不存在的河",
           "path": "src/resource/大明墨工/第01章 墨線畫出不存在的河.txt",
-          "charCount": 4037,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4103,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-34",
@@ -941,7 +974,7 @@
       "role": "鹽商之女",
       "setting": "淮南鹽岸",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "163 萬",
       "chapters": [
@@ -949,10 +982,11 @@
           "number": 1,
           "title": "密信比鹽更重",
           "path": "src/resource/長河鹽商/第01章 密信比鹽更重.txt",
-          "charCount": 4051,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4166,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-35",
@@ -969,7 +1003,7 @@
       "role": "邊關信使",
       "setting": "朔方雪關",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "158 萬",
       "chapters": [
@@ -977,10 +1011,11 @@
           "number": 1,
           "title": "不能送達的家書",
           "path": "src/resource/邊關雪信/第01章 不能送達的家書.txt",
-          "charCount": 4031,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4133,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-36",
@@ -997,7 +1032,7 @@
       "role": "落魄書吏",
       "setting": "洛陽書坊街",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "153 萬",
       "chapters": [
@@ -1005,10 +1040,11 @@
           "number": 1,
           "title": "暢銷書暗中調兵",
           "path": "src/resource/洛陽紙貴局/第01章 暢銷書暗中調兵.txt",
-          "charCount": 4044,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4179,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     },
     {
       "id": "ai-37",
@@ -1025,7 +1061,7 @@
       "role": "治水小吏",
       "setting": "青州河堤",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "148 萬",
       "chapters": [
@@ -1033,10 +1069,11 @@
           "number": 1,
           "title": "河道被人買走",
           "path": "src/resource/山河小吏/第01章 河道被人買走.txt",
-          "charCount": 4037,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4141,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "深沉"
     },
     {
       "id": "ai-38",
@@ -1053,7 +1090,7 @@
       "role": "夜航船娘",
       "setting": "金陵秦淮河",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "143 萬",
       "chapters": [
@@ -1061,10 +1098,11 @@
           "number": 1,
           "title": "客人帶來傳國玉印",
           "path": "src/resource/金陵夜航/第01章 客人帶來傳國玉印.txt",
-          "charCount": 4047,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4154,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "爽感"
     },
     {
       "id": "ai-39",
@@ -1081,7 +1119,7 @@
       "role": "茶樓掌櫃",
       "setting": "西川烽火鎮",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "138 萬",
       "chapters": [
@@ -1089,10 +1127,11 @@
           "number": 1,
           "title": "敵將點出亡妻茶名",
           "path": "src/resource/烽火茶樓/第01章 敵將點出亡妻茶名.txt",
-          "charCount": 4046,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4116,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "懸疑"
     },
     {
       "id": "ai-40",
@@ -1109,7 +1148,7 @@
       "role": "年輕史官",
       "setting": "太史院",
       "status": "每日 09:00 更新",
-      "updateNote": "目前已重設為正式開篇。後續更新必須先讀取本書資料夾內既有章節，再延續劇情。",
+      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "133 萬",
       "chapters": [
@@ -1117,10 +1156,11 @@
           "number": 1,
           "title": "空白處浮出姓名",
           "path": "src/resource/青史未署名/第01章 空白處浮出姓名.txt",
-          "charCount": 4036,
-          "generatedAt": "2026-06-05T16:46:42.196Z"
+          "charCount": 4102,
+          "generatedAt": "2026-06-05T17:34:54.572Z"
         }
-      ]
+      ],
+      "tone": "情緒"
     }
   ]
 }
