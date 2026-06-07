@@ -94,6 +94,31 @@ function chapterDisplayTitle(chapter) {
   return `第${String(chapterNumber).padStart(2, "0")}章 ${chapter.title}`;
 }
 
+function chapterNavButton(direction, chapter, disabled) {
+  const label = direction === "previous" ? "上一章" : "下一章";
+  const iconPath = direction === "previous" ? "←" : "→";
+  const target = chapter ? chapter.displayTitle : "沒有更多章節";
+  return `
+    <button class="chapter-nav__button" type="button" data-chapter-nav="${direction}" ${disabled ? "disabled" : ""}>
+      <span>${direction === "previous" ? iconPath : label}</span>
+      <strong>${direction === "previous" ? label : iconPath}</strong>
+      <small>${escapeHtml(target)}</small>
+    </button>
+  `;
+}
+
+function renderChapterNav(book, position) {
+  const previousChapter = book.chapters[currentChapterIndex - 1];
+  const nextChapter = book.chapters[currentChapterIndex + 1];
+  return `
+    <nav class="chapter-nav chapter-nav--${position}" aria-label="章節切換">
+      ${chapterNavButton("previous", previousChapter, !previousChapter)}
+      <span class="chapter-nav__count">第 ${currentChapterIndex + 1} / ${book.chapters.length} 章</span>
+      ${chapterNavButton("next", nextChapter, !nextChapter)}
+    </nav>
+  `;
+}
+
 async function fetchTextFile(path) {
   const response = await fetch(resourceUrl(path), { cache: "no-store" });
   if (!response.ok) {
@@ -320,10 +345,25 @@ function openBook(bookId) {
   document.body.style.overflow = "hidden";
 }
 
+function setModalChapterIndex(index, shouldScroll = true) {
+  if (!currentModalBook) return;
+  const lastIndex = Math.max(currentModalBook.chapters.length - 1, 0);
+  currentChapterIndex = Math.min(Math.max(index, 0), lastIndex);
+  renderModal();
+
+  if (shouldScroll) {
+    window.requestAnimationFrame(() => {
+      document.querySelector(".reader-pane")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+}
+
 function renderModal() {
   if (!currentModalBook) return;
   const book = currentModalBook;
   const activeChapter = book.chapters[currentChapterIndex] || book.chapters[0];
+  const displayedChapters = [...book.chapters].sort((a, b) => Number(b.number || 0) - Number(a.number || 0));
+  const readerHook = book.readerHook || book.premise;
   const content = document.getElementById("modalContent");
 
   content.innerHTML = `
@@ -348,7 +388,7 @@ function renderModal() {
           <section class="modal-author" aria-label="作者">
             <span class="modal-author__label">作者</span>
             <strong>${escapeHtml(book.author)}</strong>
-            <p>${escapeHtml(book.authorIntro || "天書原創作者，專注長篇連載的世界觀、人物弧線與章節節奏，持續把每部作品推向更完整的閱讀體驗。")}</p>
+            <p>${escapeHtml(book.authorIntro || "他把故事交給場景、人物和下一個不肯消失的疑問；每一次更新，都像替這個世界再點亮一盞燈。")}</p>
           </section>
           <div class="modal-actions">
             <button class="primary-action" type="button" id="readFirstChapter">
@@ -360,24 +400,29 @@ function renderModal() {
               下載整本小說
             </button>
           </div>
-          <div class="status-note">
+          <div class="status-note reader-hook">
             <span class="icon" data-icon="info"></span>
-            <span>${escapeHtml(book.updateNote)}</span>
+            <span>${escapeHtml(readerHook)}</span>
           </div>
         </div>
       </section>
       <section class="modal-sections">
         <div class="chapter-list">
           <h3>章節閱讀</h3>
-          ${book.chapters.map((chapter, index) => `
+          ${displayedChapters.map((chapter) => {
+            const index = book.chapters.indexOf(chapter);
+            return `
             <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}">
               ${escapeHtml(chapter.displayTitle)}
             </button>
-          `).join("")}
+          `;
+          }).join("")}
         </div>
         <div class="reader-pane">
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
+          ${renderChapterNav(book, "top")}
           <div class="reader-text">${escapeHtml(activeChapter.content)}</div>
+          ${renderChapterNav(book, "bottom")}
         </div>
       </section>
     </div>
@@ -386,8 +431,7 @@ function renderModal() {
   hydrateIcons(content);
 
   document.getElementById("readFirstChapter").addEventListener("click", () => {
-    currentChapterIndex = 0;
-    renderModal();
+    setModalChapterIndex(0);
   });
 
   document.getElementById("downloadBook").addEventListener("click", () => {
@@ -396,8 +440,15 @@ function renderModal() {
 
   content.querySelectorAll("[data-chapter-index]").forEach((button) => {
     button.addEventListener("click", () => {
-      currentChapterIndex = Number(button.dataset.chapterIndex);
-      renderModal();
+      setModalChapterIndex(Number(button.dataset.chapterIndex));
+    });
+  });
+
+  content.querySelectorAll("[data-chapter-nav]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.dataset.chapterNav;
+      if (direction === "previous") setModalChapterIndex(currentChapterIndex - 1);
+      if (direction === "next") setModalChapterIndex(currentChapterIndex + 1);
     });
   });
 }

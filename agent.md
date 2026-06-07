@@ -59,10 +59,15 @@
 ## Video Production Rules
 
 - Build YouTube audiobook-style videos with local scripted tooling such as FFmpeg rather than expensive generative-video services by default.
+- FFmpeg is not a macOS built-in tool. In the current local environment it is available through Homebrew at `/opt/homebrew/bin/ffmpeg`; use it for local video assembly, looping, trimming, audio mixing, fades, subtitles, and export when available.
 - Keep video production assets organized per novel and chapter, for example `video-resource/<novel title>/<chapter title>/`.
 - Final video output must be at least 720p, meaning minimum 1280x720 resolution. Prefer 1080p when the background source and processing time allow it.
 - Audio and video artifacts must stay local and must not be committed to GitHub. `.gitignore` should exclude generated audio folders, rendered video/output folders, cache/temp folders, and common audio/video file extensions.
 - Lightweight metadata, production notes, subtitle files, and automation scripts may be committed when useful, as long as they do not embed large binary media.
+- Do not use unlicensed commercial game footage, gameplay captures, or recognisable game UI as audiobook background material. Use licensed stock footage, self-generated abstract/game-like loops, or user-provided licensed assets, and record the source URL plus license in that video's production notes.
+- For audiobook background visuals, the default direction is a subtle forever-loop runner / light game-HUD feel: continuous motion, mild tension, low visual clutter, no copyrighted game branding, no flashing UI, and no controls that distract from narration.
+- Background music before final narration is placeholder only. Keep it quiet, roughly in the background-bed range (`volume=0.10-0.18`, or about -30 LUFS / clearly below narration). When audiobook narration exists, duck or sidechain-compress the music so speech remains dominant.
+- Put one-off custom choices for each audiobook/video in that unit's production notes, for example `video-resource/<novel title>/<chapter title>/notes/production-notes.md`. Overall rules and reusable defaults belong in this `agent.md`.
 - For standalone audiobook exports, keep generated audio files local and ignored by Git. Store reusable voice direction, pacing, and production notes as small Markdown files under each novel's `有聲書/` folder.
 - macOS `say` with a Traditional Chinese voice is only acceptable for local pipeline verification, timing checks, and rough drafts. It is not a publishable audiobook voice unless the user explicitly approves that lower-quality output.
 - Publishable audiobook drafts should use a higher-quality Taiwan Mandarin TTS or narrator workflow. When using OpenAI speech generation, prefer `scripts/generate-openai-audiobook.mjs` so long chapters are chunked safely, canonical `.txt` chapters stay untouched, and final audio remains ignored by Git.
