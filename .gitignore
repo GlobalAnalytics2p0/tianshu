@@ -1,5 +1,5 @@
 # macOS
-.DS_Store
+*.DS_Store
 
 # Local video production outputs.
 # Keep lightweight plans/metadata/subtitles trackable, but never commit generated audio/video.
