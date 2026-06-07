@@ -1,16 +1,20 @@
 # macOS
 *.DS_Store
 
+# Local caches
+__pycache__/
+*.pyc
+
 # Local video production outputs.
-# Keep lightweight plans/metadata/subtitles trackable, but never commit generated audio/video.
-video-resource/**/audio/
-video-resource/**/video/
-video-resource/**/output/
-video-resource/**/renders/
-video-resource/**/source/
-video-resource/**/tmp/
-video-resource/**/temp/
-video-resource/**/cache/
+# Keep lightweight plans/metadata/subtitles/thumbnail PNGs trackable, but never commit generated audio/video.
+src/resource/**/影片/**/audio/
+src/resource/**/影片/**/video/
+src/resource/**/影片/**/output/
+src/resource/**/影片/**/renders/
+src/resource/**/影片/**/source/
+src/resource/**/影片/**/tmp/
+src/resource/**/影片/**/temp/
+src/resource/**/影片/**/cache/
 
 # Audio files
 *.aac

@@ -9,17 +9,19 @@
 - The core reader wants relaxed, direct, satisfying serial fiction. Make the prose easy to enter, the stakes concrete, the protagonist's pressure clear, and the chapter rewarding even while the long mystery remains unresolved.
 - Aim for雅俗共賞: tension and depth should coexist with readable scenes, clear emotional pressure, lived daily details, small wins, and momentum.
 - Audience experience comes first. Use reader and user feedback to adjust pacing, emphasis, mystery density, emotional spacing, and spotlight allocation when that feedback improves engagement or clarity.
+- Long-term serialization is a rhythm, not only a mystery reserve. After a local high point, allow cooling space: aftermath, fatigue, ordinary costs, small humor, repaired trust, witness reactions, or a concrete practical problem before the next pressure wave.
 
 ## Length And Storage
 
-- Each normal chapter must be 4,000-5,000 Traditional Chinese non-whitespace characters.
-- Save every chapter as an independent `.txt` file under `src/resource/<novel title>/`.
+- Each normal chapter must be 6,000-6,500 Traditional Chinese non-whitespace characters unless the user explicitly sets a different target. Previously published chapters may remain at their published length and must not be expanded only to satisfy a later rule change.
+- Save every chapter as an independent `.txt` file. For migrated title folders, use `src/resource/<novel title>/文章/`; for unmigrated folders, use the existing `src/resource/<novel title>/` root until that title is reorganized.
 - Update `src/resource/manifest.json` after writing or revising chapter files.
 - Never store chapter bodies inline in `app.js`.
+- Published chapters are locked canon. Do not edit an already published chapter unless the user explicitly authorizes a post-publication correction. For `星骸王座`, `第01章 星核在雨夜說謊` is already published and must remain unchanged.
 
 ## Continuity
 
-- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, and all existing `.txt` chapters for that novel.
+- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, and all existing `.txt` chapters for that novel. For migrated folders, read continuity Markdown from `src/resource/<novel title>/素材/` and chapters from `src/resource/<novel title>/文章/`.
 - Unless the user explicitly requests otherwise, all new content extends existing canon. Do not go back and revise earlier chapter events, outcomes, or facts just to make the next chapter easier.
 - Preserve character state, setting rules, unresolved hooks, emotional consequences, clues, debts, injuries, secrets, and relationship changes.
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
@@ -35,6 +37,8 @@
 - Build around one clear event or problem per chapter. Let it breathe before adding another major turn.
 - Default to one primary viewpoint center at the start of the chapter. Let the reader settle into one person, one pressure, and one immediate situation before expanding the scope.
 - Use the long-serial rhythm of "small event fast, major truth slow": the day's concrete incident should move, hurt, and resolve partially; the central mystery should advance only by one controlled layer.
+- The 6,000-6,500 character format should support stronger audiobook retention: deepen scene continuity, let danger breathe, add concrete minor-character pressure, and include one or two staged reversals. Do not use the added length for repeated inspection beats, repeated silence, or abstract explanation.
+- Do not treat every chapter as a bigger explosion than the last. A long serial should alternate pressure and release, letting a smaller consequence, meal, walk, injury, debt, search, or conversation carry interest between peaks.
 - Give the reader a local reward whenever possible: a clever escape, a recovered clue, a face-saving reversal, an enemy misread, a saved minor character, a practical gain, or a sharper emotional commitment.
 - Keep important foreshadowing alive for longer. Do not reveal every hook immediately after it appears.
 - Use slow-burn escalation: ordinary pressure, wrong detail, personal stake, risky choice, partial reversal, stronger unanswered question.
@@ -62,10 +66,27 @@
 - Prefer white-language clarity over literary stiffness. Depth should come from situation, choice, sensory detail, and consequence, not from archaic phrasing or abstract moralizing.
 - After a climax or heavy reveal, allow a brief emotional reset before building toward the next pressure wave. Rest is part of pacing, not a failure of pacing.
 - Do not keep readers in nonstop high-arousal mode. Peak, release, and re-accumulation should form a readable curve.
+- Side plots may interact with the main line across many chapters. They do not need to close in the same chapter, but they must remain intentional, trackable, and eventually convergent rather than multiplying without return.
 - The reader should be able to inhabit the protagonist's body, stress, hesitation, and sensory field. Favor immersion over summary.
 - Make transitions natural. A new clue should arise from the prior action, not appear just because the chapter needs another twist.
 - Do not batch-write books by reusing the same paragraph skeleton and only replacing names, objects, factions, or settings. Each novel needs its own scene logic, clue sequence, emotional pressure, and rhythm.
 - Long serials need renewable pressure. Build recurring institutions, obligations, resentments, professions, geography, and power costs that can keep producing conflict without repeating the same scene skeleton.
+
+## Social Promotion And Cover Art
+
+- Treat social visuals, especially Instagram images, as reader-acquisition cover art. They must sell genre, mood, conflict, and curiosity at first glance.
+- Social posts should be platform-native. Instagram, Threads, Facebook, and YouTube each need independent copy, CTA shape, and verification; do not depend on cross-platform sync or paste one identical post everywhere.
+- Before preparing platform posts, use `docs/roles/social-media-director/README.md` and `docs/roles/social-media-director/social-resources.md` as the operating guide.
+- Use owned or generated chapter-specific story art rather than website screenshots, UI cards, generic banners, or text-heavy layouts.
+- Generate base artwork with no embedded text or logos, then add accurate Traditional Chinese typography locally.
+- The image should show one strong story signal: protagonist, danger, mystery object, setting pressure, or iconic scene. Do not make the visual abstract when the chapter has a concrete hook.
+- Keep the composition full-bleed, cinematic, and phone-readable. Avoid covering the protagonist's face, central relic/object, or main action with text boxes.
+- Limit text on IG images to title/chapter plus one short hook. Put long summaries, links, hashtags, and calls to action in the post caption.
+- Brand labels, badges, and frames must fit their text with generous padding. A no-frame label is better than a cramped or overflowing badge.
+- Decorative rules, lines, or separators must never cross through title glyphs or interfere with readability.
+- Avoid redundant corner watermarks or small extra logos unless the user explicitly asks for them.
+- Use a display-quality CJK title font that fits the genre, such as Noto Serif CJK TC for serious fantasy/玄幻 assets, with restrained shadow or glow.
+- Reject promotion assets with clipped text, overlapping elements, cheap-looking fonts, crowded URL blocks, unnecessary watermarks, or anything that feels like a generic automation template.
 
 ## Forbidden Prose Patterns
 
@@ -79,7 +100,7 @@
 ## Review Gate
 
 - After generation or revision, check:
-  - 4,000-5,000 non-whitespace Traditional Chinese characters.
+  - 6,000-6,500 non-whitespace Traditional Chinese characters for new or unpublished chapters, with documented exceptions only for already-published locked chapters or explicit user approval.
   - No forbidden meta/scaffolding phrases.
   - The body does not contain the manifest `premise` sentence verbatim.
   - No repeated filler paragraphs.
@@ -89,6 +110,7 @@
   - The chapter gives at least one local reader reward without exhausting the long arc.
   - The chapter respects existing canon instead of rewriting prior events.
   - The emotional curve is readable: build, peak, brief reset, then renewed anticipation.
+  - The chapter does not keep the reader in permanent emergency mode; it uses cooling beats and ordinary consequence where the prior scene intensity calls for it.
   - The chapter is immersive enough that the reader can stay inside the protagonist's lived experience.
   - The chapter follows one main event with natural transitions.
   - The final hook is intriguing but not over-explained.

@@ -25,29 +25,29 @@
         {
           "number": 1,
           "title": "星核在雨夜說謊",
-          "path": "src/resource/星骸王座/第01章 星核在雨夜說謊.txt",
+          "path": "src/resource/星骸王座/文章/第01章 星核在雨夜說謊.txt",
           "charCount": 4433,
           "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "暗縫裡的舊雪",
-          "path": "src/resource/星骸王座/第02章 暗縫裡的舊雪.txt",
-          "charCount": 4177,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "path": "src/resource/星骸王座/文章/第02章 暗縫裡的舊雪.txt",
+          "charCount": 6044,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 3,
           "title": "墓牆後的舊名",
-          "path": "src/resource/星骸王座/第03章 墓牆後的舊名.txt",
-          "charCount": 4415,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "path": "src/resource/星骸王座/文章/第03章 墓牆後的舊名.txt",
+          "charCount": 6276,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "顧夜燼不寫天命的光，他寫人被逼到雪線下仍肯抬頭。冷硬邊境、說謊星核、每一次死法預見，都被他磨成少年逆命的刀口。",
-      "coverImage": "src/resource/星骸王座/主角圖片素材/星骸王座-沈曜阿棠.png",
-      "heroImage": "src/resource/星骸王座/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png"
+      "coverImage": "src/resource/星骸王座/素材/圖像/主角圖片素材/星骸王座-沈曜阿棠.png",
+      "heroImage": "src/resource/星骸王座/素材/圖像/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png"
     },
     {
       "id": "ai-02",
@@ -374,22 +374,22 @@
           "number": 1,
           "title": "黑點吞掉晨光",
           "path": "src/resource/灰塔觀測者/第01章 黑點吞掉晨光.txt",
-          "charCount": 4001,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6041,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 2,
           "title": "黑痕所指之層",
           "path": "src/resource/灰塔觀測者/第02章 黑痕所指之層.txt",
-          "charCount": 4020,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6150,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 3,
           "title": "負一層來敲窗",
           "path": "src/resource/灰塔觀測者/第03章 負一層來敲窗.txt",
-          "charCount": 4003,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6060,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -721,22 +721,22 @@
           "number": 1,
           "title": "雪夜聽見刀聲",
           "path": "src/resource/雪刃照孤城/第01章 雪夜聽見刀聲.txt",
-          "charCount": 4004,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6104,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 2,
           "title": "暗道藏鋒",
           "path": "src/resource/雪刃照孤城/第02章 暗道藏鋒.txt",
-          "charCount": 4002,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6075,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 3,
           "title": "第三個學刀的人",
           "path": "src/resource/雪刃照孤城/第03章 第三個學刀的人.txt",
-          "charCount": 4003,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6049,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1068,22 +1068,22 @@
           "number": 1,
           "title": "三點推送我的死訊",
           "path": "src/resource/凌晨三點的演算法/第01章 三點推送我的死訊.txt",
-          "charCount": 4002,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 2,
           "title": "權重留下指紋",
           "path": "src/resource/凌晨三點的演算法/第02章 權重留下指紋.txt",
-          "charCount": 4039,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6044,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 3,
           "title": "死訊的確認者",
           "path": "src/resource/凌晨三點的演算法/第03章 死訊的確認者.txt",
-          "charCount": 4172,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6165,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1415,22 +1415,22 @@
           "number": 1,
           "title": "墨線畫出不存在的河",
           "path": "src/resource/大明墨工/第01章 墨線畫出不存在的河.txt",
-          "charCount": 4514,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6104,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 2,
           "title": "真地形上的墨痕",
           "path": "src/resource/大明墨工/第02章 真地形上的墨痕.txt",
-          "charCount": 4084,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6010,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 3,
           "title": "第三條河",
           "path": "src/resource/大明墨工/第03章 第三條河.txt",
-          "charCount": 4020,
-          "generatedAt": "2026-06-07T03:19:11.086Z"
+          "charCount": 6152,
+          "generatedAt": "2026-06-08T00:00:00.000+08:00"
         }
       ],
       "tone": "深沉",

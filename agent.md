@@ -2,13 +2,22 @@
 
 ## Persistent Project Requirements
 
+- Role-based onboarding is now mandatory. A future Agent should first identify its role and read the matching handbook under `docs/roles/` before acting:
+  - Content Creator: `docs/roles/content-creator/README.md`
+  - Social Media Director: `docs/roles/social-media-director/README.md`
+  - Full-stack Engineer: `docs/roles/full-stack-engineer/README.md`
+  - Role overview and CEO-level checks: `docs/roles/README.md`
+- `docs/README.md` is the project operations index. It maps Markdown files to role ownership so new Agents can take over without moving canonical content paths or losing information.
+- Do not move canonical novel chapters, `src/resource/manifest.json`, `src/resource/writing-rules.md`, or active title continuity files just to make the documentation tree look cleaner. Role handbooks should point to those files; the website and automation depend on stable paths.
 - Core narrative doctrine is long-term-first. Every active serial should be planned, paced, and protected as a long-running work rather than a short-term hook machine.
 - Audience response matters. Future content direction, pacing, focus, and local reader reward should be adjusted when credible user/reader feedback reveals confusion, impatience, boredom, attachment, or stronger interest in a particular thread.
 - Continuity is default law. Unless the user explicitly requests a reset or revision, all new writing must build on existing canon instead of rewriting prior chapters.
 - When continuity understanding is incomplete, the correct action is to reread prior material and continuity files, not to guess loosely or silently retcon.
-- Daily chapter output remains fixed at 4,000-5,000 Traditional Chinese non-whitespace characters.
+- Daily chapter output is now 6,000-6,500 Traditional Chinese non-whitespace characters for new or still-unpublished chapter work unless the user explicitly requests a shorter format. Previously published chapters may remain at their already-published length and must not be padded retroactively.
 - Reader experience should favor immersion, continuity, and slow-burn attachment over premature payoff. Do not reveal too many major protagonists, endgame truths, or top-tier conflicts too early.
 - Chapter movement can stay intuitive and flexible, but it should not become急功近利. Strong scenes may take more space, and post-climax decompression is part of the intended pacing rather than wasted space.
+- Long-term serialization rhythm must include release as well as pressure. After a local climax, use quieter follow-up space for aftermath, ordinary cost, relationship adjustment, witness reaction, small rewards, and re-accumulated unease before the next high-intensity wave.
+- Do not keep readers under continuous maximum tension. A 1,500+ chapter serial should move slowly but interestingly, with main and side threads interacting over long arcs and converging later, not being forced to resolve inside a single chapter.
 
 - Build this as a pure static website for GitHub Pages by default. Keep the root `index.html`, `styles.css`, and `app.js` deployable without a backend or build step unless the user explicitly changes direction.
 - The homepage must render full-width across the available viewport. Do not cap the desktop main content to a narrow fixed width that leaves the right side blank.
@@ -27,17 +36,18 @@
 - Public-facing website copy should use the `天書` brand vocabulary instead of `AI`, for example `天書小說榜`, `天書原創連載`, and `天書熱門分類`.
 - The homepage `天書小說榜` should rank only those 5 active category leaders, one per category, instead of mixing all 40 titles into the top five.
 - Ranking, hero, category, Modal, and download surfaces should all refer to 天書 original serials rather than existing novels.
-- Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`.
+- Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`; migrated folders store chapters under `src/resource/<novel title>/文章/`.
 - Before generating any new chapter, read that novel's existing `.txt` chapters and `src/resource/manifest.json` so continuity, character state, clues, and unresolved hooks are preserved.
-- Before generating or revising any of the five active titles, also read `src/resource/五本長篇共通管理規範.md` plus that title's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, and `伏筆事件台帳.md`. These files are mandatory author/persona and continuity refresh files, not optional notes.
+- Before generating or revising any of the five active titles, also read `src/resource/五本長篇共通管理規範.md` plus that title's continuity files: `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, and `伏筆事件台帳.md`. For migrated folders, these live under `src/resource/<novel title>/素材/`; for unmigrated folders, use the existing title root. These files are mandatory author/persona and continuity refresh files, not optional notes.
 - Every AI novel must be planned as a long-running serial that can credibly sustain at least 1,500 chapters without collapsing its core premise, power ceiling, relationship engine, or central mystery too early.
-- Each normal generated chapter must be 4,000-5,000 Traditional Chinese characters. Do not silently shorten chapters unless the user explicitly accepts a smaller batch.
-- Daily automation must save generated chapters into the matching `src/resource/<novel title>/` folder and update `src/resource/manifest.json` so the static GitHub Pages site can load the newest content.
+- Each normal generated chapter must be 6,000-6,500 Traditional Chinese non-whitespace characters. Do not silently shorten chapters unless the user explicitly accepts a smaller batch.
+- Daily automation must save generated chapters into the matching title's canonical chapter location, using `src/resource/<novel title>/文章/` for migrated folders and the title root for unmigrated folders, then update `src/resource/manifest.json` so the static GitHub Pages site can load the newest content.
 - Future routine updates and daily chapter generation should target only the novel text for the 5 active category leaders above unless the user explicitly broadens scope. The other 35 titles stay frozen in place for now.
 - The five active titles should be treated as five independent authors with separate personality, emotional temperature, prose rhythm, clue style, and chapter engine. Do not use one generic voice across all five.
-- Daily chapters should satisfy a relaxed serial-fiction reader: direct white-language prose, concrete stakes, one local reward or reversal, readable momentum, and long-term foreshadowing that is not immediately explained.
+- Daily chapters should satisfy a relaxed serial-fiction reader: direct white-language prose, concrete stakes, one local reward or reversal, readable momentum, and long-term foreshadowing that is not immediately explained. The longer 6,000-6,500 character format should deepen scene pressure, character reaction, ordinary-life texture, and staged reversals rather than add filler.
+- When expanding older 4,000-character drafts to the 6,000-6,500 official format, do not simply add extra twists. Prefer fuller scene work: travel time, hiding time, work routines, small-person witness stakes, bodily fatigue, money/food/weather pressure, and a short cooling beat after impact.
 - Video planning, audiobook planning, and related asset work should stay out of the default daily automation path unless the user explicitly asks for them.
-- After daily automation generation and validation pass, commit the AI content update and push it to GitHub using the configured upstream. Stage only the intended AI content/rule changes for that run, typically `src/resource/manifest.json`, new/changed `src/resource/<novel title>/*.txt`, and `src/resource/writing-rules.md` only when rules actually change. Do not stage unrelated UI/assets/docs changes.
+- After daily automation generation and validation pass, commit the AI content update and push it to GitHub using the configured upstream. Stage only the intended AI content/rule changes for that run, typically `src/resource/manifest.json`, new/changed title chapter `.txt` files in that title's canonical chapter location, and `src/resource/writing-rules.md` only when rules actually change. Do not stage unrelated UI/assets/docs changes.
 - Novel prose must be immersive creator-facing fiction for readers. Do not write scaffolding or explainer/meta language such as "這一章", "讀者會", "主角", "章末", "第一章的安排", "第二章會", outline notes, automation notes, or commentary about how the text is structured.
 - The interface can show chapter labels for navigation, but the `.txt` novel body should not describe chapter planning or future automation behavior.
 - Before any AI novel generation or revision, read and follow `src/resource/writing-rules.md`. Treat it as the durable writing-quality rulebook for plot tension, slower foreshadowing, character focus, style variation, human-like prose, and review gates.
@@ -60,18 +70,53 @@
 
 - Build YouTube audiobook-style videos with local scripted tooling such as FFmpeg rather than expensive generative-video services by default.
 - FFmpeg is not a macOS built-in tool. In the current local environment it is available through Homebrew at `/opt/homebrew/bin/ffmpeg`; use it for local video assembly, looping, trimming, audio mixing, fades, subtitles, and export when available.
-- Keep video production assets organized per novel and chapter, for example `video-resource/<novel title>/<chapter title>/`.
-- Final video output must be at least 720p, meaning minimum 1280x720 resolution. Prefer 1080p when the background source and processing time allow it.
+- Keep video production assets organized inside each novel's own video folder, not in a separate top-level `video-resource` folder. Use `src/resource/<novel title>/影片/<chapter title>/` with subfolders such as `source/`, `subtitles/`, `output/`, `thumbnails/`, `tmp/`, and `notes/`.
+- Initial audiobook/video drafts should default to 720p (1280x720) for smoother local processing and faster iteration. Prefer 1080p only when the user asks for higher quality or when the source material, processing time, and upload plan justify it.
 - Audio and video artifacts must stay local and must not be committed to GitHub. `.gitignore` should exclude generated audio folders, rendered video/output folders, cache/temp folders, and common audio/video file extensions.
-- Lightweight metadata, production notes, subtitle files, and automation scripts may be committed when useful, as long as they do not embed large binary media.
+- Lightweight metadata, production notes, subtitle files, thumbnail PNGs, and automation scripts may be committed when useful, as long as they do not embed large binary media.
 - Do not use unlicensed commercial game footage, gameplay captures, or recognisable game UI as audiobook background material. Use licensed stock footage, self-generated abstract/game-like loops, or user-provided licensed assets, and record the source URL plus license in that video's production notes.
-- For audiobook background visuals, the default direction is a subtle forever-loop runner / light game-HUD feel: continuous motion, mild tension, low visual clutter, no copyrighted game branding, no flashing UI, and no controls that distract from narration.
-- Background music before final narration is placeholder only. Keep it quiet, roughly in the background-bed range (`volume=0.10-0.18`, or about -30 LUFS / clearly below narration). When audiobook narration exists, duck or sidechain-compress the music so speech remains dominant.
-- Put one-off custom choices for each audiobook/video in that unit's production notes, for example `video-resource/<novel title>/<chapter title>/notes/production-notes.md`. Overall rules and reusable defaults belong in this `agent.md`.
+- For audiobook background visuals, the default direction is novel-aligned fixed story images rather than unrelated running footage: use owned/generated story images, timed cuts, restrained environmental texture, and enough visual connection to the chapter's setting without distracting from narration.
+- Runner/gameplay-style forever loops are only an optional direction when the user explicitly wants that satisfying-background style. If used, keep it copyright-safe, generic, low-clutter, and not so disconnected that the audiobook feels like unrelated footage.
+- When canonical chapter text, audiobook scripts, or narration transcripts exist, subtitles are recommended. Prefer subtitles generated from the same TTS run or word/sentence boundary metadata so speech and text are synchronized; avoid rough average-character timing for publishable drafts. Burn subtitles into local drafts for visual review or keep them as a YouTube caption sidecar for upload.
+- The current official audiobook-video background is rain plus white noise, not melodic music. Keep this consistent across videos unless the user explicitly requests a different bed.
+- After the 2026-06-07 speech-speed feedback, use 1x TTS speed by default: Edge `zh-TW-YunJheNeural`, `--rate=+0%`, `--pitch=-2Hz`, and subtitles generated from that same TTS run. The earlier `+4%` rate is now considered too fast unless the user explicitly asks to restore it.
+- Default official rain/white-noise mix ratios after the 1x soft-voice pass: narration source `volume=0.92`; main rain/white-noise bed `volume=0.20`; fine rain texture `volume=0.020`; low rain body `volume=0.010`; final mix bus `volume=0.84`; narration limiter `limit=0.64:level=false`; final limiter `limit=0.62:level=false`. Effective post-bus ratio is narration about `0.773` and main rain bed about `0.168`, so the main background bed is about 21.7% of the narration chain, with fine/low texture at about 2.2% and 1.1%.
+- For a softer narration tone, reduce sharpness with `highpass=f=80`, a slight warmth lift around `220Hz`, EQ cuts around `3200Hz` and `6200Hz`, `lowpass=f=9000`, and conservative limiting. Avoid effects that make the narration sound distant or artificial.
+- For QA, the approved 15-second v8 sample measured about `mean_volume: -26.5 dB` and `max_volume: -7.7 dB` with FFmpeg `volumedetect`. Full videos should stay in that soft sleep-listening range unless the user asks otherwise; avoid peaks above about `-6 dB`.
+- Background music should be pure instrumental / melody-first whenever possible only when the user explicitly asks for music again. Do not reintroduce melodic beds into the official rain/white-noise workflow.
+- For sleep-listening audiobook videos, the official low-stimulation ambience is quiet rain plus white noise. Keep ambience hidden under narration, non-sharp, and non-startling.
+- Do not claim sleep-audio beds create specific neurological effects. If the user explicitly asks for music outside the official rain/white-noise workflow, keep it slow, soft, lyric-free, low, and non-stimulating.
+- When the user asks to switch the background to rain or white noise, remove melodic music entirely and use filtered rain/white-noise layers instead. Keep it soft, steady, non-hissy, and clearly below narration.
+- When the user asks for a softer sleep-listening mix, reduce the background bed first and then tame sharpness with gentle high-frequency EQ cuts, low-pass filtering on ambience/music, and conservative limiters on narration/final mix. Avoid compression settings that raise average loudness when the requested direction is quieter and softer.
+- For still-image audiobook videos, prefer fixed images with timed cuts. Do not use pan/zoom/jitter by default; only add subtle non-shaking effects such as rare meteor glints when they do not distract from listening. For full chapter videos around 10-20 minutes, each background page should stay on screen for about 3-5 minutes; compute the slide count from duration so no normal slide changes faster than this.
+- Each chapter video should have a chapter-specific thumbnail under `src/resource/<novel title>/影片/<chapter title>/thumbnails/`. Generate the base image with the image tool, customize the scene to the chapter title, then add reliable title text locally if needed rather than depending on generated text accuracy.
+- Before regenerating a full-length video after major sync, audio-bed, or visual-motion changes, create a short preview clip, usually about 15 seconds, and wait for user approval.
+- Put one-off custom choices for each audiobook/video in that unit's production notes, for example `src/resource/<novel title>/影片/<chapter title>/notes/production-notes.md`. Overall rules and reusable defaults belong in this `agent.md`.
 - For standalone audiobook exports, keep generated audio files local and ignored by Git. Store reusable voice direction, pacing, and production notes as small Markdown files under each novel's `有聲書/` folder.
 - macOS `say` with a Traditional Chinese voice is only acceptable for local pipeline verification, timing checks, and rough drafts. It is not a publishable audiobook voice unless the user explicitly approves that lower-quality output.
 - Publishable audiobook drafts should use a higher-quality Taiwan Mandarin TTS or narrator workflow. When using OpenAI speech generation, prefer `scripts/generate-openai-audiobook.mjs` so long chapters are chunked safely, canonical `.txt` chapters stay untouched, and final audio remains ignored by Git.
 - If OpenAI Speech API fails because of missing quota or billing, do not keep retrying the same key. Use a higher-quality fallback such as Edge Neural TTS Taiwan voices for a local candidate, and record the quota blocker in the novel's audiobook production notes.
+
+## Social Promotion Image Rules
+
+- Social publishing is platform-specific by default. Do not enable sync/cross-post features between Instagram, Threads, and Facebook unless the user explicitly asks for it.
+- Instagram, Threads, Facebook, and YouTube should each receive independently optimized copy and posting behavior. Do not reuse one identical post across all platforms as the normal workflow.
+- Before posting to any social platform, read `docs/roles/social-media-director/README.md` and `docs/roles/social-media-director/social-resources.md`.
+- After publishing, verify the result on that specific platform instead of assuming a shared post propagated correctly.
+- Instagram promotion images are conversion-critical cover assets, not incidental website screenshots. IG readers judge the work first by image quality, atmosphere, typography, and immediate genre promise.
+- For IG/Threads/Facebook visual posts, prefer owned or AI-generated story art tailored to the chapter scene. Do not use generic site banners, UI screenshots, crowded cards, long URL blocks, or flat tool-looking layouts as the main visual.
+- Generate base story art without embedded text, logos, watermarks, or UI. Add Traditional Chinese titles locally afterward so typography is accurate, readable, and controllable.
+- Use a chapter-specific scene signal whenever possible: protagonist, location, danger object, mystery item, emotional weather, or iconic conflict. For `星骸王座` chapter 1, the core signals are rain night, border graveyard, black coffin,沈曜, and the lying star core.
+- Keep IG artwork full-bleed and visually immersive. Text should support the image, not dominate it. Avoid covering faces, key objects, weapons, relics, monsters, magic cores, or the central action.
+- Limit IG image text to three layers at most: brand/series label, title/chapter, and one short hook. Put URLs, hashtags, longer summaries, and viewing links in the caption instead of the image.
+- Use safe margins and phone-first readability. No clipped text, no overlapping text, no line squeezed against a rounded box edge, and no tiny secondary text that becomes unreadable on mobile.
+- Use more polished CJK typography for promotion assets, such as Songti/Hiragino-style title treatment plus a clean sans for smaller text. Avoid default-looking font choices when the asset is meant to sell the story.
+- If a brand/category label uses a frame or badge, verify the text fits inside the shape with generous padding. Prefer no frame over a cramped frame.
+- Decorative lines must never pass through, touch, or visually cut title glyphs. Use short underlines, side rules, separators, or background accents only where they do not interfere with reading.
+- Do not add redundant corner watermarks, logos, or small brand words to IG cover art unless the user explicitly asks for them. If branding is needed, keep it in the top label or caption.
+- For serious fantasy/玄幻 cover typography, prefer a vetted CJK display serif such as Noto Serif CJK TC for title text, with restrained shadow/glow. Avoid hard outlines, default-looking system UI fonts, and heavy effects that make the cover feel cheap or automated.
+- Before publishing any IG image, visually inspect the final 1080x1080 output and reject it if it feels like a template, if the image is weak, if the font looks cheap, or if any text/object overlap reduces appeal.
+- Store local social image sources and rendered exports under that novel/chapter's media folder, for example `src/resource/<novel title>/影片/<chapter title>/source/` and `output/`. These generated binary assets should remain ignored by Git unless the user explicitly asks to track a lightweight final image.
 
 ## Maintenance Rule
 
@@ -81,8 +126,12 @@
 
 - Static hosting target: GitHub Pages.
 - Primary surface: homepage only.
+- Operating model: three main roles are `Content Creator`, `Social Media Director`, and `Full-stack Engineer`; all handbooks live under `docs/roles/`.
 - AI novel automation exists in Codex with id `ai` and should generate original Traditional Chinese content only.
-- Automation cadence target: every day at 09:00 Asia/Taipei, update only the 5 active category leaders with one new 4,000-5,000 Traditional Chinese character chapter each where feasible.
+- Automation cadence target: every day at 09:00 Asia/Taipei, update only the 5 active category leaders with one new 6,000-6,500 Traditional Chinese non-whitespace character chapter each where feasible.
+- 2026-06-08 length revision: future unpublished or newly generated chapters should target 6,000-6,500 non-whitespace Traditional Chinese characters to produce roughly longer-form audiobook episodes. Do not revise already-published chapters solely to match the new length.
+- 2026-06-08 `星骸王座` lock: Chapter 1 `第01章 星核在雨夜說謊` has already been published as a YouTube audiobook and must not be edited unless the user explicitly authorizes a post-publication correction. Chapter 2 and Chapter 3 may still be revised before publication.
+- 2026-06-08 long-term pacing reinforcement: all five active novels should avoid nonstop escalation. The preferred pattern is local pressure, partial peak, cooling/aftermath, practical gain, and then renewed uncertainty. Side lines may stay open for many chapters, but each must remain trackable in `每日寫作狀態.md` or `伏筆事件台帳.md` until it converges.
 - Automation publish requirement: after successful validation, create a Git commit such as `chore: daily AI novel update YYYY-MM-DD` and push to the configured GitHub upstream. If git status is dirty at start, record the baseline and avoid committing unrelated pre-existing changes. If commit or push fails because remote/auth/upstream is unavailable, report the failure clearly.
 - 2026-06-06 reset: prior inline/generated chapter bodies were cleared from the app. The canonical content was regenerated as 40 standalone opening `.txt` files under `src/resource/<novel>/`, with one chapter per novel and no second chapters retained.
 - 2026-06-06 writing-quality revision request: all first chapters should be reviewed and revised for deeper tension, slower foreshadowing, clearer protagonist setup, smaller active cast, varied genre tone, more human prose, natural transitions, and 4,000-5,000 character length.
@@ -90,5 +139,7 @@
 - 2026-06-06 long-serial rule: every title must preserve runway for 1,500+ chapters, using layered long-term arcs and slower payoff scheduling so core mysteries, emotional debts, and setting secrets can unfold over a very long release horizon.
 - 2026-06-07 scope revision: the previous "5 hottest books" note is superseded by a stricter per-category rule. Ongoing updates should only touch one leader per category: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`, unless the user explicitly selects a different pool.
 - 2026-06-07 director workflow revision: active-title folders now include `README.md`, `每日寫作狀態.md`, and `伏筆事件台帳.md`. Future generation must use these files to refresh author persona, current state, next-event focus, minor-character slots, local reader reward, and foreshadowing/payoff status before writing.
+- 2026-06-07 folder-structure revision: migrated novel folders should separate canonical chapters and media production into `文章/`, `有聲書/`, `影片/`, and `素材/`. Canonical chapter paths must be reflected in `manifest.json`; planning Markdown, author/persona files, image materials, and production notes belong under `素材/`.
 - The homepage must load AI book/chapter content from `src/resource/manifest.json` and the `.txt` chapter files, not from inline chapter strings in `app.js`.
 - Full commercial texts are intentionally not present in the repository.
+- 2026-06-08 social publishing decision: keep platform sync features turned off. Future social promotion should publish separate, audience-optimized posts to IG, Threads, and Facebook rather than sharing one identical post across platforms.
