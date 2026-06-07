@@ -19,6 +19,9 @@
 - Preserve character state, setting rules, unresolved hooks, emotional consequences, clues, debts, injuries, secrets, and relationship changes.
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
 - Every title must retain enough structural runway to serialize beyond 1,500 chapters. Do not spend the premise, final villain tier, ultimate setting answer, or irreversible relationship endgame too early.
+- The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
+- Unless the user explicitly changes scope, daily work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen.
+- Video planning, audiobook planning, and non-novel asset work are out of the default daily update path unless the user explicitly asks for them.
 
 ## Plot And Tension
 

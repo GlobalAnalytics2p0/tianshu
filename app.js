@@ -15,7 +15,13 @@ const icons = {
   spark: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M13 3 9.8 9.8 3 13l6.8 3.2L13 23l3.2-6.8L23 13l-6.8-3.2L13 3Z"/></svg>',
   bag: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg>',
   wave: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 13c2.4 0 2.4-6 4.8-6s2.4 10 4.8 10S15 7 17.4 7 19.8 17 22 17"/></svg>',
-  youtube: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="6.5" width="18" height="11" rx="3"/><path d="m10.5 10 5 2-5 2.5V10Z" fill="currentColor" stroke="none"/></svg>',
+  youtube: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>',
+  subscribe: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>',
+  thumb: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/><path d="M7 10v12"/></svg>',
+  share: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>',
+  line: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c4.97 0 9 3.37 9 7.53 0 3.73-3.23 6.83-7.57 7.43L8 22l1.48-3.2C5.8 18.13 3 15.14 3 11.53 3 7.37 7.03 4 12 4Z"/><path d="M8.4 10.2v3.7"/><path d="M10.95 10.2v3.7h2.4"/><path d="M15.15 13.9v-3.7l2.45 3.7v-3.7"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h2.5V4.8c-.44-.06-1.38-.18-2.48-.18-2.46 0-4.14 1.5-4.14 4.27V11H7v3.58h2.88V21h3.55v-6.42H16.2L16.65 11h-3.22V9.26c0-.98.28-1.66 1.57-1.66Z"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.91 5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.8 13.12a5 5 0 0 0 7.07 7.07L13.09 19"/></svg>',
   sync: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 2v5h-5"/><path d="M19 9A7 7 0 0 0 6.4 5.8"/><path d="M7 22v-5h5"/><path d="M5 15a7 7 0 0 0 12.6 3.2"/></svg>',
   message: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 5h14v10H8l-4 4V6a1 1 0 0 1 1-1Z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>',
   devices: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="13" height="10" rx="1.5"/><rect x="17" y="8" width="4" height="11" rx="1.2"/><path d="M7 19h5"/></svg>',
@@ -49,6 +55,15 @@ const coverPalettes = [
 ];
 
 const resourceManifestPath = "src/resource/manifest.json";
+const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
+const youtubeShareText = "來看天書小說：每日原創連載、爆款小說、有聲短劇";
+const activeRankingTitles = [
+  "星骸王座",
+  "灰塔觀測者",
+  "雪刃照孤城",
+  "凌晨三點的演算法",
+  "大明墨工"
+];
 
 let allBooks = [];
 
@@ -56,6 +71,14 @@ let currentRankTab = "recommended";
 let currentModalBook = null;
 let currentChapterIndex = 0;
 let toastTimer = null;
+
+function buildShareUrls() {
+  const combinedText = `${youtubeShareText} ${youtubeChannelUrl}`;
+  return {
+    line: `https://line.me/R/msg/text/?${encodeURIComponent(combinedText)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(youtubeChannelUrl)}&quote=${encodeURIComponent(youtubeShareText)}`
+  };
+}
 
 function buildSummary(book) {
   return `AI 原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
@@ -150,6 +173,11 @@ function parseHeat(heat) {
   return Number(String(heat).replace(/[^\d]/g, "")) || 0;
 }
 
+function getActiveRankingBooks() {
+  const rankingMap = new Map(allBooks.map((book) => [book.title, book]));
+  return activeRankingTitles.map((title) => rankingMap.get(title)).filter(Boolean);
+}
+
 function coverStyle(book) {
   return `--cover-a:${book.cover[0]};--cover-b:${book.cover[1]}`;
 }
@@ -169,11 +197,18 @@ function renderBookCover(book, rank = "") {
 }
 
 function getRankedBooks(tab) {
-  if (tab === "hot") return [...allBooks].sort((a, b) => parseHeat(b.heat) - parseHeat(a.heat));
-  if (tab === "hook") return [...allBooks].sort((a, b) => b.tags.length - a.tags.length || parseHeat(b.heat) - parseHeat(a.heat));
-  if (tab === "new") return [...allBooks].slice().reverse();
-  if (tab === "longform") return [...allBooks].sort((a, b) => b.summary.length - a.summary.length);
-  return allBooks;
+  const rankingBooks = getActiveRankingBooks();
+  if (tab === "hot") return [...rankingBooks].sort((a, b) => parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "hook") return [...rankingBooks].sort((a, b) => b.tags.length - a.tags.length || parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "new") {
+    return [...rankingBooks].sort((a, b) => {
+      const latestA = a.chapters.at(-1)?.generatedAt || "";
+      const latestB = b.chapters.at(-1)?.generatedAt || "";
+      return latestB.localeCompare(latestA) || parseHeat(b.heat) - parseHeat(a.heat);
+    });
+  }
+  if (tab === "longform") return [...rankingBooks].sort((a, b) => b.summary.length - a.summary.length || parseHeat(b.heat) - parseHeat(a.heat));
+  return rankingBooks;
 }
 
 function renderRanking() {
@@ -182,7 +217,7 @@ function renderRanking() {
   let books = getRankedBooks(currentRankTab);
 
   if (query) {
-    books = allBooks.filter((book) => {
+    books = getActiveRankingBooks().filter((book) => {
       const haystack = `${book.title} ${book.author} ${book.category} ${book.tags.join(" ")} ${book.premise}`.toLowerCase();
       return haystack.includes(query);
     });
@@ -410,6 +445,22 @@ function showToast(message) {
   }, 2600);
 }
 
+function openShareSheet() {
+  const sheet = document.getElementById("shareSheet");
+  sheet.classList.add("is-open");
+  sheet.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeShareSheet() {
+  const sheet = document.getElementById("shareSheet");
+  sheet.classList.remove("is-open");
+  sheet.setAttribute("aria-hidden", "true");
+  if (!document.getElementById("bookModal").classList.contains("is-open")) {
+    document.body.style.overflow = "";
+  }
+}
+
 function initEvents() {
   document.getElementById("searchInput").addEventListener("input", () => {
     renderRanking();
@@ -420,8 +471,40 @@ function initEvents() {
     showToast("登入介面目前為佔位，後續可接 OAuth、會員系統或自家 API。");
   });
 
-  document.getElementById("youtubePlanButton").addEventListener("click", () => {
-    showToast("YouTube 頻道建議：名稱「天書小說 AI 劇場」，Handle「@TianshuNovel」。建立帳號後可接入正式網址。");
+  document.getElementById("subscribeButton").addEventListener("click", () => {
+    showToast("正在前往天書小說 YouTube 頻道。");
+  });
+
+  document.getElementById("likeButton").addEventListener("click", () => {
+    showToast("正在前往天書小說 YouTube 頻道。");
+  });
+
+  document.getElementById("shareButton").addEventListener("click", openShareSheet);
+
+  document.querySelectorAll("[data-close-share]").forEach((node) => {
+    node.addEventListener("click", closeShareSheet);
+  });
+
+  document.querySelectorAll("[data-share-target]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const target = button.dataset.shareTarget;
+      const shareUrls = buildShareUrls();
+
+      if (target === "line" || target === "facebook") {
+        window.open(shareUrls[target], "_blank", "noopener,noreferrer");
+        closeShareSheet();
+        showToast(`已開啟${target === "line" ? " LINE " : " Facebook "}分享。`);
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(youtubeChannelUrl);
+        closeShareSheet();
+        showToast("已複製天書小說 YouTube 頻道連結。");
+      } catch (error) {
+        showToast(`請手動複製：${youtubeChannelUrl}`);
+      }
+    });
   });
 
   document.getElementById("heroOpenButton").addEventListener("click", () => {
@@ -462,11 +545,14 @@ function initEvents() {
     if (event.key === "Escape" && document.getElementById("bookModal").classList.contains("is-open")) {
       closeModal();
     }
+    if (event.key === "Escape" && document.getElementById("shareSheet").classList.contains("is-open")) {
+      closeShareSheet();
+    }
   });
 }
 
 function initHero() {
-  const heroBook = allBooks[0];
+  const heroBook = getActiveRankingBooks()[0];
   if (!heroBook) return;
   document.getElementById("heroTitle").textContent = heroBook.title;
   document.getElementById("heroDescription").textContent = heroBook.premise;

@@ -3,31 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>天書小說 AI 劇場 - AI 每日原創連載</title>
+    <title>天書小說 - 每日原創連載</title>
     <meta
       name="description"
-      content="天書小說 AI 劇場每日更新 40 本原創連載，收錄爆款鉤子、章節閱讀、分類榜單與 YouTube 頻道企劃。"
+      content="天書小說每日更新 40 本原創連載，收錄爆款小說、章節閱讀、分類榜單與 YouTube 頻道企劃。"
     />
     <meta name="theme-color" content="#05060a" />
-    <link rel="icon" href="public/assets/tianshu-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="public/assets/tianshu-icon.png?v=20260606-literary-assets" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260607-layout-audit" />
   </head>
   <body>
     <div id="app" class="shell">
       <aside class="sidebar" aria-label="主要導覽">
         <a class="brand" href="#" aria-label="天書小說首頁">
           <span class="brand-mark" aria-hidden="true">
-            <img src="public/assets/tianshu-mark.svg" alt="" />
+            <img src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
           </span>
           <span class="brand-copy">
             <span class="brand-title">天書小說</span>
-            <span class="brand-subtitle">AI 每日原創連載</span>
+            <span class="brand-subtitle">每日原創連載</span>
           </span>
         </a>
 
@@ -96,11 +96,11 @@
         <header class="topbar">
           <a class="mobile-brand" href="#" aria-label="天書小說首頁">
             <span class="brand-mark" aria-hidden="true">
-              <img src="public/assets/tianshu-mark.svg" alt="" />
+              <img src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
             </span>
             <span class="brand-copy">
               <span class="brand-title">天書小說</span>
-              <span class="brand-subtitle">AI 每日原創連載</span>
+              <span class="brand-subtitle">每日原創連載</span>
             </span>
           </a>
 
@@ -124,6 +124,50 @@
           <button type="button" data-nav-target="youtube">YouTube</button>
         </nav>
 
+        <section class="channel-strip" id="youtube" aria-label="YouTube 頻道企劃">
+          <div class="channel-strip__body">
+            <div class="channel-strip__identity">
+              <img class="channel-strip__avatar" src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
+              <div>
+                <span class="channel-strip__eyebrow">YouTube Channel</span>
+                <h2>天書小說</h2>
+                <p>@tianshunovel · 原創連載、有聲演繹、爆款小說企劃</p>
+              </div>
+            </div>
+            <div class="channel-strip__meta">
+              <div class="channel-strip__points" aria-label="頻道內容">
+                <span>5 部重點連載</span>
+                <span>每日 09:00 更新</span>
+                <span>YouTube 同步企劃</span>
+              </div>
+              <div class="channel-strip__actions" aria-label="YouTube 頻道操作">
+                <a
+                  class="channel-action channel-action--subscribe"
+                  id="subscribeButton"
+                  href="https://www.youtube.com/@tianshunovel"
+                  aria-label="前往天書小說 YouTube 頻道訂閱"
+                >
+                  <span class="icon" data-icon="subscribe"></span>
+                  訂閱
+                </a>
+                <a
+                  class="channel-action"
+                  id="likeButton"
+                  href="https://www.youtube.com/@tianshunovel"
+                  aria-label="前往天書小說 YouTube 頻道按讚"
+                >
+                  <span class="icon" data-icon="thumb"></span>
+                  按讚
+                </a>
+                <button class="channel-action" id="shareButton" type="button">
+                  <span class="icon" data-icon="share"></span>
+                  分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="hero" aria-label="今日 AI 爆款">
           <div class="hero__copy">
             <span class="hero__badge">
@@ -138,12 +182,6 @@
             <span class="icon" data-icon="flame"></span>
             <span id="heroHeat">人氣 328 萬</span>
           </button>
-          <div class="hero__dots" aria-hidden="true">
-            <span class="is-active"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </section>
 
         <section class="quick-actions" aria-label="快捷入口">
@@ -157,7 +195,7 @@
             <span class="quick-actions__icon quick-actions__icon--blue">
               <span class="icon" data-icon="bot"></span>
             </span>
-            <span>AI 創作榜</span>
+            <span>重點連載</span>
           </button>
           <button type="button" data-nav-target="ranking">
             <span class="quick-actions__icon quick-actions__icon--red">
@@ -165,50 +203,17 @@
             </span>
             <span>今日 AI 爆款</span>
           </button>
-          <button type="button" data-nav-target="new">
+          <button type="button" data-nav-target="categories">
             <span class="quick-actions__icon quick-actions__icon--violet">
               <span class="icon" data-icon="spark"></span>
             </span>
-            <span>新題材速遞</span>
+            <span>分類入口</span>
           </button>
-          <button type="button" data-nav-target="finished">
-            <span class="quick-actions__icon quick-actions__icon--blue">
-              <span class="icon" data-icon="grid"></span>
-            </span>
-            <span>長篇潛力</span>
-          </button>
-          <button type="button" data-nav-target="categories">
+          <button type="button" data-nav-target="youtube">
             <span class="quick-actions__icon quick-actions__icon--teal">
-              <span class="icon" data-icon="bag"></span>
+              <span class="icon" data-icon="youtube"></span>
             </span>
-            <span>全部分類</span>
-          </button>
-          <button type="button" data-nav-target="ai">
-            <span class="quick-actions__icon quick-actions__icon--indigo">
-              <span class="icon" data-icon="wave"></span>
-            </span>
-            <span>AI 小說區</span>
-            <span class="new-badge">NEW</span>
-          </button>
-        </section>
-
-        <section class="channel-strip" id="youtube" aria-label="YouTube 頻道企劃">
-          <div class="channel-strip__identity">
-            <img class="channel-strip__avatar" src="public/assets/tianshu-mark.svg" alt="" />
-            <div>
-              <span class="channel-strip__eyebrow">YouTube Channel</span>
-              <h2>天書小說 AI 劇場</h2>
-              <p>@TianshuNovel · 每日 AI 原創連載、爆款鉤子、有聲短劇</p>
-            </div>
-          </div>
-          <div class="channel-strip__points" aria-label="頻道內容">
-            <span>40 本原創題材</span>
-            <span>每日 09:00 更新</span>
-            <span>短影音預告</span>
-          </div>
-          <button class="channel-strip__button" id="youtubePlanButton" type="button">
-            <span class="icon" data-icon="youtube"></span>
-            頻道帳號建議
+            <span>頻道分享</span>
           </button>
         </section>
 
@@ -238,7 +243,7 @@
         <section class="panel ai-panel" id="ai">
           <div class="section-heading">
             <h2>AI 原創連載</h2>
-            <span class="ai-note">40 本每日一章</span>
+            <span class="ai-note">5 部重點更新，其餘作品暫停續更</span>
             <span class="new-badge">NEW</span>
             <button class="ghost-link" type="button" data-nav-target="ai">查看更多</button>
           </div>
@@ -252,7 +257,7 @@
             </span>
             <div>
               <h3>每日更新</h3>
-              <p>40 本 AI 原創每日 09:00 更新</p>
+              <p>5 部重點連載每日 09:00 更新</p>
             </div>
           </article>
           <article>
@@ -260,8 +265,8 @@
               <span class="icon" data-icon="spark"></span>
             </span>
             <div>
-              <h3>AI 創作支援</h3>
-              <p>長篇大綱、角色弧線、章末鉤子</p>
+              <h3>長線規劃</h3>
+              <p>世界觀、角色弧線、長篇伏筆</p>
             </div>
           </article>
           <article>
@@ -269,8 +274,8 @@
               <span class="icon" data-icon="message"></span>
             </span>
             <div>
-              <h3>社群互動</h3>
-              <p>留言、討論、交友，發現同好</p>
+              <h3>頻道擴散</h3>
+              <p>YouTube 連載、分享、短內容分發</p>
             </div>
           </article>
           <article>
@@ -278,8 +283,8 @@
               <span class="icon" data-icon="devices"></span>
             </span>
             <div>
-              <h3>多裝置同步</h3>
-              <p>書架、進度、收藏，隨時同步</p>
+              <h3>閱讀動線</h3>
+              <p>首頁聚焦、榜單明確、入口更少更直觀</p>
             </div>
           </article>
         </section>
@@ -321,6 +326,42 @@
       </article>
     </div>
 
-    <script src="app.js"></script>
+    <div class="share-sheet" id="shareSheet" aria-hidden="true">
+      <div class="share-sheet__backdrop" data-close-share></div>
+      <section class="share-sheet__dialog" role="dialog" aria-modal="true" aria-labelledby="shareSheetTitle">
+        <button class="share-sheet__close" type="button" data-close-share aria-label="關閉分享面板">
+          <span class="icon" data-icon="close"></span>
+        </button>
+        <span class="share-sheet__eyebrow">分享頻道</span>
+        <h2 id="shareSheetTitle">分享天書小說 YouTube 頻道</h2>
+        <p class="share-sheet__description">直接分享到 LINE 或 Facebook，也可以複製頻道連結。</p>
+        <div class="share-sheet__link">https://www.youtube.com/@tianshunovel</div>
+        <div class="share-sheet__options">
+          <button class="share-option share-option--line" type="button" data-share-target="line">
+            <span class="share-option__icon"><span class="icon" data-icon="line"></span></span>
+            <span>
+              <strong>分享到 LINE</strong>
+              <small>把頻道連結帶進聊天室</small>
+            </span>
+          </button>
+          <button class="share-option share-option--facebook" type="button" data-share-target="facebook">
+            <span class="share-option__icon"><span class="icon" data-icon="facebook"></span></span>
+            <span>
+              <strong>分享到 Facebook</strong>
+              <small>帶入頻道網址與簡短介紹</small>
+            </span>
+          </button>
+          <button class="share-option share-option--copy" type="button" data-share-target="copy">
+            <span class="share-option__icon"><span class="icon" data-icon="link"></span></span>
+            <span>
+              <strong>複製連結</strong>
+              <small>手動貼到任何社群或訊息</small>
+            </span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js?v=20260607-layout-audit"></script>
   </body>
 </html>

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-07T01:14:56.182Z",
+  "generatedAt": "2026-06-07T03:19:11.086Z",
   "policy": "AI-only original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
       "id": "ai-01",
       "title": "星骸王座",
       "category": "玄幻",
-      "author": "天書 AI 編劇室",
+      "author": "顧夜燼",
       "tags": [
         "星骸",
         "王座",
@@ -17,7 +17,7 @@
       "role": "觀星流放者",
       "setting": "霜河邊境",
       "status": "每日 09:00 更新",
-      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
+      "updateNote": "前三章已重寫為白話長線玄幻骨架，強化邊境求生、星核死法預視與沈姓舊案伏筆，後續只針對五部類別領跑作持續更新。",
       "score": "9.8",
       "heat": "328 萬",
       "chapters": [
@@ -25,22 +25,22 @@
           "number": 1,
           "title": "星核在雨夜說謊",
           "path": "src/resource/星骸王座/第01章 星核在雨夜說謊.txt",
-          "charCount": 4115,
-          "generatedAt": "2026-06-05T17:34:54.572Z"
+          "charCount": 3539,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "暗縫裡的舊雪",
           "path": "src/resource/星骸王座/第02章 暗縫裡的舊雪.txt",
-          "charCount": 4257,
-          "generatedAt": "2026-06-06T02:24:23Z"
+          "charCount": 3500,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 3,
           "title": "墓牆後的舊名",
           "path": "src/resource/星骸王座/第03章 墓牆後的舊名.txt",
-          "charCount": 4333,
-          "generatedAt": "2026-06-07T01:14:56.182Z"
+          "charCount": 3181,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         }
       ],
       "tone": "深沉"
@@ -350,7 +350,7 @@
       "id": "ai-09",
       "title": "灰塔觀測者",
       "category": "奇幻",
-      "author": "天書 AI 編劇室",
+      "author": "霧原",
       "tags": [
         "灰塔",
         "觀測",
@@ -361,7 +361,7 @@
       "role": "灰塔書記員",
       "setting": "北境灰塔",
       "status": "每日 09:00 更新",
-      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
+      "updateNote": "前三章已重寫為白話懸疑奇幻骨架，強化灰塔規則感、晨光黑斑與負一層觀測線，後續只針對五部類別領跑作持續更新。",
       "score": "9.2",
       "heat": "288 萬",
       "chapters": [
@@ -369,22 +369,22 @@
           "number": 1,
           "title": "黑點吞掉晨光",
           "path": "src/resource/灰塔觀測者/第01章 黑點吞掉晨光.txt",
-          "charCount": 4161,
-          "generatedAt": "2026-06-05T17:34:54.572Z"
+          "charCount": 2627,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "黑痕所指之層",
           "path": "src/resource/灰塔觀測者/第02章 黑痕所指之層.txt",
-          "charCount": 4457,
-          "generatedAt": "2026-06-06T02:24:23Z"
+          "charCount": 2663,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 3,
           "title": "負一層來敲窗",
           "path": "src/resource/灰塔觀測者/第03章 負一層來敲窗.txt",
-          "charCount": 4371,
-          "generatedAt": "2026-06-07T01:14:56.182Z"
+          "charCount": 2595,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         }
       ],
       "tone": "深沉"
@@ -694,7 +694,7 @@
       "id": "ai-17",
       "title": "雪刃照孤城",
       "category": "武俠",
-      "author": "天書 AI 編劇室",
+      "author": "謝聽寒",
       "tags": [
         "刀客",
         "孤城",
@@ -705,7 +705,7 @@
       "role": "失明琴師",
       "setting": "北雪孤城",
       "status": "每日 09:00 更新",
-      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
+      "updateNote": "前三章已重寫為白話武俠骨架，強化雪夜刀鳴、暗道舊兵庫與第三學刀人伏筆，後續只針對五部類別領跑作持續更新。",
       "score": "9.2",
       "heat": "248 萬",
       "chapters": [
@@ -713,22 +713,22 @@
           "number": 1,
           "title": "雪夜聽見刀聲",
           "path": "src/resource/雪刃照孤城/第01章 雪夜聽見刀聲.txt",
-          "charCount": 4160,
-          "generatedAt": "2026-06-05T17:34:54.572Z"
+          "charCount": 2775,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "暗道藏鋒",
           "path": "src/resource/雪刃照孤城/第02章 暗道藏鋒.txt",
-          "charCount": 4410,
-          "generatedAt": "2026-06-06T02:24:23Z"
+          "charCount": 2624,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 3,
           "title": "第三個學刀的人",
           "path": "src/resource/雪刃照孤城/第03章 第三個學刀的人.txt",
-          "charCount": 4433,
-          "generatedAt": "2026-06-07T01:14:56.182Z"
+          "charCount": 2801,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         }
       ],
       "tone": "深沉"
@@ -1038,7 +1038,7 @@
       "id": "ai-25",
       "title": "凌晨三點的演算法",
       "category": "都市",
-      "author": "天書 AI 編劇室",
+      "author": "陳停雲",
       "tags": [
         "AI",
         "職場",
@@ -1049,7 +1049,7 @@
       "role": "產品經理",
       "setting": "海城科技園",
       "status": "每日 09:00 更新",
-      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
+      "updateNote": "前三章已重寫為白話都市驚悚骨架，強化死訊推送、確認層與父輩舊系統鉤子，後續只針對五部類別領跑作持續更新。",
       "score": "9.3",
       "heat": "208 萬",
       "chapters": [
@@ -1057,22 +1057,22 @@
           "number": 1,
           "title": "三點推送我的死訊",
           "path": "src/resource/凌晨三點的演算法/第01章 三點推送我的死訊.txt",
-          "charCount": 4110,
-          "generatedAt": "2026-06-05T17:34:54.572Z"
+          "charCount": 2423,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "權重留下指紋",
           "path": "src/resource/凌晨三點的演算法/第02章 權重留下指紋.txt",
-          "charCount": 4921,
-          "generatedAt": "2026-06-06T02:24:23Z"
+          "charCount": 2903,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 3,
           "title": "死訊的確認者",
           "path": "src/resource/凌晨三點的演算法/第03章 死訊的確認者.txt",
-          "charCount": 4393,
-          "generatedAt": "2026-06-07T01:14:56.182Z"
+          "charCount": 2678,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         }
       ],
       "tone": "深沉"
@@ -1382,7 +1382,7 @@
       "id": "ai-33",
       "title": "大明墨工",
       "category": "歷史",
-      "author": "天書 AI 編劇室",
+      "author": "蕭墨臣",
       "tags": [
         "明代",
         "工匠",
@@ -1393,7 +1393,7 @@
       "role": "輿圖墨工",
       "setting": "大明工部",
       "status": "每日 09:00 更新",
-      "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
+      "updateNote": "前三章已重寫為白話歷史工匠骨架，強化返墨河線、三河並記與井下真圖主線，後續只針對五部類別領跑作持續更新。",
       "score": "9.4",
       "heat": "168 萬",
       "chapters": [
@@ -1401,22 +1401,22 @@
           "number": 1,
           "title": "墨線畫出不存在的河",
           "path": "src/resource/大明墨工/第01章 墨線畫出不存在的河.txt",
-          "charCount": 4103,
-          "generatedAt": "2026-06-05T17:34:54.572Z"
+          "charCount": 2724,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 2,
           "title": "真地形上的墨痕",
           "path": "src/resource/大明墨工/第02章 真地形上的墨痕.txt",
-          "charCount": 4993,
-          "generatedAt": "2026-06-06T02:24:23Z"
+          "charCount": 2322,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         },
         {
           "number": 3,
           "title": "第三條河",
           "path": "src/resource/大明墨工/第03章 第三條河.txt",
-          "charCount": 4377,
-          "generatedAt": "2026-06-07T01:14:56.182Z"
+          "charCount": 2522,
+          "generatedAt": "2026-06-07T03:19:11.086Z"
         }
       ],
       "tone": "深沉"

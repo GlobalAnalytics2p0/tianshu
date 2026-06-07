@@ -11,16 +11,20 @@
 - This project should keep using code-native UI text and controls rather than baking interface text into screenshots.
 - Long book titles should use a shortened decorative label on generated cover art. Full titles must remain in card body text, Modal headings, and downloadable metadata.
 - Current product direction is AI-only. Do not reintroduce existing commercial novel titles such as prior ranking examples unless the user explicitly reverses this decision.
-- Brand icon direction: use `public/assets/tianshu-mark.svg` as the canonical site/favicon/channel-avatar mark. The mark should avoid symmetric open-page shapes that read awkwardly; current direction links T and S as a "天書" monogram, with T as the book spine and S as a flowing page/fate line. Use `public/assets/youtube-channel-avatar.png` for direct YouTube upload.
-- YouTube channel direction: channel name is `天書小說`, handle is `@tianshunovel`, and `public/assets/youtube-channel-banner.svg` plus `public/assets/youtube-channel-banner.png` are the current banner direction/upload asset. Actual account creation and final URL require the user to log into Google/YouTube.
-- Current YouTube banner uses `public/assets/youtube-channel-background.png` as an immersive no-text novel-theatre background, with safe-area overlay and three YouTube-style CTA chips: 訂閱, 按讚, 分享. Background book/poster imagery should stay textless; do not reintroduce individual novel names in the banner. Banner tagline should use `爆款小說`, not `爆款鉤子`.
+- Brand icon direction: use `public/assets/tianshu-icon.png` as the canonical site/favicon/channel-avatar mark and direct YouTube upload asset. The current visual direction is matte, tactile, literary, and bookplate-like, not shiny or AI-glossy.
+- YouTube channel direction: channel name is `天書小說`, handle is `@tianshunovel`, and `public/assets/tianshu-banner.png` is the current banner upload asset. Actual account creation and final URL require the user to log into Google/YouTube.
+- YouTube icon/banner assets should be PNG-only and should not keep SVG direction files or split background files. Banner background should feel like a quiet literary reading room/bookstore with paper texture, no glitter, no neon, no glossy fantasy-AI shine, and no individual novel names. Banner tagline should use `爆款小說`.
 - The AI library must maintain 5 categories with 8 original AI novels per category, for 40 total AI titles.
+- The full library can remain visible on the static site, but active maintenance is currently narrowed to 5 category leaders only unless the user explicitly changes scope again: `星骸王座` (玄幻), `灰塔觀測者` (奇幻), `雪刃照孤城` (武俠), `凌晨三點的演算法` (都市), and `大明墨工` (歷史).
+- The homepage `AI 小說榜` should rank only those 5 active category leaders, one per category, instead of mixing all 40 titles into the top five.
 - Ranking, hero, category, Modal, and download surfaces should all refer to AI original serials rather than existing novels.
 - Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`.
 - Before generating any new chapter, read that novel's existing `.txt` chapters and `src/resource/manifest.json` so continuity, character state, clues, and unresolved hooks are preserved.
 - Every AI novel must be planned as a long-running serial that can credibly sustain at least 1,500 chapters without collapsing its core premise, power ceiling, relationship engine, or central mystery too early.
 - Each normal generated chapter must be 4,000-5,000 Traditional Chinese characters. Do not silently shorten chapters unless the user explicitly accepts a smaller batch.
 - Daily automation must save generated chapters into the matching `src/resource/<novel title>/` folder and update `src/resource/manifest.json` so the static GitHub Pages site can load the newest content.
+- Future routine updates and daily chapter generation should target only the novel text for the 5 active category leaders above unless the user explicitly broadens scope. The other 35 titles stay frozen in place for now.
+- Video planning, audiobook planning, and related asset work should stay out of the default daily automation path unless the user explicitly asks for them.
 - After daily automation generation and validation pass, commit the AI content update and push it to GitHub using the configured upstream. Stage only the intended AI content/rule changes for that run, typically `src/resource/manifest.json`, new/changed `src/resource/<novel title>/*.txt`, and `src/resource/writing-rules.md` only when rules actually change. Do not stage unrelated UI/assets/docs changes.
 - Novel prose must be immersive creator-facing fiction for readers. Do not write scaffolding or explainer/meta language such as "這一章", "讀者會", "主角", "章末", "第一章的安排", "第二章會", outline notes, automation notes, or commentary about how the text is structured.
 - The interface can show chapter labels for navigation, but the `.txt` novel body should not describe chapter planning or future automation behavior.
@@ -37,6 +41,14 @@
 - The download flow should support original AI text, public-domain text, licensed text, or user-provided TXT files.
 - Commercial novel entries may keep metadata, summaries, chapter placeholders, and an import-ready `chapters` structure until lawful content is available.
 
+## Video Production Rules
+
+- Build YouTube audiobook-style videos with local scripted tooling such as FFmpeg rather than expensive generative-video services by default.
+- Keep video production assets organized per novel and chapter, for example `video-resource/<novel title>/<chapter title>/`.
+- Final video output must be at least 720p, meaning minimum 1280x720 resolution. Prefer 1080p when the background source and processing time allow it.
+- Audio and video artifacts must stay local and must not be committed to GitHub. `.gitignore` should exclude generated audio folders, rendered video/output folders, cache/temp folders, and common audio/video file extensions.
+- Lightweight metadata, production notes, subtitle files, and automation scripts may be committed when useful, as long as they do not embed large binary media.
+
 ## Maintenance Rule
 
 - When future requests add requirements, constraints, known bugs, or design decisions, update this `agent.md` in the same change so the next pass does not repeat resolved mistakes.
@@ -46,11 +58,12 @@
 - Static hosting target: GitHub Pages.
 - Primary surface: homepage only.
 - AI novel automation exists in Codex with id `ai` and should generate original Traditional Chinese content only.
-- Automation cadence target: every day at 09:00 Asia/Taipei, update every AI title with one new 4,000-5,000 Traditional Chinese character chapter where feasible.
+- Automation cadence target: every day at 09:00 Asia/Taipei, update only the 5 active category leaders with one new 4,000-5,000 Traditional Chinese character chapter each where feasible.
 - Automation publish requirement: after successful validation, create a Git commit such as `chore: daily AI novel update YYYY-MM-DD` and push to the configured GitHub upstream. If git status is dirty at start, record the baseline and avoid committing unrelated pre-existing changes. If commit or push fails because remote/auth/upstream is unavailable, report the failure clearly.
 - 2026-06-06 reset: prior inline/generated chapter bodies were cleared from the app. The canonical content was regenerated as 40 standalone opening `.txt` files under `src/resource/<novel>/`, with one chapter per novel and no second chapters retained.
 - 2026-06-06 writing-quality revision request: all first chapters should be reviewed and revised for deeper tension, slower foreshadowing, clearer protagonist setup, smaller active cast, varied genre tone, more human prose, natural transitions, and 4,000-5,000 character length.
 - 2026-06-06 review correction: reject chapter batches that paste the manifest `premise` into prose, repeat paragraph skeletons, use numbered/obvious filler beats, or contain repeated/near-repeated paragraph prefixes inside a chapter.
 - 2026-06-06 long-serial rule: every title must preserve runway for 1,500+ chapters, using layered long-term arcs and slower payoff scheduling so core mysteries, emotional debts, and setting secrets can unfold over a very long release horizon.
+- 2026-06-07 scope revision: the previous "5 hottest books" note is superseded by a stricter per-category rule. Ongoing updates should only touch one leader per category: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`, unless the user explicitly selects a different pool.
 - The homepage must load AI book/chapter content from `src/resource/manifest.json` and the `.txt` chapter files, not from inline chapter strings in `app.js`.
 - Full commercial texts are intentionally not present in the repository.
