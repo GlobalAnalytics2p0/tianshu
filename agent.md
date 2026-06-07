@@ -66,6 +66,7 @@
 - For standalone audiobook exports, keep generated audio files local and ignored by Git. Store reusable voice direction, pacing, and production notes as small Markdown files under each novel's `有聲書/` folder.
 - macOS `say` with a Traditional Chinese voice is only acceptable for local pipeline verification, timing checks, and rough drafts. It is not a publishable audiobook voice unless the user explicitly approves that lower-quality output.
 - Publishable audiobook drafts should use a higher-quality Taiwan Mandarin TTS or narrator workflow. When using OpenAI speech generation, prefer `scripts/generate-openai-audiobook.mjs` so long chapters are chunked safely, canonical `.txt` chapters stay untouched, and final audio remains ignored by Git.
+- If OpenAI Speech API fails because of missing quota or billing, do not keep retrying the same key. Use a higher-quality fallback such as Edge Neural TTS Taiwan voices for a local candidate, and record the quota blocker in the novel's audiobook production notes.
 
 ## Maintenance Rule
 
