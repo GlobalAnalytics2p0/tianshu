@@ -3,10 +3,12 @@
 ## Core Goal
 
 - Write original Traditional Chinese serial fiction that feels intentional, human, and worth following.
+- Think in long-term-serialization mode. Every chapter should serve a durable long arc, not just chase short-term excitement.
 - The target reader is here for story, tension, emotion, payoff, and curiosity. Do not explain how the chapter is structured.
 - Each chapter should create enough unresolved curiosity that the reader wants the next update, but it should still feel satisfying on its own.
 - The core reader wants relaxed, direct, satisfying serial fiction. Make the prose easy to enter, the stakes concrete, the protagonist's pressure clear, and the chapter rewarding even while the long mystery remains unresolved.
 - Aim for雅俗共賞: tension and depth should coexist with readable scenes, clear emotional pressure, lived daily details, small wins, and momentum.
+- Audience experience comes first. Use reader and user feedback to adjust pacing, emphasis, mystery density, emotional spacing, and spotlight allocation when that feedback improves engagement or clarity.
 
 ## Length And Storage
 
@@ -18,8 +20,10 @@
 ## Continuity
 
 - Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, and all existing `.txt` chapters for that novel.
+- Unless the user explicitly requests otherwise, all new content extends existing canon. Do not go back and revise earlier chapter events, outcomes, or facts just to make the next chapter easier.
 - Preserve character state, setting rules, unresolved hooks, emotional consequences, clues, debts, injuries, secrets, and relationship changes.
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
+- If understanding is incomplete, reread the earlier chapters and continuity files until the logic is clear enough to continue without retcon pressure.
 - Refresh the correct author persona before writing. The five active books must not share the same sentence rhythm, emotional temperature, clue style, or chapter engine.
 - Every title must retain enough structural runway to serialize beyond 1,500 chapters. Do not spend the premise, final villain tier, ultimate setting answer, or irreversible relationship endgame too early.
 - The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
@@ -29,10 +33,12 @@
 ## Plot And Tension
 
 - Build around one clear event or problem per chapter. Let it breathe before adding another major turn.
+- Default to one primary viewpoint center at the start of the chapter. Let the reader settle into one person, one pressure, and one immediate situation before expanding the scope.
 - Use the long-serial rhythm of "small event fast, major truth slow": the day's concrete incident should move, hurt, and resolve partially; the central mystery should advance only by one controlled layer.
 - Give the reader a local reward whenever possible: a clever escape, a recovered clue, a face-saving reversal, an enemy misread, a saved minor character, a practical gain, or a sharper emotional commitment.
 - Keep important foreshadowing alive for longer. Do not reveal every hook immediately after it appears.
 - Use slow-burn escalation: ordinary pressure, wrong detail, personal stake, risky choice, partial reversal, stronger unanswered question.
+- Do not front-load too many major protagonists, master plans, top-level factions, or ultimate answers. Curiosity should widen by control, not by immediate overexposure.
 - Avoid mechanical escalation where every paragraph adds a new object, new institution, or new mystery.
 - A good final hook should sharpen a question, not dump a full explanation.
 - Plan in layers: chapter payoff, short arc payoff, mid-arc reversal, and very long arc payoff. Seed threads that can stay dormant for dozens or hundreds of chapters before returning in a stronger form.
@@ -51,9 +57,12 @@
 
 - Vary tone by book and genre. Some serials can be deep, restrained, and oppressive; others can be爽文, direct, clever, and momentum-driven.
 - Prose should feel human: less template rhythm, fewer repeated sentence structures, clearer cause and effect, more intuitive transitions.
-- Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage.
+- Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage. Strong scenes are allowed to take a larger share of the chapter.
 - Prefer specific physical detail over abstract labels. Use concrete rooms, weather, sounds, small habits, money, work, wounds, tools, documents, and social pressure.
 - Prefer white-language clarity over literary stiffness. Depth should come from situation, choice, sensory detail, and consequence, not from archaic phrasing or abstract moralizing.
+- After a climax or heavy reveal, allow a brief emotional reset before building toward the next pressure wave. Rest is part of pacing, not a failure of pacing.
+- Do not keep readers in nonstop high-arousal mode. Peak, release, and re-accumulation should form a readable curve.
+- The reader should be able to inhabit the protagonist's body, stress, hesitation, and sensory field. Favor immersion over summary.
 - Make transitions natural. A new clue should arise from the prior action, not appear just because the chapter needs another twist.
 - Do not batch-write books by reusing the same paragraph skeleton and only replacing names, objects, factions, or settings. Each novel needs its own scene logic, clue sequence, emotional pressure, and rhythm.
 - Long serials need renewable pressure. Build recurring institutions, obligations, resentments, professions, geography, and power costs that can keep producing conflict without repeating the same scene skeleton.
@@ -78,6 +87,9 @@
   - The protagonist is clear.
   - The author persona for that title is visibly distinct.
   - The chapter gives at least one local reader reward without exhausting the long arc.
+  - The chapter respects existing canon instead of rewriting prior events.
+  - The emotional curve is readable: build, peak, brief reset, then renewed anticipation.
+  - The chapter is immersive enough that the reader can stay inside the protagonist's lived experience.
   - The chapter follows one main event with natural transitions.
   - The final hook is intriguing but not over-explained.
   - The chapter does not exhaust the novel's long-term runway and leaves future arc space consistent with a 1,500+ chapter serial.
