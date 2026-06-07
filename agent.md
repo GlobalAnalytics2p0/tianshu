@@ -64,7 +64,8 @@
 - Audio and video artifacts must stay local and must not be committed to GitHub. `.gitignore` should exclude generated audio folders, rendered video/output folders, cache/temp folders, and common audio/video file extensions.
 - Lightweight metadata, production notes, subtitle files, and automation scripts may be committed when useful, as long as they do not embed large binary media.
 - For standalone audiobook exports, keep generated audio files local and ignored by Git. Store reusable voice direction, pacing, and production notes as small Markdown files under each novel's `有聲書/` folder.
-- If no cloud TTS API key is available, macOS `say` with a Traditional Chinese voice is an acceptable first-pass local pipeline, but note the limitation and be prepared to replace it with a higher-quality Taiwan Mandarin TTS later.
+- macOS `say` with a Traditional Chinese voice is only acceptable for local pipeline verification, timing checks, and rough drafts. It is not a publishable audiobook voice unless the user explicitly approves that lower-quality output.
+- Publishable audiobook drafts should use a higher-quality Taiwan Mandarin TTS or narrator workflow. When using OpenAI speech generation, prefer `scripts/generate-openai-audiobook.mjs` so long chapters are chunked safely, canonical `.txt` chapters stay untouched, and final audio remains ignored by Git.
 
 ## Maintenance Rule
 
