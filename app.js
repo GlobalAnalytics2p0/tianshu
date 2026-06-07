@@ -81,7 +81,7 @@ function buildShareUrls() {
 }
 
 function buildSummary(book) {
-  return `AI 原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
+  return `天書原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
 }
 
 function resourceUrl(path) {
@@ -142,7 +142,7 @@ async function loadLibrary() {
       cover: coverPalettes[index % coverPalettes.length],
       summary: buildSummary(book),
       chapters,
-      contentStatus: "AI 原創連載"
+      contentStatus: "天書原創連載"
     };
   }));
 
@@ -187,11 +187,19 @@ function coverTitle(title) {
   return compactTitle.length > 5 ? compactTitle.slice(0, 5) : compactTitle;
 }
 
+function renderCoverContent(book) {
+  if (book.coverImage) {
+    return `<img src="${escapeHtml(resourceUrl(book.coverImage))}" alt="${escapeHtml(book.title)} 主角圖片" loading="lazy" />`;
+  }
+
+  return `<span class="book-card__title-art">${escapeHtml(coverTitle(book.title))}</span>`;
+}
+
 function renderBookCover(book, rank = "") {
   return `
-    <span class="book-card__cover" style="${coverStyle(book)}">
+    <span class="book-card__cover ${book.coverImage ? "book-card__cover--image" : ""}" style="${coverStyle(book)}">
       ${rank ? `<span class="book-card__rank">${rank}</span>` : ""}
-      <span class="book-card__title-art">${escapeHtml(coverTitle(book.title))}</span>
+      ${renderCoverContent(book)}
     </span>
   `;
 }
@@ -252,7 +260,7 @@ function renderCategories() {
       <span class="category-chip__icon"><span class="icon" data-icon="${category.icon}"></span></span>
       <span>
         <strong>${escapeHtml(category.name)}</strong>
-        <span>${formatCount(category.count)} 本 AI 原創</span>
+        <span>${formatCount(category.count)} 本天書原創</span>
       </span>
     </button>
   `).join("");
@@ -265,19 +273,19 @@ function renderCategories() {
       renderRanking();
       renderAiNovels(category);
       scrollToTarget("ranking");
-      showToast(`已篩選「${category}」AI 原創，共 8 本。`);
+      showToast(`已篩選「${category}」天書原創，共 8 本。`);
     });
   });
 }
 
 function renderAiNovels(category = "") {
   const list = document.getElementById("aiNovelList");
-  const books = (category ? allBooks.filter((book) => book.category === category) : allBooks).slice(0, 8);
+  const books = (category ? allBooks.filter((book) => book.category === category) : getActiveRankingBooks()).slice(0, 8);
   list.innerHTML = books.map((book) => `
     <button class="ai-card" type="button" data-book-id="${book.id}">
       ${renderBookCover(book)}
       <span>
-        <span class="ai-card__tag">AI 原創</span>
+        <span class="ai-card__tag">天書原創</span>
         <h3>${escapeHtml(book.title)}</h3>
         <p>${escapeHtml(book.summary)}</p>
         <span class="ai-card__actions">
@@ -298,7 +306,7 @@ function renderAiNovels(category = "") {
 function openBook(bookId) {
   const book = allBooks.find((item) => item.id === bookId) || allBooks[0];
   if (!book) {
-    showToast("AI 小說資料尚未載入完成。");
+    showToast("天書小說資料尚未載入完成。");
     return;
   }
 
@@ -321,8 +329,8 @@ function renderModal() {
   content.innerHTML = `
     <div class="modal-layout">
       <section class="modal-hero">
-        <span class="modal-cover" style="${coverStyle(book)}">
-          <span class="book-card__title-art">${escapeHtml(coverTitle(book.title))}</span>
+        <span class="modal-cover ${book.coverImage ? "modal-cover--image" : ""}" style="${coverStyle(book)}">
+          ${renderCoverContent(book)}
         </span>
         <div class="modal-meta">
           <h2 id="modalTitle">${escapeHtml(book.title)}</h2>
@@ -337,6 +345,11 @@ function renderModal() {
             ${book.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
           </div>
           <p class="modal-summary">${escapeHtml(book.summary)}</p>
+          <section class="modal-author" aria-label="作者">
+            <span class="modal-author__label">作者</span>
+            <strong>${escapeHtml(book.author)}</strong>
+            <p>${escapeHtml(book.authorIntro || "天書原創作者，專注長篇連載的世界觀、人物弧線與章節節奏，持續把每部作品推向更完整的閱讀體驗。")}</p>
+          </section>
           <div class="modal-actions">
             <button class="primary-action" type="button" id="readFirstChapter">
               <span class="icon" data-icon="reader"></span>
@@ -401,17 +414,17 @@ function downloadBook(book) {
   const chapterText = book.chapters.map((chapter) => {
     return `\n\n${chapter.displayTitle}\n${"=".repeat(24)}\n${chapter.content}`;
   }).join("");
-  const text = `天書小說 AI 原創文本\n書名：${book.title}\n作者：${book.author}\n分類：${book.category}\n更新：${book.status}\n內容狀態：${book.contentStatus}\n\n${book.summary}${chapterText}\n`;
+  const text = `天書小說原創文本\n書名：${book.title}\n作者：${book.author}\n作者介紹：${book.authorIntro || ""}\n分類：${book.category}\n更新：${book.status}\n內容狀態：${book.contentStatus}\n\n${book.summary}${chapterText}\n`;
   const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = `${book.title}-AI原創章節.txt`;
+  anchor.download = `${book.title}-天書原創章節.txt`;
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
   URL.revokeObjectURL(url);
-  showToast(`已下載《${book.title}》AI 原創章節。`);
+  showToast(`已下載《${book.title}》天書原創章節。`);
 }
 
 function scrollToTarget(target) {
@@ -509,13 +522,13 @@ function initEvents() {
 
   document.getElementById("heroOpenButton").addEventListener("click", () => {
     if (allBooks[0]) openBook(allBooks[0].id);
-    else showToast("AI 小說資料尚未載入完成。");
+    else showToast("天書小說資料尚未載入完成。");
   });
 
   document.querySelector(".hero").addEventListener("click", (event) => {
     if (event.target.closest("#heroOpenButton")) return;
     if (allBooks[0]) openBook(allBooks[0].id);
-    else showToast("AI 小說資料尚未載入完成。");
+    else showToast("天書小說資料尚未載入完成。");
   });
 
   document.querySelectorAll("[data-rank-tab]").forEach((button) => {
@@ -565,7 +578,7 @@ function showLoadError(error) {
   const detail = window.location.protocol === "file:"
     ? "目前是直接用 file:// 開啟，瀏覽器會擋掉本機 JSON/TXT fetch。"
     : `讀取失敗：${error.resourcePath || resourceManifestPath}${error.status ? `（HTTP ${error.status}）` : ""}`;
-  const message = `無法讀取 AI 小說資料。${detail}請從專案根目錄啟動本機伺服器，並開啟 http://127.0.0.1:4173/。`;
+  const message = `無法讀取天書小說資料。${detail}請從專案根目錄啟動本機伺服器，並開啟 http://127.0.0.1:4173/。`;
   document.getElementById("heroDescription").textContent = message;
   document.getElementById("rankingList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
   document.getElementById("aiNovelList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;

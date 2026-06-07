@@ -1,4 +1,4 @@
-# AI Novel Writing Rules
+# 天書 Novel Writing Rules
 
 ## Core Goal
 

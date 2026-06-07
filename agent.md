@@ -16,8 +16,9 @@
 - YouTube icon/banner assets should be PNG-only and should not keep SVG direction files or split background files. Banner background should feel like a quiet literary reading room/bookstore with paper texture, no glitter, no neon, no glossy fantasy-AI shine, and no individual novel names. Banner tagline should use `爆款小說`.
 - The AI library must maintain 5 categories with 8 original AI novels per category, for 40 total AI titles.
 - The full library can remain visible on the static site, but active maintenance is currently narrowed to 5 category leaders only unless the user explicitly changes scope again: `星骸王座` (玄幻), `灰塔觀測者` (奇幻), `雪刃照孤城` (武俠), `凌晨三點的演算法` (都市), and `大明墨工` (歷史).
-- The homepage `AI 小說榜` should rank only those 5 active category leaders, one per category, instead of mixing all 40 titles into the top five.
-- Ranking, hero, category, Modal, and download surfaces should all refer to AI original serials rather than existing novels.
+- Public-facing website copy should use the `天書` brand vocabulary instead of `AI`, for example `天書小說榜`, `天書原創連載`, and `天書熱門分類`.
+- The homepage `天書小說榜` should rank only those 5 active category leaders, one per category, instead of mixing all 40 titles into the top five.
+- Ranking, hero, category, Modal, and download surfaces should all refer to 天書 original serials rather than existing novels.
 - Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`.
 - Before generating any new chapter, read that novel's existing `.txt` chapters and `src/resource/manifest.json` so continuity, character state, clues, and unresolved hooks are preserved.
 - Every AI novel must be planned as a long-running serial that can credibly sustain at least 1,500 chapters without collapsing its core premise, power ceiling, relationship engine, or central mystery too early.

@@ -39,9 +39,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 45% -10%, rgba(73, 98, 197, 0.2), transparent 34rem),
-    radial-gradient(circle at 78% 14%, rgba(214, 80, 72, 0.1), transparent 28rem),
+    linear-gradient(180deg, rgba(2, 3, 6, 0.48), rgba(2, 3, 6, 0.78) 42%, rgba(2, 3, 6, 0.9) 100%),
+    url("public/assets/tianshu-banner.png?v=20260606-literary-assets"),
     linear-gradient(135deg, #030408 0%, #080a10 48%, #020305 100%);
+  background-attachment: fixed, fixed, fixed;
+  background-position: center top, center top, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, cover, cover;
   color: var(--text);
   font-family: var(--font);
 }
@@ -70,7 +74,8 @@ button {
   flex-direction: column;
   border: 1px solid var(--stroke);
   border-radius: var(--radius-md);
-  background: linear-gradient(180deg, rgba(8, 9, 14, 0.96), rgba(7, 8, 13, 0.82));
+  background: linear-gradient(180deg, rgba(8, 9, 14, 0.76), rgba(7, 8, 13, 0.6));
+  backdrop-filter: blur(18px);
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.02);
   padding: 20px 14px 16px;
 }
@@ -460,8 +465,9 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
   background:
-    linear-gradient(180deg, rgba(11, 12, 18, 0.94), rgba(8, 10, 15, 0.9)),
-    linear-gradient(90deg, rgba(6, 8, 12, 0.72), rgba(6, 8, 12, 0.56));
+    linear-gradient(180deg, rgba(11, 12, 18, 0.72), rgba(8, 10, 15, 0.62)),
+    linear-gradient(90deg, rgba(6, 8, 12, 0.52), rgba(6, 8, 12, 0.38));
+  backdrop-filter: blur(16px);
   box-shadow: 0 22px 58px rgba(0, 0, 0, 0.3);
 }
 
@@ -469,13 +475,8 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(7, 8, 12, 0.8) 0%, rgba(7, 8, 12, 0.58) 36%, rgba(7, 8, 12, 0.62) 100%),
-    url("public/assets/tianshu-banner.png?v=20260606-literary-assets");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.38;
-  filter: saturate(0.88);
+  background: linear-gradient(90deg, rgba(7, 8, 12, 0.52) 0%, rgba(7, 8, 12, 0.34) 48%, rgba(7, 8, 12, 0.44) 100%);
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -777,7 +778,8 @@ button {
 .panel {
   border: 1px solid var(--stroke);
   border-radius: var(--radius-sm);
-  background: linear-gradient(180deg, rgba(20, 23, 33, 0.9), rgba(12, 14, 21, 0.82));
+  background: linear-gradient(180deg, rgba(20, 23, 33, 0.66), rgba(12, 14, 21, 0.54));
+  backdrop-filter: blur(14px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
 }
 
@@ -915,8 +917,27 @@ button {
   aspect-ratio: 0.72;
 }
 
+.book-card__cover--image,
+.modal-cover--image {
+  background: rgba(7, 8, 12, 0.48);
+}
+
+.book-card__cover--image::before,
+.modal-cover--image::before {
+  display: none;
+}
+
+.book-card__cover img,
+.modal-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .book-card__rank {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 21px;
@@ -1021,8 +1042,9 @@ button {
   border: 1px solid var(--stroke);
   border-radius: var(--radius-sm);
   background:
-    linear-gradient(90deg, rgba(var(--chip-rgb), 0.2), rgba(255, 255, 255, 0.05)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+    linear-gradient(90deg, rgba(var(--chip-rgb), 0.14), rgba(255, 255, 255, 0.03)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+  backdrop-filter: blur(10px);
   color: inherit;
   cursor: pointer;
   padding: 7px 10px;
@@ -1078,7 +1100,8 @@ button {
   gap: 10px;
   border: 1px solid var(--stroke);
   border-radius: var(--radius-sm);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+  backdrop-filter: blur(10px);
   color: inherit;
   cursor: pointer;
   padding: 8px;
@@ -1141,7 +1164,8 @@ button {
   align-items: center;
   border: 1px solid var(--stroke);
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.022);
+  backdrop-filter: blur(10px);
   padding: 13px 14px;
 }
 
@@ -1295,6 +1319,37 @@ button {
   color: #d9dce5;
   font-size: 14px;
   line-height: 1.75;
+}
+
+.modal-author {
+  margin: 0 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 13px;
+}
+
+.modal-author__label {
+  display: block;
+  margin-bottom: 4px;
+  color: #9aa0ad;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.modal-author strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff1c7;
+  font-size: 15px;
+}
+
+.modal-author p {
+  margin: 0;
+  color: #c4c9d4;
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .modal-actions {
@@ -1513,8 +1568,13 @@ button {
 @media (max-width: 780px) {
   body {
     background:
-      radial-gradient(circle at 50% 0%, rgba(72, 84, 143, 0.22), transparent 20rem),
+      linear-gradient(180deg, rgba(2, 3, 6, 0.46), rgba(2, 3, 6, 0.82) 48%, rgba(2, 3, 6, 0.94) 100%),
+      url("public/assets/tianshu-banner.png?v=20260606-literary-assets"),
       linear-gradient(180deg, #06070d 0%, #101219 52%, #08090d 100%);
+    background-attachment: scroll, scroll, scroll;
+    background-position: center top, center top, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto 42vh, auto 42vh, cover;
   }
 
   .shell {
