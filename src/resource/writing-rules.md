@@ -27,6 +27,7 @@
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
 - If understanding is incomplete, reread the earlier chapters and continuity files until the logic is clear enough to continue without retcon pressure.
 - Refresh the correct author persona before writing. The five active books must not share the same sentence rhythm, emotional temperature, clue style, or chapter engine.
+- If writing produces a new durable insight, record it in the correct Markdown file before ending the run. Do not rely on vague future recall.
 - Every title must retain enough structural runway to serialize beyond 1,500 chapters. Do not spend the premise, final villain tier, ultimate setting answer, or irreversible relationship endgame too early.
 - The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
 - Unless the user explicitly changes scope, daily work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen.
@@ -116,3 +117,4 @@
   - The final hook is intriguing but not over-explained.
   - The chapter does not exhaust the novel's long-term runway and leaves future arc space consistent with a 1,500+ chapter serial.
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
+  - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.

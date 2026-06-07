@@ -25,6 +25,7 @@ RAIN_WHITE_NOISE_VOLUME = 0.20
 RAIN_FINE_VOLUME = 0.020
 RAIN_LOW_VOLUME = 0.010
 FINAL_MIX_VOLUME = 0.84
+CLOSING_PUNCTUATION = "，、。：；！？）」』》】"
 
 
 def run(args: list[str], capture: bool = False) -> subprocess.CompletedProcess[str]:
@@ -158,7 +159,8 @@ def build_stills(novel: str, chapter_title: str, source_dir: Path, count: int) -
         base = add_vignette(base)
         base = add_caption_safe_gradient(base)
         base = add_weather_texture(base, seed=700 + index, density=210)
-        base = add_label(base, novel, subtitles[index % len(subtitles)])
+        if index == 0:
+            base = add_label(base, novel, subtitles[index % len(subtitles)])
         out = source_dir / f"slide-{index + 1:02d}.png"
         base.save(out, optimize=True)
         stills.append(out)
@@ -250,12 +252,23 @@ def wrap_caption(text: str, width: int = 18) -> str:
     if len(lines) == 2 and len(lines[1]) <= 4 and len(lines[0]) > width // 2:
         move = min(6, len(lines[0]) - width // 2)
         lines = [lines[0][:-move], lines[0][-move:] + lines[1]]
-    if len(lines) >= 2 and lines[1] and lines[1][0] in "，、。：；！？）」』":
-        lines[0] += lines[1][0]
-        lines[1] = lines[1][1:]
-        if not lines[1]:
-            lines = lines[:1]
+    for index in range(1, len(lines)):
+        while lines[index] and lines[index][0] in CLOSING_PUNCTUATION:
+            lines[index - 1] += lines[index][0]
+            lines[index] = lines[index][1:]
+    lines = [line for line in lines if line]
     return "\n".join(lines[:2])
+
+
+def attach_leading_closing_punctuation(chunks: list[str]) -> list[str]:
+    fixed: list[str] = []
+    for chunk in chunks:
+        while chunk and chunk[0] in CLOSING_PUNCTUATION and fixed:
+            fixed[-1] += chunk[0]
+            chunk = chunk[1:]
+        if chunk:
+            fixed.append(chunk)
+    return fixed
 
 
 def split_caption_text(text: str, max_chars: int = MAX_CAPTION_CHARS) -> list[str]:
@@ -277,7 +290,7 @@ def split_caption_text(text: str, max_chars: int = MAX_CAPTION_CHARS) -> list[st
             buffer = buffer[max_chars:]
     if buffer:
         chunks.append(buffer)
-    return chunks
+    return attach_leading_closing_punctuation(chunks)
 
 
 def split_timed_entry(start: float, end: float, text: str) -> list[tuple[float, float, str]]:
