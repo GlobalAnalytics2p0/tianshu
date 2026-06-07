@@ -21,10 +21,13 @@
 - Ranking, hero, category, Modal, and download surfaces should all refer to 天書 original serials rather than existing novels.
 - Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`.
 - Before generating any new chapter, read that novel's existing `.txt` chapters and `src/resource/manifest.json` so continuity, character state, clues, and unresolved hooks are preserved.
+- Before generating or revising any of the five active titles, also read `src/resource/五本長篇共通管理規範.md` plus that title's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, and `伏筆事件台帳.md`. These files are mandatory author/persona and continuity refresh files, not optional notes.
 - Every AI novel must be planned as a long-running serial that can credibly sustain at least 1,500 chapters without collapsing its core premise, power ceiling, relationship engine, or central mystery too early.
 - Each normal generated chapter must be 4,000-5,000 Traditional Chinese characters. Do not silently shorten chapters unless the user explicitly accepts a smaller batch.
 - Daily automation must save generated chapters into the matching `src/resource/<novel title>/` folder and update `src/resource/manifest.json` so the static GitHub Pages site can load the newest content.
 - Future routine updates and daily chapter generation should target only the novel text for the 5 active category leaders above unless the user explicitly broadens scope. The other 35 titles stay frozen in place for now.
+- The five active titles should be treated as five independent authors with separate personality, emotional temperature, prose rhythm, clue style, and chapter engine. Do not use one generic voice across all five.
+- Daily chapters should satisfy a relaxed serial-fiction reader: direct white-language prose, concrete stakes, one local reward or reversal, readable momentum, and long-term foreshadowing that is not immediately explained.
 - Video planning, audiobook planning, and related asset work should stay out of the default daily automation path unless the user explicitly asks for them.
 - After daily automation generation and validation pass, commit the AI content update and push it to GitHub using the configured upstream. Stage only the intended AI content/rule changes for that run, typically `src/resource/manifest.json`, new/changed `src/resource/<novel title>/*.txt`, and `src/resource/writing-rules.md` only when rules actually change. Do not stage unrelated UI/assets/docs changes.
 - Novel prose must be immersive creator-facing fiction for readers. Do not write scaffolding or explainer/meta language such as "這一章", "讀者會", "主角", "章末", "第一章的安排", "第二章會", outline notes, automation notes, or commentary about how the text is structured.
@@ -33,6 +36,7 @@
 - First chapters should introduce the protagonist's pressure, desire, fear, and ordinary context before the supernatural/business/political hook escalates. Early chapters should usually keep the active cast to the protagonist plus one or two key supporting characters.
 - Do not rush every clue into an immediate reveal. Foreshadowing can stay unresolved across chapters when it improves tension and retention.
 - Long-arc foreshadowing is mandatory: plant clues, debts, rivalries, institutions, and personal wounds early, then pay them off gradually across many chapters instead of burning major reveals within the first few updates.
+- Minor characters are allowed and encouraged when they add life, humor, class/work pressure, witness stakes, or a concrete reason the protagonist's choice matters. Keep them functional and avoid crowding the active cast.
 - Avoid templated montage rhythm. Prefer fewer events with deeper scene work, longer paragraphs where appropriate, clearer cause-and-effect transitions, and no filler repetition to hit word count.
 - Do not generate the 40 AI novels by reusing one shared paragraph template with swapped names/settings. Batch work still needs per-title scene logic, clue order, character pressure, and prose rhythm.
 
@@ -66,5 +70,6 @@
 - 2026-06-06 review correction: reject chapter batches that paste the manifest `premise` into prose, repeat paragraph skeletons, use numbered/obvious filler beats, or contain repeated/near-repeated paragraph prefixes inside a chapter.
 - 2026-06-06 long-serial rule: every title must preserve runway for 1,500+ chapters, using layered long-term arcs and slower payoff scheduling so core mysteries, emotional debts, and setting secrets can unfold over a very long release horizon.
 - 2026-06-07 scope revision: the previous "5 hottest books" note is superseded by a stricter per-category rule. Ongoing updates should only touch one leader per category: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`, unless the user explicitly selects a different pool.
+- 2026-06-07 director workflow revision: active-title folders now include `README.md`, `每日寫作狀態.md`, and `伏筆事件台帳.md`. Future generation must use these files to refresh author persona, current state, next-event focus, minor-character slots, local reader reward, and foreshadowing/payoff status before writing.
 - The homepage must load AI book/chapter content from `src/resource/manifest.json` and the `.txt` chapter files, not from inline chapter strings in `app.js`.
 - Full commercial texts are intentionally not present in the repository.
