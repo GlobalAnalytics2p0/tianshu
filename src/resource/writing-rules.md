@@ -78,6 +78,9 @@
 - Treat social visuals, especially Instagram images, as reader-acquisition cover art. They must sell genre, mood, conflict, and curiosity at first glance.
 - Social posts should be platform-native. Instagram, Threads, Facebook, and YouTube each need independent copy, CTA shape, and verification; do not depend on cross-platform sync or paste one identical post everywhere.
 - Before preparing platform posts, use `docs/roles/social-media-director/README.md` and `docs/roles/social-media-director/social-resources.md` as the operating guide.
+- Upload success and publishing success are separate checks. For YouTube, verify video upload, custom thumbnail application, checks completion, public visibility, and public watch URL separately.
+- Do not treat a YouTube thumbnail file picker closing as proof that the custom thumbnail was applied. Confirm the visible Studio thumbnail/preview; if it falls back to auto-generated or needs manual help, record that in the chapter production notes.
+- For Instagram, Threads, and Facebook, verify each platform's own final post state after publishing. Do not assume a post appeared because another platform or share toggle reported success.
 - Use owned or generated chapter-specific story art rather than website screenshots, UI cards, generic banners, or text-heavy layouts.
 - Generate base artwork with no embedded text or logos, then add accurate Traditional Chinese typography locally.
 - The image should show one strong story signal: protagonist, danger, mystery object, setting pressure, or iconic scene. Do not make the visual abstract when the chapter has a concrete hook.

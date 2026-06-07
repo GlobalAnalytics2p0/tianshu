@@ -7,10 +7,10 @@
 | 平台 | 名稱/帳號 | 連結 | 用途 | 狀態 |
 | --- | --- | --- | --- | --- |
 | Official Website | 天書小說 | https://tianshu.petrichor.tw/ | 靜態官網、小說閱讀入口、Bio 連結 | 可用 |
-| YouTube | 天書小說 / `@tianshunovel` | https://www.youtube.com/@tianshunovel | 有聲書影片主平台 | 已可上傳；第一支影片已發布 |
-| Instagram | `@tianshu_novel` | https://www.instagram.com/tianshu_novel/ | 視覺導流、封面圖、短 caption | 可用；同步開關預設關閉 |
+| YouTube | 天書小說 / `@tianshunovel` | https://www.youtube.com/@tianshunovel | 有聲書影片主平台 | 已可用原生檔案選擇器上傳影片；縮圖上傳需二次人工/畫面驗證 |
+| Instagram | `@tianshu_novel` | https://www.instagram.com/tianshu_novel/ | 視覺導流、封面圖、短 caption | 可用；圖片上傳可行；同步開關預設關閉 |
 | Threads | `@tianshu_novel` | https://www.threads.com/@tianshu_novel | 短文字推廣、連載感、讀者互動 | 可用；不得用 IG 同步代替 |
-| Facebook | 天書小說粉絲頁 | https://www.facebook.com/profile.php?id=61590406722346 | 較完整貼文、影片與官網導流 | 可用；不得用 IG 同步代替 |
+| Facebook | 天書小說粉絲頁 | https://www.facebook.com/profile.php?id=61590406722346 | 較完整貼文、影片與官網導流 | 可用；發文可行；不得用 IG 同步代替 |
 
 ## 已知內容資源
 
@@ -22,6 +22,8 @@
 | 星骸王座第 1 章影片紀錄 | `src/resource/星骸王座/影片/第01章 星核在雨夜說謊/notes/production-notes.md` | 影片規格、音訊混音、字幕 QA |
 | 星骸王座 IG 圖最後版 | `src/resource/星骸王座/影片/第01章 星核在雨夜說謊/output/instagram-promo.png` | 本機忽略檔；發 IG 用的最終輸出 |
 | 星骸王座 YouTube 第一集 | https://www.youtube.com/watch?v=s4I1Rj6kJw4 | 已用於 IG caption |
+| 星骸王座第 2 章影片紀錄 | `src/resource/星骸王座/影片/第02章 暗縫裡的舊雪/notes/production-notes.md` | 影片規格、發布紀錄、社群發布結果 |
+| 星骸王座 YouTube 第二集 | https://youtu.be/OE0rgOWDvpM | 已發布；已用於 Threads、Facebook、IG 推廣 |
 | 品牌 icon | `public/assets/tianshu-icon.png` | 網站 favicon、頻道頭像 |
 | 品牌 banner | `public/assets/tianshu-banner.png` | YouTube 橫幅與部分視覺 fallback |
 
@@ -34,3 +36,9 @@
 - YouTube 連結可作為每輪社群推廣的主要 CTA；官網作為 Bio/閱讀入口。
 - 發布後把結果、失敗原因或新規則回寫到社群總監手冊或 `agent.md`。
 
+## 已知操作注意事項
+
+- Chrome/Computer Control 可以透過 macOS 原生檔案選擇器完成影片與 IG 圖片上傳；使用 `Cmd+Shift+G` 貼入絕對路徑比直接依賴瀏覽器 `setFiles` 穩定。
+- YouTube 影片檔上傳已驗證可行，但縮圖檔上傳不可視為完全自動化穩定。每次都必須確認 Studio preview 或發布後編輯頁顯示的是自訂縮圖，而不是 auto-generated。
+- 如果縮圖需要手動介入，該次任務仍可完成，但必須把介入點寫入製作紀錄，供下一位社群總監排查。
+- Instagram、Threads、Facebook 的發布與驗證已可走獨立流程；不要因為 IG 顯示 Threads 分享開關就打開同步。

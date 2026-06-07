@@ -28,6 +28,17 @@
 - 若平台提供同步開關，預設保持關閉。
 - 發布後確認平台頁面或貼文狀態，例如 Instagram 個人頁貼文數、Facebook 粉專貼文出現、Threads profile 出現新串文。
 
+## 發布操作 SOP
+
+- YouTube 影片上傳目前可靠流程是使用 Chrome/Computer Control 走原生 macOS 檔案選擇器：先在 YouTube Studio 點 `Upload videos` / `Select files`，再用 `Cmd+Shift+G` 貼入本機影片絕對路徑並確認。若 Playwright `fileChooser.setFiles` 回 `Not allowed`，不要卡住；改走原生檔案選擇器。
+- YouTube 縮圖上傳仍是高風險步驟。選完縮圖檔後，必須在 Studio Details 或最終發布/編輯頁明確確認自訂縮圖已套用；不能只因檔案選擇器關閉就假設成功。
+- 若 YouTube 縮圖沒有套用、仍顯示 auto-generated、或需要使用者手動介入，必須在該章 `production-notes.md` 記錄原因與結果，並在 final 回覆中明確說明。除非使用者同意，不要把自動縮圖當作已完成的自訂縮圖。
+- YouTube 發布前必須等 copyright 與 Community Guidelines checks 完成且為 `No issues found`，再按 Public/Publish。若平台跳出 `Publish anyway`，預設退回等待，不硬闖。
+- YouTube 發布後要用公開 watch URL 驗證：影片標題可見、沒有 `Private` 標記、播放頁可載入，再開始導流到社群。
+- Instagram 圖片上傳可用原生 macOS 檔案選擇器；發布前確認方圖完整、caption 已填、Threads/Facebook 同步開關保持關閉。發布後用 profile 貼文數與新貼文 URL 驗證。
+- Threads 文字貼文流程目前穩定；發文後用 profile 頂部新串文、時間戳與連結 preview 驗證。
+- Facebook 粉專貼文流程目前穩定；如果 `What's on your mind?` 滑鼠點擊沒有反應，可以對同一個按鈕用 keyboard `Enter` 開 composer。發文前確認 `Public`、`Publish now`、`Share to story Off`、`Boost Off`，並讓 YouTube 連結成為主要 preview。
+
 ## IG 視覺製作規格
 
 - 優先產生無字底圖，再用本機字體排繁中標題。
@@ -51,4 +62,3 @@
 - 向內容創作者拿：章節 hook、不可劇透事項、人物/場景重點。
 - 向全端工程師拿：最終影片 URL、網站 URL、縮圖與社群圖輸出路徑。
 - 發布結果回寫到相關製作紀錄或社群資源文件，重要規則回寫 `agent.md`。
-

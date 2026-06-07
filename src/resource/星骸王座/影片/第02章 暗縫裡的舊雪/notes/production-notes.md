@@ -41,8 +41,17 @@
 - A frame at 00:05:00 was extracted after the title-label adjustment to confirm the later slide does not cover character faces.
 - Output video, generated source audio, generated stills, and temporary QA frames are ignored by Git. Notes, subtitles, script, and thumbnail PNG may be tracked.
 
+## Publishing Log
+
+- YouTube: published publicly on 2026-06-08 as `https://youtu.be/OE0rgOWDvpM`.
+- YouTube checks: copyright and Community Guidelines both completed with no issues found before public publishing.
+- YouTube upload workflow note: video file upload succeeded via Chrome/Computer Control with the native macOS file picker and absolute file path. Custom thumbnail upload was not fully reliable in automation and required user/manual intervention plus final verification; future runs must treat thumbnail application as a separate checkpoint.
+- Threads: independently published to `@tianshu_novel` at `https://www.threads.com/@tianshu_novel/post/DZTbLmsE1ti`.
+- Facebook Page: independently published to `天書小說｜原創小說天地-日更`; post verified on the page feed with the YouTube chapter preview.
+- Instagram: independently published to `@tianshu_novel` at `https://www.instagram.com/tianshu_novel/p/DZTcB_3E5Ou/` using `output/instagram-promo.png`.
+- Cross-platform sync: kept off. IG Threads sharing switch was checked as `aria-checked=false` before publishing.
+
 ## Fixes Applied During Production
 
 - Updated `scripts/build-audiobook-chapter-video.py` so closing punctuation such as `」` is attached to the previous subtitle chunk instead of starting a new line or cue.
 - Updated slide rendering so the title label appears only on the first slide. Earlier drafts placed the label on every slide, which could cover faces in the second background image.
-
