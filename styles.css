@@ -288,7 +288,7 @@ button {
   border-radius: var(--radius-md);
   background:
     linear-gradient(90deg, rgba(17, 13, 21, 0.92) 0%, rgba(28, 20, 35, 0.78) 42%, rgba(10, 11, 16, 0.26) 100%),
-    url("public/assets/hero-art-xinghai-battle.png?v=20260607-battle");
+    var(--hero-art, url("public/assets/hero-art.png"));
   background-size: auto, auto 100%;
   background-position: center, right center;
   background-repeat: no-repeat;

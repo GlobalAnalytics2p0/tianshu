@@ -618,10 +618,15 @@ function initEvents() {
 function initHero() {
   const heroBook = getActiveRankingBooks()[0];
   if (!heroBook) return;
+  const hero = document.querySelector(".hero");
   document.getElementById("heroTitle").textContent = heroBook.title;
   document.getElementById("heroDescription").textContent = heroBook.premise;
   document.getElementById("heroHeat").textContent = `人氣 ${heroBook.heat}`;
   document.getElementById("heroTags").innerHTML = heroBook.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  if (hero) {
+    const heroImage = heroBook.heroImage || heroBook.coverImage || "public/assets/hero-art.png";
+    hero.style.setProperty("--hero-art", `url("${resourceUrl(heroImage)}")`);
+  }
 }
 
 function showLoadError(error) {
