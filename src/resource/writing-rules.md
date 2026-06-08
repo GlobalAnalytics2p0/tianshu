@@ -18,6 +18,7 @@
 - Update `src/resource/manifest.json` after writing or revising chapter files.
 - Never store chapter bodies inline in `app.js`.
 - Published chapters are locked canon. Do not edit an already published chapter unless the user explicitly authorizes a post-publication correction. For `星骸王座`, `第01章 星核在雨夜說謊` is already published and must remain unchanged.
+- For automation runs, treat `local chapter written`, `manifest updated`, `commit created`, `push succeeded`, and `live site updated` as separate states. Do not report the chapter as published on the site until the live manifest matches the local manifest.
 
 ## Continuity
 
@@ -127,6 +128,7 @@
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
   - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
   - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.
+  - For automation publishes, `node scripts/verify-site-publication.mjs` passes after push. If it does not pass, the run may be locally complete or pushed, but it must not be described as live on the website.
 
 ## 2026-06-08 補充節奏註記
 

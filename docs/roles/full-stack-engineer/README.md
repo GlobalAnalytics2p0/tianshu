@@ -30,6 +30,15 @@
 - 生成前必須由內容創作者規則刷新連貫性。
 - 成功後更新章節 `.txt`、`src/resource/manifest.json`、相關狀態檔與對應 `反思.md`（如內容創作者有新的耐久回饋要落檔）。
 - 驗證通過後才 commit 並 push。
+- `commit created`、`push succeeded`、`raw GitHub updated`、`GitHub Pages live manifest updated` 是四個不同狀態。沒有通過最後一關前，不得宣稱網站已更新。
+- push 後必須執行 `node scripts/verify-site-publication.mjs`。這支腳本會檢查：
+  - 當前 branch 是否與 upstream 完全同步，沒有 local-only commit。
+  - `raw.githubusercontent.com` 的 `src/resource/manifest.json` 是否已等於本地 manifest。
+  - 自訂網域或 GitHub Pages 網址實際送出的 `manifest.json` 是否已等於本地 manifest。
+- 若 `node scripts/verify-site-publication.mjs` 失敗，回報必須明確區分：
+  - `ahead > 0`：內容還在本地，根本沒有完整發佈。
+  - raw GitHub 已更新但 live site 未更新：屬於 Pages/CDN 部署延遲，不能說已上站，只能說已 push、等待站點生效。
+  - remote/auth 失敗：屬於發佈 blocker，不能把本地完成誤報成網站完成。
 - commit 時只 stage 當次意圖內的內容；若起始狀態已有 dirty files，要記錄並避免混入不相關變更。
 - `src/resource/backup/` 用來放 35 本暫停更新作品；routine hourly automation 不應對 backup 內作品做內容改寫。
 

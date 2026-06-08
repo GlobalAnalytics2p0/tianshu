@@ -68,4 +68,5 @@
 
 - 給社群總監：提供短 hook、人物/場景關鍵畫面、可公開但不劇透的賣點。
 - 給全端工程師：提供章節檔路徑、字數、manifest 需要更新的 metadata、是否已發布鎖定。
+- 內容交稿完成不等於網站已更新。若是 hourly automation，最終狀態必須等全端工程流程確認 `node scripts/verify-site-publication.mjs` 通過，才可對外回報「已上站」。
 - 不直接處理大型音檔、影片輸出或社群後台發布。
