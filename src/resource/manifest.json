@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T21:25:45+08:00",
+  "generatedAt": "2026-06-09T02:32:10+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -98,6 +98,13 @@
           "path": "src/resource/星骸王座/文章/第11章 灰棚錯結.txt",
           "charCount": 6142,
           "generatedAt": "2026-06-08T21:25:45+08:00"
+        },
+        {
+          "number": 12,
+          "title": "東槽回認",
+          "path": "src/resource/星骸王座/文章/第12章 東槽回認.txt",
+          "charCount": 6094,
+          "generatedAt": "2026-06-09T02:32:10+08:00"
         }
       ],
       "tone": "深沉",
@@ -502,6 +509,13 @@
           "path": "src/resource/灰塔觀測者/第11章 頂腹繩輪.txt",
           "charCount": 6054,
           "generatedAt": "2026-06-08T21:25:45+08:00"
+        },
+        {
+          "number": 12,
+          "title": "鐘後白格",
+          "path": "src/resource/灰塔觀測者/第12章 鐘後白格.txt",
+          "charCount": 6036,
+          "generatedAt": "2026-06-09T02:32:10+08:00"
         }
       ],
       "tone": "深沉",
@@ -905,6 +919,13 @@
           "path": "src/resource/雪刃照孤城/第11章 北簍空匣.txt",
           "charCount": 6055,
           "generatedAt": "2026-06-08T21:25:45+08:00"
+        },
+        {
+          "number": 12,
+          "title": "內庫記欠",
+          "path": "src/resource/雪刃照孤城/第12章 內庫記欠.txt",
+          "charCount": 6083,
+          "generatedAt": "2026-06-09T02:32:10+08:00"
         }
       ],
       "tone": "深沉",
@@ -1308,6 +1329,13 @@
           "path": "src/resource/凌晨三點的演算法/第11章 回收箱醒.txt",
           "charCount": 6110,
           "generatedAt": "2026-06-08T21:25:45+08:00"
+        },
+        {
+          "number": 12,
+          "title": "市檔醒口",
+          "path": "src/resource/凌晨三點的演算法/第12章 市檔醒口.txt",
+          "charCount": 6009,
+          "generatedAt": "2026-06-09T02:32:10+08:00"
         }
       ],
       "tone": "深沉",
@@ -1711,6 +1739,13 @@
           "path": "src/resource/大明墨工/第11章 二風偏秤.txt",
           "charCount": 6111,
           "generatedAt": "2026-06-08T21:25:45+08:00"
+        },
+        {
+          "number": 12,
+          "title": "後簿借名",
+          "path": "src/resource/大明墨工/第12章 後簿借名.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-09T02:32:10+08:00"
         }
       ],
       "tone": "深沉",
