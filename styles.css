@@ -1566,13 +1566,14 @@ button {
   }
 
   .topbar {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 14px;
     margin-bottom: 12px;
   }
 
   .mobile-brand {
     display: inline-grid;
+    grid-column: 1 / -1;
   }
 
   .mobile-brand .brand-mark {
@@ -1585,17 +1586,18 @@ button {
   }
 
   .search {
+    grid-column: 1;
     height: 38px;
     padding: 0 13px;
-    padding-right: 78px;
   }
 
   .login-button {
-    position: absolute;
-    top: 82px;
-    right: 12px;
+    position: static;
+    grid-column: 2;
+    justify-self: end;
     height: 36px;
-    padding: 0 10px;
+    min-width: 74px;
+    padding: 0 11px;
     border-color: rgba(255, 211, 123, 0.44);
     color: #ffe8aa;
   }
