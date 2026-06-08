@@ -399,6 +399,12 @@
       </section>
     </div>
 
-    <script src="app.js?v=20260607-layout-audit"></script>
+    <script>
+      {
+        const script = document.createElement("script");
+        script.src = `app.js?v=${Date.now()}`;
+        document.body.appendChild(script);
+      }
+    </script>
   </body>
 </html>

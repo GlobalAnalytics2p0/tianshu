@@ -64,6 +64,8 @@ const activeRankingTitles = [
   "凌晨三點的演算法",
   "大明墨工"
 ];
+const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
+const manifestPollIntervalMs = 60000;
 
 let allBooks = [];
 
@@ -71,6 +73,9 @@ let currentRankTab = "recommended";
 let currentModalBook = null;
 let currentChapterIndex = 0;
 let toastTimer = null;
+let currentManifestSignature = "";
+let manifestPollTimer = null;
+let manifestPollInFlight = false;
 
 function buildShareUrls() {
   const combinedText = `${youtubeShareText} ${youtubeChannelUrl}`;
@@ -84,8 +89,10 @@ function buildSummary(book) {
   return `天書原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
 }
 
-function resourceUrl(path) {
-  return new URL(encodeURI(path), window.location.href).href;
+function resourceUrl(path, cacheToken = "") {
+  const url = new URL(encodeURI(path), window.location.href);
+  if (cacheToken) url.searchParams.set("v", String(cacheToken));
+  return url.href;
 }
 
 function chapterDisplayTitle(chapter) {
@@ -119,8 +126,32 @@ function renderChapterNav(book, position) {
   `;
 }
 
-async function fetchTextFile(path) {
-  const response = await fetch(resourceUrl(path), { cache: "no-store" });
+function buildManifestSignature(manifest) {
+  return (manifest.books || []).map((book) => {
+    const latestChapter = (book.chapters || []).at(-1) || {};
+    return [
+      book.id || book.title || "",
+      (book.chapters || []).length,
+      latestChapter.number || "",
+      latestChapter.generatedAt || "",
+      latestChapter.path || ""
+    ].join(":");
+  }).join("|");
+}
+
+async function fetchManifest(cacheToken = "") {
+  const response = await fetch(resourceUrl(resourceManifestPath, cacheToken), { cache: "no-store" });
+  if (!response.ok) {
+    const error = new Error("Unable to load resource manifest");
+    error.resourcePath = resourceManifestPath;
+    error.status = response.status;
+    throw error;
+  }
+  return response.json();
+}
+
+async function fetchTextFile(path, cacheToken = "") {
+  const response = await fetch(resourceUrl(path, cacheToken), { cache: "no-store" });
   if (!response.ok) {
     const error = new Error(`Unable to load ${path}`);
     error.resourcePath = path;
@@ -143,18 +174,11 @@ function syncCategoryCounts() {
 }
 
 async function loadLibrary() {
-  const response = await fetch(resourceUrl(resourceManifestPath), { cache: "no-store" });
-  if (!response.ok) {
-    const error = new Error("Unable to load resource manifest");
-    error.resourcePath = resourceManifestPath;
-    error.status = response.status;
-    throw error;
-  }
-
-  const manifest = await response.json();
+  const manifest = await fetchManifest(`library-${Date.now()}`);
+  currentManifestSignature = buildManifestSignature(manifest);
   allBooks = await Promise.all((manifest.books || []).map(async (book, index) => {
     const chapters = await Promise.all((book.chapters || []).map(async (chapter) => {
-      const content = await fetchTextFile(chapter.path);
+      const content = await fetchTextFile(chapter.path, chapter.generatedAt || `${chapter.number || "0"}-${currentManifestSignature}`);
       return {
         ...chapter,
         displayTitle: chapterDisplayTitle(chapter),
@@ -509,6 +533,13 @@ function showToast(message) {
   }, 2600);
 }
 
+function consumeAutoRefreshFlag() {
+  const message = sessionStorage.getItem(chapterAutoRefreshFlag);
+  if (!message) return;
+  sessionStorage.removeItem(chapterAutoRefreshFlag);
+  showToast(message);
+}
+
 function openShareSheet() {
   const sheet = document.getElementById("shareSheet");
   sheet.classList.add("is-open");
@@ -615,6 +646,43 @@ function initEvents() {
   });
 }
 
+async function checkForLibraryUpdates() {
+  if (manifestPollInFlight) return;
+
+  manifestPollInFlight = true;
+  try {
+    const manifest = await fetchManifest(`poll-${Date.now()}`);
+    const nextSignature = buildManifestSignature(manifest);
+    if (currentManifestSignature && nextSignature && nextSignature !== currentManifestSignature) {
+      sessionStorage.setItem(chapterAutoRefreshFlag, "已同步最新章節。");
+      window.location.reload();
+    }
+  } catch (error) {
+    console.warn("Manifest refresh check failed.", error);
+  } finally {
+    manifestPollInFlight = false;
+  }
+}
+
+function initManifestPolling() {
+  if (manifestPollTimer) window.clearInterval(manifestPollTimer);
+  manifestPollTimer = window.setInterval(() => {
+    if (document.visibilityState === "visible") {
+      void checkForLibraryUpdates();
+    }
+  }, manifestPollIntervalMs);
+
+  window.addEventListener("focus", () => {
+    void checkForLibraryUpdates();
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      void checkForLibraryUpdates();
+    }
+  });
+}
+
 function initHero() {
   const heroBook = getActiveRankingBooks()[0];
   if (!heroBook) return;
@@ -650,6 +718,8 @@ async function init() {
     renderRanking();
     renderCategories();
     renderAiNovels();
+    consumeAutoRefreshFlag();
+    initManifestPolling();
   } catch (error) {
     showLoadError(error);
   }
