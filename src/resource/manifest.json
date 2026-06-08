@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T18:59:00.000+08:00",
+  "generatedAt": "2026-06-08T20:00:00.000+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -47,7 +47,7 @@
           "number": 4,
           "title": "聽星犬先聞見血",
           "path": "src/resource/星骸王座/文章/第04章 聽星犬先聞見血.txt",
-          "charCount": 6452,
+          "charCount": 6416,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
         },
         {
@@ -77,6 +77,13 @@
           "path": "src/resource/星骸王座/文章/第08章 藍灰籤先夾進沒人哭的門.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-08T18:59:00.000+08:00"
+        },
+        {
+          "number": 9,
+          "title": "後井先讓借路的人濕了鞋",
+          "path": "src/resource/星骸王座/文章/第09章 後井先讓借路的人濕了鞋.txt",
+          "charCount": 6099,
+          "generatedAt": "2026-06-08T20:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -460,6 +467,13 @@
           "path": "src/resource/灰塔觀測者/第08章 補鐘次的人先把第二拍抹平.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-08T18:59:00.000+08:00"
+        },
+        {
+          "number": 9,
+          "title": "晚鐘前先有人把油桶換輕了",
+          "path": "src/resource/灰塔觀測者/第09章 晚鐘前先有人把油桶換輕了.txt",
+          "charCount": 6002,
+          "generatedAt": "2026-06-08T20:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -842,6 +856,13 @@
           "path": "src/resource/雪刃照孤城/第08章 舊主刀位先等借燈的人.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-08T18:59:00.000+08:00"
+        },
+        {
+          "number": 9,
+          "title": "找鉤的人先去看誰把舊燈掛矮",
+          "path": "src/resource/雪刃照孤城/第09章 找鉤的人先去看誰把舊燈掛矮.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T20:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1224,6 +1245,13 @@
           "path": "src/resource/凌晨三點的演算法/第08章 先巡的人先嫌樓下太熱鬧.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-08T18:59:00.000+08:00"
+        },
+        {
+          "number": 9,
+          "title": "寄物櫃先把待取單吐給不該來的人",
+          "path": "src/resource/凌晨三點的演算法/第09章 寄物櫃先把待取單吐給不該來的人.txt",
+          "charCount": 6004,
+          "generatedAt": "2026-06-08T20:00:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1606,6 +1634,13 @@
           "path": "src/resource/大明墨工/第08章 問鉤的人先去找夜裡開火的鋪子.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-08T18:59:00.000+08:00"
+        },
+        {
+          "number": 9,
+          "title": "先過的小件不先走井口",
+          "path": "src/resource/大明墨工/第09章 先過的小件不先走井口.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T20:00:00.000+08:00"
         }
       ],
       "tone": "深沉",

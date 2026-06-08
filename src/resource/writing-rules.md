@@ -40,6 +40,7 @@
 - Default to one primary viewpoint center at the start of the chapter. Let the reader settle into one person, one pressure, and one immediate situation before expanding the scope.
 - Use the long-serial rhythm of "small event fast, major truth slow": the day's concrete incident should move, hurt, and resolve partially; the central mystery should advance only by one controlled layer.
 - The 6,000-6,500 character format should support stronger audiobook retention: deepen scene continuity, let danger breathe, add concrete minor-character pressure, and include one or two staged reversals. Do not use the added length for repeated inspection beats, repeated silence, or abstract explanation.
+- Depth must not come from archaic diction, harder-to-read phrasing, or lore dumps. Add layers through competing motives, ordinary costs, small betrayals, emotional restraint, institutional pressure, and clues that mean one thing now but can mean something sharper later.
 - Do not treat every chapter as a bigger explosion than the last. A long serial should alternate pressure and release, letting a smaller consequence, meal, walk, injury, debt, search, or conversation carry interest between peaks.
 - Give the reader a local reward whenever possible: a clever escape, a recovered clue, a face-saving reversal, an enemy misread, a saved minor character, a practical gain, or a sharper emotional commitment.
 - Keep important foreshadowing alive for longer. Do not reveal every hook immediately after it appears.
@@ -56,6 +57,7 @@
 - Keep the active cast small. Early chapters should usually focus on the protagonist plus one or two important supporting characters.
 - Avoid introducing too many named people, factions, titles, or relics in one chapter.
 - Let personality emerge through choices, gestures, dialogue, and memory instead of biography dumps.
+- Romance elements are allowed and useful, especially in long-form audiobook chapters, but they should grow from trust, disagreement, care under pressure, shared secrets, bodily risk, and moments of choosing each other. Do not let romance hijack the genre engine or become decorative flirting pasted onto danger.
 - Small roles are encouraged when useful, but they must have a function: witness pressure, add humor or life texture, expose class/workplace/institutional stakes, carry a clue, or make the protagonist's choice matter to someone concrete.
 - Do not turn minor characters into exposition devices. Give them one human detail, one pressure, or one recognizable desire, then let the scene move.
 
@@ -66,6 +68,7 @@
 - Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage. Strong scenes are allowed to take a larger share of the chapter.
 - Prefer specific physical detail over abstract labels. Use concrete rooms, weather, sounds, small habits, money, work, wounds, tools, documents, and social pressure.
 - Prefer white-language clarity over literary stiffness. Depth should come from situation, choice, sensory detail, and consequence, not from archaic phrasing or abstract moralizing.
+- For audiobook listening, vary the emotional texture inside a chapter: pressure, watchfulness, small human noise, quiet tenderness, restrained humor, then renewed unease. A chapter that only explains a procedure or only sustains one tension note will feel flat when heard aloud.
 - After a climax or heavy reveal, allow a brief emotional reset before building toward the next pressure wave. Rest is part of pacing, not a failure of pacing.
 - Do not keep readers in nonstop high-arousal mode. Peak, release, and re-accumulation should form a readable curve.
 - Side plots may interact with the main line across many chapters. They do not need to close in the same chapter, but they must remain intentional, trackable, and eventually convergent rather than multiplying without return.
@@ -124,3 +127,7 @@
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
   - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
   - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.
+
+## 2026-06-08 補充節奏註記
+
+- 當敵方或制度性的黑路仰賴安靜、正常、順手來完成收尾時，反制不必先靠硬闖。優先考慮把現場叫醒、弄髒、弄亮，讓普通人的聲音、腳步、火氣與日常流程一起破壞那條路。
