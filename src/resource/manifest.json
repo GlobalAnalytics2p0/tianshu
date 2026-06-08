@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T20:00:00.000+08:00",
+  "generatedAt": "2026-06-08T21:25:45+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -91,6 +91,13 @@
           "path": "src/resource/星骸王座/文章/第10章 洗布靜巷.txt",
           "charCount": 6134,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
+        },
+        {
+          "number": 11,
+          "title": "灰棚錯結",
+          "path": "src/resource/星骸王座/文章/第11章 灰棚錯結.txt",
+          "charCount": 6142,
+          "generatedAt": "2026-06-08T21:25:45+08:00"
         }
       ],
       "tone": "深沉",
@@ -488,6 +495,13 @@
           "path": "src/resource/灰塔觀測者/第10章 曬板半息.txt",
           "charCount": 6265,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
+        },
+        {
+          "number": 11,
+          "title": "頂腹繩輪",
+          "path": "src/resource/灰塔觀測者/第11章 頂腹繩輪.txt",
+          "charCount": 6054,
+          "generatedAt": "2026-06-08T21:25:45+08:00"
         }
       ],
       "tone": "深沉",
@@ -884,6 +898,13 @@
           "path": "src/resource/雪刃照孤城/第10章 藥門低燈.txt",
           "charCount": 6310,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
+        },
+        {
+          "number": 11,
+          "title": "北簍空匣",
+          "path": "src/resource/雪刃照孤城/第11章 北簍空匣.txt",
+          "charCount": 6055,
+          "generatedAt": "2026-06-08T21:25:45+08:00"
         }
       ],
       "tone": "深沉",
@@ -1280,6 +1301,13 @@
           "path": "src/resource/凌晨三點的演算法/第10章 退件架醒.txt",
           "charCount": 6447,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
+        },
+        {
+          "number": 11,
+          "title": "回收箱醒",
+          "path": "src/resource/凌晨三點的演算法/第11章 回收箱醒.txt",
+          "charCount": 6110,
+          "generatedAt": "2026-06-08T21:25:45+08:00"
         }
       ],
       "tone": "深沉",
@@ -1676,6 +1704,13 @@
           "path": "src/resource/大明墨工/第10章 長槽試重.txt",
           "charCount": 6204,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
+        },
+        {
+          "number": 11,
+          "title": "二風偏秤",
+          "path": "src/resource/大明墨工/第11章 二風偏秤.txt",
+          "charCount": 6111,
+          "generatedAt": "2026-06-08T21:25:45+08:00"
         }
       ],
       "tone": "深沉",
