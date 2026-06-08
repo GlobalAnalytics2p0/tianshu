@@ -38,14 +38,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background:
-    linear-gradient(180deg, rgba(2, 3, 6, 0.48), rgba(2, 3, 6, 0.78) 42%, rgba(2, 3, 6, 0.9) 100%),
-    url("public/assets/tianshu-banner.png?v=20260606-literary-assets"),
-    linear-gradient(135deg, #030408 0%, #080a10 48%, #020305 100%);
-  background-attachment: fixed, fixed, fixed;
-  background-position: center top, center top, center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, cover, cover;
+  background: #020305;
   color: var(--text);
   font-family: var(--font);
 }
@@ -1556,14 +1549,7 @@ button {
 
 @media (max-width: 780px) {
   body {
-    background:
-      linear-gradient(180deg, rgba(2, 3, 6, 0.46), rgba(2, 3, 6, 0.82) 48%, rgba(2, 3, 6, 0.94) 100%),
-      url("public/assets/tianshu-banner.png?v=20260606-literary-assets"),
-      linear-gradient(180deg, #06070d 0%, #101219 52%, #08090d 100%);
-    background-attachment: scroll, scroll, scroll;
-    background-position: center top, center top, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: auto 42vh, auto 42vh, cover;
+    background: #020305;
   }
 
   .shell {
