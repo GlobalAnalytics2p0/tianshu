@@ -35,8 +35,15 @@
 - If writing produces a new durable insight, record it in the correct Markdown file before ending the run. Do not rely on vague future recall.
 - Every title must retain enough structural runway to serialize beyond 1,500 chapters. Do not spend the premise, final villain tier, ultimate setting answer, or irreversible relationship endgame too early.
 - The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
-- Unless the user explicitly changes scope, hourly work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen in `src/resource/backup/`.
-- Video planning, audiobook planning, and non-novel asset work are out of the default daily update path unless the user explicitly asks for them.
+- Unless the user explicitly changes scope, six-hour scheduled work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen in `src/resource/backup/`.
+- Video planning, audiobook planning, and non-novel asset work are out of the default six-hour update path unless the user explicitly asks for them.
+
+## Automation Cadence
+
+- Routine novel automation cadence is every 6 hours in Asia/Taipei: 00:00, 06:00, 12:00, and 18:00.
+- Do not run routine novel updates every hour unless the user explicitly changes the cadence again.
+- Each scheduled run should continue only the 5 active category leaders and produce at most one new chapter per active title where feasible.
+- Public copy should describe the cadence as `每日 00/06/12/18 更新` or equivalent, not as `每日 09:00 更新` or hourly updates.
 
 ## Plot And Tension
 
