@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T03:19:11.086Z",
+  "generatedAt": "2026-06-08T09:40:41.000+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -42,6 +42,13 @@
           "path": "src/resource/星骸王座/文章/第03章 墓牆後的舊名.txt",
           "charCount": 6276,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
+        },
+        {
+          "number": 4,
+          "title": "聽星犬先聞見血",
+          "path": "src/resource/星骸王座/文章/第04章 聽星犬先聞見血.txt",
+          "charCount": 6452,
+          "generatedAt": "2026-06-08T09:40:41.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -390,6 +397,13 @@
           "path": "src/resource/灰塔觀測者/第03章 負一層來敲窗.txt",
           "charCount": 6060,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
+        },
+        {
+          "number": 4,
+          "title": "被刪掉的值守位",
+          "path": "src/resource/灰塔觀測者/第04章 被刪掉的值守位.txt",
+          "charCount": 6120,
+          "generatedAt": "2026-06-08T09:40:41.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -737,6 +751,13 @@
           "path": "src/resource/雪刃照孤城/第03章 第三個學刀的人.txt",
           "charCount": 6049,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
+        },
+        {
+          "number": 4,
+          "title": "雪犬追到炭棚前",
+          "path": "src/resource/雪刃照孤城/第04章 雪犬追到炭棚前.txt",
+          "charCount": 6494,
+          "generatedAt": "2026-06-08T09:40:41.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1084,6 +1105,13 @@
           "path": "src/resource/凌晨三點的演算法/第03章 死訊的確認者.txt",
           "charCount": 6165,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
+        },
+        {
+          "number": 4,
+          "title": "舊工作機不該連網",
+          "path": "src/resource/凌晨三點的演算法/第04章 舊工作機不該連網.txt",
+          "charCount": 6056,
+          "generatedAt": "2026-06-08T09:40:41.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1431,6 +1459,13 @@
           "path": "src/resource/大明墨工/第03章 第三條河.txt",
           "charCount": 6152,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
+        },
+        {
+          "number": 4,
+          "title": "灶火先烘出半張河意",
+          "path": "src/resource/大明墨工/第04章 灶火先烘出半張河意.txt",
+          "charCount": 6031,
+          "generatedAt": "2026-06-08T09:40:41.000+08:00"
         }
       ],
       "tone": "深沉",
