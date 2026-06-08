@@ -1,11 +1,11 @@
 # 天書小說
 
-天書小說是繁體中文原創長篇連載平台，專注五部重點作品，並延伸有聲小說與 YouTube 說書企劃。
+天書小說是繁體中文原創長篇連載平台，首頁提供五部重點作品的互動閱讀入口、有聲小說與 YouTube 說書企劃。
 
 ## 重要連結
 
 - 首頁：https://tianshu.petrichor.tw/
-- 作品總覽：https://tianshu.petrichor.tw/books/
+- 五部連載入口：https://tianshu.petrichor.tw/#youtube
 - YouTube：https://www.youtube.com/@tianshunovel
 - Facebook：https://www.facebook.com/profile.php?id=61590406722346
 - Instagram：https://www.instagram.com/tianshu_novel/
@@ -13,17 +13,12 @@
 
 ## 五部重點作品
 
-- 星骸王座（玄幻，作者：顧夜燼）：霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。
-  - 作品頁：https://tianshu.petrichor.tw/books/starbone-throne/
-- 灰塔觀測者（奇幻，作者：霧原）：灰塔的晨光少了一塊，艾文只是在簿冊上補了一筆，整座塔卻像忽然記起某個不該存在的人。
-  - 作品頁：https://tianshu.petrichor.tw/books/gray-tower-observer/
-- 雪刃照孤城（武俠，作者：謝聽寒）：孤城大雪封門，沈照夜聽見一聲不該存在的刀鳴；那一夜開始，舊案、暗道與欠下的命全都醒了。
-  - 作品頁：https://tianshu.petrichor.tw/books/snowblade-lonely-city/
-- 凌晨三點的演算法（都市，作者：陳停雲）：凌晨三點，周祈的手機推送了自己的死訊。真正可怕的不是預測錯誤，而是有人正在讓預測成真。
-  - 作品頁：https://tianshu.petrichor.tw/books/algorithm-at-3am/
-- 大明墨工（歷史，作者：蕭墨臣）：沈墨在御用輿圖下看見一條不存在的河；墨線一動，藏在河工、糧道與官場裡的殺局也跟著浮上來。
-  - 作品頁：https://tianshu.petrichor.tw/books/ming-inkwright/
+- 星骸王座：玄幻，作者顧夜燼。
+- 灰塔觀測者：奇幻，作者霧原。
+- 雪刃照孤城：武俠，作者謝聽寒。
+- 凌晨三點的演算法：都市，作者陳停雲。
+- 大明墨工：歷史，作者蕭墨臣。
 
 ## 內容政策
 
-本站只發布原創繁體中文小說內容。章節文字的 canonical source 位於 src/resource/manifest.json 與 src/resource/<小說名>/ 文字檔，靜態 HTML 頁面由這些資源生成。
+本站只發布原創繁體中文小說內容。小說資料與章節正文的 canonical source 位於 `src/resource/manifest.json` 與 `src/resource/<小說名>/` 內的文字檔；網站前端從這些資源載入內容，不另建獨立章節靜態頁。

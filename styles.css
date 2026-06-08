@@ -374,68 +374,6 @@ button {
   cursor: pointer;
 }
 
-.quick-actions {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-  padding: 14px 0 16px;
-}
-
-.quick-actions button {
-  position: relative;
-  min-width: 0;
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  border: 0;
-  background: transparent;
-  color: #f0ecdf;
-  cursor: pointer;
-  padding: 0;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.quick-actions__icon {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  color: var(--text-white);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.28));
-}
-
-.quick-actions__icon--gold {
-  background: linear-gradient(145deg, #fff1b8, #ff9e24);
-  color: #432500;
-}
-
-.quick-actions__icon--blue {
-  background: linear-gradient(145deg, #b9c8ff, #617aff);
-  color: #101434;
-}
-
-.quick-actions__icon--red {
-  background: linear-gradient(145deg, #ff958f, #ff383d);
-  color: #3e0808;
-}
-
-.quick-actions__icon--violet {
-  background: linear-gradient(145deg, #c496ff, #6e35ff);
-}
-
-.quick-actions__icon--teal {
-  background: linear-gradient(145deg, #76fff5, #02a9a1);
-  color: #072d2d;
-}
-
-.quick-actions__icon--indigo {
-  background: linear-gradient(145deg, #83a4ff, #342bd3);
-}
-
 .new-badge {
   display: inline-flex;
   align-items: center;
@@ -447,12 +385,6 @@ button {
   font-size: 10px;
   font-weight: 900;
   padding: 0 5px;
-}
-
-.quick-actions .new-badge {
-  position: absolute;
-  top: -2px;
-  right: 13px;
 }
 
 .channel-strip {
@@ -1149,63 +1081,54 @@ button {
   white-space: nowrap;
 }
 
-.feature-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  padding-top: 18px;
-}
-
-.feature-row article {
-  min-width: 0;
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 12px;
-  align-items: center;
-  border: 1px solid var(--stroke);
+.aeo-showcase {
+  display: block;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 211, 123, 0.14);
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.022);
-  backdrop-filter: blur(10px);
-  padding: 13px 14px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 211, 123, 0.13), transparent 30%),
+    linear-gradient(135deg, rgba(20, 23, 33, 0.62), rgba(7, 9, 15, 0.46));
+  backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  padding: 20px;
 }
 
-.feature-row__icon {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: rgba(41, 204, 211, 0.16);
-  color: var(--teal);
+.aeo-showcase--lead {
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
-.feature-row__icon--violet {
-  background: rgba(153, 109, 255, 0.16);
-  color: var(--violet);
+.aeo-showcase--lead .channel-strip__identity {
+  margin-bottom: 16px;
 }
 
-.feature-row__icon--gold {
-  background: rgba(255, 211, 123, 0.15);
-  color: var(--gold);
+.aeo-showcase--lead .channel-strip__points {
+  justify-content: flex-start;
+  margin-top: 16px;
 }
 
-.feature-row__icon--green {
-  background: rgba(140, 202, 115, 0.14);
-  color: var(--green);
+.aeo-showcase--lead .channel-strip__actions {
+  justify-content: flex-start;
+  margin-top: 14px;
 }
 
-.feature-row h3 {
-  margin: 0 0 3px;
-  color: #fff8ed;
-  font-size: 14px;
-  line-height: 1.2;
+.aeo-showcase h2 {
+  max-width: 780px;
+  margin: 0 0 12px;
+  color: #fff7e6;
+  font-size: clamp(26px, 2.4vw, 38px);
+  line-height: 1.16;
+  font-weight: 900;
+  letter-spacing: -0.03em;
 }
 
-.feature-row p {
+.aeo-showcase p {
+  max-width: 820px;
   margin: 0;
-  color: #888d98;
-  font-size: 11px;
-  line-height: 1.35;
+  color: #b7ad9b;
+  font-size: 14px;
+  line-height: 1.85;
 }
 
 .modal {
@@ -1628,6 +1551,7 @@ button {
   .channel-strip__actions {
     justify-content: flex-start;
   }
+
 }
 
 @media (max-width: 780px) {
@@ -1764,23 +1688,6 @@ button {
     right: 13px;
     bottom: 18px;
     font-size: 11px;
-  }
-
-  .quick-actions {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 8px;
-    padding: 14px 0 14px;
-  }
-
-  .quick-actions button {
-    font-size: 12px;
-    gap: 7px;
-  }
-
-  .quick-actions__icon {
-    width: 31px;
-    height: 31px;
-    border-radius: 9px;
   }
 
   .channel-strip {
@@ -1983,8 +1890,19 @@ button {
     white-space: nowrap;
   }
 
-  .feature-row {
-    display: none;
+  .aeo-showcase {
+    gap: 12px;
+    margin-top: 14px;
+    padding: 15px 12px;
+  }
+
+  .aeo-showcase h2 {
+    font-size: 24px;
+  }
+
+  .aeo-showcase p {
+    font-size: 13px;
+    line-height: 1.75;
   }
 
   .bottom-nav {
@@ -2115,10 +2033,6 @@ button {
 
   .hero h1 {
     font-size: 18px;
-  }
-
-  .quick-actions button {
-    font-size: 11px;
   }
 
   .ai-card {
