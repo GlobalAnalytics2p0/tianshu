@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T17:26:36.000+08:00",
+  "generatedAt": "2026-06-08T18:59:00.000+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -70,6 +70,13 @@
           "path": "src/resource/星骸王座/文章/第07章 問藥的人先把燈翻了面.txt",
           "charCount": 6057,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
+        },
+        {
+          "number": 8,
+          "title": "藍灰籤先夾進沒人哭的門",
+          "path": "src/resource/星骸王座/文章/第08章 藍灰籤先夾進沒人哭的門.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-08T18:59:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -446,6 +453,13 @@
           "path": "src/resource/灰塔觀測者/第07章 補夜記的人先在第二拍停筆.txt",
           "charCount": 6014,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
+        },
+        {
+          "number": 8,
+          "title": "補鐘次的人先把第二拍抹平",
+          "path": "src/resource/灰塔觀測者/第08章 補鐘次的人先把第二拍抹平.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T18:59:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -821,6 +835,13 @@
           "path": "src/resource/雪刃照孤城/第07章 借還簿上先少了三個缺口.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
+        },
+        {
+          "number": 8,
+          "title": "舊主刀位先等借燈的人",
+          "path": "src/resource/雪刃照孤城/第08章 舊主刀位先等借燈的人.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T18:59:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1196,6 +1217,13 @@
           "path": "src/resource/凌晨三點的演算法/第07章 垃圾門還沒開樓下先醒了.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
+        },
+        {
+          "number": 8,
+          "title": "先巡的人先嫌樓下太熱鬧",
+          "path": "src/resource/凌晨三點的演算法/第08章 先巡的人先嫌樓下太熱鬧.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-08T18:59:00.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1571,6 +1599,13 @@
           "path": "src/resource/大明墨工/第07章 第二個看井的人先掉了一截鉤.txt",
           "charCount": 6009,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
+        },
+        {
+          "number": 8,
+          "title": "問鉤的人先去找夜裡開火的鋪子",
+          "path": "src/resource/大明墨工/第08章 問鉤的人先去找夜裡開火的鋪子.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-08T18:59:00.000+08:00"
         }
       ],
       "tone": "深沉",
