@@ -37,7 +37,7 @@ python3 -m http.server 4173
 - 頻道名稱建議：`天書小說`
 - 頻道 Handle：`@tianshunovel`
 
-每日 09:00 的 Codex Automation 會負責更新 5 本 active title 的 AI 原創章節。新章目標長度為 6,000-6,500 字，且必須先讀取最新 `agent.md`、`src/resource/writing-rules.md`、`src/resource/manifest.json`、`src/resource/五本長篇共通管理規範.md`，以及作品自己的作者/連貫性 Markdown 與既有章節後，才可開始生成。
+每小時整點的 Codex Automation 會負責更新 5 本 active title 的 AI 原創章節。新章目標長度為 6,000-6,500 字，且必須先讀取最新 `agent.md`、`src/resource/writing-rules.md`、`src/resource/manifest.json`、`src/resource/五本長篇共通管理規範.md`，以及作品自己的作者/連貫性 Markdown、`反思.md` 與既有章節後，才可開始生成。其他暫停更新作品會暫存到 `src/resource/backup/`。
 
 ## 影片產出
 

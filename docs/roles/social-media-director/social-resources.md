@@ -17,7 +17,7 @@
 | 資源 | 路徑或連結 | 備註 |
 | --- | --- | --- |
 | 官網資料 manifest | `src/resource/manifest.json` | 40 本原創 AI 小說；首頁資料來源 |
-| 主要 active title | `星骸王座`、`灰塔觀測者`、`雪刃照孤城`、`凌晨三點的演算法`、`大明墨工` | 日更與推廣優先 |
+| 主要 active title | `星骸王座`、`灰塔觀測者`、`雪刃照孤城`、`凌晨三點的演算法`、`大明墨工` | 整點更新與推廣優先 |
 | 星骸王座第 1 章正文 | `src/resource/星骸王座/文章/第01章 星核在雨夜說謊.txt` | 已公開，正文鎖定 |
 | 星骸王座第 1 章影片紀錄 | `src/resource/星骸王座/影片/第01章 星核在雨夜說謊/notes/production-notes.md` | 影片規格、音訊混音、字幕 QA |
 | 星骸王座 IG 圖最後版 | `src/resource/星骸王座/影片/第01章 星核在雨夜說謊/output/instagram-promo.png` | 本機忽略檔；發 IG 用的最終輸出 |

@@ -13,7 +13,7 @@
 
 ## Length And Storage
 
-- Each normal chapter must be 6,000-6,500 Traditional Chinese non-whitespace characters unless the user explicitly sets a different target. Previously published chapters may remain at their published length and must not be expanded only to satisfy a later rule change.
+- Each active-title routine chapter must be 6,000-6,500 Traditional Chinese non-whitespace characters unless the user explicitly sets a different target. Previously published chapters may remain at their published length and must not be expanded only to satisfy a later rule change.
 - Save every chapter as an independent `.txt` file. For migrated title folders, use `src/resource/<novel title>/文章/`; for unmigrated folders, use the existing `src/resource/<novel title>/` root until that title is reorganized.
 - Update `src/resource/manifest.json` after writing or revising chapter files.
 - Never store chapter bodies inline in `app.js`.
@@ -21,16 +21,17 @@
 
 ## Continuity
 
-- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, and all existing `.txt` chapters for that novel. For migrated folders, read continuity Markdown from `src/resource/<novel title>/素材/` and chapters from `src/resource/<novel title>/文章/`.
+- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, `反思.md`, and all existing `.txt` chapters for that novel. For migrated folders, read continuity Markdown from `src/resource/<novel title>/素材/` and chapters from `src/resource/<novel title>/文章/`.
 - Unless the user explicitly requests otherwise, all new content extends existing canon. Do not go back and revise earlier chapter events, outcomes, or facts just to make the next chapter easier.
 - Preserve character state, setting rules, unresolved hooks, emotional consequences, clues, debts, injuries, secrets, and relationship changes.
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
 - If understanding is incomplete, reread the earlier chapters and continuity files until the logic is clear enough to continue without retcon pressure.
 - Refresh the correct author persona before writing. The five active books must not share the same sentence rhythm, emotional temperature, clue style, or chapter engine.
+- Treat `反思.md` as the paired senior reader's direct voice. It exists to criticize drift, expose weak beats, and force growth, not to flatter the writer.
 - If writing produces a new durable insight, record it in the correct Markdown file before ending the run. Do not rely on vague future recall.
 - Every title must retain enough structural runway to serialize beyond 1,500 chapters. Do not spend the premise, final villain tier, ultimate setting answer, or irreversible relationship endgame too early.
 - The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
-- Unless the user explicitly changes scope, daily work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen.
+- Unless the user explicitly changes scope, hourly work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen in `src/resource/backup/`.
 - Video planning, audiobook planning, and non-novel asset work are out of the default daily update path unless the user explicitly asks for them.
 
 ## Plot And Tension
@@ -72,6 +73,7 @@
 - Make transitions natural. A new clue should arise from the prior action, not appear just because the chapter needs another twist.
 - Do not batch-write books by reusing the same paragraph skeleton and only replacing names, objects, factions, or settings. Each novel needs its own scene logic, clue sequence, emotional pressure, and rhythm.
 - Long serials need renewable pressure. Build recurring institutions, obligations, resentments, professions, geography, and power costs that can keep producing conflict without repeating the same scene skeleton.
+- Respect the writer/reader yin-yang. The writer pushes instinct and scene life forward; the paired reader in `反思.md` pushes back on weak tension, lazy explanation, false高潮, overexposure, and emotional blur.
 
 ## Social Promotion And Cover Art
 
@@ -120,4 +122,5 @@
   - The final hook is intriguing but not over-explained.
   - The chapter does not exhaust the novel's long-term runway and leaves future arc space consistent with a 1,500+ chapter serial.
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
+  - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
   - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.

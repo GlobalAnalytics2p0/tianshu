@@ -70,7 +70,7 @@
       "protagonist": "林照川",
       "role": "外門守匣人",
       "setting": "萬相山後禁谷",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "323 萬",
@@ -78,21 +78,21 @@
         {
           "number": 1,
           "title": "骨匣吐出我的臉",
-          "path": "src/resource/萬相骨匣/第01章 骨匣吐出我的臉.txt",
+          "path": "src/resource/backup/萬相骨匣/第01章 骨匣吐出我的臉.txt",
           "charCount": 4163,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "新屍入土",
-          "path": "src/resource/萬相骨匣/第02章 新屍入土.txt",
+          "path": "src/resource/backup/萬相骨匣/第02章 新屍入土.txt",
           "charCount": 4699,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "鈴下埋骨",
-          "path": "src/resource/萬相骨匣/第03章 鈴下埋骨.txt",
+          "path": "src/resource/backup/萬相骨匣/第03章 鈴下埋骨.txt",
           "charCount": 4447,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -113,7 +113,7 @@
       "protagonist": "晏青",
       "role": "抄書童",
       "setting": "燼都廢墟",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "318 萬",
@@ -121,21 +121,21 @@
         {
           "number": 1,
           "title": "灰燼裡的刪頁",
-          "path": "src/resource/燼天錄/第01章 灰燼裡的刪頁.txt",
+          "path": "src/resource/backup/燼天錄/第01章 灰燼裡的刪頁.txt",
           "charCount": 4174,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "灰城第一碑",
-          "path": "src/resource/燼天錄/第02章 灰城第一碑.txt",
+          "path": "src/resource/backup/燼天錄/第02章 灰城第一碑.txt",
           "charCount": 4885,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "第二碑起筆",
-          "path": "src/resource/燼天錄/第03章 第二碑起筆.txt",
+          "path": "src/resource/backup/燼天錄/第03章 第二碑起筆.txt",
           "charCount": 4364,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -156,7 +156,7 @@
       "protagonist": "陸沉舟",
       "role": "龍印承劫者",
       "setting": "白龍淵",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "313 萬",
@@ -164,21 +164,21 @@
         {
           "number": 1,
           "title": "第一枚龍印發燙",
-          "path": "src/resource/九劫龍印/第01章 第一枚龍印發燙.txt",
+          "path": "src/resource/backup/九劫龍印/第01章 第一枚龍印發燙.txt",
           "charCount": 4115,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "白龍淵邊的孩子",
-          "path": "src/resource/九劫龍印/第02章 白龍淵邊的孩子.txt",
+          "path": "src/resource/backup/九劫龍印/第02章 白龍淵邊的孩子.txt",
           "charCount": 4940,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "承劫者抱走的孩子",
-          "path": "src/resource/九劫龍印/第03章 承劫者抱走的孩子.txt",
+          "path": "src/resource/backup/九劫龍印/第03章 承劫者抱走的孩子.txt",
           "charCount": 4390,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -199,7 +199,7 @@
       "protagonist": "祁明霜",
       "role": "無命格星算師",
       "setting": "天璇城",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "308 萬",
@@ -207,21 +207,21 @@
         {
           "number": 1,
           "title": "名字從星圖剝落",
-          "path": "src/resource/逆命星河/第01章 名字從星圖剝落.txt",
+          "path": "src/resource/backup/逆命星河/第01章 名字從星圖剝落.txt",
           "charCount": 4151,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "留痕於將滅之名",
-          "path": "src/resource/逆命星河/第02章 留痕於將滅之名.txt",
+          "path": "src/resource/backup/逆命星河/第02章 留痕於將滅之名.txt",
           "charCount": 4180,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "牆後有人代我活過",
-          "path": "src/resource/逆命星河/第03章 牆後有人代我活過.txt",
+          "path": "src/resource/backup/逆命星河/第03章 牆後有人代我活過.txt",
           "charCount": 4396,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -242,7 +242,7 @@
       "protagonist": "段野",
       "role": "神墟拾荒人",
       "setting": "墜神荒原",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "303 萬",
@@ -250,21 +250,21 @@
         {
           "number": 1,
           "title": "神心在布袋裡跳動",
-          "path": "src/resource/神墟拾荒人/第01章 神心在布袋裡跳動.txt",
+          "path": "src/resource/backup/神墟拾荒人/第01章 神心在布袋裡跳動.txt",
           "charCount": 4153,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "屍骨堆裡的買賣",
-          "path": "src/resource/神墟拾荒人/第02章 屍骨堆裡的買賣.txt",
+          "path": "src/resource/backup/神墟拾荒人/第02章 屍骨堆裡的買賣.txt",
           "charCount": 4917,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "跟脈搏同跳的黑核",
-          "path": "src/resource/神墟拾荒人/第03章 跟脈搏同跳的黑核.txt",
+          "path": "src/resource/backup/神墟拾荒人/第03章 跟脈搏同跳的黑核.txt",
           "charCount": 4397,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -285,7 +285,7 @@
       "protagonist": "謝無咎",
       "role": "劍骨少年",
       "setting": "青冥劍塚",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "298 萬",
@@ -293,21 +293,21 @@
         {
           "number": 1,
           "title": "劍靈要我弒師",
-          "path": "src/resource/青冥契/第01章 劍靈要我弒師.txt",
+          "path": "src/resource/backup/青冥契/第01章 劍靈要我弒師.txt",
           "charCount": 4165,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "塚中舊物",
-          "path": "src/resource/青冥契/第02章 塚中舊物.txt",
+          "path": "src/resource/backup/青冥契/第02章 塚中舊物.txt",
           "charCount": 4535,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "第二道契痕",
-          "path": "src/resource/青冥契/第03章 第二道契痕.txt",
+          "path": "src/resource/backup/青冥契/第03章 第二道契痕.txt",
           "charCount": 4397,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -328,7 +328,7 @@
       "protagonist": "阮知白",
       "role": "採藥少年",
       "setting": "無盡丹城",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "293 萬",
@@ -336,21 +336,21 @@
         {
           "number": 1,
           "title": "丹爐裡有人呼吸",
-          "path": "src/resource/無盡丹城/第01章 丹爐裡有人呼吸.txt",
+          "path": "src/resource/backup/無盡丹城/第01章 丹爐裡有人呼吸.txt",
           "charCount": 4147,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "藥棚深處的第二口氣",
-          "path": "src/resource/無盡丹城/第02章 藥棚深處的第二口氣.txt",
+          "path": "src/resource/backup/無盡丹城/第02章 藥棚深處的第二口氣.txt",
           "charCount": 4861,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "鏡爐笑聲",
-          "path": "src/resource/無盡丹城/第03章 鏡爐笑聲.txt",
+          "path": "src/resource/backup/無盡丹城/第03章 鏡爐笑聲.txt",
           "charCount": 4374,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -424,7 +424,7 @@
       "protagonist": "諾亞",
       "role": "守鐘學徒",
       "setting": "霧港鐘樓",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "283 萬",
@@ -432,21 +432,21 @@
         {
           "number": 1,
           "title": "第十三聲鐘響",
-          "path": "src/resource/霧港第十三鐘/第01章 第十三聲鐘響.txt",
+          "path": "src/resource/backup/霧港第十三鐘/第01章 第十三聲鐘響.txt",
           "charCount": 4110,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "夜渡船上的錯名者",
-          "path": "src/resource/霧港第十三鐘/第02章 夜渡船上的錯名者.txt",
+          "path": "src/resource/backup/霧港第十三鐘/第02章 夜渡船上的錯名者.txt",
           "charCount": 4583,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "第十三名乘客的船票",
-          "path": "src/resource/霧港第十三鐘/第03章 第十三名乘客的船票.txt",
+          "path": "src/resource/backup/霧港第十三鐘/第03章 第十三名乘客的船票.txt",
           "charCount": 4433,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -467,7 +467,7 @@
       "protagonist": "黎安",
       "role": "空艇船長",
       "setting": "雲海航道",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "278 萬",
@@ -475,21 +475,21 @@
         {
           "number": 1,
           "title": "月背來信",
-          "path": "src/resource/月鯨航線/第01章 月背來信.txt",
+          "path": "src/resource/backup/月鯨航線/第01章 月背來信.txt",
           "charCount": 4160,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "霧海下的鳴聲",
-          "path": "src/resource/月鯨航線/第02章 霧海下的鳴聲.txt",
+          "path": "src/resource/backup/月鯨航線/第02章 霧海下的鳴聲.txt",
           "charCount": 4639,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "船錨下的子時",
-          "path": "src/resource/月鯨航線/第03章 船錨下的子時.txt",
+          "path": "src/resource/backup/月鯨航線/第03章 船錨下的子時.txt",
           "charCount": 4354,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -510,7 +510,7 @@
       "protagonist": "溫珀",
       "role": "雨夜書店代理人",
       "setting": "舊城銀燭街",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "273 萬",
@@ -518,21 +518,21 @@
         {
           "number": 1,
           "title": "買走明日結局",
-          "path": "src/resource/銀燭書店/第01章 買走明日結局.txt",
+          "path": "src/resource/backup/銀燭書店/第01章 買走明日結局.txt",
           "charCount": 4105,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "明天退貨",
-          "path": "src/resource/銀燭書店/第02章 明天退貨.txt",
+          "path": "src/resource/backup/銀燭書店/第02章 明天退貨.txt",
           "charCount": 4561,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "木匣裡寄養的明天",
-          "path": "src/resource/銀燭書店/第03章 木匣裡寄養的明天.txt",
+          "path": "src/resource/backup/銀燭書店/第03章 木匣裡寄養的明天.txt",
           "charCount": 4372,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -553,7 +553,7 @@
       "protagonist": "莉雅",
       "role": "洗衣坊女孩",
       "setting": "黑冠王都",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "268 萬",
@@ -561,21 +561,21 @@
         {
           "number": 1,
           "title": "烏鴉落在肩上",
-          "path": "src/resource/王冠下的烏鴉/第01章 烏鴉落在肩上.txt",
+          "path": "src/resource/backup/王冠下的烏鴉/第01章 烏鴉落在肩上.txt",
           "charCount": 4168,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "舊廚房的銀灰",
-          "path": "src/resource/王冠下的烏鴉/第02章 舊廚房的銀灰.txt",
+          "path": "src/resource/backup/王冠下的烏鴉/第02章 舊廚房的銀灰.txt",
           "charCount": 4861,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "灶灰裡的王室湯匙",
-          "path": "src/resource/王冠下的烏鴉/第03章 灶灰裡的王室湯匙.txt",
+          "path": "src/resource/backup/王冠下的烏鴉/第03章 灶灰裡的王室湯匙.txt",
           "charCount": 4387,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -596,7 +596,7 @@
       "protagonist": "瑟琳",
       "role": "海國辯護人",
       "setting": "深藍法庭",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "263 萬",
@@ -604,21 +604,21 @@
         {
           "number": 1,
           "title": "潮汐翻供",
-          "path": "src/resource/深藍魔女法庭/第01章 潮汐翻供.txt",
+          "path": "src/resource/backup/深藍魔女法庭/第01章 潮汐翻供.txt",
           "charCount": 4106,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "深藍停審",
-          "path": "src/resource/深藍魔女法庭/第02章 深藍停審.txt",
+          "path": "src/resource/backup/深藍魔女法庭/第02章 深藍停審.txt",
           "charCount": 4524,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "沉船案的舊記錄者",
-          "path": "src/resource/深藍魔女法庭/第03章 沉船案的舊記錄者.txt",
+          "path": "src/resource/backup/深藍魔女法庭/第03章 沉船案的舊記錄者.txt",
           "charCount": 4418,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -639,7 +639,7 @@
       "protagonist": "伊索",
       "role": "龍語學徒",
       "setting": "暮色邊境",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "258 萬",
@@ -647,21 +647,21 @@
         {
           "number": 1,
           "title": "龍在死前唱童謠",
-          "path": "src/resource/暮色龍語師/第01章 龍在死前唱童謠.txt",
+          "path": "src/resource/backup/暮色龍語師/第01章 龍在死前唱童謠.txt",
           "charCount": 4183,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "童謠續在陌生人喉間",
-          "path": "src/resource/暮色龍語師/第02章 童謠續在陌生人喉間.txt",
+          "path": "src/resource/backup/暮色龍語師/第02章 童謠續在陌生人喉間.txt",
           "charCount": 4948,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "第三句童謠",
-          "path": "src/resource/暮色龍語師/第03章 第三句童謠.txt",
+          "path": "src/resource/backup/暮色龍語師/第03章 第三句童謠.txt",
           "charCount": 4390,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -682,7 +682,7 @@
       "protagonist": "安蘿",
       "role": "新任守書人",
       "setting": "冬林聖所",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "253 萬",
@@ -690,21 +690,21 @@
         {
           "number": 1,
           "title": "白鹿踩過黑頁",
-          "path": "src/resource/白鹿與黑書/第01章 白鹿踩過黑頁.txt",
+          "path": "src/resource/backup/白鹿與黑書/第01章 白鹿踩過黑頁.txt",
           "charCount": 4162,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "禁書林的雪痕",
-          "path": "src/resource/白鹿與黑書/第02章 禁書林的雪痕.txt",
+          "path": "src/resource/backup/白鹿與黑書/第02章 禁書林的雪痕.txt",
           "charCount": 4088,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "白鹿回頭處",
-          "path": "src/resource/白鹿與黑書/第03章 白鹿回頭處.txt",
+          "path": "src/resource/backup/白鹿與黑書/第03章 白鹿回頭處.txt",
           "charCount": 4387,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -778,7 +778,7 @@
       "protagonist": "裴長星",
       "role": "夜市劍徒",
       "setting": "長安不夜巷",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "243 萬",
@@ -786,21 +786,21 @@
         {
           "number": 1,
           "title": "買下一柄記仇劍",
-          "path": "src/resource/長安不夜劍/第01章 買下一柄記仇劍.txt",
+          "path": "src/resource/backup/長安不夜劍/第01章 買下一柄記仇劍.txt",
           "charCount": 4112,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "燈市舊帳",
-          "path": "src/resource/長安不夜劍/第02章 燈市舊帳.txt",
+          "path": "src/resource/backup/長安不夜劍/第02章 燈市舊帳.txt",
           "charCount": 4852,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "劍先到過燈市",
-          "path": "src/resource/長安不夜劍/第03章 劍先到過燈市.txt",
+          "path": "src/resource/backup/長安不夜劍/第03章 劍先到過燈市.txt",
           "charCount": 4399,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -821,7 +821,7 @@
       "protagonist": "唐棠",
       "role": "渡口船娘",
       "setting": "桃花渡",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "238 萬",
@@ -829,21 +829,21 @@
         {
           "number": 1,
           "title": "同船的仇人",
-          "path": "src/resource/桃花渡口/第01章 同船的仇人.txt",
+          "path": "src/resource/backup/桃花渡口/第01章 同船的仇人.txt",
           "charCount": 4121,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "不能落水的包裹",
-          "path": "src/resource/桃花渡口/第02章 不能落水的包裹.txt",
+          "path": "src/resource/backup/桃花渡口/第02章 不能落水的包裹.txt",
           "charCount": 4905,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "包裹裡的舊稱呼",
-          "path": "src/resource/桃花渡口/第03章 包裹裡的舊稱呼.txt",
+          "path": "src/resource/backup/桃花渡口/第03章 包裹裡的舊稱呼.txt",
           "charCount": 4395,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -864,7 +864,7 @@
       "protagonist": "何不歸",
       "role": "鏢局少掌櫃",
       "setting": "荒沙官道",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "233 萬",
@@ -872,21 +872,21 @@
         {
           "number": 1,
           "title": "箱中多了一口氣",
-          "path": "src/resource/無名鏢局/第01章 箱中多了一口氣.txt",
+          "path": "src/resource/backup/無名鏢局/第01章 箱中多了一口氣.txt",
           "charCount": 4176,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "荒沙一口活氣",
-          "path": "src/resource/無名鏢局/第02章 荒沙一口活氣.txt",
+          "path": "src/resource/backup/無名鏢局/第02章 荒沙一口活氣.txt",
           "charCount": 4792,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "同拍的呼吸",
-          "path": "src/resource/無名鏢局/第03章 同拍的呼吸.txt",
+          "path": "src/resource/backup/無名鏢局/第03章 同拍的呼吸.txt",
           "charCount": 4427,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -907,7 +907,7 @@
       "protagonist": "顧春水",
       "role": "茶樓掌櫃",
       "setting": "春水樓",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "228 萬",
@@ -915,21 +915,21 @@
         {
           "number": 1,
           "title": "白水客人拔刀",
-          "path": "src/resource/刀藏春水/第01章 白水客人拔刀.txt",
+          "path": "src/resource/backup/刀藏春水/第01章 白水客人拔刀.txt",
           "charCount": 4151,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "白水試路",
-          "path": "src/resource/刀藏春水/第02章 白水試路.txt",
+          "path": "src/resource/backup/刀藏春水/第02章 白水試路.txt",
           "charCount": 4609,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "樓下那碗春水",
-          "path": "src/resource/刀藏春水/第03章 樓下那碗春水.txt",
+          "path": "src/resource/backup/刀藏春水/第03章 樓下那碗春水.txt",
           "charCount": 4438,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -950,7 +950,7 @@
       "protagonist": "江問眠",
       "role": "雲夢盟後人",
       "setting": "雲夢澤",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "223 萬",
@@ -958,21 +958,21 @@
         {
           "number": 1,
           "title": "盟約背面的死名",
-          "path": "src/resource/雲夢舊盟/第01章 盟約背面的死名.txt",
+          "path": "src/resource/backup/雲夢舊盟/第01章 盟約背面的死名.txt",
           "charCount": 4172,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "封堂夜燈",
-          "path": "src/resource/雲夢舊盟/第02章 封堂夜燈.txt",
+          "path": "src/resource/backup/雲夢舊盟/第02章 封堂夜燈.txt",
           "charCount": 4607,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "被刪掉的江停舟",
-          "path": "src/resource/雲夢舊盟/第03章 被刪掉的江停舟.txt",
+          "path": "src/resource/backup/雲夢舊盟/第03章 被刪掉的江停舟.txt",
           "charCount": 4481,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -993,7 +993,7 @@
       "protagonist": "宋青衣",
       "role": "縣衙捕快",
       "setting": "青石縣",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "218 萬",
@@ -1001,21 +1001,21 @@
         {
           "number": 1,
           "title": "錯帳簿露出盟主名",
-          "path": "src/resource/青衣捕快/第01章 錯帳簿露出盟主名.txt",
+          "path": "src/resource/backup/青衣捕快/第01章 錯帳簿露出盟主名.txt",
           "charCount": 4166,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "城門前另取證",
-          "path": "src/resource/青衣捕快/第02章 城門前另取證.txt",
+          "path": "src/resource/backup/青衣捕快/第02章 城門前另取證.txt",
           "charCount": 4990,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "箱印落在手腕上",
-          "path": "src/resource/青衣捕快/第03章 箱印落在手腕上.txt",
+          "path": "src/resource/backup/青衣捕快/第03章 箱印落在手腕上.txt",
           "charCount": 4451,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1036,7 +1036,7 @@
       "protagonist": "葉聽雨",
       "role": "說書人徒弟",
       "setting": "斷橋茶棚",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.4",
       "heat": "213 萬",
@@ -1044,21 +1044,21 @@
         {
           "number": 1,
           "title": "雨裡排隊尋仇",
-          "path": "src/resource/斷橋聽雨/第01章 雨裡排隊尋仇.txt",
+          "path": "src/resource/backup/斷橋聽雨/第01章 雨裡排隊尋仇.txt",
           "charCount": 4130,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "橋心點名",
-          "path": "src/resource/斷橋聽雨/第02章 橋心點名.txt",
+          "path": "src/resource/backup/斷橋聽雨/第02章 橋心點名.txt",
           "charCount": 4472,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "說書人沒有淋濕",
-          "path": "src/resource/斷橋聽雨/第03章 說書人沒有淋濕.txt",
+          "path": "src/resource/backup/斷橋聽雨/第03章 說書人沒有淋濕.txt",
           "charCount": 4411,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1132,7 +1132,7 @@
       "protagonist": "陳澈",
       "role": "影像公司合夥人",
       "setting": "南港創業街",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "203 萬",
@@ -1140,21 +1140,21 @@
         {
           "number": 1,
           "title": "廣告改掉一段記憶",
-          "path": "src/resource/逆光合夥人/第01章 廣告改掉一段記憶.txt",
+          "path": "src/resource/backup/逆光合夥人/第01章 廣告改掉一段記憶.txt",
           "charCount": 4171,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "底片醒來時",
-          "path": "src/resource/逆光合夥人/第02章 底片醒來時.txt",
+          "path": "src/resource/backup/逆光合夥人/第02章 底片醒來時.txt",
           "charCount": 4922,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "底片裡的舊童年",
-          "path": "src/resource/逆光合夥人/第03章 底片裡的舊童年.txt",
+          "path": "src/resource/backup/逆光合夥人/第03章 底片裡的舊童年.txt",
           "charCount": 4467,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1175,7 +1175,7 @@
       "protagonist": "梁夏",
       "role": "北漂設計師",
       "setting": "老公寓四樓",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "198 萬",
@@ -1183,21 +1183,21 @@
         {
           "number": 1,
           "title": "裂縫吐出求救便利貼",
-          "path": "src/resource/租屋處有個時間洞/第01章 裂縫吐出求救便利貼.txt",
+          "path": "src/resource/backup/租屋處有個時間洞/第01章 裂縫吐出求救便利貼.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "今晚讓誰過來",
-          "path": "src/resource/租屋處有個時間洞/第02章 今晚讓誰過來.txt",
+          "path": "src/resource/backup/租屋處有個時間洞/第02章 今晚讓誰過來.txt",
           "charCount": 4874,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "昨天還在敲門",
-          "path": "src/resource/租屋處有個時間洞/第03章 昨天還在敲門.txt",
+          "path": "src/resource/backup/租屋處有個時間洞/第03章 昨天還在敲門.txt",
           "charCount": 4468,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1218,7 +1218,7 @@
       "protagonist": "溫予",
       "role": "夜班店員",
       "setting": "雨城便利店",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "193 萬",
@@ -1226,21 +1226,21 @@
         {
           "number": 1,
           "title": "貨架上販售夢境",
-          "path": "src/resource/失眠便利店/第01章 貨架上販售夢境.txt",
+          "path": "src/resource/backup/失眠便利店/第01章 貨架上販售夢境.txt",
           "charCount": 4107,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "少了一格睡意",
-          "path": "src/resource/失眠便利店/第02章 少了一格睡意.txt",
+          "path": "src/resource/backup/失眠便利店/第02章 少了一格睡意.txt",
           "charCount": 4832,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "寄存的睡意",
-          "path": "src/resource/失眠便利店/第03章 寄存的睡意.txt",
+          "path": "src/resource/backup/失眠便利店/第03章 寄存的睡意.txt",
           "charCount": 4400,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1261,7 +1261,7 @@
       "protagonist": "紀寧",
       "role": "法務專員",
       "setting": "昭明大廈",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "188 萬",
@@ -1269,21 +1269,21 @@
         {
           "number": 1,
           "title": "第七份離職信未送出",
-          "path": "src/resource/第七份離職信/第01章 第七份離職信未送出.txt",
+          "path": "src/resource/backup/第七份離職信/第01章 第七份離職信未送出.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "清晨會議室的第七個席位",
-          "path": "src/resource/第七份離職信/第02章 清晨會議室的第七個席位.txt",
+          "path": "src/resource/backup/第七份離職信/第02章 清晨會議室的第七個席位.txt",
           "charCount": 4499,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "合約室的舊工牌",
-          "path": "src/resource/第七份離職信/第03章 合約室的舊工牌.txt",
+          "path": "src/resource/backup/第七份離職信/第03章 合約室的舊工牌.txt",
           "charCount": 4393,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1304,7 +1304,7 @@
       "protagonist": "蘇聽瀾",
       "role": "心理師",
       "setting": "雨城診所",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "183 萬",
@@ -1312,21 +1312,21 @@
         {
           "number": 1,
           "title": "患者夢裡坐著我",
-          "path": "src/resource/雨城心理師/第01章 患者夢裡坐著我.txt",
+          "path": "src/resource/backup/雨城心理師/第01章 患者夢裡坐著我.txt",
           "charCount": 4111,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "診間滲夢",
-          "path": "src/resource/雨城心理師/第02章 診間滲夢.txt",
+          "path": "src/resource/backup/雨城心理師/第02章 診間滲夢.txt",
           "charCount": 4228,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "夢裡留下的手印",
-          "path": "src/resource/雨城心理師/第03章 夢裡留下的手印.txt",
+          "path": "src/resource/backup/雨城心理師/第03章 夢裡留下的手印.txt",
           "charCount": 4460,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1347,7 +1347,7 @@
       "protagonist": "程野",
       "role": "過氣記者",
       "setting": "星河傳媒樓",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "178 萬",
@@ -1355,21 +1355,21 @@
         {
           "number": 1,
           "title": "熱搜寫出我的人生",
-          "path": "src/resource/熱搜之外/第01章 熱搜寫出我的人生.txt",
+          "path": "src/resource/backup/熱搜之外/第01章 熱搜寫出我的人生.txt",
           "charCount": 4148,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "標題替我開門",
-          "path": "src/resource/熱搜之外/第02章 標題替我開門.txt",
+          "path": "src/resource/backup/熱搜之外/第02章 標題替我開門.txt",
           "charCount": 4226,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "葬禮先上熱搜",
-          "path": "src/resource/熱搜之外/第03章 葬禮先上熱搜.txt",
+          "path": "src/resource/backup/熱搜之外/第03章 葬禮先上熱搜.txt",
           "charCount": 4397,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1390,7 +1390,7 @@
       "protagonist": "許知遠",
       "role": "地鐵站務員",
       "setting": "零點地鐵站",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.5",
       "heat": "173 萬",
@@ -1398,21 +1398,21 @@
         {
           "number": 1,
           "title": "末班車載滿明天",
-          "path": "src/resource/零點地鐵站/第01章 末班車載滿明天.txt",
+          "path": "src/resource/backup/零點地鐵站/第01章 末班車載滿明天.txt",
           "charCount": 4103,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "多坐一站",
-          "path": "src/resource/零點地鐵站/第02章 多坐一站.txt",
+          "path": "src/resource/backup/零點地鐵站/第02章 多坐一站.txt",
           "charCount": 4846,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "明日遺失物",
-          "path": "src/resource/零點地鐵站/第03章 明日遺失物.txt",
+          "path": "src/resource/backup/零點地鐵站/第03章 明日遺失物.txt",
           "charCount": 4407,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1486,7 +1486,7 @@
       "protagonist": "顧清鹽",
       "role": "鹽商之女",
       "setting": "淮南鹽岸",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.3",
       "heat": "163 萬",
@@ -1494,21 +1494,21 @@
         {
           "number": 1,
           "title": "密信比鹽更重",
-          "path": "src/resource/長河鹽商/第01章 密信比鹽更重.txt",
+          "path": "src/resource/backup/長河鹽商/第01章 密信比鹽更重.txt",
           "charCount": 4166,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "離岸三尺",
-          "path": "src/resource/長河鹽商/第02章 離岸三尺.txt",
+          "path": "src/resource/backup/長河鹽商/第02章 離岸三尺.txt",
           "charCount": 4946,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "鹽水才能看見的字",
-          "path": "src/resource/長河鹽商/第03章 鹽水才能看見的字.txt",
+          "path": "src/resource/backup/長河鹽商/第03章 鹽水才能看見的字.txt",
           "charCount": 4429,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1529,7 +1529,7 @@
       "protagonist": "秦望北",
       "role": "邊關信使",
       "setting": "朔方雪關",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "158 萬",
@@ -1537,21 +1537,21 @@
         {
           "number": 1,
           "title": "不能送達的家書",
-          "path": "src/resource/邊關雪信/第01章 不能送達的家書.txt",
+          "path": "src/resource/backup/邊關雪信/第01章 不能送達的家書.txt",
           "charCount": 4133,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "夜過雪關",
-          "path": "src/resource/邊關雪信/第02章 夜過雪關.txt",
+          "path": "src/resource/backup/邊關雪信/第02章 夜過雪關.txt",
           "charCount": 4493,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "寄往亡母的家書",
-          "path": "src/resource/邊關雪信/第03章 寄往亡母的家書.txt",
+          "path": "src/resource/backup/邊關雪信/第03章 寄往亡母的家書.txt",
           "charCount": 4447,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1572,7 +1572,7 @@
       "protagonist": "裴紙生",
       "role": "落魄書吏",
       "setting": "洛陽書坊街",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.2",
       "heat": "153 萬",
@@ -1580,21 +1580,21 @@
         {
           "number": 1,
           "title": "暢銷書暗中調兵",
-          "path": "src/resource/洛陽紙貴局/第01章 暢銷書暗中調兵.txt",
+          "path": "src/resource/backup/洛陽紙貴局/第01章 暢銷書暗中調兵.txt",
           "charCount": 4179,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "改句試兵",
-          "path": "src/resource/洛陽紙貴局/第02章 改句試兵.txt",
+          "path": "src/resource/backup/洛陽紙貴局/第02章 改句試兵.txt",
           "charCount": 4216,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "改文者回城",
-          "path": "src/resource/洛陽紙貴局/第03章 改文者回城.txt",
+          "path": "src/resource/backup/洛陽紙貴局/第03章 改文者回城.txt",
           "charCount": 4452,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1615,7 +1615,7 @@
       "protagonist": "陸山河",
       "role": "治水小吏",
       "setting": "青州河堤",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.8",
       "heat": "148 萬",
@@ -1623,21 +1623,21 @@
         {
           "number": 1,
           "title": "河道被人買走",
-          "path": "src/resource/山河小吏/第01章 河道被人買走.txt",
+          "path": "src/resource/backup/山河小吏/第01章 河道被人買走.txt",
           "charCount": 4141,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "命根在河床",
-          "path": "src/resource/山河小吏/第02章 命根在河床.txt",
+          "path": "src/resource/backup/山河小吏/第02章 命根在河床.txt",
           "charCount": 4931,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "河樁刻著生辰",
-          "path": "src/resource/山河小吏/第03章 河樁刻著生辰.txt",
+          "path": "src/resource/backup/山河小吏/第03章 河樁刻著生辰.txt",
           "charCount": 4427,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1658,7 +1658,7 @@
       "protagonist": "沈夜航",
       "role": "夜航船娘",
       "setting": "金陵秦淮河",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.7",
       "heat": "143 萬",
@@ -1666,21 +1666,21 @@
         {
           "number": 1,
           "title": "客人帶來傳國玉印",
-          "path": "src/resource/金陵夜航/第01章 客人帶來傳國玉印.txt",
+          "path": "src/resource/backup/金陵夜航/第01章 客人帶來傳國玉印.txt",
           "charCount": 4154,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "禁河問印",
-          "path": "src/resource/金陵夜航/第02章 禁河問印.txt",
+          "path": "src/resource/backup/金陵夜航/第02章 禁河問印.txt",
           "charCount": 4343,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "已死之人夜渡",
-          "path": "src/resource/金陵夜航/第03章 已死之人夜渡.txt",
+          "path": "src/resource/backup/金陵夜航/第03章 已死之人夜渡.txt",
           "charCount": 4454,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1701,7 +1701,7 @@
       "protagonist": "梁茶生",
       "role": "茶樓掌櫃",
       "setting": "西川烽火鎮",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "138 萬",
@@ -1709,21 +1709,21 @@
         {
           "number": 1,
           "title": "敵將點出亡妻茶名",
-          "path": "src/resource/烽火茶樓/第01章 敵將點出亡妻茶名.txt",
+          "path": "src/resource/backup/烽火茶樓/第01章 敵將點出亡妻茶名.txt",
           "charCount": 4116,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "私茶暗線",
-          "path": "src/resource/烽火茶樓/第02章 私茶暗線.txt",
+          "path": "src/resource/backup/烽火茶樓/第02章 私茶暗線.txt",
           "charCount": 4690,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "茶樓牆後的火線",
-          "path": "src/resource/烽火茶樓/第03章 茶樓牆後的火線.txt",
+          "path": "src/resource/backup/烽火茶樓/第03章 茶樓牆後的火線.txt",
           "charCount": 4420,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }
@@ -1744,7 +1744,7 @@
       "protagonist": "謝青史",
       "role": "年輕史官",
       "setting": "太史院",
-      "status": "每日 09:00 更新",
+      "status": "封存於 backup，暫不更新",
       "updateNote": "第一章已依 writing-rules 重新修訂，移除批次模板句、premise 摘要與補字痕跡，後續更新必須先讀既有章節再延續。",
       "score": "9.6",
       "heat": "133 萬",
@@ -1752,21 +1752,21 @@
         {
           "number": 1,
           "title": "空白處浮出姓名",
-          "path": "src/resource/青史未署名/第01章 空白處浮出姓名.txt",
+          "path": "src/resource/backup/青史未署名/第01章 空白處浮出姓名.txt",
           "charCount": 4102,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
           "number": 2,
           "title": "以名換白",
-          "path": "src/resource/青史未署名/第02章 以名換白.txt",
+          "path": "src/resource/backup/青史未署名/第02章 以名換白.txt",
           "charCount": 4715,
           "generatedAt": "2026-06-06T02:24:23Z"
         },
         {
           "number": 3,
           "title": "署押旁的溫姓",
-          "path": "src/resource/青史未署名/第03章 署押旁的溫姓.txt",
+          "path": "src/resource/backup/青史未署名/第03章 署押旁的溫姓.txt",
           "charCount": 4477,
           "generatedAt": "2026-06-07T01:14:56.182Z"
         }

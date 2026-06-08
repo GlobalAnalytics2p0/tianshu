@@ -25,12 +25,13 @@
 
 ## Automation 與 Git
 
-- 每日 09:00 Asia/Taipei 的更新目標是五本 active title，各新增一章可行時 6,000-6,500 字。
+- 每小時整點 Asia/Taipei 的更新目標是五本 active title，各新增一章可行時 6,000-6,500 字。
 - 開始大量生成前先做 GitHub 預檢：確認 `origin` 存在，並用 `git ls-remote --exit-code origin HEAD` 檢查遠端與 SSH/auth 是否正常。若這一步已失敗，要明確回報 blocker，不要等到全部寫完才發現無法提交。
 - 生成前必須由內容創作者規則刷新連貫性。
-- 成功後更新章節 `.txt`、`src/resource/manifest.json`、相關狀態檔。
+- 成功後更新章節 `.txt`、`src/resource/manifest.json`、相關狀態檔與對應 `反思.md`（如內容創作者有新的耐久回饋要落檔）。
 - 驗證通過後才 commit 並 push。
 - commit 時只 stage 當次意圖內的內容；若起始狀態已有 dirty files，要記錄並避免混入不相關變更。
+- `src/resource/backup/` 用來放 35 本暫停更新作品；routine hourly automation 不應對 backup 內作品做內容改寫。
 
 ## 影音產出
 

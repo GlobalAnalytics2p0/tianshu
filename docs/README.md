@@ -25,10 +25,9 @@
 | 專案說明 | `README.md` | 全端工程師 |
 | 寫作規則 | `src/resource/writing-rules.md` | 內容創作者 |
 | 五本長篇管理 | `src/resource/五本長篇共通管理規範.md` | 內容創作者 |
-| 小說企劃與連載狀態 | `src/resource/<作品>/README.md`、`核心靈魂檔案.md`、`作者思路.md`、`人物架構.md`、`每日寫作狀態.md`、`伏筆事件台帳.md` | 內容創作者 |
-| 已遷移作品企劃 | `src/resource/<作品>/素材/*.md` | 內容創作者 |
+| 小說企劃與連載狀態 | `src/resource/<作品>/README.md`、`核心靈魂檔案.md`、`作者思路.md`、`人物架構.md`、`每日寫作狀態.md`、`伏筆事件台帳.md`、`反思.md` | 內容創作者 |
+| 已遷移作品企劃 | `src/resource/<作品>/素材/*.md`（含 `反思.md`） | 內容創作者 |
 | 有聲書規則與紀錄 | `src/resource/<作品>/有聲書/README.md`、`src/resource/<作品>/素材/有聲書/**/*.md` | 全端工程師主責，內容創作者協作 |
 | 影片規劃與製作紀錄 | `src/resource/<作品>/影片/**/*.md`、`src/resource/<作品>/素材/影片/README.md` | 全端工程師主責，社群總監協作 |
 | 社群策略與資源 | `docs/roles/social-media-director/*.md` | 社群總監 |
 | 角色上任手冊 | `docs/roles/**/README.md` | 對應角色 |
-

@@ -56,7 +56,7 @@ const coverPalettes = [
 
 const resourceManifestPath = "src/resource/manifest.json";
 const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
-const youtubeShareText = "來看天書小說：每日原創連載、爆款小說、有聲短劇";
+const youtubeShareText = "來看天書小說：每小時整點原創連載、爆款小說、有聲短劇";
 const activeRankingTitles = [
   "星骸王座",
   "灰塔觀測者",
