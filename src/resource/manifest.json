@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T15:27:03.000+08:00",
+  "generatedAt": "2026-06-08T17:26:36.000+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -63,6 +63,13 @@
           "path": "src/resource/星骸王座/文章/第06章 借灶的人先聽見樓下醒了.txt",
           "charCount": 6010,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
+        },
+        {
+          "number": 7,
+          "title": "問藥的人先把燈翻了面",
+          "path": "src/resource/星骸王座/文章/第07章 問藥的人先把燈翻了面.txt",
+          "charCount": 6057,
+          "generatedAt": "2026-06-08T17:26:36.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -432,6 +439,13 @@
           "path": "src/resource/灰塔觀測者/第06章 洗灰水裡先浮出替補名.txt",
           "charCount": 6002,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
+        },
+        {
+          "number": 7,
+          "title": "補夜記的人先在第二拍停筆",
+          "path": "src/resource/灰塔觀測者/第07章 補夜記的人先在第二拍停筆.txt",
+          "charCount": 6014,
+          "generatedAt": "2026-06-08T17:26:36.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -800,6 +814,13 @@
           "path": "src/resource/雪刃照孤城/第06章 北三格外先借一塊門牌.txt",
           "charCount": 6007,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
+        },
+        {
+          "number": 7,
+          "title": "借還簿上先少了三個缺口",
+          "path": "src/resource/雪刃照孤城/第07章 借還簿上先少了三個缺口.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T17:26:36.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1168,6 +1189,13 @@
           "path": "src/resource/凌晨三點的演算法/第06章 物業間那台夜巡端還在亮.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
+        },
+        {
+          "number": 7,
+          "title": "垃圾門還沒開樓下先醒了",
+          "path": "src/resource/凌晨三點的演算法/第07章 垃圾門還沒開樓下先醒了.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-08T17:26:36.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1536,6 +1564,13 @@
           "path": "src/resource/大明墨工/第06章 先對井的人不先開格.txt",
           "charCount": 6079,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
+        },
+        {
+          "number": 7,
+          "title": "第二個看井的人先掉了一截鉤",
+          "path": "src/resource/大明墨工/第07章 第二個看井的人先掉了一截鉤.txt",
+          "charCount": 6009,
+          "generatedAt": "2026-06-08T17:26:36.000+08:00"
         }
       ],
       "tone": "深沉",
