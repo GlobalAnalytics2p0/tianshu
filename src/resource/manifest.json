@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T09:40:41.000+08:00",
+  "generatedAt": "2026-06-08T15:27:03.000+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -49,6 +49,13 @@
           "path": "src/resource/星骸王座/文章/第04章 聽星犬先聞見血.txt",
           "charCount": 6452,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
+        },
+        {
+          "number": 5,
+          "title": "北牆外先少了一盞燈",
+          "path": "src/resource/星骸王座/文章/第05章 北牆外先少了一盞燈.txt",
+          "charCount": 6070,
+          "generatedAt": "2026-06-08T15:27:03.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -404,6 +411,13 @@
           "path": "src/resource/灰塔觀測者/第04章 被刪掉的值守位.txt",
           "charCount": 6120,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
+        },
+        {
+          "number": 5,
+          "title": "換簿的人不走正梯",
+          "path": "src/resource/灰塔觀測者/第05章 換簿的人不走正梯.txt",
+          "charCount": 6020,
+          "generatedAt": "2026-06-08T15:27:03.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -758,6 +772,13 @@
           "path": "src/resource/雪刃照孤城/第04章 雪犬追到炭棚前.txt",
           "charCount": 6494,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
+        },
+        {
+          "number": 5,
+          "title": "煙道裡的刀先冷了",
+          "path": "src/resource/雪刃照孤城/第05章 煙道裡的刀先冷了.txt",
+          "charCount": 6046,
+          "generatedAt": "2026-06-08T15:27:03.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1112,6 +1133,13 @@
           "path": "src/resource/凌晨三點的演算法/第04章 舊工作機不該連網.txt",
           "charCount": 6056,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
+        },
+        {
+          "number": 5,
+          "title": "父案模板先算到門口",
+          "path": "src/resource/凌晨三點的演算法/第05章 父案模板先算到門口.txt",
+          "charCount": 6066,
+          "generatedAt": "2026-06-08T15:27:03.000+08:00"
         }
       ],
       "tone": "深沉",
@@ -1466,6 +1494,13 @@
           "path": "src/resource/大明墨工/第04章 灶火先烘出半張河意.txt",
           "charCount": 6031,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
+        },
+        {
+          "number": 5,
+          "title": "木匣先驗借河的人",
+          "path": "src/resource/大明墨工/第05章 木匣先驗借河的人.txt",
+          "charCount": 6008,
+          "generatedAt": "2026-06-08T15:27:03.000+08:00"
         }
       ],
       "tone": "深沉",
