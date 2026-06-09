@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T02:32:10+08:00",
+  "generatedAt": "2026-06-09T08:03:08+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -105,6 +105,13 @@
           "path": "src/resource/星骸王座/文章/第12章 東槽回認.txt",
           "charCount": 6094,
           "generatedAt": "2026-06-09T02:32:10+08:00"
+        },
+        {
+          "number": 13,
+          "title": "活手亂槽",
+          "path": "src/resource/星骸王座/文章/第13章 活手亂槽.txt",
+          "charCount": 6383,
+          "generatedAt": "2026-06-09T08:03:08+08:00"
         }
       ],
       "tone": "深沉",
@@ -516,6 +523,13 @@
           "path": "src/resource/灰塔觀測者/第12章 鐘後白格.txt",
           "charCount": 6036,
           "generatedAt": "2026-06-09T02:32:10+08:00"
+        },
+        {
+          "number": 13,
+          "title": "第二格輪",
+          "path": "src/resource/灰塔觀測者/第13章 第二格輪.txt",
+          "charCount": 6472,
+          "generatedAt": "2026-06-09T08:03:08+08:00"
         }
       ],
       "tone": "深沉",
@@ -926,6 +940,13 @@
           "path": "src/resource/雪刃照孤城/第12章 內庫記欠.txt",
           "charCount": 6083,
           "generatedAt": "2026-06-09T02:32:10+08:00"
+        },
+        {
+          "number": 13,
+          "title": "西庫半扣",
+          "path": "src/resource/雪刃照孤城/第13章 西庫半扣.txt",
+          "charCount": 6286,
+          "generatedAt": "2026-06-09T08:03:08+08:00"
         }
       ],
       "tone": "深沉",
@@ -1336,6 +1357,13 @@
           "path": "src/resource/凌晨三點的演算法/第12章 市檔醒口.txt",
           "charCount": 6009,
           "generatedAt": "2026-06-09T02:32:10+08:00"
+        },
+        {
+          "number": 13,
+          "title": "暫口留單",
+          "path": "src/resource/凌晨三點的演算法/第13章 暫口留單.txt",
+          "charCount": 6381,
+          "generatedAt": "2026-06-09T08:03:08+08:00"
         }
       ],
       "tone": "深沉",
@@ -1746,6 +1774,13 @@
           "path": "src/resource/大明墨工/第12章 後簿借名.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-09T02:32:10+08:00"
+        },
+        {
+          "number": 13,
+          "title": "西庫押名",
+          "path": "src/resource/大明墨工/第13章 西庫押名.txt",
+          "charCount": 6170,
+          "generatedAt": "2026-06-09T08:03:08+08:00"
         }
       ],
       "tone": "深沉",
