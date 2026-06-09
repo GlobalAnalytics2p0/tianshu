@@ -573,7 +573,9 @@ function isIOSInstallPromptBrowser() {
   const userAgent = navigator.userAgent || "";
   const vendor = navigator.vendor || "";
   const isSmallTouchScreen = window.matchMedia("(max-width: 780px)").matches && navigator.maxTouchPoints > 0;
-  const isIOS = /iP(hone|od|ad)/i.test(userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isClassicIOS = /iP(hone|od|ad)/i.test(userAgent);
+  const isIPadOSDesktopUA = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1 && /Mobile/i.test(userAgent);
+  const isIOS = isClassicIOS || isIPadOSDesktopUA;
   const isSafari = /Safari/i.test(userAgent) && /Apple Computer/i.test(vendor) && !/CriOS/i.test(userAgent);
   const isChrome = /CriOS/i.test(userAgent);
   const isUnsupportedBrowser = /FxiOS|EdgiOS|OPiOS|DuckDuckGo|Android/i.test(userAgent);
