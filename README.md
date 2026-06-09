@@ -37,9 +37,11 @@ python3 -m http.server 4173
 - 頻道名稱建議：`天書小說`
 - 頻道 Handle：`@tianshunovel`
 
-每小時整點的 Codex Automation 會負責更新 5 本 active title 的 AI 原創章節。新章目標長度為 6,000-6,500 字，且必須先讀取最新 `agent.md`、`src/resource/writing-rules.md`、`src/resource/manifest.json`、`src/resource/五本長篇共通管理規範.md`，以及作品自己的作者/連貫性 Markdown、`反思.md` 與既有章節後，才可開始生成。其他暫停更新作品會暫存到 `src/resource/backup/`。
+每 6 小時（Asia/Taipei 00:00、06:00、12:00、18:00）的 Codex Automation 會負責更新 5 本 active title 的 AI 原創章節。新章目標長度為 6,000-6,500 字，且必須先讀取最新 `agent.md`、`src/resource/writing-rules.md`、`src/resource/manifest.json`、`src/resource/五本長篇共通管理規範.md`，以及作品自己的作者/連貫性 Markdown、`反思.md` 與既有章節後，才可開始生成。其他暫停更新作品會暫存到 `src/resource/backup/`。
 
-發佈完成的判定不能只看 commit 或 push。hourly automation 在 push 後必須再跑 `node scripts/verify-site-publication.mjs`，確認本地 manifest、GitHub raw manifest、實際網站 manifest 三者一致，才可回報網站已更新。
+每次 six-hour automation 開始前，先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`。如果前一輪因網路問題留下 local-only commit，這一步會要求先補發佈，避免網站一直停在舊版卻繼續累積新章。
+
+發佈完成的判定不能只看 commit 或 push。six-hour automation 在 push 後必須再跑 `node scripts/verify-site-publication.mjs`，確認本地 manifest、GitHub raw manifest、實際網站 manifest 三者一致，才可回報網站已更新。
 
 ## 影片產出
 

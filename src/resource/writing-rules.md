@@ -22,6 +22,7 @@
 - Do not use long sentence-like chapter titles as a routine pattern, especially repeated structures such as `先...的人...`, `...先把...`, or titles that explain the whole scene. Use an evocative object, place, action, or threat instead.
 - Already published video/audiobook chapter titles are locked with their public assets. Do not rename published chapters unless the user explicitly approves a public metadata correction.
 - For automation runs, treat `local chapter written`, `manifest updated`, `commit created`, `push succeeded`, and `live site updated` as separate states. Do not report the chapter as published on the site until the live manifest matches the local manifest.
+- At the start of every six-hour automation run, check for deferred publish debt with `node scripts/check-publish-state.mjs --auto-publish-if-ahead`. If old local-only commits are still ahead of upstream and origin is reachable again, publish them before generating more chapters. If origin is unreachable, record that deferred publish debt explicitly instead of leaving the website state ambiguous.
 
 ## Continuity
 
@@ -44,6 +45,7 @@
 - Do not run routine novel updates every hour unless the user explicitly changes the cadence again.
 - Each scheduled run should continue only the 5 active category leaders and produce at most one new chapter per active title where feasible.
 - Public copy should describe the cadence as `每日 00/06/12/18 更新` or equivalent, not as `每日 09:00 更新` or hourly updates.
+- If a prior run ended local-only because GitHub was unreachable, the next reachable run should clear that publish debt before adding another batch. Do not normalize an `ahead > 0` branch as ordinary background state.
 
 ## Plot And Tension
 

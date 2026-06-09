@@ -26,7 +26,12 @@
 ## Automation 與 Git
 
 - 每 6 小時 Asia/Taipei（00:00、06:00、12:00、18:00）的更新目標是五本 active title，各新增一章可行時 6,000-6,500 字。
-- 開始大量生成前先做 GitHub 預檢：確認 `origin` 存在，並用 `git ls-remote --exit-code origin HEAD` 檢查遠端與 SSH/auth 是否正常。若這一步已失敗，要明確回報 blocker，不要等到全部寫完才發現無法提交。
+- 開始大量生成前先做 GitHub 預檢，不要只看 remote 是否存在。標準做法是先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`：
+  - 若 branch 已經 `ahead > 0` 且遠端可達，先清掉 deferred publish debt，再開始新內容。
+  - 若 branch `ahead > 0` 但遠端不可達，必須把「網站仍停在舊版」當成顯式 blocker 寫進記錄與回報。
+  - 若 branch `behind > 0`，先處理分支分歧，不要直接生成新內容。
+  - 若 branch 同步但 `origin` 不可達，才能進入明確標註為 local-only 的這一輪。
+- 若沒有跑上面的腳本，至少也要確認 `origin` 存在，並用 `git ls-remote --exit-code origin HEAD` 檢查遠端與 SSH/auth 是否正常。這一步失敗時，要明確回報 blocker，不要等到全部寫完才發現無法提交。
 - 生成前必須由內容創作者規則刷新連貫性。
 - 成功後更新章節 `.txt`、`src/resource/manifest.json`、相關狀態檔與對應 `反思.md`（如內容創作者有新的耐久回饋要落檔）。
 - 驗證通過後才 commit 並 push。
@@ -39,6 +44,7 @@
   - `ahead > 0`：內容還在本地，根本沒有完整發佈。
   - raw GitHub 已更新但 live site 未更新：屬於 Pages/CDN 部署延遲，不能說已上站，只能說已 push、等待站點生效。
   - remote/auth 失敗：屬於發佈 blocker，不能把本地完成誤報成網站完成。
+- 流程檢討重點：最容易反覆卡住的不是 Pages，而是「前一輪 local-only commit 沒先補發佈，下一輪又繼續生成」。這種 backlog 不可視為正常狀態；下一次網路恢復時要優先補推並驗站。
 - commit 時只 stage 當次意圖內的內容；若起始狀態已有 dirty files，要記錄並避免混入不相關變更。
 - `src/resource/backup/` 用來放 35 本暫停更新作品；routine six-hour automation 不應對 backup 內作品做內容改寫。
 
