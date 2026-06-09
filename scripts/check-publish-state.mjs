@@ -6,6 +6,7 @@ const PUBLISH_SCRIPT = new URL("./publish-site-update.mjs", import.meta.url);
 
 function parseArgs(argv) {
   return {
+    allowLocalOnly: argv.includes("--allow-local-only"),
     autoPublishIfAhead: argv.includes("--auto-publish-if-ahead"),
     json: argv.includes("--json")
   };
@@ -117,9 +118,15 @@ function main() {
   }
 
   if (!state.remoteReachable) {
-    state.status = "remote-unreachable";
-    state.message = "No local publish debt, but origin is currently unreachable. A local-only run may proceed, but it cannot publish this cycle.";
-    exitWith(2, state, options.json);
+    if (options.allowLocalOnly) {
+      state.status = "remote-unreachable-local-only-allowed";
+      state.message = "Origin is unreachable. Local-only work is allowed only because --allow-local-only was explicitly provided.";
+      exitWith(2, state, options.json);
+    }
+
+    state.status = "remote-unreachable-blocking";
+    state.message = "Origin is unreachable. Stop before generation; do not create local-only updates unless --allow-local-only is explicitly approved for this run.";
+    exitWith(5, state, options.json);
   }
 
   state.status = "clean";

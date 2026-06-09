@@ -30,7 +30,7 @@
   - 若 branch 已經 `ahead > 0` 且遠端可達，先清掉 deferred publish debt，再開始新內容。
   - 若 branch `ahead > 0` 但遠端不可達，必須把「網站仍停在舊版」當成顯式 blocker 寫進記錄與回報。
   - 若 branch `behind > 0`，先處理分支分歧，不要直接生成新內容。
-  - 若 branch 同步但 `origin` 不可達，才能進入明確標註為 local-only 的這一輪。
+  - 若 branch 同步但 `origin` 不可達，預設也要直接停下。只有使用者明確批准本輪接受網站不可見時，才可改用 `node scripts/check-publish-state.mjs --auto-publish-if-ahead --allow-local-only` 進入例外 local-only 流程。
 - 若沒有跑上面的腳本，至少也要確認 `origin` 存在，並用 `git ls-remote --exit-code origin HEAD` 檢查遠端與 SSH/auth 是否正常。這一步失敗時，要明確回報 blocker，不要等到全部寫完才發現無法提交。
 - 生成前必須由內容創作者規則刷新連貫性。
 - 成功後更新章節 `.txt`、`src/resource/manifest.json`、相關狀態檔與對應 `反思.md`（如內容創作者有新的耐久回饋要落檔）。
