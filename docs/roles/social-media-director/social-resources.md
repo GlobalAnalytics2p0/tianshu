@@ -24,6 +24,10 @@
 | 星骸王座 YouTube 第一集 | https://www.youtube.com/watch?v=s4I1Rj6kJw4 | 已用於 IG caption |
 | 星骸王座第 2 章影片紀錄 | `src/resource/星骸王座/影片/第02章 暗縫裡的舊雪/notes/production-notes.md` | 影片規格、發布紀錄、社群發布結果 |
 | 星骸王座 YouTube 第二集 | https://youtu.be/OE0rgOWDvpM | 已發布；已用於 Threads、Facebook、IG 推廣 |
+| 星骸王座第 3 章影片紀錄 | `src/resource/星骸王座/影片/第03章 墓牆舊名/notes/production-notes.md` | 影片規格、發布紀錄、社群發布結果 |
+| 星骸王座 YouTube 第三集 | https://youtu.be/Qq8QxxLNKW8 | 已發布；已用於 Threads、Facebook、IG 推廣 |
+| 星骸王座第 3 章 Threads 貼文 | https://www.threads.com/@tianshu_novel/post/DZWQsd3E6Dt | 獨立文字貼文，非 IG 同步 |
+| 星骸王座第 3 章 Instagram 貼文 | https://www.instagram.com/tianshu_novel/p/DZWR27Xmcjs/ | 1080x1080 圖文貼文；原 Promote 圖與第 2 章視覺過近，已於本機改成新版地下舊站圖，live IG 需刪除重發或另發修正版才會換圖 |
 | 品牌 icon | `public/assets/tianshu-icon.png` | 網站 favicon、頻道頭像 |
 | 品牌 banner | `public/assets/tianshu-banner.png` | YouTube 橫幅與部分視覺 fallback |
 
@@ -39,6 +43,7 @@
 ## 已知操作注意事項
 
 - Chrome/Computer Control 可以透過 macOS 原生檔案選擇器完成影片與 IG 圖片上傳；使用 `Cmd+Shift+G` 貼入絕對路徑比直接依賴瀏覽器 `setFiles` 穩定。
+- 若 Chrome `fileChooser.setFiles` 回 `Not allowed`，使用 IG/YouTube/Meta 畫面上的可見上傳按鈕叫出原生 macOS 檔案選擇器，再走 `Cmd+Shift+G`；避免使用二進位圖片剪貼簿上傳。
 - YouTube 影片檔上傳已驗證可行，但縮圖檔上傳不可視為完全自動化穩定。每次都必須確認 Studio preview 或發布後編輯頁顯示的是自訂縮圖，而不是 auto-generated。
 - 如果縮圖需要手動介入，該次任務仍可完成，但必須把介入點寫入製作紀錄，供下一位社群總監排查。
-- Instagram、Threads、Facebook 的發布與驗證已可走獨立流程；不要因為 IG 顯示 Threads 分享開關就打開同步。
+- Instagram、Threads、Facebook 的發布與驗證已可走獨立流程；不要因為 IG 顯示 Threads/Facebook 分享開關就打開同步。若 IG 分享狀態曾不清楚，發布後檢查 Facebook/Threads 是否有重複同步貼文。

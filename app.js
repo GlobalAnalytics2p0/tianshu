@@ -56,7 +56,7 @@ const coverPalettes = [
 
 const resourceManifestPath = "src/resource/manifest.json";
 const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
-const youtubeShareText = "來看天書小說：每日 09:00 原創連載、爆款小說、有聲短劇";
+const youtubeShareText = "來看天書小說：每日 00/06/12/18 原創連載、爆款小說、有聲短劇";
 const activeRankingTitles = [
   "星骸王座",
   "灰塔觀測者",
@@ -65,6 +65,7 @@ const activeRankingTitles = [
   "大明墨工"
 ];
 const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
+const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
 const manifestPollIntervalMs = 60000;
 
 let allBooks = [];
@@ -540,6 +541,20 @@ function consumeAutoRefreshFlag() {
   showToast(message);
 }
 
+function isOverlayOpen() {
+  return Boolean(
+    document.getElementById("bookModal").classList.contains("is-open") ||
+    document.getElementById("shareSheet").classList.contains("is-open") ||
+    document.getElementById("installGuide").classList.contains("is-open")
+  );
+}
+
+function releaseOverlayScroll() {
+  if (!isOverlayOpen()) {
+    document.body.style.overflow = "";
+  }
+}
+
 function openShareSheet() {
   const sheet = document.getElementById("shareSheet");
   sheet.classList.add("is-open");
@@ -551,9 +566,60 @@ function closeShareSheet() {
   const sheet = document.getElementById("shareSheet");
   sheet.classList.remove("is-open");
   sheet.setAttribute("aria-hidden", "true");
-  if (!document.getElementById("bookModal").classList.contains("is-open")) {
-    document.body.style.overflow = "";
+  releaseOverlayScroll();
+}
+
+function isMobileSafariBrowser() {
+  const userAgent = navigator.userAgent || "";
+  const vendor = navigator.vendor || "";
+  const isSmallTouchScreen = window.matchMedia("(max-width: 780px)").matches && navigator.maxTouchPoints > 0;
+  const isIOS = /iP(hone|od|ad)/i.test(userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isSafari = /Safari/i.test(userAgent) && /Apple Computer/i.test(vendor);
+  const isOtherIOSBrowser = /CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Chrome|Chromium|Android/i.test(userAgent);
+  const isStandalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
+  return isSmallTouchScreen && isIOS && isSafari && !isOtherIOSBrowser && !isStandalone;
+}
+
+function hasDismissedInstallGuide() {
+  try {
+    return localStorage.getItem(installGuideStorageKey) === "dismissed";
+  } catch (error) {
+    return false;
   }
+}
+
+function markInstallGuideDismissed() {
+  try {
+    localStorage.setItem(installGuideStorageKey, "dismissed");
+  } catch (error) {
+    // Private browsing can block localStorage; the guide still closes for this session.
+  }
+}
+
+function openInstallGuide() {
+  const guide = document.getElementById("installGuide");
+  if (!guide || guide.classList.contains("is-open")) return;
+  guide.classList.add("is-open");
+  guide.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeInstallGuide() {
+  const guide = document.getElementById("installGuide");
+  if (!guide) return;
+  guide.classList.remove("is-open");
+  guide.setAttribute("aria-hidden", "true");
+  markInstallGuideDismissed();
+  releaseOverlayScroll();
+}
+
+function maybeShowInstallGuide() {
+  if (!isMobileSafariBrowser() || hasDismissedInstallGuide()) return;
+  window.setTimeout(() => {
+    if (isMobileSafariBrowser() && !isOverlayOpen()) {
+      openInstallGuide();
+    }
+  }, 1200);
 }
 
 function initEvents() {
@@ -579,6 +645,12 @@ function initEvents() {
   document.querySelectorAll("[data-close-share]").forEach((node) => {
     node.addEventListener("click", closeShareSheet);
   });
+
+  document.querySelectorAll("[data-close-install-guide]").forEach((node) => {
+    node.addEventListener("click", closeInstallGuide);
+  });
+
+  document.getElementById("installGuideNever").addEventListener("click", closeInstallGuide);
 
   document.querySelectorAll("[data-share-target]").forEach((button) => {
     button.addEventListener("click", async () => {
@@ -642,6 +714,9 @@ function initEvents() {
     }
     if (event.key === "Escape" && document.getElementById("shareSheet").classList.contains("is-open")) {
       closeShareSheet();
+    }
+    if (event.key === "Escape" && document.getElementById("installGuide").classList.contains("is-open")) {
+      closeInstallGuide();
     }
   });
 }
@@ -718,6 +793,7 @@ async function init() {
     renderRanking();
     renderCategories();
     renderAiNovels();
+    maybeShowInstallGuide();
     consumeAutoRefreshFlag();
     initManifestPolling();
   } catch (error) {

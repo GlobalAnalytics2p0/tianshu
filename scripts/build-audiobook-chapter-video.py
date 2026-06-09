@@ -140,8 +140,12 @@ def slide_count_for_duration(duration: float) -> int:
     return max(1, math.ceil(duration / MAX_SLIDE_SECONDS))
 
 
-def build_stills(novel: str, chapter_title: str, source_dir: Path, count: int) -> list[Path]:
+def build_stills(novel: str, chapter_title: str, source_dir: Path, count: int, regenerate: bool) -> list[Path]:
     source_dir.mkdir(parents=True, exist_ok=True)
+    existing = [source_dir / f"slide-{index + 1:02d}.png" for index in range(count)]
+    if not regenerate and all(path.exists() for path in existing):
+        return existing
+
     visuals = available_visuals(novel)
     anchors = [(0.34, 0.52), (0.26, 0.42), (0.58, 0.50), (0.72, 0.52), (0.44, 0.46)]
     subtitles = [
@@ -466,6 +470,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--edge-pitch", default=EDGE_PITCH)
     parser.add_argument("--preview-seconds", type=float)
     parser.add_argument("--output-label")
+    parser.add_argument("--regenerate-stills", action="store_true", help="Regenerate chapter still images instead of reusing existing slide-*.png files.")
     parser.add_argument("--reuse-tts", action="store_true", help="Reuse existing generated Edge TTS media and VTT timing files.")
     return parser.parse_args()
 
@@ -499,7 +504,7 @@ def main() -> None:
     )
     source_duration = ffprobe_duration(narration)
     duration = min(source_duration, args.preview_seconds) if args.preview_seconds is not None else source_duration
-    stills = build_stills(args.novel, args.chapter_title, source_dir, slide_count_for_duration(duration))
+    stills = build_stills(args.novel, args.chapter_title, source_dir, slide_count_for_duration(duration), args.regenerate_stills)
     build_grouped_srt(vtt, subtitle_file, duration)
     build_video(stills, subtitle_file, narration, output, duration)
 

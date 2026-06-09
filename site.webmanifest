@@ -1,0 +1,18 @@
+{
+  "name": "天書小說",
+  "short_name": "天書小說",
+  "description": "每日 00/06/12/18 更新的繁體中文原創長篇連載平台。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#020305",
+  "theme_color": "#05060a",
+  "icons": [
+    {
+      "src": "public/assets/tianshu-icon.png?v=20260609-home-icon",
+      "sizes": "800x800",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

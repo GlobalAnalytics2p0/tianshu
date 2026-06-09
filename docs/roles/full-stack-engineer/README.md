@@ -56,6 +56,8 @@
 - 大型音檔、影片、source、output、tmp、cache 都不提交 GitHub。
 - 可提交的通常是腳本、字幕 sidecar、縮圖、製作紀錄與輕量 metadata。
 - 正式星骸流程使用 Edge `zh-TW-YunJheNeural`、`--rate=+0%`、`--pitch=-2Hz`，雨聲白噪音背景，字幕由同次 TTS timing 產生。
+- `星骸王座` 第 4 章到第 15 章影片必須一章一章做。每章都視為獨立任務：讀正文、定視覺 brief、用 Image 2 產高質感章節圖、檢查圖片、產影片、跑 QA、寫 notes，完成後才進下一章。
+- 不可用批次腳本或程式生成低質感 placeholder 圖來交付第 4-15 章；最終 slide、thumbnail、IG 圖都必須是符合章節內容的高質感故事圖。
 
 ## Repository 清潔
 

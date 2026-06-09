@@ -12,6 +12,7 @@ src/resource/**/影片/**/video/
 src/resource/**/影片/**/output/
 src/resource/**/影片/**/renders/
 src/resource/**/影片/**/source/
+src/resource/**/影片/**/qa/
 src/resource/**/影片/**/tmp/
 src/resource/**/影片/**/temp/
 src/resource/**/影片/**/cache/

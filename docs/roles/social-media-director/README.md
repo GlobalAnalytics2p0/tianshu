@@ -16,6 +16,7 @@
 ## 平台策略
 
 - Instagram：視覺第一。圖片必須是 1080x1080、滿版、有故事氣氛、手機上可讀。不要用網站截圖、模板卡、字太多的圖或粗糙字體。圖片文字最多三層：品牌/系列、標題章名、短 hook。URL 與 hashtag 放 caption。
+- Instagram Reels / YouTube Shorts / TikTok / 抖音式短影音：主檔用 1080x1920、9:16、直式 1080p。平台可接受較低解析度不代表製作時要用最低規格；除非做測試版，短影音圖片、字幕版面與 FFmpeg 輸出都以 1080x1920 為準。
 - Threads：文字節奏第一。短、直接、有鉤子，可以像小說讀者之間的推薦，不要寫成正式公告。
 - Facebook 粉絲頁：資訊完整度第一。可以比 Threads 長，交代故事賣點、章節狀態、收聽/閱讀入口，適合留下連結與較完整說明。
 - YouTube：標題、縮圖、描述、章節資訊與 pinned comment 都要服務點擊與留存；已發布影片內容不可任意改標題方向，除非使用者要求。
@@ -35,13 +36,17 @@
 - 若 YouTube 縮圖沒有套用、仍顯示 auto-generated、或需要使用者手動介入，必須在該章 `production-notes.md` 記錄原因與結果，並在 final 回覆中明確說明。除非使用者同意，不要把自動縮圖當作已完成的自訂縮圖。
 - YouTube 發布前必須等 copyright 與 Community Guidelines checks 完成且為 `No issues found`，再按 Public/Publish。若平台跳出 `Publish anyway`，預設退回等待，不硬闖。
 - YouTube 發布後要用公開 watch URL 驗證：影片標題可見、沒有 `Private` 標記、播放頁可載入，再開始導流到社群。
-- Instagram 圖片上傳可用原生 macOS 檔案選擇器；發布前確認方圖完整、caption 已填、Threads/Facebook 同步開關保持關閉。發布後用 profile 貼文數與新貼文 URL 驗證。
+- Instagram 圖片上傳優先準備 `/tmp/tianshu-upload/` 下的 ASCII real-copy 圖檔。若 Chrome `fileChooser.setFiles` 回 `Not allowed`，不要重試同一路徑；改用畫面上的 `從電腦選擇` 讓原生 macOS 檔案選擇器出現，再用 `Cmd+Shift+G` 貼入絕對路徑。不要用二進位圖片剪貼簿貼入，容易中斷 Chrome 控制。
+- Instagram 發布前確認方圖完整、caption 已填，並以畫面截圖或可見控制確認 `分享到` 裡的 Facebook/Threads 同步開關沒有打開。若狀態不夠清楚，發布後立刻檢查 Facebook/Threads 是否出現同步重複貼文。
+- Instagram 發布後用 profile 貼文數、新貼文 URL、caption 文字與圖片實際載入狀態驗證。
 - Threads 文字貼文流程目前穩定；發文後用 profile 頂部新串文、時間戳與連結 preview 驗證。
 - Facebook 粉專貼文流程目前穩定；如果 `What's on your mind?` 滑鼠點擊沒有反應，可以對同一個按鈕用 keyboard `Enter` 開 composer。發文前確認 `Public`、`Publish now`、`Share to story Off`、`Boost Off`，並讓 YouTube 連結成為主要 preview。
 
 ## IG 視覺製作規格
 
 - 優先產生無字底圖，再用本機字體排繁中標題。
+- 每一章的 IG Promote 圖、YouTube 縮圖、影片幻燈片都必須是不同視覺；不能沿用同一張底圖、同一個角色站位、同一個背景構圖，只改章節文字。
+- 發布前比對同作品既有 `output/instagram-promo.png`、`thumbnails/*.png`、`source/slide-*.png`；如果手機尺寸看起來像重複圖，必須重生或換成章節專屬場景。
 - 嚴禁文字超出框線、被裝飾線穿過、被 UI 元件遮擋、右下角多餘浮水印或 logo。
 - 嚴重玄幻或奇幻封面優先使用 Noto Serif CJK TC / 宋體感 display serif，避免預設 UI 字體。
 - 發布前必須實際檢視 1080x1080 成品；若圖片醜、字體廉價、構圖模板化或遮擋主體，不可發布。
@@ -62,3 +67,4 @@
 - 向內容創作者拿：章節 hook、不可劇透事項、人物/場景重點。
 - 向全端工程師拿：最終影片 URL、網站 URL、縮圖與社群圖輸出路徑。
 - 發布結果回寫到相關製作紀錄或社群資源文件，重要規則回寫 `agent.md`。
+- 如果發布過程出現手動介入、原生檔案選擇器 fallback、同步開關疑慮、縮圖未套用、或無法取得 permalink，必須寫進該章 `production-notes.md`，不要只留在對話記憶中。
