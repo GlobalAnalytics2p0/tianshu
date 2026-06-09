@@ -277,6 +277,7 @@ button {
   overflow: hidden;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
   border: 1px solid var(--stroke);
   border-radius: var(--radius-md);
   background:
@@ -713,7 +714,7 @@ button {
 }
 
 .ranking-panel {
-  padding: 14px 14px 12px;
+  padding: 18px 16px 16px;
 }
 
 .section-heading {
@@ -737,6 +738,13 @@ button {
   line-height: 1;
   font-weight: 900;
   white-space: nowrap;
+}
+
+.ranking-panel .section-heading,
+.ai-panel .section-heading {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
 }
 
 .tabs {
@@ -1637,6 +1645,7 @@ button {
 
   .hero {
     min-height: 154px;
+    margin-bottom: 14px;
     border-radius: 8px;
     background-size: auto, auto 100%;
     background-position: center, right center;
@@ -1932,6 +1941,12 @@ button {
   .ranking-panel,
   .ai-panel {
     padding: 12px 10px;
+  }
+
+  .ranking-panel .section-heading,
+  .ai-panel .section-heading {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
   }
 
   .section-heading {
