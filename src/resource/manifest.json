@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T14:29:45+08:00",
+  "generatedAt": "2026-06-09T20:32:39+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -119,6 +119,13 @@
           "path": "src/resource/星骸王座/文章/第14章 穩手北折.txt",
           "charCount": 6122,
           "generatedAt": "2026-06-09T14:29:45+08:00"
+        },
+        {
+          "number": 15,
+          "title": "簍口留灰",
+          "path": "src/resource/星骸王座/文章/第15章 簍口留灰.txt",
+          "charCount": 6064,
+          "generatedAt": "2026-06-09T20:32:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -544,6 +551,13 @@
           "path": "src/resource/灰塔觀測者/第14章 拖邊白尾.txt",
           "charCount": 6019,
           "generatedAt": "2026-06-09T14:29:45+08:00"
+        },
+        {
+          "number": 15,
+          "title": "借晾尾尺",
+          "path": "src/resource/灰塔觀測者/第15章 借晾尾尺.txt",
+          "charCount": 6005,
+          "generatedAt": "2026-06-09T20:32:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -968,6 +982,13 @@
           "path": "src/resource/雪刃照孤城/第14章 還扣對位.txt",
           "charCount": 6002,
           "generatedAt": "2026-06-09T14:29:45+08:00"
+        },
+        {
+          "number": 15,
+          "title": "照壁退線",
+          "path": "src/resource/雪刃照孤城/第15章 照壁退線.txt",
+          "charCount": 6002,
+          "generatedAt": "2026-06-09T20:32:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -1392,6 +1413,13 @@
           "path": "src/resource/凌晨三點的演算法/第14章 坡道備轉.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-09T14:29:45+08:00"
+        },
+        {
+          "number": 15,
+          "title": "貨梯補簽",
+          "path": "src/resource/凌晨三點的演算法/第15章 貨梯補簽.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-09T20:32:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -1816,6 +1844,13 @@
           "path": "src/resource/大明墨工/第14章 南匠白牌.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-09T14:29:45+08:00"
+        },
+        {
+          "number": 15,
+          "title": "南口試榫",
+          "path": "src/resource/大明墨工/第15章 南口試榫.txt",
+          "charCount": 6002,
+          "generatedAt": "2026-06-09T20:32:39+08:00"
         }
       ],
       "tone": "深沉",
