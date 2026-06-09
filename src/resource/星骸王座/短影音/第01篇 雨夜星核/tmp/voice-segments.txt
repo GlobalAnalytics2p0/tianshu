@@ -1,8 +1,0 @@
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-01-hook.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-02-death.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-03-reversal.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-03-warning.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-04-monster.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-05-cost.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-05-shout.mp3'
-file '/Users/tobliao/Documents/workspace/global_analytics2p0/tianshu/src/resource/星骸王座/短影音/第01篇 雨夜星核/tmp/voice-06-question.mp3'

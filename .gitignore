@@ -17,6 +17,26 @@ src/resource/**/影片/**/tmp/
 src/resource/**/影片/**/temp/
 src/resource/**/影片/**/cache/
 
+# Local short-form video production outputs.
+# Keep scripts, planning docs, subtitles, thumbnails, and license notes trackable; keep generated frames/renders/audio local.
+src/resource/**/短影音/**/audio/
+src/resource/**/短影音/**/video/
+src/resource/**/短影音/**/output/
+src/resource/**/短影音/**/renders/
+src/resource/**/短影音/**/source/
+src/resource/**/短影音/**/qa/
+src/resource/**/短影音/**/tmp/
+src/resource/**/短影音/**/temp/
+src/resource/**/短影音/**/cache/
+
+# Local audiobook production outputs.
+src/resource/**/有聲書/**/audio/
+src/resource/**/有聲書/**/output/
+src/resource/**/有聲書/**/renders/
+src/resource/**/有聲書/**/tmp/
+src/resource/**/有聲書/**/temp/
+src/resource/**/有聲書/**/cache/
+
 # Audio files
 *.aac
 *.aif

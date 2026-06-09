@@ -569,15 +569,16 @@ function closeShareSheet() {
   releaseOverlayScroll();
 }
 
-function isMobileSafariBrowser() {
+function isIOSInstallPromptBrowser() {
   const userAgent = navigator.userAgent || "";
   const vendor = navigator.vendor || "";
   const isSmallTouchScreen = window.matchMedia("(max-width: 780px)").matches && navigator.maxTouchPoints > 0;
   const isIOS = /iP(hone|od|ad)/i.test(userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  const isSafari = /Safari/i.test(userAgent) && /Apple Computer/i.test(vendor);
-  const isOtherIOSBrowser = /CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Chrome|Chromium|Android/i.test(userAgent);
+  const isSafari = /Safari/i.test(userAgent) && /Apple Computer/i.test(vendor) && !/CriOS/i.test(userAgent);
+  const isChrome = /CriOS/i.test(userAgent);
+  const isUnsupportedBrowser = /FxiOS|EdgiOS|OPiOS|DuckDuckGo|Android/i.test(userAgent);
   const isStandalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
-  return isSmallTouchScreen && isIOS && isSafari && !isOtherIOSBrowser && !isStandalone;
+  return isSmallTouchScreen && isIOS && (isSafari || isChrome) && !isUnsupportedBrowser && !isStandalone;
 }
 
 function hasDismissedInstallGuide() {
@@ -614,9 +615,9 @@ function closeInstallGuide() {
 }
 
 function maybeShowInstallGuide() {
-  if (!isMobileSafariBrowser() || hasDismissedInstallGuide()) return;
+  if (!isIOSInstallPromptBrowser() || hasDismissedInstallGuide()) return;
   window.setTimeout(() => {
-    if (isMobileSafariBrowser() && !isOverlayOpen()) {
+    if (isIOSInstallPromptBrowser() && !isOverlayOpen()) {
       openInstallGuide();
     }
   }, 1200);
