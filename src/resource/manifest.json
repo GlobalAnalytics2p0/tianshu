@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T08:24:41+08:00",
+  "generatedAt": "2026-06-10T12:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -140,6 +140,13 @@
           "path": "src/resource/星骸王座/文章/第17章 灰架記底.txt",
           "charCount": 6081,
           "generatedAt": "2026-06-10T08:24:41+08:00"
+        },
+        {
+          "number": 18,
+          "title": "午後聽勺",
+          "path": "src/resource/星骸王座/文章/第18章 午後聽勺.txt",
+          "charCount": 6500,
+          "generatedAt": "2026-06-10T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -586,6 +593,13 @@
           "path": "src/resource/灰塔觀測者/第17章 補線灰標.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-10T08:24:41+08:00"
+        },
+        {
+          "number": 18,
+          "title": "外簿白釘",
+          "path": "src/resource/灰塔觀測者/第18章 外簿白釘.txt",
+          "charCount": 6376,
+          "generatedAt": "2026-06-10T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1031,6 +1045,13 @@
           "path": "src/resource/雪刃照孤城/第17章 守位薄尺.txt",
           "charCount": 6520,
           "generatedAt": "2026-06-10T08:24:41+08:00"
+        },
+        {
+          "number": 18,
+          "title": "退心黑簽",
+          "path": "src/resource/雪刃照孤城/第18章 退心黑簽.txt",
+          "charCount": 6500,
+          "generatedAt": "2026-06-10T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1476,6 +1497,13 @@
           "path": "src/resource/凌晨三點的演算法/第17章 館配薄套.txt",
           "charCount": 6520,
           "generatedAt": "2026-06-10T08:24:41+08:00"
+        },
+        {
+          "number": 18,
+          "title": "熱封頁心",
+          "path": "src/resource/凌晨三點的演算法/第18章 熱封頁心.txt",
+          "charCount": 6375,
+          "generatedAt": "2026-06-10T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1921,6 +1949,13 @@
           "path": "src/resource/大明墨工/第17章 摸邊手.txt",
           "charCount": 6507,
           "generatedAt": "2026-06-10T08:24:41+08:00"
+        },
+        {
+          "number": 18,
+          "title": "封邊紙",
+          "path": "src/resource/大明墨工/第18章 封邊紙.txt",
+          "charCount": 6367,
+          "generatedAt": "2026-06-10T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
