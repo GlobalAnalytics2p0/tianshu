@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T12:00:00+08:00",
+  "generatedAt": "2026-06-10T18:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -147,6 +147,13 @@
           "path": "src/resource/星骸王座/文章/第18章 午後聽勺.txt",
           "charCount": 6500,
           "generatedAt": "2026-06-10T12:00:00+08:00"
+        },
+        {
+          "number": 19,
+          "title": "裂腹舊屋",
+          "path": "src/resource/星骸王座/文章/第19章 裂腹舊屋.txt",
+          "charCount": 6456,
+          "generatedAt": "2026-06-10T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -600,6 +607,13 @@
           "path": "src/resource/灰塔觀測者/第18章 外簿白釘.txt",
           "charCount": 6376,
           "generatedAt": "2026-06-10T12:00:00+08:00"
+        },
+        {
+          "number": 19,
+          "title": "折梯回灰",
+          "path": "src/resource/灰塔觀測者/第19章 折梯回灰.txt",
+          "charCount": 6006,
+          "generatedAt": "2026-06-10T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1052,6 +1066,13 @@
           "path": "src/resource/雪刃照孤城/第18章 退心黑簽.txt",
           "charCount": 6500,
           "generatedAt": "2026-06-10T12:00:00+08:00"
+        },
+        {
+          "number": 19,
+          "title": "藥檐舊簽",
+          "path": "src/resource/雪刃照孤城/第19章 藥檐舊簽.txt",
+          "charCount": 6004,
+          "generatedAt": "2026-06-10T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1504,6 +1525,13 @@
           "path": "src/resource/凌晨三點的演算法/第18章 熱封頁心.txt",
           "charCount": 6375,
           "generatedAt": "2026-06-10T12:00:00+08:00"
+        },
+        {
+          "number": 19,
+          "title": "三室停架",
+          "path": "src/resource/凌晨三點的演算法/第19章 三室停架.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-10T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1956,6 +1984,13 @@
           "path": "src/resource/大明墨工/第18章 封邊紙.txt",
           "charCount": 6367,
           "generatedAt": "2026-06-10T12:00:00+08:00"
+        },
+        {
+          "number": 19,
+          "title": "晚算灰紙",
+          "path": "src/resource/大明墨工/第19章 晚算灰紙.txt",
+          "charCount": 6004,
+          "generatedAt": "2026-06-10T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
