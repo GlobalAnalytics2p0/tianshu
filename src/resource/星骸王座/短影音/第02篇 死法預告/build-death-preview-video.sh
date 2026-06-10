@@ -16,8 +16,8 @@ VIDEO="$BASE/output/星骸王座-短影音-第02篇-死法預告-1080x1920.mp4"
 VOICE_ACTED="$BASE/voice/edge-acted-narration.m4a"
 LICENSED_MUSIC="$BASE/music/Darkling-Kevin-MacLeod.mp3"
 MUSIC="$BASE/music/death-preview-bed.m4a"
-TOTAL_DURATION="61.90"
-SUBTITLE_CUTOFF="54.00"
+TOTAL_DURATION="68.00"
+SUBTITLE_CUTOFF="60.00"
 
 mkdir -p "$BASE/source/normalized" "$BASE/tmp" "$BASE/output" "$BASE/voice" "$BASE/subtitles" "$BASE/music" "$BASE/qa"
 
@@ -32,93 +32,58 @@ find "$BASE/tmp" -maxdepth 1 -type f \( \
 
 cat > "$BASE/tmp/voice-01-hook.txt" <<'EOF'
 修煉前，他先看見死法。
-
 別人升級，他先死一次。
 EOF
 
 cat > "$BASE/tmp/voice-02-snow.txt" <<'EOF'
 雪地裡，有一個沈曜趴著。
-
 手指還壓在雪上。
-
 可那個人，不會再抬頭。
 EOF
 
 cat > "$BASE/tmp/voice-03-alive.txt" <<'EOF'
 他低頭看見自己還活著。
-
 星核在掌心發冷。
-
 像剛把他從那條死路上拉回來。
 EOF
 
 cat > "$BASE/tmp/voice-04-warning.txt" <<'EOF'
 下一種死法，已經在前面等你。
-
 走錯一步，你就回不來。
 EOF
 
 cat > "$BASE/tmp/voice-05-coffin.txt" <<'EOF'
 黑棺旁，出現第二個影子。
-
 棺蓋上那點星光，亮得太乾淨。
-
 乾淨到像在請他靠近。
 EOF
 
 cat > "$BASE/tmp/voice-06-pressure.txt" <<'EOF'
 他不敢信。
-
 可他也不能停。
-
 追兵的燈，已經進了巷口。
 EOF
 
 cat > "$BASE/tmp/voice-07-pursuer.txt" <<'EOF'
 人在前面，別讓他碰那顆星核。
-
 封住巷口，不要讓他跑。
 EOF
 
-cat > "$BASE/tmp/voice-08-realization.txt" <<'EOF'
-沈曜忽然明白。
-
-預告不是答案。
-
-它只是把刀，先放到他眼前。
-EOF
-
-cat > "$BASE/tmp/voice-09-change.txt" <<'EOF'
-雪路、黑棺、星光。
-
-每一條都能殺他。
-
-可只要還沒發生，他就還能改。
-EOF
-
-cat > "$BASE/tmp/voice-10-cut.txt" <<'EOF'
+cat > "$BASE/tmp/voice-08-final.txt" <<'EOF'
+沈曜沒有照星光走。
 他割斷最亮的那條線。
-
-轉身走進最難走的黑路。
-EOF
-
-cat > "$BASE/tmp/voice-11-cta.txt" <<'EOF'
-如果你喜歡死亡預視、冷硬玄幻、少年逆命。
-
+想看他怎麼改掉死法，
 去天書小說，看星骸王座第一章。
 EOF
 
 python3 -m edge_tts --file "$BASE/tmp/voice-01-hook.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+5% --pitch=-2Hz --write-media "$BASE/tmp/voice-01-hook.mp3"
 python3 -m edge_tts --file "$BASE/tmp/voice-02-snow.txt" --voice "zh-TW-HsiaoChenNeural" --rate=-4% --pitch=-4Hz --write-media "$BASE/tmp/voice-02-snow.mp3"
 python3 -m edge_tts --file "$BASE/tmp/voice-03-alive.txt" --voice "zh-TW-HsiaoChenNeural" --rate=-2% --pitch=-4Hz --write-media "$BASE/tmp/voice-03-alive.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-04-warning.txt" --voice "zh-TW-YunJheNeural" --rate=-6% --pitch=-4Hz --write-media "$BASE/tmp/voice-04-warning.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-05-coffin.txt" --voice "zh-TW-HsiaoChenNeural" --rate=-3% --pitch=-4Hz --write-media "$BASE/tmp/voice-05-coffin.mp3"
+python3 -m edge_tts --file "$BASE/tmp/voice-04-warning.txt" --voice "zh-TW-YunJheNeural" --rate=-2% --pitch=-2Hz --write-media "$BASE/tmp/voice-04-warning.mp3"
+python3 -m edge_tts --file "$BASE/tmp/voice-05-coffin.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+0% --pitch=-3Hz --write-media "$BASE/tmp/voice-05-coffin.mp3"
 python3 -m edge_tts --file "$BASE/tmp/voice-06-pressure.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+3% --pitch=-3Hz --write-media "$BASE/tmp/voice-06-pressure.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-07-pursuer.txt" --voice "zh-TW-YunJheNeural" --rate=+1% --pitch=-3Hz --write-media "$BASE/tmp/voice-07-pursuer.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-08-realization.txt" --voice "zh-TW-HsiaoChenNeural" --rate=-1% --pitch=-4Hz --write-media "$BASE/tmp/voice-08-realization.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-09-change.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+1% --pitch=-3Hz --write-media "$BASE/tmp/voice-09-change.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-10-cut.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+2% --pitch=-3Hz --write-media "$BASE/tmp/voice-10-cut.mp3"
-python3 -m edge_tts --file "$BASE/tmp/voice-11-cta.txt" --voice "zh-TW-HsiaoChenNeural" --rate=-2% --pitch=-3Hz --write-media "$BASE/tmp/voice-11-cta.mp3"
+python3 -m edge_tts --file "$BASE/tmp/voice-07-pursuer.txt" --voice "zh-TW-YunJheNeural" --rate=-2% --pitch=-2Hz --write-media "$BASE/tmp/voice-07-pursuer.mp3"
+python3 -m edge_tts --file "$BASE/tmp/voice-08-final.txt" --voice "zh-TW-HsiaoChenNeural" --rate=+1% --pitch=-3Hz --write-media "$BASE/tmp/voice-08-final.mp3"
 
 BASE="$BASE" FFPROBE="$FFPROBE" SUBTITLE_CUTOFF="$SUBTITLE_CUTOFF" python3 - <<'PY'
 import os
@@ -162,23 +127,11 @@ segments = [
         ("人在前面\\N別讓他碰那顆星核", "Hit", 3.0),
         ("封住巷口\\N不要讓他跑", "Hit", 2.5),
     ]),
-    ("voice-08-realization.mp3", [
-        ("沈曜忽然明白", "Default", 1.7),
-        ("預告不是答案", "Default", 1.8),
-        ("它只是把刀\\N先放到他眼前", "Choice", 2.8),
-    ]),
-    ("voice-09-change.mp3", [
-        ("雪路\\N黑棺\\N星光", "Default", 2.3),
-        ("每一條都能殺他", "Hit", 2.0),
-        ("只要還沒發生\\N他就還能改", "Choice", 2.9),
-    ]),
-    ("voice-10-cut.mp3", [
-        ("他割斷最亮的那條線", "Choice", 2.6),
-        ("轉身走進\\N最難走的黑路", "Choice", 2.6),
-    ]),
-    ("voice-11-cta.mp3", [
-        ("喜歡死亡預視\\N冷硬玄幻\\N少年逆命", "Default", 3.2),
-        ("去天書小說\\N看《星骸王座》第一章", "Choice", 3.0),
+    ("voice-08-final.mp3", [
+        ("沈曜沒有照星光走", "Choice", 2.4),
+        ("他割斷最亮的那條線", "Choice", 2.5),
+        ("想看他怎麼改掉死法", "Default", 2.6),
+        ("去天書小說\\N看《星骸王座》第一章", "Choice", 2.8),
     ]),
 ]
 
@@ -273,10 +226,7 @@ printf "file '%s'\n" "$BASE/tmp/voice-04-warning.mp3" >> "$BASE/tmp/voice-segmen
 printf "file '%s'\n" "$BASE/tmp/voice-05-coffin.mp3" >> "$BASE/tmp/voice-segments.txt"
 printf "file '%s'\n" "$BASE/tmp/voice-06-pressure.mp3" >> "$BASE/tmp/voice-segments.txt"
 printf "file '%s'\n" "$BASE/tmp/voice-07-pursuer.mp3" >> "$BASE/tmp/voice-segments.txt"
-printf "file '%s'\n" "$BASE/tmp/voice-08-realization.mp3" >> "$BASE/tmp/voice-segments.txt"
-printf "file '%s'\n" "$BASE/tmp/voice-09-change.mp3" >> "$BASE/tmp/voice-segments.txt"
-printf "file '%s'\n" "$BASE/tmp/voice-10-cut.mp3" >> "$BASE/tmp/voice-segments.txt"
-printf "file '%s'\n" "$BASE/tmp/voice-11-cta.mp3" >> "$BASE/tmp/voice-segments.txt"
+printf "file '%s'\n" "$BASE/tmp/voice-08-final.mp3" >> "$BASE/tmp/voice-segments.txt"
 
 "$FFMPEG" -y -v warning -f concat -safe 0 -i "$BASE/tmp/voice-segments.txt" \
   -af "aresample=24000,apad=pad_dur=1.4" -c:a aac -b:a 160k "$VOICE_ACTED"
@@ -288,7 +238,7 @@ for source in "$BASE"/source/images/frame-*.png; do
     "$BASE/source/normalized/$name"
 done
 
-durations=(4.4 4.8 4.3 5.2 5.0 5.4 4.8 5.0 5.2 5.0 5.2 7.6)
+durations=(4.4 4.8 4.3 5.2 5.0 5.4 4.8 5.0 6.3 6.2 8.6 8.0)
 pan_x=(-24 26 -18 22 -20 24 -15 30 -25 18 -22 0)
 pan_y=(20 -18 24 -12 18 -22 10 -16 22 -18 14 0)
 
@@ -299,7 +249,7 @@ for i in $(seq -w 1 12); do
   dy="${pan_y[$idx]}"
   fade_start="$(awk -v d="$duration" 'BEGIN { printf "%.2f", d - 0.18 }')"
   "$FFMPEG" -y -v error -loop 1 -t "$duration" -i "$BASE/source/normalized/frame-$i.png" \
-    -vf "scale=1180:2098:force_original_aspect_ratio=increase,crop=1180:2098,crop=1080:1920:x='(iw-ow)/2+($dx*t/$duration)':y='(ih-oh)/2+($dy*t/$duration)',fade=t=in:st=0:d=0.16,fade=t=out:st=$fade_start:d=0.18,fps=30,format=yuv420p" \
+    -vf "scale=1180:2098:force_original_aspect_ratio=increase,crop=1180:2098,crop=1080:1920:x='(iw-ow)/2+($dx*t/$duration)':y='(ih-oh)/2+($dy*t/$duration)',setsar=1,fade=t=in:st=0:d=0.16,fade=t=out:st=$fade_start:d=0.18,fps=30,format=yuv420p" \
     -c:v libx264 -preset veryfast -crf 20 -pix_fmt yuv420p "$BASE/tmp/seg-$i.mp4"
   printf "file '%s'\n" "seg-$i.mp4" >> "$BASE/tmp/segments.txt"
 done

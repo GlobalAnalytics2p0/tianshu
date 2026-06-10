@@ -1,0 +1,35 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.26,Hit,,0,0,0,,他們要認一隻手
+Dialogue: 0,0:00:02.26,0:00:04.90,Hit,,0,0,0,,沈曜叫來\N整條巷子的手
+Dialogue: 0,0:00:04.90,0:00:08.63,Default,,0,0,0,,洗布婦\N挑灰漢\N藥鋪小夥計
+Dialogue: 0,0:00:08.63,0:00:10.73,Choice,,0,0,0,,全往板上按
+Dialogue: 0,0:00:10.73,0:00:12.28,Hit,,0,0,0,,別亂
+Dialogue: 0,0:00:12.28,0:00:15.07,Hit,,0,0,0,,我要的是\N那一隻真手
+Dialogue: 0,0:00:15.07,0:00:17.57,Default,,0,0,0,,第七欄靠乾板認人
+Dialogue: 0,0:00:17.57,0:00:20.16,Default,,0,0,0,,手汗\N藥氣\N濕氣
+Dialogue: 0,0:00:20.16,0:00:21.89,Hit,,0,0,0,,都不能亂
+Dialogue: 0,0:00:21.89,0:00:23.41,Default,,0,0,0,,阿棠撒粉
+Dialogue: 0,0:00:23.41,0:00:25.87,Choice,,0,0,0,,周嬸拖來舊門板
+Dialogue: 0,0:00:25.87,0:00:27.31,Hit,,0,0,0,,都按
+Dialogue: 0,0:00:27.31,0:00:31.01,Hit,,0,0,0,,誰的手沒做過活\N讓它認個夠
+Dialogue: 0,0:00:31.01,0:00:34.19,Default,,0,0,0,,阿福一瓢灰水\N潑下去
+Dialogue: 0,0:00:34.19,0:00:37.15,Hit,,0,0,0,,灰頁濕了\N乾板也濕了
+Dialogue: 0,0:00:37.15,0:00:40.18,Choice,,0,0,0,,一條紋\N變成十幾條手路
+Dialogue: 0,0:00:40.18,0:00:43.05,Default,,0,0,0,,掌心\N虎口\N老繭
+Dialogue: 0,0:00:43.05,0:00:45.26,Choice,,0,0,0,,全咬在一起
+Dialogue: 0,0:00:45.26,0:00:48.15,Default,,0,0,0,,敵人想靠乾淨收人
+Dialogue: 0,0:00:48.15,0:00:51.24,Choice,,0,0,0,,這一回\N被活人弄到失準
+Dialogue: 0,0:00:51.24,0:00:53.45,Default,,0,0,0,,想看普通人\N怎麼反咬第七欄

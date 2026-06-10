@@ -1,0 +1,32 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.22,Hit,,0,0,0,,看膩無敵開局
+Dialogue: 0,0:00:02.22,0:00:05.64,Hit,,0,0,0,,換一部\N開局就被判死的玄幻
+Dialogue: 0,0:00:05.64,0:00:08.46,Default,,0,0,0,,少年沈曜不是天選
+Dialogue: 0,0:00:08.46,0:00:12.41,Default,,0,0,0,,被流放\N被追\N連活著都像欠命
+Dialogue: 0,0:00:12.41,0:00:13.75,Choice,,0,0,0,,理由一
+Dialogue: 0,0:00:13.75,0:00:16.20,Hit,,0,0,0,,星核會說謊
+Dialogue: 0,0:00:16.20,0:00:18.43,Default,,0,0,0,,它給路\N也挖坑
+Dialogue: 0,0:00:18.43,0:00:21.58,Hit,,0,0,0,,你會死在\N下一次變強前
+Dialogue: 0,0:00:21.58,0:00:23.01,Choice,,0,0,0,,理由二
+Dialogue: 0,0:00:23.01,0:00:26.30,Default,,0,0,0,,變強前\N先看見死法
+Dialogue: 0,0:00:26.30,0:00:27.86,Choice,,0,0,0,,理由三
+Dialogue: 0,0:00:27.86,0:00:30.26,Default,,0,0,0,,不靠大招清場
+Dialogue: 0,0:00:30.26,0:00:35.06,Default,,0,0,0,,燈、灶火、手和哭聲\N都能反擊
+Dialogue: 0,0:00:35.06,0:00:37.34,Default,,0,0,0,,不是一路碾
+Dialogue: 0,0:00:37.34,0:00:41.42,Choice,,0,0,0,,差一點死\N還拆開命運一寸
+Dialogue: 0,0:00:41.42,0:00:45.23,Default,,0,0,0,,冷硬玄幻\N少年逆命\N長線懸疑
+Dialogue: 0,0:00:45.23,0:00:47.14,Hit,,0,0,0,,先收藏
+Dialogue: 0,0:00:47.14,0:00:49.45,Default,,0,0,0,,官網看《星骸王座》

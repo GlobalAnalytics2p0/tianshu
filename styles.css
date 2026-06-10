@@ -1441,6 +1441,89 @@ button {
   white-space: nowrap;
 }
 
+.chapter-audio {
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--stroke);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 211, 123, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.022));
+  padding: 14px;
+}
+
+.chapter-audio__header,
+.chapter-audio--checking {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.chapter-audio__icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 211, 123, 0.32);
+  border-radius: 50%;
+  background: rgba(255, 211, 123, 0.1);
+  color: #ffe3a1;
+}
+
+.chapter-audio strong {
+  display: block;
+  color: #fff4d7;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.chapter-audio small {
+  display: block;
+  margin-top: 3px;
+  color: #aeb3bf;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.chapter-audio audio {
+  width: 100%;
+  min-height: 38px;
+  border-radius: 999px;
+  filter: sepia(0.14) saturate(0.82);
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border: 2px solid rgba(255, 211, 123, 0.2);
+  border-top-color: #ffd37b;
+  border-radius: 50%;
+  animation: spin 820ms linear infinite;
+}
+
+.reader-loading {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  color: #d9caa8;
+  text-align: center;
+}
+
+.reader-error {
+  min-height: 180px;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  color: #f0c7c7;
+  text-align: center;
+}
+
+.reader-error strong {
+  color: #ffe5e5;
+  font-size: 15px;
+}
+
 .reader-text {
   min-height: 220px;
   border-top: 1px solid var(--stroke);
@@ -1449,6 +1532,12 @@ button {
   line-height: 1.9;
   padding: 14px;
   white-space: pre-line;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .toast {

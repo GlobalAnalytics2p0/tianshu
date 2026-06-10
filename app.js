@@ -30,6 +30,7 @@ const icons = {
   close: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>',
   download: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v11"/><path d="m8 10 4 4 4-4"/><path d="M5 19h14"/></svg>',
   reader: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H20v14H7a3 3 0 0 0-3 3V6.5Z"/><path d="M8 8h8"/><path d="M8 12h6"/></svg>',
+  play: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5L10 8.5Z"/></svg>',
   info: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 10v6"/><path d="M12 7h.01"/></svg>'
 };
 
@@ -77,6 +78,7 @@ let toastTimer = null;
 let currentManifestSignature = "";
 let manifestPollTimer = null;
 let manifestPollInFlight = false;
+const resourceAvailabilityCache = new Map();
 
 function buildShareUrls() {
   const combinedText = `${youtubeShareText} ${youtubeChannelUrl}`;
@@ -162,6 +164,22 @@ async function fetchTextFile(path, cacheToken = "") {
   return response.text();
 }
 
+async function resourceExists(path, cacheToken = "") {
+  if (!path) return false;
+  const cacheKey = `${path}|${cacheToken}`;
+  if (resourceAvailabilityCache.has(cacheKey)) return resourceAvailabilityCache.get(cacheKey);
+
+  try {
+    const response = await fetch(resourceUrl(path, cacheToken), { method: "HEAD", cache: "no-store" });
+    const exists = response.ok;
+    resourceAvailabilityCache.set(cacheKey, exists);
+    return exists;
+  } catch (error) {
+    resourceAvailabilityCache.set(cacheKey, false);
+    return false;
+  }
+}
+
 function syncCategoryCounts() {
   const counts = allBooks.reduce((result, book) => {
     result[book.category] = (result[book.category] || 0) + 1;
@@ -177,14 +195,14 @@ function syncCategoryCounts() {
 async function loadLibrary() {
   const manifest = await fetchManifest(`library-${Date.now()}`);
   currentManifestSignature = buildManifestSignature(manifest);
-  allBooks = await Promise.all((manifest.books || []).map(async (book, index) => {
-    const chapters = await Promise.all((book.chapters || []).map(async (chapter) => {
-      const content = await fetchTextFile(chapter.path, chapter.generatedAt || `${chapter.number || "0"}-${currentManifestSignature}`);
-      return {
-        ...chapter,
-        displayTitle: chapterDisplayTitle(chapter),
-        content: content.trim()
-      };
+  allBooks = (manifest.books || []).map((book, index) => {
+    const chapters = (book.chapters || []).map((chapter) => ({
+      ...chapter,
+      displayTitle: chapterDisplayTitle(chapter),
+      content: "",
+      contentState: "idle",
+      audioState: chapter.audio?.path ? "idle" : "none",
+      audioAvailable: false
     }));
 
     return {
@@ -194,7 +212,7 @@ async function loadLibrary() {
       chapters,
       contentStatus: "天書原創連載"
     };
-  }));
+  });
 
   syncCategoryCounts();
 }
@@ -383,6 +401,115 @@ function setModalChapterIndex(index, shouldScroll = true) {
   }
 }
 
+function renderLoadingBlock(message = "章節文字載入中") {
+  return `
+    <div class="reader-loading" role="status" aria-live="polite">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <span>${escapeHtml(message)}</span>
+    </div>
+  `;
+}
+
+function renderChapterText(chapter) {
+  if (!chapter) return renderLoadingBlock("章節資料準備中");
+  if (chapter.contentState === "loaded") return escapeHtml(chapter.content);
+  if (chapter.contentState === "error") {
+    return `
+      <div class="reader-error">
+        <strong>章節暫時讀取失敗</strong>
+        <span>請稍後重試，或切換到其他章節。</span>
+      </div>
+    `;
+  }
+  return renderLoadingBlock("正在載入章節內容");
+}
+
+function renderChapterAudio(chapter) {
+  if (!chapter?.audio?.path || chapter.audioState === "missing") return "";
+  if (chapter.audioState !== "available") {
+    return `
+      <div class="chapter-audio chapter-audio--checking" data-audio-panel>
+        <span class="chapter-audio__icon"><span class="loading-spinner" aria-hidden="true"></span></span>
+        <span>
+          <strong>有聲書確認中</strong>
+          <small>如果本章音檔已部署，播放器會自動出現。</small>
+        </span>
+      </div>
+    `;
+  }
+
+  const audio = chapter.audio;
+  return `
+    <div class="chapter-audio" data-audio-panel>
+      <div class="chapter-audio__header">
+        <span class="chapter-audio__icon"><span class="icon" data-icon="play"></span></span>
+        <span>
+          <strong>播放有聲書</strong>
+          <small>${escapeHtml(audio.narrator || "天書小說")} · ${escapeHtml(audio.format || "M4A")}</small>
+        </span>
+      </div>
+      <audio controls preload="none" src="${escapeHtml(resourceUrl(audio.path, audio.generatedAt || chapter.generatedAt || currentManifestSignature))}"></audio>
+    </div>
+  `;
+}
+
+function updateReaderPane(book, index) {
+  if (!currentModalBook || currentModalBook.id !== book.id || currentChapterIndex !== index) return;
+  const chapter = book.chapters[index];
+  const readerText = document.querySelector("[data-reader-text]");
+  const audioSlot = document.querySelector("[data-audio-slot]");
+  if (readerText) readerText.innerHTML = renderChapterText(chapter);
+  if (audioSlot) {
+    audioSlot.innerHTML = renderChapterAudio(chapter);
+    hydrateIcons(audioSlot);
+  }
+}
+
+async function ensureChapterAudioAvailability(book, index) {
+  const chapter = book.chapters[index];
+  if (!chapter?.audio?.path || chapter.audioState === "available" || chapter.audioState === "missing") return;
+  chapter.audioState = "checking";
+  updateReaderPane(book, index);
+  const exists = await resourceExists(chapter.audio.path, chapter.audio.generatedAt || chapter.generatedAt || currentManifestSignature);
+  chapter.audioAvailable = exists;
+  chapter.audioState = exists ? "available" : "missing";
+  updateReaderPane(book, index);
+}
+
+async function ensureChapterContent(book, index, { silent = false } = {}) {
+  const chapter = book.chapters[index];
+  if (!chapter || chapter.contentState === "loaded") return chapter?.content || "";
+  if (chapter.contentPromise) return chapter.contentPromise;
+
+  chapter.contentState = "loading";
+  if (!silent) updateReaderPane(book, index);
+  chapter.contentPromise = fetchTextFile(chapter.path, chapter.generatedAt || `${chapter.number || "0"}-${currentManifestSignature}`)
+    .then((content) => {
+      chapter.content = content.trim();
+      chapter.contentState = "loaded";
+      return chapter.content;
+    })
+    .catch((error) => {
+      console.warn("Chapter load failed.", error);
+      chapter.contentState = "error";
+      return "";
+    })
+    .finally(() => {
+      chapter.contentPromise = null;
+      if (!silent) updateReaderPane(book, index);
+    });
+
+  return chapter.contentPromise;
+}
+
+function warmNearbyChapters(book, index) {
+  [index + 1, index - 1].forEach((nextIndex) => {
+    if (book.chapters[nextIndex]?.contentState === "idle") {
+      void ensureChapterContent(book, nextIndex, { silent: true });
+    }
+  });
+}
+
 function renderModal() {
   if (!currentModalBook) return;
   const book = currentModalBook;
@@ -445,8 +572,9 @@ function renderModal() {
         </div>
         <div class="reader-pane">
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
+          <div data-audio-slot>${renderChapterAudio(activeChapter)}</div>
           ${renderChapterNav(book, "top")}
-          <div class="reader-text">${escapeHtml(activeChapter.content)}</div>
+          <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
         </div>
       </section>
@@ -460,7 +588,7 @@ function renderModal() {
   });
 
   document.getElementById("downloadBook").addEventListener("click", () => {
-    downloadBook(book);
+    void downloadBook(book);
   });
 
   content.querySelectorAll("[data-chapter-index]").forEach((button) => {
@@ -476,6 +604,11 @@ function renderModal() {
       if (direction === "next") setModalChapterIndex(currentChapterIndex + 1);
     });
   });
+
+  void ensureChapterAudioAvailability(book, currentChapterIndex);
+  void ensureChapterContent(book, currentChapterIndex).then(() => {
+    warmNearbyChapters(book, currentChapterIndex);
+  });
 }
 
 function closeModal() {
@@ -486,9 +619,12 @@ function closeModal() {
   currentModalBook = null;
 }
 
-function downloadBook(book) {
+async function downloadBook(book) {
+  showToast(`正在整理《${book.title}》章節文字。`);
+  await Promise.all(book.chapters.map((chapter, index) => ensureChapterContent(book, index, { silent: true })));
   const chapterText = book.chapters.map((chapter) => {
-    return `\n\n${chapter.displayTitle}\n${"=".repeat(24)}\n${chapter.content}`;
+    const content = chapter.contentState === "loaded" ? chapter.content : "（此章節暫時讀取失敗）";
+    return `\n\n${chapter.displayTitle}\n${"=".repeat(24)}\n${content}`;
   }).join("");
   const text = `天書小說原創文本\n書名：${book.title}\n作者：${book.author}\n作者介紹：${book.authorIntro || ""}\n分類：${book.category}\n更新：${book.status}\n內容狀態：${book.contentStatus}\n\n${book.summary}${chapterText}\n`;
   const blob = new Blob([text], { type: "text/plain;charset=utf-8" });

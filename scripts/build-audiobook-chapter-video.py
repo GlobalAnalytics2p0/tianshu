@@ -470,6 +470,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--edge-pitch", default=EDGE_PITCH)
     parser.add_argument("--preview-seconds", type=float)
     parser.add_argument("--output-label")
+    parser.add_argument("--slide-count", type=int, help="Use an explicit number of slide images instead of duration-derived count.")
     parser.add_argument("--regenerate-stills", action="store_true", help="Regenerate chapter still images instead of reusing existing slide-*.png files.")
     parser.add_argument("--reuse-tts", action="store_true", help="Reuse existing generated Edge TTS media and VTT timing files.")
     return parser.parse_args()
@@ -504,7 +505,10 @@ def main() -> None:
     )
     source_duration = ffprobe_duration(narration)
     duration = min(source_duration, args.preview_seconds) if args.preview_seconds is not None else source_duration
-    stills = build_stills(args.novel, args.chapter_title, source_dir, slide_count_for_duration(duration), args.regenerate_stills)
+    slide_count = args.slide_count or slide_count_for_duration(duration)
+    if slide_count < 1:
+        raise ValueError("--slide-count must be at least 1")
+    stills = build_stills(args.novel, args.chapter_title, source_dir, slide_count, args.regenerate_stills)
     build_grouped_srt(vtt, subtitle_file, duration)
     build_video(stills, subtitle_file, narration, output, duration)
 

@@ -11,7 +11,7 @@
 - Resolution: 1080x1920
 - Aspect ratio: 9:16
 - Frame rate: 30 fps
-- Target duration: about 62 seconds
+- Target duration: about 68 seconds
 - Main images: 11 story frames plus 1 CTA end card
 - Output: `output/星骸王座-短影音-第02篇-死法預告-1080x1920.mp4`
 
@@ -39,5 +39,18 @@
 ## QA 要點
 
 - Build script 會用實際 TTS segment duration 動態生成 ASS/SRT，避免男聲後字幕漂移。
+- 2026-06-09 QA 修正：初版 11 段旁白因 Edge TTS 實際長度達 87 秒，會被 62 秒輸出截斷；已改成 8 段緊湊版，保留死亡預告、黑棺、追兵、割斷命線與 CTA。
+- 2026-06-09 QA 修正：男聲 `zh-TW-YunJheNeural` 使用 `rate=-2%`、`pitch=-2Hz` 作為穩定參數；過低 pitch/rate 可能產生 partial mp3 或 `NoAudioReceived`。
+- 2026-06-09 QA 修正：影像段落加上 `setsar=1`，確保輸出為 1080x1920、SAR 1:1、DAR 9:16。
 - Contact sheet 必須抽樣：前三秒 hook、星核男聲、追兵男聲、回女旁白、CTA end card。
 - CTA end card 至少停留 7 秒，不疊字幕，確保官網與搜尋詞可讀。
+
+## 2026-06-09 最終輸出
+
+- Output: `output/星骸王座-短影音-第02篇-死法預告-1080x1920.mp4`
+- Video: 1080x1920, 30fps, SAR 1:1, DAR 9:16, duration 68.000s.
+- Audio: AAC mono 24000Hz, duration 68.000s.
+- Voice source: `voice/edge-acted-narration.m4a`, duration 67.208s; final MP4 沒有截斷旁白。
+- Mix volume: mean `-22.0 dB`, max `-6.6 dB`; no clipping.
+- QA contact sheet: `qa/death-preview-contact-sheet.png`.
+- Subtitle cutoff: 59.67s，60s 後 CTA end card 保持乾淨。
