@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T02:22:17+08:00",
+  "generatedAt": "2026-06-10T08:24:41+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -133,6 +133,13 @@
           "path": "src/resource/星骸王座/文章/第16章 墊靜灰底.txt",
           "charCount": 6417,
           "generatedAt": "2026-06-10T02:22:17+08:00"
+        },
+        {
+          "number": 17,
+          "title": "灰架記底",
+          "path": "src/resource/星骸王座/文章/第17章 灰架記底.txt",
+          "charCount": 6081,
+          "generatedAt": "2026-06-10T08:24:41+08:00"
         }
       ],
       "tone": "深沉",
@@ -572,6 +579,13 @@
           "path": "src/resource/灰塔觀測者/第16章 鐘背斷線.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-10T02:22:17+08:00"
+        },
+        {
+          "number": 17,
+          "title": "補線灰標",
+          "path": "src/resource/灰塔觀測者/第17章 補線灰標.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-10T08:24:41+08:00"
         }
       ],
       "tone": "深沉",
@@ -1010,6 +1024,13 @@
           "path": "src/resource/雪刃照孤城/第16章 半寸影差.txt",
           "charCount": 6003,
           "generatedAt": "2026-06-10T02:22:17+08:00"
+        },
+        {
+          "number": 17,
+          "title": "守位薄尺",
+          "path": "src/resource/雪刃照孤城/第17章 守位薄尺.txt",
+          "charCount": 6520,
+          "generatedAt": "2026-06-10T08:24:41+08:00"
         }
       ],
       "tone": "深沉",
@@ -1448,6 +1469,13 @@
           "path": "src/resource/凌晨三點的演算法/第16章 東口白臉.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-10T02:22:17+08:00"
+        },
+        {
+          "number": 17,
+          "title": "館配薄套",
+          "path": "src/resource/凌晨三點的演算法/第17章 館配薄套.txt",
+          "charCount": 6520,
+          "generatedAt": "2026-06-10T08:24:41+08:00"
         }
       ],
       "tone": "深沉",
@@ -1886,6 +1914,13 @@
           "path": "src/resource/大明墨工/第16章 小口藏心.txt",
           "charCount": 6383,
           "generatedAt": "2026-06-10T02:22:17+08:00"
+        },
+        {
+          "number": 17,
+          "title": "摸邊手",
+          "path": "src/resource/大明墨工/第17章 摸邊手.txt",
+          "charCount": 6507,
+          "generatedAt": "2026-06-10T08:24:41+08:00"
         }
       ],
       "tone": "深沉",
