@@ -3,6 +3,21 @@
 import { execFileSync, spawnSync } from "node:child_process";
 
 const PUBLISH_SCRIPT = new URL("./publish-site-update.mjs", import.meta.url);
+const ACTIVE_TITLES = [
+  "星骸王座",
+  "灰塔觀測者",
+  "雪刃照孤城",
+  "凌晨三點的演算法",
+  "大明墨工"
+];
+const ACTIVE_NOTE_NAMES = new Set([
+  "核心靈魂檔案.md",
+  "作者思路.md",
+  "人物架構.md",
+  "每日寫作狀態.md",
+  "伏筆事件台帳.md",
+  "反思.md"
+]);
 
 function parseArgs(argv) {
   return {
@@ -14,6 +29,13 @@ function parseArgs(argv) {
 
 function runGit(args) {
   return execFileSync("git", args, { encoding: "utf8" }).trim();
+}
+
+function runGitNullDelimited(args) {
+  return execFileSync("git", args, { encoding: "buffer" })
+    .toString("utf8")
+    .split("\u0000")
+    .filter(Boolean);
 }
 
 function runGitWithStatus(args) {
@@ -38,8 +60,40 @@ function print(result, asJson = false) {
   console.log(`behind=${result.behind}`);
   console.log(`remoteReachable=${result.remoteReachable}`);
   if (result.remoteError) console.log(`remoteError=${result.remoteError}`);
+  console.log(`dirtyActiveContent=${result.dirtyActivePaths.length}`);
+  if (result.dirtyActivePaths.length > 0) {
+    for (const path of result.dirtyActivePaths) {
+      console.log(`dirtyActivePath=${path}`);
+    }
+  }
   console.log(`status=${result.status}`);
   if (result.message) console.log(`message=${result.message}`);
+}
+
+function isActiveContentPath(path) {
+  if (path === "src/resource/manifest.json") return true;
+
+  if (/^src\/resource\/星骸王座\/文章\/第\d+章 .+\.txt$/.test(path)) return true;
+  const starThroneNoteMatch = path.match(/^src\/resource\/星骸王座\/素材\/([^/]+)$/);
+  if (starThroneNoteMatch && ACTIVE_NOTE_NAMES.has(starThroneNoteMatch[1])) return true;
+
+  for (const title of ACTIVE_TITLES.filter((item) => item !== "星骸王座")) {
+    const chapterRegex = new RegExp(`^src/resource/${title}/第\\d+章 .+\\.txt$`);
+    if (chapterRegex.test(path)) return true;
+
+    const noteRegex = new RegExp(`^src/resource/${title}/([^/]+)$`);
+    const noteMatch = path.match(noteRegex);
+    if (noteMatch && ACTIVE_NOTE_NAMES.has(noteMatch[1])) return true;
+  }
+
+  return false;
+}
+
+function getDirtyActivePaths() {
+  const tracked = runGitNullDelimited(["diff", "--name-only", "-z", "HEAD", "--"]);
+  const untracked = runGitNullDelimited(["ls-files", "--others", "--exclude-standard", "-z", "--"]);
+  const unique = new Set([...tracked, ...untracked]);
+  return [...unique].filter(isActiveContentPath).sort((left, right) => left.localeCompare(right, "zh-Hant"));
 }
 
 function getState() {
@@ -61,6 +115,7 @@ function getState() {
     origin,
     ahead,
     behind,
+    dirtyActivePaths: getDirtyActivePaths(),
     remoteReachable,
     remoteError,
     status: "unknown",
@@ -88,6 +143,18 @@ function main() {
     state.status = "behind-upstream";
     state.message = "Local branch is behind upstream; resolve divergence before generation or publish.";
     exitWith(4, state, options.json);
+  }
+
+  if (state.dirtyActivePaths.length > 0) {
+    if (state.remoteReachable) {
+      state.status = "working-tree-publish-debt";
+      state.message = "Uncommitted active-title site content exists; commit/publish or clear it before new generation.";
+      exitWith(6, state, options.json);
+    }
+
+    state.status = "working-tree-publish-debt-remote-blocked";
+    state.message = "Uncommitted active-title site content exists and origin is unreachable. Resolve or explicitly archive the local-only state before new generation.";
+    exitWith(6, state, options.json);
   }
 
   if (state.ahead > 0) {

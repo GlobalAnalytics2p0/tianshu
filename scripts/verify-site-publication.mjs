@@ -110,6 +110,7 @@ async function fetchJson(url) {
   const target = new URL(url);
   target.searchParams.set("ts", String(Date.now()));
   const response = await fetch(target, {
+    cache: "no-store",
     headers: {
       "cache-control": "no-cache, no-store, max-age=0",
       pragma: "no-cache"
@@ -136,6 +137,7 @@ async function main() {
   const localManifest = loadJsonFile(MANIFEST_PATH);
   const localSummary = buildSummary(localManifest);
   const branch = runGit(["branch", "--show-current"]);
+  const headCommit = runGit(["rev-parse", "HEAD"]);
   const upstream = runGit(["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}"]);
   const [behindText, aheadText] = runGit(["rev-list", "--left-right", "--count", `${upstream}...HEAD`]).split(/\s+/);
   const behind = Number.parseInt(behindText, 10) || 0;
@@ -156,7 +158,7 @@ async function main() {
     fail("origin remote is not a supported github.com URL", [`origin=${originUrl}`]);
   }
 
-  const rawManifestUrl = `https://raw.githubusercontent.com/${remote.owner}/${remote.repo}/${branch}/src/resource/manifest.json`;
+  const rawManifestUrl = `https://raw.githubusercontent.com/${remote.owner}/${remote.repo}/${headCommit}/src/resource/manifest.json`;
   const siteManifestUrl = resolveSiteManifestUrl(remote.owner, remote.repo);
 
   const rawManifest = await fetchJson(rawManifestUrl);
