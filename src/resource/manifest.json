@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T20:15:54+08:00",
+  "generatedAt": "2026-06-12T02:04:02+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -200,6 +200,13 @@
           "path": "src/resource/星骸王座/文章/第23章 更北細紅.txt",
           "charCount": 6420,
           "generatedAt": "2026-06-11T20:15:54+08:00"
+        },
+        {
+          "number": 24,
+          "title": "盤腳偏熱",
+          "path": "src/resource/星骸王座/文章/第24章 盤腳偏熱.txt",
+          "charCount": 6228,
+          "generatedAt": "2026-06-12T02:04:02+08:00"
         }
       ],
       "tone": "深沉",
@@ -688,6 +695,13 @@
           "path": "src/resource/灰塔觀測者/第23章 更裡換卡.txt",
           "charCount": 6451,
           "generatedAt": "2026-06-11T20:15:54+08:00"
+        },
+        {
+          "number": 24,
+          "title": "借牙回位",
+          "path": "src/resource/灰塔觀測者/第24章 借牙回位.txt",
+          "charCount": 6313,
+          "generatedAt": "2026-06-12T02:04:02+08:00"
         }
       ],
       "tone": "深沉",
@@ -1175,6 +1189,13 @@
           "path": "src/resource/雪刃照孤城/第23章 風道位骨.txt",
           "charCount": 6030,
           "generatedAt": "2026-06-11T20:15:54+08:00"
+        },
+        {
+          "number": 24,
+          "title": "舊鞘回皮",
+          "path": "src/resource/雪刃照孤城/第24章 舊鞘回皮.txt",
+          "charCount": 6297,
+          "generatedAt": "2026-06-12T02:04:02+08:00"
         }
       ],
       "tone": "深沉",
@@ -1662,6 +1683,13 @@
           "path": "src/resource/凌晨三點的演算法/第23章 二五三口.txt",
           "charCount": 6101,
           "generatedAt": "2026-06-11T20:15:54+08:00"
+        },
+        {
+          "number": 24,
+          "title": "失櫃白槽",
+          "path": "src/resource/凌晨三點的演算法/第24章 失櫃白槽.txt",
+          "charCount": 6495,
+          "generatedAt": "2026-06-12T02:04:02+08:00"
         }
       ],
       "tone": "深沉",
@@ -2149,6 +2177,13 @@
           "path": "src/resource/大明墨工/第23章 冷白照腳.txt",
           "charCount": 6394,
           "generatedAt": "2026-06-11T20:15:54+08:00"
+        },
+        {
+          "number": 24,
+          "title": "沉樁冷白",
+          "path": "src/resource/大明墨工/第24章 沉樁冷白.txt",
+          "charCount": 6428,
+          "generatedAt": "2026-06-12T02:04:02+08:00"
         }
       ],
       "tone": "深沉",
