@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T06:00:00+08:00",
+  "generatedAt": "2026-06-11T14:05:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -186,6 +186,13 @@
           "path": "src/resource/星骸王座/文章/第21章 檐後喚炭.txt",
           "charCount": 6014,
           "generatedAt": "2026-06-11T06:00:00+08:00"
+        },
+        {
+          "number": 22,
+          "title": "閘後細紅",
+          "path": "src/resource/星骸王座/文章/第22章 閘後細紅.txt",
+          "charCount": 6500,
+          "generatedAt": "2026-06-11T14:05:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -660,6 +667,13 @@
           "path": "src/resource/灰塔觀測者/第21章 晨前三尺.txt",
           "charCount": 6012,
           "generatedAt": "2026-06-11T06:00:00+08:00"
+        },
+        {
+          "number": 22,
+          "title": "鐘前量位",
+          "path": "src/resource/灰塔觀測者/第22章 鐘前量位.txt",
+          "charCount": 6285,
+          "generatedAt": "2026-06-11T14:05:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1133,6 +1147,13 @@
           "path": "src/resource/雪刃照孤城/第21章 北閘回炭.txt",
           "charCount": 6011,
           "generatedAt": "2026-06-11T06:00:00+08:00"
+        },
+        {
+          "number": 22,
+          "title": "閘後吊紙",
+          "path": "src/resource/雪刃照孤城/第22章 閘後吊紙.txt",
+          "charCount": 6197,
+          "generatedAt": "2026-06-11T14:05:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1606,6 +1627,13 @@
           "path": "src/resource/凌晨三點的演算法/第21章 白盒對時.txt",
           "charCount": 6027,
           "generatedAt": "2026-06-11T06:00:00+08:00"
+        },
+        {
+          "number": 22,
+          "title": "座牌抽位",
+          "path": "src/resource/凌晨三點的演算法/第22章 座牌抽位.txt",
+          "charCount": 6500,
+          "generatedAt": "2026-06-11T14:05:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -2079,6 +2107,13 @@
           "path": "src/resource/大明墨工/第21章 二響來手.txt",
           "charCount": 6071,
           "generatedAt": "2026-06-11T06:00:00+08:00"
+        },
+        {
+          "number": 22,
+          "title": "河坡冷板",
+          "path": "src/resource/大明墨工/第22章 河坡冷板.txt",
+          "charCount": 6258,
+          "generatedAt": "2026-06-11T14:05:00+08:00"
         }
       ],
       "tone": "深沉",
