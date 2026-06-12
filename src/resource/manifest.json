@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T02:04:02+08:00",
+  "generatedAt": "2026-06-12T08:16:43+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -207,6 +207,13 @@
           "path": "src/resource/星骸王座/文章/第24章 盤腳偏熱.txt",
           "charCount": 6228,
           "generatedAt": "2026-06-12T02:04:02+08:00"
+        },
+        {
+          "number": 25,
+          "title": "偏肩護皮",
+          "path": "src/resource/星骸王座/文章/第25章 偏肩護皮.txt",
+          "charCount": 6333,
+          "generatedAt": "2026-06-12T08:16:43+08:00"
         }
       ],
       "tone": "深沉",
@@ -702,6 +709,13 @@
           "path": "src/resource/灰塔觀測者/第24章 借牙回位.txt",
           "charCount": 6313,
           "generatedAt": "2026-06-12T02:04:02+08:00"
+        },
+        {
+          "number": 25,
+          "title": "空齒留白",
+          "path": "src/resource/灰塔觀測者/第25章 空齒留白.txt",
+          "charCount": 6168,
+          "generatedAt": "2026-06-12T08:16:43+08:00"
         }
       ],
       "tone": "深沉",
@@ -1196,6 +1210,13 @@
           "path": "src/resource/雪刃照孤城/第24章 舊鞘回皮.txt",
           "charCount": 6297,
           "generatedAt": "2026-06-12T02:04:02+08:00"
+        },
+        {
+          "number": 25,
+          "title": "暖牆回弧",
+          "path": "src/resource/雪刃照孤城/第25章 暖牆回弧.txt",
+          "charCount": 6197,
+          "generatedAt": "2026-06-12T08:16:43+08:00"
         }
       ],
       "tone": "深沉",
@@ -1690,6 +1711,13 @@
           "path": "src/resource/凌晨三點的演算法/第24章 失櫃白槽.txt",
           "charCount": 6495,
           "generatedAt": "2026-06-12T02:04:02+08:00"
+        },
+        {
+          "number": 25,
+          "title": "零一回簽",
+          "path": "src/resource/凌晨三點的演算法/第25章 零一回簽.txt",
+          "charCount": 6056,
+          "generatedAt": "2026-06-12T08:16:43+08:00"
         }
       ],
       "tone": "深沉",
@@ -2184,6 +2212,13 @@
           "path": "src/resource/大明墨工/第24章 沉樁冷白.txt",
           "charCount": 6428,
           "generatedAt": "2026-06-12T02:04:02+08:00"
+        },
+        {
+          "number": 25,
+          "title": "第二陰平肩",
+          "path": "src/resource/大明墨工/第25章 第二陰平肩.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-12T08:16:43+08:00"
         }
       ],
       "tone": "深沉",
