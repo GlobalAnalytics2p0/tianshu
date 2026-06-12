@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T14:12:30+08:00",
+  "generatedAt": "2026-06-12T20:50:59+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -221,6 +221,13 @@
           "path": "src/resource/星骸王座/文章/第26章 北耳試牆.txt",
           "charCount": 6007,
           "generatedAt": "2026-06-12T14:12:30+08:00"
+        },
+        {
+          "number": 27,
+          "title": "老腹先暖",
+          "path": "src/resource/星骸王座/文章/第27章 老腹先暖.txt",
+          "charCount": 6003,
+          "generatedAt": "2026-06-12T20:50:59+08:00"
         }
       ],
       "tone": "深沉",
@@ -730,6 +737,13 @@
           "path": "src/resource/灰塔觀測者/第26章 腹口借齒.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-12T14:12:30+08:00"
+        },
+        {
+          "number": 27,
+          "title": "暖腹手",
+          "path": "src/resource/灰塔觀測者/第27章 暖腹手.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-12T20:50:59+08:00"
         }
       ],
       "tone": "深沉",
@@ -1238,6 +1252,13 @@
           "path": "src/resource/雪刃照孤城/第26章 問耳窄皮.txt",
           "charCount": 6007,
           "generatedAt": "2026-06-12T14:12:30+08:00"
+        },
+        {
+          "number": 27,
+          "title": "櫃口先暖",
+          "path": "src/resource/雪刃照孤城/第27章 櫃口先暖.txt",
+          "charCount": 6008,
+          "generatedAt": "2026-06-12T20:50:59+08:00"
         }
       ],
       "tone": "深沉",
@@ -1746,6 +1767,13 @@
           "path": "src/resource/凌晨三點的演算法/第26章 下鎖回車.txt",
           "charCount": 6003,
           "generatedAt": "2026-06-12T14:12:30+08:00"
+        },
+        {
+          "number": 27,
+          "title": "灰簾下槽",
+          "path": "src/resource/凌晨三點的演算法/第27章 灰簾下槽.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-12T20:50:59+08:00"
         }
       ],
       "tone": "深沉",
@@ -2254,6 +2282,13 @@
           "path": "src/resource/大明墨工/第26章 暖腹老箱.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-12T14:12:30+08:00"
+        },
+        {
+          "number": 27,
+          "title": "老腹問榫",
+          "path": "src/resource/大明墨工/第27章 老腹問榫.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-12T20:50:59+08:00"
         }
       ],
       "tone": "深沉",
