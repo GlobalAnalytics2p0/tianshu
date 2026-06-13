@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T06:26:13+08:00",
+  "generatedAt": "2026-06-13T12:27:37+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -242,6 +242,13 @@
           "path": "src/resource/星骸王座/文章/第29章 鹽箱問主.txt",
           "charCount": 6161,
           "generatedAt": "2026-06-13T06:26:13+08:00"
+        },
+        {
+          "number": 30,
+          "title": "失背問主",
+          "path": "src/resource/星骸王座/文章/第30章 失背問主.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-13T12:27:37+08:00"
         }
       ],
       "tone": "深沉",
@@ -772,6 +779,13 @@
           "path": "src/resource/灰塔觀測者/第29章 木嘴補鳴.txt",
           "charCount": 6002,
           "generatedAt": "2026-06-13T06:26:13+08:00"
+        },
+        {
+          "number": 30,
+          "title": "半聲回名",
+          "path": "src/resource/灰塔觀測者/第30章 半聲回名.txt",
+          "charCount": 6091,
+          "generatedAt": "2026-06-13T12:27:37+08:00"
         }
       ],
       "tone": "深沉",
@@ -1301,6 +1315,13 @@
           "path": "src/resource/雪刃照孤城/第29章 鞘背收主.txt",
           "charCount": 6003,
           "generatedAt": "2026-06-13T06:26:13+08:00"
+        },
+        {
+          "number": 30,
+          "title": "鞘背回聲",
+          "path": "src/resource/雪刃照孤城/第30章 鞘背回聲.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-13T12:27:37+08:00"
         }
       ],
       "tone": "深沉",
@@ -1830,6 +1851,13 @@
           "path": "src/resource/凌晨三點的演算法/第29章 家套回彈.txt",
           "charCount": 6002,
           "generatedAt": "2026-06-13T06:26:13+08:00"
+        },
+        {
+          "number": 30,
+          "title": "前燈守頁",
+          "path": "src/resource/凌晨三點的演算法/第30章 前燈守頁.txt",
+          "charCount": 6366,
+          "generatedAt": "2026-06-13T12:27:37+08:00"
         }
       ],
       "tone": "深沉",
@@ -2359,6 +2387,13 @@
           "path": "src/resource/大明墨工/第29章 短聲問主.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-13T06:26:13+08:00"
+        },
+        {
+          "number": 30,
+          "title": "回腕試主",
+          "path": "src/resource/大明墨工/第30章 回腕試主.txt",
+          "charCount": 6165,
+          "generatedAt": "2026-06-13T12:27:37+08:00"
         }
       ],
       "tone": "深沉",
