@@ -249,6 +249,13 @@
           "path": "src/resource/星骸王座/文章/第30章 失背問主.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-13T12:27:37+08:00"
+        },
+        {
+          "number": 31,
+          "title": "回腕板",
+          "path": "src/resource/星骸王座/文章/第31章 回腕板.txt",
+          "charCount": 6257,
+          "generatedAt": "2026-06-13T18:10:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -786,6 +793,13 @@
           "path": "src/resource/灰塔觀測者/第30章 半聲回名.txt",
           "charCount": 6091,
           "generatedAt": "2026-06-13T12:27:37+08:00"
+        },
+        {
+          "number": 31,
+          "title": "折梯半名",
+          "path": "src/resource/灰塔觀測者/第31章 折梯半名.txt",
+          "charCount": 6132,
+          "generatedAt": "2026-06-13T18:10:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -1322,6 +1336,13 @@
           "path": "src/resource/雪刃照孤城/第30章 鞘背回聲.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-13T12:27:37+08:00"
+        },
+        {
+          "number": 31,
+          "title": "背芯回位",
+          "path": "src/resource/雪刃照孤城/第31章 背芯回位.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-13T18:10:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -1858,6 +1879,13 @@
           "path": "src/resource/凌晨三點的演算法/第30章 前燈守頁.txt",
           "charCount": 6366,
           "generatedAt": "2026-06-13T12:27:37+08:00"
+        },
+        {
+          "number": 31,
+          "title": "頁數差",
+          "path": "src/resource/凌晨三點的演算法/第31章 頁數差.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-13T18:10:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -2394,6 +2422,13 @@
           "path": "src/resource/大明墨工/第30章 回腕試主.txt",
           "charCount": 6165,
           "generatedAt": "2026-06-13T12:27:37+08:00"
+        },
+        {
+          "number": 31,
+          "title": "潮前試手",
+          "path": "src/resource/大明墨工/第31章 潮前試手.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-13T18:10:15+08:00"
         }
       ],
       "tone": "深沉",
