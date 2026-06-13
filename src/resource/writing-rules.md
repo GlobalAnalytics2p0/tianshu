@@ -18,7 +18,8 @@
 - Update `src/resource/manifest.json` after writing or revising chapter files.
 - Never store chapter bodies inline in `app.js`.
 - Published chapters are locked canon. Do not edit an already published chapter unless the user explicitly authorizes a post-publication correction. For `星骸王座`, `第01章 星核在雨夜說謊` is already published and must remain unchanged.
-- Chapter titles should be short, memorable, and production-friendly. For unpublished or newly generated chapters, prefer 3-6 Traditional Chinese characters and do not exceed 7 characters unless the user explicitly approves a longer title.
+- Chapter titles should be short, memorable, and production-friendly. For unpublished or newly generated chapters, prefer clear, immediately understandable titles in roughly 4-7 Traditional Chinese characters and do not exceed 7 unless the user explicitly approves a longer title.
+- Do not over-compress chapter titles into opaque four-character shorthand when a clearer 5-7 character title reads better. Reduce polyphonic/易誤讀字 when practical, especially for reader-facing chapter cards and narration metadata.
 - Do not use long sentence-like chapter titles as a routine pattern, especially repeated structures such as `先...的人...`, `...先把...`, or titles that explain the whole scene. Use an evocative object, place, action, or threat instead.
 - Already published video/audiobook chapter titles are locked with their public assets. Do not rename published chapters unless the user explicitly approves a public metadata correction.
 - For automation runs, treat `local chapter written`, `manifest updated`, `commit created`, `push succeeded`, and `live site updated` as separate states. Do not report the chapter as published on the site until the live manifest matches the local manifest.
@@ -129,7 +130,7 @@
 
 - After generation or revision, check:
   - 6,000-6,500 non-whitespace Traditional Chinese characters for new or unpublished chapters, with documented exceptions only for already-published locked chapters or explicit user approval.
-  - Chapter title length is production-friendly: prefer 3-6 Traditional Chinese characters and do not exceed 7 for unpublished/new chapters.
+  - Chapter title length is production-friendly: prefer clear 4-7 Traditional Chinese characters and do not exceed 7 for unpublished/new chapters.
   - No forbidden meta/scaffolding phrases.
   - The body does not contain the manifest `premise` sentence verbatim.
   - No repeated filler paragraphs.
