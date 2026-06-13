@@ -944,6 +944,19 @@ button {
   font-weight: 800;
 }
 
+.book-card__latest {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 6px;
+  border-radius: 999px;
+  background: rgba(255, 214, 138, 0.12);
+  color: #ffd99f;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
 .book-card__score {
   color: var(--gold);
   font-size: 13px;
@@ -1071,6 +1084,7 @@ button {
 
 .ai-card__actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   overflow: hidden;
 }

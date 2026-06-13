@@ -104,6 +104,12 @@ function chapterDisplayTitle(chapter) {
   return `第${String(chapterNumber).padStart(2, "0")}章 ${chapter.title}`;
 }
 
+function latestChapterLabel(book) {
+  const latestChapter = book.chapters?.at(-1);
+  if (!latestChapter) return "最新章節待同步";
+  return `更新至 第${String(latestChapter.number).padStart(2, "0")}章`;
+}
+
 function chapterNavButton(direction, chapter, disabled) {
   const label = direction === "previous" ? "上一章" : "下一章";
   const iconPath = direction === "previous" ? "←" : "→";
@@ -306,6 +312,7 @@ function renderRanking() {
         <h3>${escapeHtml(book.title)}</h3>
         <span class="book-card__author">${escapeHtml(book.author)}</span>
         <span class="book-card__category">${escapeHtml(book.category)}</span>
+        <span class="book-card__latest">${escapeHtml(latestChapterLabel(book))}</span>
         <span class="book-card__score">${escapeHtml(book.score)}分</span>
         <span class="book-card__heat">
           <span class="icon" data-icon="flame"></span>
@@ -357,7 +364,8 @@ function renderAiNovels(category = "") {
         <h3>${escapeHtml(book.title)}</h3>
         <p>${escapeHtml(book.summary)}</p>
         <span class="ai-card__actions">
-          <span>每日一章</span>
+          <span>${escapeHtml(latestChapterLabel(book))}</span>
+          <span>00 / 06 / 12 / 18</span>
           <span>深度連載</span>
           <span>強鉤子</span>
         </span>
