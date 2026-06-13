@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T12:27:37+08:00",
+  "generatedAt": "2026-06-14T00:29:39+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -256,6 +256,13 @@
           "path": "src/resource/星骸王座/文章/第31章 回腕板.txt",
           "charCount": 6257,
           "generatedAt": "2026-06-13T18:10:15+08:00"
+        },
+        {
+          "number": 32,
+          "title": "空背來手",
+          "path": "src/resource/星骸王座/文章/第32章 空背來手.txt",
+          "charCount": 6196,
+          "generatedAt": "2026-06-14T00:29:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -800,6 +807,13 @@
           "path": "src/resource/灰塔觀測者/第31章 折梯缺名.txt",
           "charCount": 6132,
           "generatedAt": "2026-06-13T18:10:15+08:00"
+        },
+        {
+          "number": 32,
+          "title": "通梁接名",
+          "path": "src/resource/灰塔觀測者/第32章 通梁接名.txt",
+          "charCount": 6023,
+          "generatedAt": "2026-06-14T00:29:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -1343,6 +1357,13 @@
           "path": "src/resource/雪刃照孤城/第31章 匣芯回位.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-13T18:10:15+08:00"
+        },
+        {
+          "number": 32,
+          "title": "灰門送芯",
+          "path": "src/resource/雪刃照孤城/第32章 灰門送芯.txt",
+          "charCount": 6092,
+          "generatedAt": "2026-06-14T00:29:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -1886,6 +1907,13 @@
           "path": "src/resource/凌晨三點的演算法/第31章 頁數差.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-13T18:10:15+08:00"
+        },
+        {
+          "number": 32,
+          "title": "右燈吃頁",
+          "path": "src/resource/凌晨三點的演算法/第32章 右燈吃頁.txt",
+          "charCount": 6005,
+          "generatedAt": "2026-06-14T00:29:39+08:00"
         }
       ],
       "tone": "深沉",
@@ -2429,6 +2457,13 @@
           "path": "src/resource/大明墨工/第31章 潮前試手.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-13T18:10:15+08:00"
+        },
+        {
+          "number": 32,
+          "title": "回潮模手",
+          "path": "src/resource/大明墨工/第32章 回潮模手.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-14T00:29:39+08:00"
         }
       ],
       "tone": "深沉",
