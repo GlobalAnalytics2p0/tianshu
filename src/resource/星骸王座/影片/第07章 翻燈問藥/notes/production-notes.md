@@ -47,3 +47,20 @@
 - Middle frames show the flipped lantern and fallen tally clue.
 - Late frames show the lower-lane door mark and the closing mark at 周嬸家.
 - Thumbnail and Instagram promo were visually inspected for title fit, line placement, text clipping, and redundant watermark issues.
+
+## Publish Record
+
+- YouTube published on 2026-06-14: `https://youtu.be/3FBOdCcZWuM`
+- YouTube Studio status after publish: Visibility `Public`, Restrictions `None`, Date `Jun 14, 2026`, Status `Published`.
+- Copyright and Community Guidelines checks completed with no issues found before publishing.
+- Custom thumbnail was visible in YouTube Studio before publishing.
+- Public watch verification: YouTube oEmbed returned HTTP 200 with title `《星骸王座》第07章 翻燈問藥｜有聲書・玄幻長篇` and author `天書小說 | TianShu`.
+
+## Social Publish Record
+
+- Threads published and verified on 2026-06-14: `https://www.threads.com/@tianshu_novel/post/DZj31ygE_0M`
+- Facebook Page published and verified on 2026-06-14 at `https://www.facebook.com/profile.php?id=61590406722346`.
+- Facebook verification detail: the page showed the 第07章〈翻燈問藥〉post text, the YouTube URL `https://youtu.be/3FBOdCcZWuM`, the official website URL `https://tianshu.petrichor.tw/`, and the link preview. The exact single-post permalink was not exposed during verification.
+- Instagram published and verified on 2026-06-14: `https://www.instagram.com/tianshu_novel/p/DZj54pBmVMS/`
+- Instagram profile count changed from 6 posts to 7 posts after publishing.
+- Instagram upload note: the browser file chooser API returned a permission error earlier, but the image was already successfully attached before final captioning. Before sharing, both Threads and Facebook sync switches were checked and confirmed `false`, so the IG post was published independently.

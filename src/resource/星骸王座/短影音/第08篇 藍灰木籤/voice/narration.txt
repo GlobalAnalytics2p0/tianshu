@@ -1,0 +1,9 @@
+01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 門縫底下，多了一枚藍灰木籤。這戶，今晚會被寫死。
+02. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 第七欄最愛的，不是病人。是安靜、獨住、沒人作證的門。
+03. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 夏婆那扇門，就被挑中了。
+04. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Default] 阿棠沒等夜來。她把苦艾水、藥渣和濕布，先分給半條巷。
+05. [zh-TW-HsiaoChenNeural rate=+8% pitch=-8Hz style=Hit] 會哭的哭，會咳的咳。誰家今天都別裝安靜。
+06. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Choice] 翻燈想找一扇靜門。可每扇門都有藥味，每戶人都醒著。
+07. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 木籤還沒完。它最後指向的，不是病名，是後井。
+08. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 沈曜知道，今晚救一戶不夠。他得把整條路都弄髒。
+09. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 想看藍灰木籤後面藏著什麼，去天書小說，看星骸王座。

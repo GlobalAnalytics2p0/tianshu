@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.56,Hit,,0,0,0,,今晚第一個被送走的\N不是沈曜
+Dialogue: 0,0:00:03.56,0:00:05.21,Hit,,0,0,0,,是周嬸
+Dialogue: 0,0:00:05.21,0:00:08.09,Default,,0,0,0,,因為她把整條巷子叫醒
+Dialogue: 0,0:00:08.09,0:00:11.26,Default,,0,0,0,,第七欄要先收掉這口火氣
+Dialogue: 0,0:00:11.26,0:00:13.90,Default,,0,0,0,,白棚外有灰車\N有灰袋
+Dialogue: 0,0:00:13.90,0:00:15.96,Default,,0,0,0,,還有一枚換車結
+Dialogue: 0,0:00:15.96,0:00:20.33,Hit,,0,0,0,,你要是自己去抬灰車\N我先把你手打斷
+Dialogue: 0,0:00:20.33,0:00:23.89,Choice,,0,0,0,,我不抬車\N抬車的人不值錢
+Dialogue: 0,0:00:23.89,0:00:26.16,Choice,,0,0,0,,換結的人才值錢
+Dialogue: 0,0:00:26.16,0:00:29.54,Hit,,0,0,0,,行\N總算輪到老娘了
+Dialogue: 0,0:00:29.54,0:00:33.19,Choice,,0,0,0,,沈曜要的不是大亂\N錯一點
+Dialogue: 0,0:00:33.19,0:00:35.51,Choice,,0,0,0,,才像真的\N錯一點
+Dialogue: 0,0:00:35.51,0:00:38.16,Choice,,0,0,0,,才會讓白路先失準
+Dialogue: 0,0:00:38.16,0:00:42.04,Choice,,0,0,0,,那一夜\N周戶先被寫成已收灰
+Dialogue: 0,0:00:42.04,0:00:44.95,Choice,,0,0,0,,藥門\N才多出一口時間
+Dialogue: 0,0:00:44.95,0:00:49.03,Choice,,0,0,0,,想看一枚錯結怎麼救人\N去天書小說
+Dialogue: 0,0:00:49.03,0:00:50.66,Choice,,0,0,0,,看星骸王座

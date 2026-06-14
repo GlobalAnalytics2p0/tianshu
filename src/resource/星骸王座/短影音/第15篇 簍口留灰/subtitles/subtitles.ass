@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.80,Hit,,0,0,0,,他們這次不偷人\N先偷一只舊簍的口
+Dialogue: 0,0:00:04.80,0:00:08.34,Default,,0,0,0,,阿棠摸到簍口內沿的細痕\N立刻知道
+Dialogue: 0,0:00:08.34,0:00:10.94,Default,,0,0,0,,母親留下的不只是一隻手
+Dialogue: 0,0:00:10.94,0:00:14.24,Choice,,0,0,0,,借十只舊簍來\N新的不要
+Dialogue: 0,0:00:14.24,0:00:16.22,Choice,,0,0,0,,乾淨的也不要
+Dialogue: 0,0:00:16.22,0:00:19.17,Default,,0,0,0,,周嬸把全巷舊簍拖來\N簍口
+Dialogue: 0,0:00:19.17,0:00:20.78,Default,,0,0,0,,簍耳\N簍底
+Dialogue: 0,0:00:20.78,0:00:22.39,Default,,0,0,0,,全抹上藥灰
+Dialogue: 0,0:00:22.39,0:00:24.83,Default,,0,0,0,,收破竹的人說來做紙模
+Dialogue: 0,0:00:24.83,0:00:27.50,Default,,0,0,0,,手上卻全是摸灰紙的乾繭
+Dialogue: 0,0:00:27.50,0:00:30.65,Choice,,0,0,0,,這只是假口\N真正要藏的
+Dialogue: 0,0:00:30.65,0:00:32.54,Choice,,0,0,0,,是手記
+Dialogue: 0,0:00:32.54,0:00:36.14,Default,,0,0,0,,紙巷院裡\N小女孩沿舊線拆樣
+Dialogue: 0,0:00:36.14,0:00:39.43,Default,,0,0,0,,黑袋一開\N全是程家舊簍口
+Dialogue: 0,0:00:39.43,0:00:43.13,Choice,,0,0,0,,別追臉\N先拿袋
+Dialogue: 0,0:00:43.13,0:00:44.94,Hit,,0,0,0,,第七欄想收靜口
+Dialogue: 0,0:00:44.94,0:00:48.05,Hit,,0,0,0,,卻被整條巷子的破簍堵回去
+Dialogue: 0,0:00:48.05,0:00:50.78,Default,,0,0,0,,簍口後面\N就是簍底
+Dialogue: 0,0:00:50.78,0:00:52.82,Default,,0,0,0,,官網看後續

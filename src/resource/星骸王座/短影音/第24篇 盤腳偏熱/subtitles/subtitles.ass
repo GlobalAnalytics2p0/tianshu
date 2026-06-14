@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.85,Hit,,0,0,0,,那只盤不是壞了\N它在等左腳先熱
+Dialogue: 0,0:00:04.85,0:00:07.11,Default,,0,0,0,,阿棠故意寫錯守火譜
+Dialogue: 0,0:00:07.11,0:00:09.86,Default,,0,0,0,,讓偷學的人第一口就走偏
+Dialogue: 0,0:00:09.86,0:00:12.19,Choice,,0,0,0,,就是要他學壞
+Dialogue: 0,0:00:12.19,0:00:15.64,Default,,0,0,0,,黃昏來的瘸腿老嫗\N短杖每一下
+Dialogue: 0,0:00:15.64,0:00:17.23,Default,,0,0,0,,都先點左前
+Dialogue: 0,0:00:17.23,0:00:20.71,Choice,,0,0,0,,她跟那只盤\N是同一種步子
+Dialogue: 0,0:00:20.71,0:00:23.08,Default,,0,0,0,,竹簍一砸\N小三腳盤
+Dialogue: 0,0:00:23.08,0:00:26.64,Default,,0,0,0,,青黑布帶\N冷白麻索全滾出來
+Dialogue: 0,0:00:26.64,0:00:30.22,Default,,0,0,0,,沈曜踩住左腳\N把假藥紙塞進盤下
+Dialogue: 0,0:00:30.22,0:00:33.02,Default,,0,0,0,,影牆後的金聲當場失了平
+Dialogue: 0,0:00:33.02,0:00:35.54,Default,,0,0,0,,半夜又有人上屋吹灰
+Dialogue: 0,0:00:35.54,0:00:38.62,Default,,0,0,0,,北街卻把每一袋灰都養歪
+Dialogue: 0,0:00:38.62,0:00:42.12,Hit,,0,0,0,,它今夜不是殺人\N它在借病火
+Dialogue: 0,0:00:42.12,0:00:45.05,Hit,,0,0,0,,把一件舊器慢慢立起來
+Dialogue: 0,0:00:45.05,0:00:48.67,Default,,0,0,0,,完整連載\N到官網看星骸王座

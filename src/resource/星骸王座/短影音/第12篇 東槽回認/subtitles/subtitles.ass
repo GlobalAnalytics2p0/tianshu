@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.69,Hit,,0,0,0,,他們不認臉\N只認手
+Dialogue: 0,0:00:02.69,0:00:06.80,Default,,0,0,0,,東槽那塊乾板\N是用來回認藥門的手
+Dialogue: 0,0:00:06.80,0:00:11.18,Default,,0,0,0,,誰碰過留乾布\N誰就會被下一輪寫上去
+Dialogue: 0,0:00:11.18,0:00:14.66,Hit,,0,0,0,,若它真要認\N今天會先認我
+Dialogue: 0,0:00:14.66,0:00:17.95,Choice,,0,0,0,,那就讓它來\N等的不是人
+Dialogue: 0,0:00:17.95,0:00:20.26,Choice,,0,0,0,,是它手裡那件活
+Dialogue: 0,0:00:20.26,0:00:24.43,Default,,0,0,0,,周嬸把洗布婦\N阿福和街坊全叫來
+Dialogue: 0,0:00:24.43,0:00:28.01,Default,,0,0,0,,東槽前\N沒有一隻手是安靜的
+Dialogue: 0,0:00:28.01,0:00:31.09,Hit,,0,0,0,,都按\N誰的手沒做過活
+Dialogue: 0,0:00:31.09,0:00:33.14,Hit,,0,0,0,,讓它認個夠
+Dialogue: 0,0:00:33.14,0:00:34.85,Choice,,0,0,0,,手汗\N藥氣
+Dialogue: 0,0:00:34.85,0:00:36.55,Choice,,0,0,0,,濕水\N老繭
+Dialogue: 0,0:00:36.55,0:00:39.10,Choice,,0,0,0,,全咬在一起\N乾板越認
+Dialogue: 0,0:00:39.10,0:00:40.80,Choice,,0,0,0,,越亂
+Dialogue: 0,0:00:40.80,0:00:45.42,Hit,,0,0,0,,可沈曜也看見更冷的一層\N舊紋近的人
+Dialogue: 0,0:00:45.42,0:00:48.31,Hit,,0,0,0,,不進灰車\N會被送去補名
+Dialogue: 0,0:00:48.31,0:00:50.95,Choice,,0,0,0,,想看阿棠怎麼把手伸進死局\N去天書小說

@@ -1,0 +1,9 @@
+01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 今晚第一個被送走的，不是沈曜。是周嬸。
+02. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 因為她把整條巷子叫醒。第七欄要先收掉這口火氣。
+03. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 白棚外有灰車，有灰袋，還有一枚換車結。
+04. [zh-TW-HsiaoChenNeural rate=+0% pitch=-5Hz style=Hit] 你要是自己去抬灰車，我先把你手打斷。
+05. [zh-TW-YunJheNeural rate=-2% pitch=-3Hz style=Choice] 我不抬車。抬車的人不值錢，換結的人才值錢。
+06. [zh-TW-HsiaoChenNeural rate=+8% pitch=-8Hz style=Hit] 行。總算輪到老娘了。
+07. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Choice] 沈曜要的不是大亂。錯一點，才像真的。錯一點，才會讓白路先失準。
+08. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Choice] 那一夜，周戶先被寫成已收灰。藥門，才多出一口時間。
+09. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 想看一枚錯結怎麼救人，去天書小說，看星骸王座。

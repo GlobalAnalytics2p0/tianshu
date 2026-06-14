@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.73,Hit,,0,0,0,,活人還沒被問\N你家的簍底已經被掛上架
+Dialogue: 0,0:00:04.73,0:00:08.05,Default,,0,0,0,,灰架吊著底布\N簍耳和灰牌
+Dialogue: 0,0:00:08.05,0:00:11.98,Default,,0,0,0,,記底婦拿銅尺\N量得比驗人還細
+Dialogue: 0,0:00:11.98,0:00:16.80,Choice,,0,0,0,,砸架沒用\N要讓街上人全看見
+Dialogue: 0,0:00:16.80,0:00:20.00,Default,,0,0,0,,周嬸帶人衝進磨模屋\N罵聲一炸
+Dialogue: 0,0:00:20.00,0:00:23.21,Default,,0,0,0,,整條巷子都知道有人偷照家什
+Dialogue: 0,0:00:23.21,0:00:27.10,Choice,,0,0,0,,誰偷我家簍底\N今日把人交出來
+Dialogue: 0,0:00:27.10,0:00:31.09,Default,,0,0,0,,沈曜扯下大牌\N阿棠搶走程母樣片
+Dialogue: 0,0:00:31.09,0:00:34.51,Default,,0,0,0,,灰架一倒\N滿地都是各家的底
+Dialogue: 0,0:00:34.51,0:00:36.12,Choice,,0,0,0,,你們鬧醒這裡
+Dialogue: 0,0:00:36.12,0:00:39.60,Choice,,0,0,0,,就別想知道北腹後頭照哪條命
+Dialogue: 0,0:00:39.60,0:00:44.17,Hit,,0,0,0,,可北腹兩字已被拖到日頭下\N樣片背面
+Dialogue: 0,0:00:44.17,0:00:45.88,Hit,,0,0,0,,又浮出\N底若穩
+Dialogue: 0,0:00:45.88,0:00:47.59,Hit,,0,0,0,,午後聽勺
+Dialogue: 0,0:00:47.59,0:00:50.35,Default,,0,0,0,,下一口不是底\N是勺
+Dialogue: 0,0:00:50.35,0:00:52.42,Default,,0,0,0,,官網看後續

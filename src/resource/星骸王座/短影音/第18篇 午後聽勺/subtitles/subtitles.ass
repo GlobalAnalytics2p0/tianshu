@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.67,Hit,,0,0,0,,中午最可怕的聲音\N不是尖叫
+Dialogue: 0,0:00:03.67,0:00:06.12,Hit,,0,0,0,,是一把木勺太安靜
+Dialogue: 0,0:00:06.12,0:00:09.32,Default,,0,0,0,,北腹開始聽誰家舀粥\N盛藥
+Dialogue: 0,0:00:09.32,0:00:11.06,Default,,0,0,0,,勺碰碗最不響
+Dialogue: 0,0:00:11.06,0:00:14.71,Choice,,0,0,0,,那就讓整條巷子的勺都響給它\N聽
+Dialogue: 0,0:00:14.71,0:00:17.56,Default,,0,0,0,,粥鍋煮起來\N破碗敲起來
+Dialogue: 0,0:00:17.56,0:00:22.10,Default,,0,0,0,,沈曜盯上那個只護勺\N不護粥的賣粥婆
+Dialogue: 0,0:00:22.10,0:00:25.85,Choice,,0,0,0,,她怕的不是粥灑\N是勺被人摸到
+Dialogue: 0,0:00:25.85,0:00:29.20,Default,,0,0,0,,長柄勺落地\N聲音乾得不對
+Dialogue: 0,0:00:29.20,0:00:32.86,Default,,0,0,0,,勺柄裂開\N裡頭藏著一片薄竹
+Dialogue: 0,0:00:32.86,0:00:36.43,Choice,,0,0,0,,不是聽勺\N是聽腹
+Dialogue: 0,0:00:36.43,0:00:39.26,Hit,,0,0,0,,下一句更冷\N程藥舊腹
+Dialogue: 0,0:00:39.26,0:00:41.77,Hit,,0,0,0,,裂後未棄\N它要找的
+Dialogue: 0,0:00:41.77,0:00:44.28,Hit,,0,0,0,,是會吃藥聲的老盆
+Dialogue: 0,0:00:44.28,0:00:45.98,Default,,0,0,0,,從手\N簍
+Dialogue: 0,0:00:45.98,0:00:47.69,Default,,0,0,0,,底\N到一口老盆
+Dialogue: 0,0:00:47.69,0:00:49.39,Default,,0,0,0,,官網看下一段

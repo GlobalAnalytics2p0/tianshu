@@ -1,0 +1,9 @@
+01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 他們不認臉，只認手。
+02. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 東槽那塊乾板，是用來回認藥門的手。誰碰過留乾布，誰就會被下一輪寫上去。
+03. [zh-TW-HsiaoChenNeural rate=+0% pitch=-5Hz style=Hit] 若它真要認，今天會先認我。
+04. [zh-TW-YunJheNeural rate=-2% pitch=-3Hz style=Choice] 那就讓它來。等的不是人，是它手裡那件活。
+05. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 周嬸把洗布婦、阿福和街坊全叫來。東槽前，沒有一隻手是安靜的。
+06. [zh-TW-HsiaoChenNeural rate=+8% pitch=-8Hz style=Hit] 都按！誰的手沒做過活？讓它認個夠。
+07. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Choice] 手汗、藥氣、濕水、老繭，全咬在一起。乾板越認，越亂。
+08. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 可沈曜也看見更冷的一層。舊紋近的人，不進灰車，會被送去補名。
+09. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 想看阿棠怎麼把手伸進死局，去天書小說，看星骸王座。

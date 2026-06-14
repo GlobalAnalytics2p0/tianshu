@@ -7,6 +7,7 @@ import random
 import re
 import subprocess
 import textwrap
+import time
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -26,10 +27,35 @@ RAIN_FINE_VOLUME = 0.020
 RAIN_LOW_VOLUME = 0.010
 FINAL_MIX_VOLUME = 0.84
 CLOSING_PUNCTUATION = "，、。：；！？）」』》】"
+EDGE_TTS_RETRY_ATTEMPTS = 4
 
 
 def run(args: list[str], capture: bool = False) -> subprocess.CompletedProcess[str]:
     return subprocess.run(args, check=True, cwd=ROOT, text=True, capture_output=capture)
+
+
+def run_edge_tts_with_retries(
+    args: list[str],
+    media: Path,
+    subtitles: Path,
+    label: str,
+) -> None:
+    last_error: subprocess.CalledProcessError | None = None
+    for attempt in range(1, EDGE_TTS_RETRY_ATTEMPTS + 1):
+        for partial in (media, subtitles):
+            if partial.exists():
+                partial.unlink()
+        try:
+            run(args)
+        except subprocess.CalledProcessError as error:
+            last_error = error
+        if has_usable_file(media) and has_usable_file(subtitles):
+            return
+        if attempt < EDGE_TTS_RETRY_ATTEMPTS:
+            time.sleep(1.5 * attempt)
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError(f"Edge TTS failed or returned empty output after retries: {label}")
 
 
 def ffprobe_duration(path: Path) -> float:
@@ -175,6 +201,152 @@ def safe_label(value: str) -> str:
     return re.sub(r"[/%:+ ]+", "-", value.strip()).strip("-")
 
 
+def has_usable_file(path: Path) -> bool:
+    return path.exists() and path.stat().st_size > 0
+
+
+def split_tts_text(text: str, max_chars: int = 2200) -> list[str]:
+    pieces = re.split(r"(?<=[。！？；\n])", text)
+    chunks: list[str] = []
+    buffer = ""
+    for piece in pieces:
+        if not piece:
+            continue
+        if len(buffer) + len(piece) <= max_chars:
+            buffer += piece
+            continue
+        if buffer.strip():
+            chunks.append(buffer.strip())
+        buffer = piece
+        while len(buffer) > max_chars:
+            chunks.append(buffer[:max_chars].strip())
+            buffer = buffer[max_chars:]
+    if buffer.strip():
+        chunks.append(buffer.strip())
+    return chunks
+
+
+def fmt_vtt(seconds: float) -> str:
+    millis = int(round((seconds - int(seconds)) * 1000))
+    total = int(seconds)
+    if millis == 1000:
+        total += 1
+        millis = 0
+    h = total // 3600
+    m = (total % 3600) // 60
+    s = total % 60
+    return f"{h:02d}:{m:02d}:{s:02d}.{millis:03d}"
+
+
+def merge_vtts(chunk_vtts: list[Path], chunk_durations: list[float], out: Path) -> None:
+    offset = 0.0
+    merged: list[str] = ["WEBVTT", ""]
+    for chunk_vtt, duration in zip(chunk_vtts, chunk_durations):
+        for line in chunk_vtt.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if not stripped or stripped == "WEBVTT":
+                continue
+            if "-->" not in line:
+                merged.append(line)
+                continue
+            start_raw, end_part = line.split("-->", 1)
+            end_bits = end_part.strip().split(maxsplit=1)
+            end_raw = end_bits[0]
+            settings = f" {end_bits[1]}" if len(end_bits) > 1 else ""
+            start = parse_vtt_timestamp(start_raw.strip()) + offset
+            end = parse_vtt_timestamp(end_raw.strip()) + offset
+            merged.append(f"{fmt_vtt(start)} --> {fmt_vtt(end)}{settings}")
+        offset += duration
+    out.write_text("\n".join(merged).rstrip() + "\n", encoding="utf-8")
+
+
+def concat_audio(chunks: list[Path], out: Path) -> None:
+    list_file = out.with_suffix(".concat.txt")
+    lines = []
+    for chunk in chunks:
+        escaped = str(chunk.resolve()).replace("'", "'\\''")
+        lines.append(f"file '{escaped}'")
+    list_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    subprocess.run(
+        [
+            "/opt/homebrew/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-y",
+            "-f",
+            "concat",
+            "-safe",
+            "0",
+            "-i",
+            str(list_file),
+            "-c:a",
+            "libmp3lame",
+            "-b:a",
+            "48k",
+            str(out),
+        ],
+        check=True,
+        cwd=ROOT,
+    )
+
+
+def synthesize_timed_narration_chunked(
+    text_file: Path,
+    source_dir: Path,
+    media: Path,
+    vtt: Path,
+    edge_rate: str,
+    edge_pitch: str,
+) -> tuple[Path, Path]:
+    chunk_dir = source_dir / f"{media.stem}-chunks"
+    chunk_dir.mkdir(parents=True, exist_ok=True)
+    chunks = split_tts_text(text_file.read_text(encoding="utf-8"))
+    if not chunks:
+        raise ValueError(f"No TTS text found in {text_file}")
+
+    media_chunks: list[Path] = []
+    vtt_chunks: list[Path] = []
+    durations: list[float] = []
+    for index, chunk in enumerate(chunks, start=1):
+        chunk_text = chunk_dir / f"chunk-{index:02d}.txt"
+        chunk_media = chunk_dir / f"chunk-{index:02d}.mp3"
+        chunk_vtt = chunk_dir / f"chunk-{index:02d}.vtt"
+        chunk_text.write_text(chunk, encoding="utf-8")
+        for partial in (chunk_media, chunk_vtt):
+            if partial.exists():
+                partial.unlink()
+        run_edge_tts_with_retries(
+            [
+                "python3",
+                "-m",
+                "edge_tts",
+                "--file",
+                str(chunk_text),
+                "--voice",
+                "zh-TW-YunJheNeural",
+                f"--rate={edge_rate}",
+                f"--pitch={edge_pitch}",
+                "--write-media",
+                str(chunk_media),
+                "--write-subtitles",
+                str(chunk_vtt),
+            ],
+            chunk_media,
+            chunk_vtt,
+            str(chunk_text),
+        )
+        if not has_usable_file(chunk_media) or not has_usable_file(chunk_vtt):
+            raise RuntimeError(f"Edge TTS chunk failed or returned empty output: {chunk_text}")
+        media_chunks.append(chunk_media)
+        vtt_chunks.append(chunk_vtt)
+        durations.append(ffprobe_duration(chunk_media))
+
+    concat_audio(media_chunks, media)
+    merge_vtts(vtt_chunks, durations, vtt)
+    return media, vtt
+
+
 def build_tts_script(
     novel: str,
     chapter_title: str,
@@ -206,25 +378,46 @@ def synthesize_timed_narration(
 ) -> tuple[Path, Path]:
     media = source_dir / f"{novel}-{chapter_title}-{label}-Edge-YunJhe-{safe_label(edge_rate)}-{safe_label(edge_pitch)}.mp3"
     vtt = source_dir / f"{novel}-{chapter_title}-{label}-word-boundary.vtt"
-    if reuse and media.exists() and vtt.exists():
+    if reuse and has_usable_file(media) and has_usable_file(vtt):
         return media, vtt
-    run(
-        [
-            "python3",
-            "-m",
-            "edge_tts",
-            "--file",
+    for partial in (media, vtt):
+        if partial.exists():
+            partial.unlink()
+
+    if len(text_file.read_text(encoding="utf-8")) > 3500:
+        return synthesize_timed_narration_chunked(text_file, source_dir, media, vtt, edge_rate, edge_pitch)
+
+    try:
+        run_edge_tts_with_retries(
+            [
+                "python3",
+                "-m",
+                "edge_tts",
+                "--file",
+                str(text_file),
+                "--voice",
+                "zh-TW-YunJheNeural",
+                f"--rate={edge_rate}",
+                f"--pitch={edge_pitch}",
+                "--write-media",
+                str(media),
+                "--write-subtitles",
+                str(vtt),
+            ],
+            media,
+            vtt,
             str(text_file),
-            "--voice",
-            "zh-TW-YunJheNeural",
-            f"--rate={edge_rate}",
-            f"--pitch={edge_pitch}",
-            "--write-media",
-            str(media),
-            "--write-subtitles",
-            str(vtt),
-        ]
-    )
+        )
+    except subprocess.CalledProcessError:
+        for partial in (media, vtt):
+            if partial.exists():
+                partial.unlink()
+        return synthesize_timed_narration_chunked(text_file, source_dir, media, vtt, edge_rate, edge_pitch)
+    if not has_usable_file(media) or not has_usable_file(vtt):
+        for partial in (media, vtt):
+            if partial.exists():
+                partial.unlink()
+        return synthesize_timed_narration_chunked(text_file, source_dir, media, vtt, edge_rate, edge_pitch)
     return media, vtt
 
 

@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.97,Hit,,0,0,0,,東槽亂了\N第七欄只盯一件事
+Dialogue: 0,0:00:03.97,0:00:06.29,Hit,,0,0,0,,哪隻女手該先回
+Dialogue: 0,0:00:06.29,0:00:07.83,Default,,0,0,0,,沈曜不追煤車
+Dialogue: 0,0:00:07.83,0:00:11.16,Default,,0,0,0,,只看鞋印和車把底下那條灰布
+Dialogue: 0,0:00:11.16,0:00:15.05,Choice,,0,0,0,,不追車\N追拿樣的人
+Dialogue: 0,0:00:15.05,0:00:17.73,Default,,0,0,0,,北轉炭棚裡\N乾板一按
+Dialogue: 0,0:00:17.73,0:00:20.71,Default,,0,0,0,,灰頁浮出四字\N女手先回
+Dialogue: 0,0:00:20.71,0:00:23.62,Choice,,0,0,0,,它在找我娘留下的舊手
+Dialogue: 0,0:00:23.62,0:00:26.91,Default,,0,0,0,,阿棠搶走木片\N沈曜踢翻煤水
+Dialogue: 0,0:00:26.91,0:00:29.11,Default,,0,0,0,,所有藏字全被逼亮
+Dialogue: 0,0:00:29.11,0:00:32.74,Choice,,0,0,0,,不去門\N去手
+Dialogue: 0,0:00:32.74,0:00:35.45,Hit,,0,0,0,,下一句更毒\N女手若穩
+Dialogue: 0,0:00:35.45,0:00:38.17,Hit,,0,0,0,,午前入簿\N它不是殺人
+Dialogue: 0,0:00:38.17,0:00:39.98,Hit,,0,0,0,,是先改手
+Dialogue: 0,0:00:39.98,0:00:43.61,Default,,0,0,0,,完整連載\N到官網看星骸王座

@@ -8,7 +8,7 @@
 - 字幕：`src/resource/星骸王座/影片/第05章 北牆缺燈/subtitles/星骸王座-第05章 北牆缺燈.srt`
 - YouTube 縮圖：`src/resource/星骸王座/影片/第05章 北牆缺燈/thumbnails/星骸王座-第05章-北牆缺燈-thumbnail.png`
 - IG 宣傳圖：`src/resource/星骸王座/影片/第05章 北牆缺燈/output/instagram-promo.png`
-- 本章尚未上傳 YouTube，也尚未發布社群貼文。
+- 本章已上傳 YouTube，並已在 Instagram、Threads、Facebook 各自發布宣傳。
 
 ## 視覺 Brief
 
@@ -44,7 +44,28 @@
 - 抽幀檢查：`qa/ch05-frame-contact-sheet.png`，01:00、05:00、09:00、13:00、17:00、20:00 畫面均與章節內容相符。20:00 已切到阿棠接應圖。
 - 縮圖 / IG 圖：使用 `STHeiti Medium.ttc` 本機排字，未遮擋沈曜臉部、熄滅風燈、紙角或薄冊；無框內溢出、線條穿字與角落水印。
 
+## 發布紀錄
+
+- YouTube：`https://youtu.be/FtCvL7vZH6I`
+  - 標題：`《星骸王座》第05章 北牆缺燈｜有聲書・玄幻長篇`
+  - 狀態：Public；YouTube Studio 顯示 `Restrictions: None`。
+  - 縮圖：已套用本章 custom thumbnail。
+- Instagram：`https://www.instagram.com/tianshu_novel/p/DZbYfDTmYQk/`
+  - 使用 `output/instagram-promo.png`，profile 貼文數由 4 增加為 5。
+  - 發布後確認 caption 包含第 05 章文案、YouTube 搜尋導流、官網 bio 導流與 hashtag。
+  - Meta Business Suite Content 列表顯示為獨立 Instagram 貼文列，ID `18083425769543576`。
+- Threads：`https://www.threads.com/@tianshu_novel/post/DZbXxmzE_Tp`
+  - 獨立發布第 5 章宣傳文字。
+  - 已確認 permalink 內容包含第 5 章文案與 `https://youtu.be/FtCvL7vZH6I` 連結。
+  - 發布後檢查 Threads profile，未出現 IG caption 的同步重複貼文。
+- Facebook：`https://www.facebook.com/61590406722346/posts/122108123313346890`
+  - 透過 Meta Business Suite 發布。
+  - 發布前確認 Post to 僅選 Facebook page，Instagram 未選取；Set date and time、Share to Facebook Story、Boost 皆為 `false`。
+  - 發布後確認 permalink 包含第 05 章文案、`待補` 與 `https://youtu.be/FtCvL7vZH6I`。
+  - Meta Business Suite Content 列表顯示 Facebook row ID `122108123313346890` 與 Instagram row 分離，未以 IG 同步取代 Facebook 獨立貼文。
+
 ## 製作注意
 
 - 章節圖若有多個明確劇情段落，不應只依 5 分鐘規則機械取圖。當尾段內容需要獨立畫面時，使用 `--slide-count` 指定章節實際需要的圖數，並重新抽幀確認尾段對齊。
+- Instagram 圖片上傳沿用原生 macOS file picker 與 `/tmp/tianshu-upload/xinghai-wangzuo-ch05-instagram.png`；未更改 Chrome extension 權限。
 - 第 5 章通過後，才可依同樣單章流程進入第 6 章。

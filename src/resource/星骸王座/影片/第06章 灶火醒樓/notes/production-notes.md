@@ -43,3 +43,39 @@
 - Passed visual continuity review.
 - Early, middle, and late frames match the chapter progression.
 - The closing frame shows the broken cart and short grey dog leash, matching the chapter hook.
+
+## Publish Record
+
+- YouTube:
+  - Published URL: `https://youtu.be/1EGffELOkD8`
+  - Video ID: `1EGffELOkD8`
+  - Title: `《星骸王座》第06章 灶火醒樓｜有聲書・玄幻長篇`
+  - Visibility: Public.
+  - Restrictions: None.
+  - Published date shown by YouTube Studio: Jun 12, 2026.
+  - Checks: Copyright and Community Guidelines both reported "No issues found."
+  - Public watch-page verification: `playabilityStatus.status` returned `OK`.
+  - Playlist: `天書小說 | 星骸王座`.
+  - Thumbnail: custom uploaded thumbnail preview was visible in YouTube Studio.
+- Instagram:
+  - Permalink: `https://www.instagram.com/tianshu_novel/p/DZc8LUOma6j/`
+  - Profile count changed from 5 posts to 6 posts after publishing.
+  - Caption verified on permalink with `一鍋豆腐湯，叫醒整條巷。`
+  - Pre-publish share switches for Threads and Facebook were both off.
+- Threads:
+  - Permalink: `https://www.threads.com/@tianshu_novel/post/DZc7Mgbkyu-`
+  - Permalink verified with the chapter 6 copy and YouTube card.
+- Facebook:
+  - Public permalink: `https://www.facebook.com/permalink.php?story_fbid=122108642091346890&id=1200398056482505`
+  - Business Suite composer target was changed from Facebook + Instagram to Facebook page only.
+  - Pre-publish switches verified off: `Make this an ad post`, `Set date and time`, `Share to Facebook Story`, and `Boost`.
+  - Public permalink verified with the chapter 6 copy and YouTube URL.
+  - Business Suite Content list showed the Facebook text post under `天書小說｜原創小說天地-日更`.
+- Meta cross-platform verification:
+  - Business Suite Content list showed separate chapter 6 rows:
+    - Instagram: `Photo`, `tianshu_novel`, Fri Jun 12, 12:24am.
+    - Facebook: `Text`, `天書小說｜原創小說天地-日更`, Fri Jun 12, 12:18am.
+- Upload working copies:
+  - `/tmp/tianshu-upload/xinghai-wangzuo-ch06-video.mp4`
+  - `/tmp/tianshu-upload/xinghai-wangzuo-ch06-thumbnail.png`
+  - `/tmp/tianshu-upload/xinghai-wangzuo-ch06-instagram.png`

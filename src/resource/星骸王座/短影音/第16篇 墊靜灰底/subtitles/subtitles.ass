@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.44,Hit,,0,0,0,,它不看你的臉\N它先翻你家簍底
+Dialogue: 0,0:00:04.44,0:00:08.64,Default,,0,0,0,,簍口被弄亂後\N第七欄換了更陰的路
+Dialogue: 0,0:00:08.64,0:00:10.32,Default,,0,0,0,,先照底\N不照人
+Dialogue: 0,0:00:10.32,0:00:13.75,Choice,,0,0,0,,底太乾淨\N就會被拿去墊靜
+Dialogue: 0,0:00:13.75,0:00:16.99,Default,,0,0,0,,沈曜讓婦人翻舊簍\N豆渣灰
+Dialogue: 0,0:00:16.99,0:00:18.75,Default,,0,0,0,,藥渣水\N髒布
+Dialogue: 0,0:00:18.75,0:00:20.52,Default,,0,0,0,,全往底下抹
+Dialogue: 0,0:00:20.52,0:00:23.75,Default,,0,0,0,,可北紙巷後頭\N還有人在烘底
+Dialogue: 0,0:00:23.75,0:00:26.45,Default,,0,0,0,,試底\N挑哪只底最會吃聲
+Dialogue: 0,0:00:26.45,0:00:31.27,Choice,,0,0,0,,別讓它挑乾淨的\N讓每一只底都髒
+Dialogue: 0,0:00:31.27,0:00:34.63,Default,,0,0,0,,阿棠把程母舊底的冷灰反抹回\N去
+Dialogue: 0,0:00:34.63,0:00:36.55,Default,,0,0,0,,終於釣出那條規矩
+Dialogue: 0,0:00:36.55,0:00:39.41,Hit,,0,0,0,,北後照底\N不照人
+Dialogue: 0,0:00:39.41,0:00:41.14,Hit,,0,0,0,,它挑的不是家什
+Dialogue: 0,0:00:41.14,0:00:44.35,Hit,,0,0,0,,是一戶人怎麼把日子送得無聲
+Dialogue: 0,0:00:44.35,0:00:47.90,Default,,0,0,0,,底被拖亮後\N灰架就藏不住了

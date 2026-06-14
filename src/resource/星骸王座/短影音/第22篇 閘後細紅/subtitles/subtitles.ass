@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.78,Hit,,0,0,0,,她不認你的姓\N她只認哪把勺先冒汗
+Dialogue: 0,0:00:04.78,0:00:08.23,Default,,0,0,0,,北街把病人的勺全拖到雪地\N木的
+Dialogue: 0,0:00:08.23,0:00:09.71,Default,,0,0,0,,銅的\N缺口的
+Dialogue: 0,0:00:09.71,0:00:11.18,Default,,0,0,0,,一只不藏
+Dialogue: 0,0:00:11.18,0:00:14.42,Choice,,0,0,0,,今晚再學\N也只能學亂
+Dialogue: 0,0:00:14.42,0:00:17.99,Default,,0,0,0,,沈曜把混味藥灰抹上舊北閘風\N口
+Dialogue: 0,0:00:17.99,0:00:19.78,Default,,0,0,0,,逼牆後那人開口
+Dialogue: 0,0:00:19.78,0:00:22.18,Choice,,0,0,0,,學火不是學熱
+Dialogue: 0,0:00:22.18,0:00:25.91,Default,,0,0,0,,低道裡伸出小手\N黑布包裡不是炭
+Dialogue: 0,0:00:25.91,0:00:27.50,Default,,0,0,0,,是程家舊勺樣
+Dialogue: 0,0:00:27.50,0:00:30.58,Default,,0,0,0,,黑紙角只剩冷句\N先醒勺
+Dialogue: 0,0:00:30.58,0:00:32.43,Default,,0,0,0,,後問腹\N若不服
+Dialogue: 0,0:00:32.43,0:00:34.27,Default,,0,0,0,,聽第三紅
+Dialogue: 0,0:00:34.27,0:00:38.45,Hit,,0,0,0,,她不露臉\N只把更北那點細紅點亮了
+Dialogue: 0,0:00:38.45,0:00:42.77,Default,,0,0,0,,牆後的人到底是誰\N官網看星骸王座
