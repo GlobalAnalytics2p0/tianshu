@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T17:21:31+08:00",
+  "generatedAt": "2026-06-14T23:26:17+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -277,6 +277,13 @@
           "path": "src/resource/星骸王座/文章/第34章 洗盆聽肩.txt",
           "charCount": 6034,
           "generatedAt": "2026-06-14T17:21:31+08:00"
+        },
+        {
+          "number": 35,
+          "title": "落肩舊訣",
+          "path": "src/resource/星骸王座/文章/第35章 落肩舊訣.txt",
+          "charCount": 6003,
+          "generatedAt": "2026-06-14T23:26:17+08:00"
         }
       ],
       "tone": "深沉",
@@ -842,6 +849,13 @@
           "path": "src/resource/灰塔觀測者/第34章 黑板哭路.txt",
           "charCount": 6489,
           "generatedAt": "2026-06-14T17:21:31+08:00"
+        },
+        {
+          "number": 35,
+          "title": "槽粉合路",
+          "path": "src/resource/灰塔觀測者/第35章 槽粉合路.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-14T23:26:17+08:00"
         }
       ],
       "tone": "深沉",
@@ -1406,6 +1420,13 @@
           "path": "src/resource/雪刃照孤城/第34章 舊口再響.txt",
           "charCount": 6500,
           "generatedAt": "2026-06-14T17:21:31+08:00"
+        },
+        {
+          "number": 35,
+          "title": "再響封口",
+          "path": "src/resource/雪刃照孤城/第35章 再響封口.txt",
+          "charCount": 6004,
+          "generatedAt": "2026-06-14T23:26:17+08:00"
         }
       ],
       "tone": "深沉",
@@ -1970,6 +1991,13 @@
           "path": "src/resource/凌晨三點的演算法/第34章 在場改欄.txt",
           "charCount": 6010,
           "generatedAt": "2026-06-14T17:21:31+08:00"
+        },
+        {
+          "number": 35,
+          "title": "樓上補欄",
+          "path": "src/resource/凌晨三點的演算法/第35章 樓上補欄.txt",
+          "charCount": 6005,
+          "generatedAt": "2026-06-14T23:26:17+08:00"
         }
       ],
       "tone": "深沉",
@@ -2534,6 +2562,13 @@
           "path": "src/resource/大明墨工/第34章 淨尺再亮.txt",
           "charCount": 6006,
           "generatedAt": "2026-06-14T17:21:31+08:00"
+        },
+        {
+          "number": 35,
+          "title": "雙尺定弧",
+          "path": "src/resource/大明墨工/第35章 雙尺定弧.txt",
+          "charCount": 6018,
+          "generatedAt": "2026-06-14T23:26:17+08:00"
         }
       ],
       "tone": "深沉",
