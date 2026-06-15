@@ -27,6 +27,7 @@
 - For automation runs, treat `local chapter written`, `manifest updated`, `commit created`, `push succeeded`, and `live site updated` as separate states. Do not report the chapter as published on the site until the live manifest matches the local manifest.
 - At the start of every six-hour automation run, check for deferred publish debt with `node scripts/check-publish-state.mjs --auto-publish-if-ahead`. If old local-only commits are still ahead of upstream and origin is reachable again, publish them before generating more chapters. If origin is unreachable, record that deferred publish debt explicitly instead of leaving the website state ambiguous.
 - Do not treat a dirty worktree as proof that the latest commit was not pushed. Publish state must be judged by branch sync and site verification, while unrelated modified/untracked files must be reported separately as residual workspace dirt.
+- Publish verification is strictly sequential: wait for `git push` to finish successfully, then run `node scripts/verify-site-publication.mjs`. Do not run them in parallel, because the verifier will correctly fail while the branch is still temporarily `ahead > 0`.
 
 ## Continuity
 

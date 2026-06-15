@@ -40,6 +40,7 @@
   - 當前 branch 是否與 upstream 完全同步，沒有 local-only commit。
   - `raw.githubusercontent.com` 的 `src/resource/manifest.json` 是否已等於本地 manifest。
   - 自訂網域或 GitHub Pages 網址實際送出的 `manifest.json` 是否已等於本地 manifest。
+- 這個驗證必須在 `git push` 成功返回之後才執行，不可與 push 並行。否則 verifier 看到的 `ahead > 0` 只是 push 尚未完成中的中間態，會造成假性「未發佈」失敗。
 - 若 `node scripts/verify-site-publication.mjs` 失敗，回報必須明確區分：
   - `ahead > 0`：內容還在本地，根本沒有完整發佈。
   - raw GitHub 已更新但 live site 未更新：屬於 Pages/CDN 部署延遲，不能說已上站，只能說已 push、等待站點生效。
