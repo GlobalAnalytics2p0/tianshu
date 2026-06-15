@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 鹽箱背板整面不見了。它偷走的不是木，是一條救命手路。
+02. [gaotou] zh-TW-HsiaoChenNeural +5% -3Hz 老高頭說，昨夜箱背還在，今早箱肚空聲全變了。
+03. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠從木縫挑出薄鹽皮，逼出一句：主手先鹹，後問回腕。
+04. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 它要的不是箱子，是這條手路。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 這口箱別收。今夜照樣放著。
+06. [trap] zh-TW-HsiaoChenNeural +5% -3Hz 她用真鹽霜和藥灰養出一面假背，等那隻手夜裡回來摸。
+07. [scar] zh-TW-HsiaoChenNeural +5% -3Hz 灰粉落下，女人腕內白線一亮，竟和阿棠舊疤在同一條路上。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 她們不是在問主。她們是在等主，自己回手。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 完整連載，到官網看星骸王座。

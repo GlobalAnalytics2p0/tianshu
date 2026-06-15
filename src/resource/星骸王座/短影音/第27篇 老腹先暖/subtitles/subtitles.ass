@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.69,Hit,,0,0,0,,它不只偷牆\N下一步
+Dialogue: 0,0:00:02.69,0:00:05.71,Hit,,0,0,0,,它要哪口老腹先變暖
+Dialogue: 0,0:00:05.71,0:00:07.40,Default,,0,0,0,,周嬸一掀藥櫃底
+Dialogue: 0,0:00:07.40,0:00:10.54,Default,,0,0,0,,竟滑出一片不屬於她家的彎木
+Dialogue: 0,0:00:10.54,0:00:14.21,Choice,,0,0,0,,不是墊櫃\N是養背
+Dialogue: 0,0:00:14.21,0:00:17.45,Default,,0,0,0,,整條北檐開始翻老箱\N翻藥櫃
+Dialogue: 0,0:00:17.45,0:00:21.24,Default,,0,0,0,,翻炭櫃\N誰也不准再說只是破木頭
+Dialogue: 0,0:00:21.24,0:00:24.46,Choice,,0,0,0,,它要先認背\N再借紋
+Dialogue: 0,0:00:24.46,0:00:28.28,Default,,0,0,0,,竹尺一敲\N櫃腹深處回了一聲短悶響
+Dialogue: 0,0:00:28.28,0:00:30.31,Default,,0,0,0,,像有東西硬縮回去
+Dialogue: 0,0:00:30.31,0:00:33.51,Default,,0,0,0,,這一晚\N所有陪病老箱都被拖到白天底
+Dialogue: 0,0:00:33.51,0:00:34.70,Default,,0,0,0,,下
+Dialogue: 0,0:00:34.70,0:00:37.99,Hit,,0,0,0,,它第一次在很多活人的箱背前
+Dialogue: 0,0:00:37.99,0:00:39.50,Hit,,0,0,0,,縮得這樣狼狽
+Dialogue: 0,0:00:39.50,0:00:43.13,Default,,0,0,0,,完整連載\N到官網看星骸王座

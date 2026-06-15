@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 牆也會被偷。不是搬走，是先把它養成熟牆。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 北耳牆前，暖袋、舊皮和藥灰被故意貼滿。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 袋耳靠手，不靠牆。
+04. [woman] zh-TW-HsiaoChenNeural +5% -3Hz 灰藍婦人一進巷，眼睛卻先看牆角，不看人。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 她不是補袋。她在量牆。
+06. [cavity] zh-TW-HsiaoChenNeural +5% -3Hz 牆後夾腔被掀出來，舊灰裡還藏著布纖和藥渣。
+07. [street] zh-TW-HsiaoChenNeural +5% -3Hz 北檐眾人乾脆把前牆後牆全貼滿，讓它每一耳都聽錯。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 那一聲輕響證明，更裡那件東西今夜真的痛了。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 完整連載，到官網看星骸王座。
