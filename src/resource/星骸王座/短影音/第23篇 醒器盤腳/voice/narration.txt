@@ -1,9 +1,9 @@
-[hook] 病火偷到最後，竟然在醒一片舊金。
-[setup] 沈曜和阿棠摸到影牆風口，雪裡藏著三腳淺鐵盤。
-[pan] 盤裡沒有炭，只有一片半亮半黑的薄金。
-[shen] 先別碰。星核在震。
-[seal] 金片背後有殘缺星紋，也有像沈家老印的舊痕。
-[atang] 這不是守勺火。這是醒器火。
-[leg] 盤底翻開，三隻腳長短不一，偏北那腳最先吃熱。
-[climax] 對方先問腳，不問名。真正要醒的，是更北那件老器。
-[lead] 完整連載，到官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他們追到最後才發現，有人在偷偷把一塊舊金屬燒醒。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 沈曜和阿棠摸到影牆風口，雪裡埋著一只三腳鐵盤。
+03. [pan] zh-TW-HsiaoChenNeural +5% -3Hz 盤裡沒有炭，只有一片半黑半亮的薄金。
+04. [shen] zh-TW-YunJheNeural -3% -3Hz 先別碰。星核在震。
+05. [seal] zh-TW-HsiaoChenNeural +5% -3Hz 那片金屬背後不只藏著星紋，還像刻著沈家的舊印。
+06. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 這不是普通守火，這是在醒東西。
+07. [leg] zh-TW-HsiaoChenNeural +5% -3Hz 盤底三隻腳長短不一，偏北那隻腳最先發熱。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 對方一路偷火，不是為了炭，是為了把更北邊那件老東西慢慢燒醒。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 那件快被燒醒的東西到底是什麼，官網看星骸王座。

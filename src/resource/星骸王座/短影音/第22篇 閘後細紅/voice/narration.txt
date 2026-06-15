@@ -1,9 +1,9 @@
-[hook] 她不認你的姓。她只認哪把勺先冒汗。
-[spoons] 北街把病人的勺全拖到雪地，木的、銅的、缺口的，一只不藏。
-[atang] 今晚再學，也只能學亂。
-[vent] 沈曜把混味藥灰抹上舊北閘風口，逼牆後那人開口。
-[unseen] 學火不是學熱。
-[hand] 低道裡伸出小手，黑布包裡不是炭，是程家舊勺樣。
-[paper] 黑紙角只剩冷句：先醒勺，後問腹。若不服，聽第三紅。
-[climax] 她不露臉，只把更北那點細紅點亮了。
-[lead] 牆後的人到底是誰，官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 她不認人，只看哪把藥勺先發燙。
+02. [spoons] zh-TW-HsiaoChenNeural +5% -3Hz 北街把病人的勺全拖出來，木的銅的缺口的，一支都不藏。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 今晚誰想照著學，都只能學亂的。
+04. [vent] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜把藥灰抹上舊閘風口，逼牆後那個人出聲。
+05. [unseen] zh-TW-HsiaoChenNeural -5% -8Hz 學火，不是學熱。
+06. [hand] zh-TW-HsiaoChenNeural +5% -3Hz 低道裡突然伸出一隻小手，黑布包裡裝的不是炭，是一支舊勺樣。
+07. [paper] zh-TW-HsiaoChenNeural +5% -3Hz 黑紙角上只剩一句：先讓勺子發熱，再去找人。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 她始終不露臉，只把更北邊那一點紅光點亮。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 那點細紅最後會把誰引出來，官網看星骸王座。

@@ -1,10 +1,10 @@
-[hook] 那只盤不是壞了。它在等左腳先熱。
-[setup] 阿棠故意寫錯守火譜，讓偷學的人第一口就走偏。
-[atang] 就是要他學壞。
-[oldwoman] 黃昏來的瘸腿老嫗，短杖每一下，都先點左前。
-[shen] 她跟那只盤，是同一種步子。
-[basket] 竹簍一砸，小三腳盤、青黑布帶、冷白麻索全滾出來。
-[step] 沈曜踩住左腳，把假藥紙塞進盤下，影牆後的金聲當場失了平。
-[ash] 半夜又有人上屋吹灰。北街卻把每一袋灰都養歪。
-[climax] 它今夜不是殺人。它在借病火，把一件舊器慢慢立起來。
-[lead] 完整連載，到官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 那只三腳盤不是壞了，是左邊那隻腳先開始發熱。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 阿棠故意把守火法寫錯，就等偷學的人自己露餡。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 就是要他先學錯。
+04. [oldwoman] zh-TW-HsiaoChenNeural +5% -3Hz 黃昏來了一個瘸腿老婦，短杖每一下都先點左前。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 她走路的節奏，跟那只盤一模一樣。
+06. [basket] zh-TW-HsiaoChenNeural +5% -3Hz 竹簍一翻，小三腳盤、黑布帶、白麻繩全滾了出來。
+07. [step] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜一腳踩住盤腳，把假藥紙塞進底下，牆後那一聲立刻亂了。
+08. [ash] zh-TW-HsiaoChenNeural +5% -3Hz 半夜還有人上屋吹灰，北街卻故意把每袋灰都弄亂。
+09. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 它今晚不是要殺人，它是在借火，把那件東西慢慢立起來。
+10. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 左腳一熱之後，下一個要被立起來的是什麼，官網看星骸王座。

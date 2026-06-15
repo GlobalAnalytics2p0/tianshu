@@ -1,9 +1,9 @@
-[hook] 第一口火只是幌子。檐後，還藏著第二口炭。
-[setup] 阿棠在窄檐下聽見程母舊口訣，從板門後傳出來。
-[atang] 會暖勺的，都進來。
-[crowd] 北街婦人拖著小爐擠進去，把最安靜的檐後擠成人聲。
-[unseen] 退開。這不是你們能碰的。
-[evidence] 沈曜不追臉，只拿後試勺、灰紙角和那口藥炭。
-[girl] 小丫頭說，還有第三回小藥炭，送往舊北閘後。
-[climax] 第二口炭不是終點。真回位，在舊北閘後。
-[lead] 從檐後到舊北閘，官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 以為只是一口火？屋簷後面其實還藏著第二口炭。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 阿棠在窄檐下聽見舊口訣，聲音竟從板門後面傳出來。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 會暖勺的人，全進來。
+04. [crowd] zh-TW-HsiaoChenNeural +5% -3Hz 北街婦人拖著小爐擠進屋，硬把最安靜的角落擠成一片人聲。
+05. [unseen] zh-TW-HsiaoChenNeural -5% -8Hz 退開，這裡不是你們能碰的。
+06. [evidence] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜不追人，只盯著那口藥炭、那支試勺，還有掉下來的灰紙角。
+07. [girl] zh-TW-HsiaoChenNeural +5% -3Hz 小丫頭一句話把人都說愣了：後面還藏著第三回的小藥炭。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 第二口炭不是終點，真正的東西還藏在更後面。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 第二口炭後面到底還有什麼，官網看星骸王座。

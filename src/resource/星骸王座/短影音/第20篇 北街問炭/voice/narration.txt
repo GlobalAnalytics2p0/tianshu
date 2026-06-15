@@ -1,9 +1,9 @@
-[hook] 半夜有人問炭，不問價。只問誰家火不斷。
-[setup] 北街一亮，沈曜就知道，北腹已經從盆問到火。
-[atang] 它問的不是炭，是手。
-[tags] 火鋪掛著紅灰炭籤，每一片都記著哪戶最會留火。
-[shen] 把火都拖到街心。讓它沒有安靜火可問。
-[street] 周嬸帶人開爐、敲鉗、翻炭，整條街被迫亮成一口大鍋。
-[spill] 馮掌櫃想藏竹夾，紅灰卻灑進雪裡。
-[climax] 它不是買炭。它在挑哪隻手，能替舊腹續命。
-[lead] 完整連載，到官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 半夜有人挨家問炭，不問價，只問誰家火整晚不滅。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 北街一亮，沈曜就知道，對方已經從偷盆變成找火。
+03. [atang] zh-TW-HsiaoChenNeural -1% -5Hz 它問的不是炭，是誰天天守火。
+04. [tags] zh-TW-HsiaoChenNeural +5% -3Hz 火鋪掛滿紅灰炭籤，每一片都記著哪戶最會留火。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 把火都拖到街心。別讓它挑。
+06. [street] zh-TW-HsiaoChenNeural +5% -3Hz 周嬸帶人開爐翻炭，整條街亮得像白天。
+07. [spill] zh-TW-HsiaoChenNeural +5% -3Hz 馮掌櫃剛想把竹夾藏起來，紅灰就先灑進雪裡。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 它不是買炭。它在找哪一雙手，最適合替那口怪盆續火。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 下一個會被它盯上的守火人是誰，官網看星骸王座。

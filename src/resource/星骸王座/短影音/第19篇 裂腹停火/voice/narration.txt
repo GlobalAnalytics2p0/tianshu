@@ -1,9 +1,9 @@
-[hook] 最危險的不是偷盆。是先叫一戶人家停火。
-[setup] 沈曜和阿棠追到劉寡婦舊屋，灶下藏著程母那口裂腹盆。
-[zhou] 把老盆全拖到街上。誰也別讓它安靜。
-[visitor] 背柴人夜裡敲門，眼睛不看人，先看灶，再看盆。
-[shen] 鞋膠不缺火。藥盆缺。
-[rice] 阿棠用假盆一試，三粒黑米滾進灰裡，焦甜味立刻冒上來。
-[atang] 看清楚。這不是寶盆，是我娘養藥的一口舊腹。
-[climax] 木片露出冷句：腹先暖，醒戶後問。北腹要偷的，是守火的人情。
-[lead] 完整連載，到官網看星骸王座。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 半夜有人不偷錢，只先讓你家灶火熄掉。
+02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 沈曜和阿棠追到劉寡婦舊屋，灶下果然藏著那口裂開的藥盆。
+03. [zhou] zh-TW-HsiaoChenNeural +2% -7Hz 把老盆全拖出去。別讓它在屋裡安靜待著。
+04. [visitor] zh-TW-HsiaoChenNeural +5% -3Hz 敲門的人進屋不看人，先看灶，再看盆。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 他缺的不是火。他缺這口盆。
+06. [rice] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠拿假盆一試，三粒黑米一滾進灰裡，甜焦味立刻冒上來。
+07. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 看清楚，這不是寶物。這是有人養藥用過的舊盆。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 木片上只剩一句話：先熄火，再問人。對方要偷的不是盆，是這戶人家守火的習慣。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 到底是誰先盯上這口裂盆，官網看星骸王座。
