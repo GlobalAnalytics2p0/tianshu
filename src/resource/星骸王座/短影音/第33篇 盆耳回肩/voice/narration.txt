@@ -1,9 +1,9 @@
 01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 誰半夜先去扶那口藥盆，誰就可能先被盯上。
-02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 北街把藥盆全搬出來，盆耳朝外，一擦就露出舊熱。
-03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 它問的不是盆，是誰一到夜裡就會先伸手扶。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 北街乾脆把藥盆全搬出來，盆耳朝外，一擦就露熱。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠一句就說破：它看的不是盆，是誰一到夜裡會先伸手。
 04. [paper] zh-TW-HsiaoChenNeural +5% -3Hz 賣紙婦人笑著量紙，紙邊卻先擦過最熟的那個盆耳。
-05. [shen] zh-CN-YunxiNeural -3% -3Hz 她不是來賣紙，她是在試肩。
-06. [boy] zh-TW-HsiaoChenNeural +6% -3Hz 阿豆亂敲共盆，牆外立刻回了一聲。
-07. [old] zh-TW-HsiaoChenNeural +1% -6Hz 真要伸手扶的人，不會先躲。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 試肩板背後只露出兩個字：舊肩。它已經沿著沈家的舊傷摸回來了。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 下一個先扶盆耳的人，會不會先被借走肩膀，官網看星骸王座。
+05. [shen] zh-CN-YunxiNeural -3% -3Hz 沈曜當場點破：她不是來賣紙，她是在試誰會扶盆。
+06. [boy] zh-TW-HsiaoChenNeural +6% -3Hz 更怪的是，阿豆亂敲公用藥盆，牆外居然立刻回了一聲。
+07. [old] zh-TW-HsiaoChenNeural +1% -6Hz 老郭只說一句：真會伸手的人，不會先躲。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 試肩板背後於是只露出兩個字：舊肩。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 下一個先去扶盆的人，會不會先被它借走肩膀，官網看星骸王座。

@@ -1,9 +1,9 @@
 01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他偷的不是箱子，是你半夜摸藥時手腕回去那一下。
-02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 北街把鹽匣藥盒炭櫃全搬到白天，一戶一戶自己記手。
-03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 只要你自己記得，它就偷不乾淨。
-04. [woman] zh-TW-HsiaoChenNeural +5% -3Hz 補背的婦人提著熟油和窄木板進街，眼睛只盯著誰的手會回。
-05. [shen] zh-CN-YunxiNeural -3% -3Hz 先別看她的臉。看她籃底那塊木板。
-06. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 灰架紙角一露，冷句只剩半句：先看手腕，再找沈家那隻手。
-07. [wall] zh-TW-HsiaoChenNeural +5% -3Hz 程舊屋後牆掉出黑粉，像裡頭那件東西剛剛又被對過一次。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 今晚來的，不只是補背的人。它要看哪一隻沈家的手還能回去。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 今晚被盯上的那隻手，還能不能保住，官網看星骸王座。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 所以北街今天不先抓賊，先叫每一戶人把自己摸藥的動作做一遍。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠只說一句：你自己記得，它就偷不乾淨。
+04. [woman] zh-TW-HsiaoChenNeural +5% -3Hz 可那個補背的婦人一進街，眼睛只盯誰的手會自己回。
+05. [shen] zh-CN-YunxiNeural -3% -3Hz 沈曜也不看她的臉，只看她籃底那塊窄木板。
+06. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 灰架紙角一露，裡頭只剩半句：先看手腕，再找那隻沈家的手。
+07. [wall] zh-TW-HsiaoChenNeural +5% -3Hz 同一時間，程舊屋後牆又掉出黑粉，像裡頭那件東西剛剛又被試了一次。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 今晚來的不只是補背的人，是有人想確認哪隻手還能替那件東西把最後一下做完。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 今晚被盯上的那隻手到底保不保得住，官網看星骸王座。

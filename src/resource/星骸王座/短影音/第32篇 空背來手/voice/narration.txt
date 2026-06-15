@@ -1,9 +1,9 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他們故意把空心鹽箱放在街中央，等那隻手自己回來。
-02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠把裂盆放到程舊屋後牆，只留一個能回聲的活口。
-03. [shen1] zh-CN-YunxiNeural -3% -3Hz 它想聽我的手。那我只給它半聲。
-04. [reply] zh-TW-HsiaoChenNeural +5% -3Hz 三輕一重剛敲下去，牆後真的只回了一下，像認人，也像在躲。
-05. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 他在等你再敲一次。
-06. [shen2] zh-CN-YunxiNeural -3% -3Hz 不能再敲了，這一下再送進去，就回不來了。
-07. [read] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜這才看懂，對方不是在問盆，是想把他的手路整個拖回牆裡。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 他把裂盆交給阿棠，也把那一下回聲死死記住。
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他們故意把空心鹽箱擺到街中央，只等那隻手自己回來。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠還把裂盆放到後牆，只留一個會回聲的活口。
+03. [shen1] zh-CN-YunxiNeural -3% -3Hz 沈曜說得更狠：它想聽我的手，我只給它半聲。
+04. [reply] zh-TW-HsiaoChenNeural +5% -3Hz 三輕一重剛敲下去，牆後果然只回了一下。
+05. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠立刻聽出來：它在等你再敲一次。
+06. [shen2] zh-CN-YunxiNeural -3% -3Hz 沈曜卻直接收手，因為再敲下去，那一下就真會被它拖走。
+07. [read] zh-TW-HsiaoChenNeural +5% -3Hz 到這時他才看懂，對方不是在問盆，是想把他摸藥的習慣整個拖回牆裡。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 所以他寧可把裂盆交出去，也不肯把第二聲送進去。
 09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 等那隻手真的回來時，空鹽箱會先認誰，官網看星骸王座。
