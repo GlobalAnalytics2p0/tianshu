@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T00:14:59+08:00",
+  "generatedAt": "2026-06-16T06:33:32+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -312,6 +312,13 @@
           "path": "src/resource/星骸王座/文章/第39章 先名後力.txt",
           "charCount": 6279,
           "generatedAt": "2026-06-16T00:14:59+08:00"
+        },
+        {
+          "number": 40,
+          "title": "後肩回名",
+          "path": "src/resource/星骸王座/文章/第40章 後肩回名.txt",
+          "charCount": 6097,
+          "generatedAt": "2026-06-16T06:33:32+08:00"
         }
       ],
       "tone": "深沉",
@@ -912,6 +919,13 @@
           "path": "src/resource/灰塔觀測者/第39章 分承夜面.txt",
           "charCount": 6024,
           "generatedAt": "2026-06-16T00:14:59+08:00"
+        },
+        {
+          "number": 40,
+          "title": "先照自己",
+          "path": "src/resource/灰塔觀測者/第40章 先照自己.txt",
+          "charCount": 6023,
+          "generatedAt": "2026-06-16T06:33:32+08:00"
         }
       ],
       "tone": "深沉",
@@ -1511,6 +1525,13 @@
           "path": "src/resource/雪刃照孤城/第39章 避名守門.txt",
           "charCount": 6022,
           "generatedAt": "2026-06-16T00:14:59+08:00"
+        },
+        {
+          "number": 40,
+          "title": "鼓後收門",
+          "path": "src/resource/雪刃照孤城/第40章 鼓後收門.txt",
+          "charCount": 6194,
+          "generatedAt": "2026-06-16T06:33:32+08:00"
         }
       ],
       "tone": "深沉",
@@ -2110,6 +2131,13 @@
           "path": "src/resource/凌晨三點的演算法/第39章 號牌守位.txt",
           "charCount": 6075,
           "generatedAt": "2026-06-16T00:14:59+08:00"
+        },
+        {
+          "number": 40,
+          "title": "先看誰喊",
+          "path": "src/resource/凌晨三點的演算法/第40章 先看誰喊.txt",
+          "charCount": 6314,
+          "generatedAt": "2026-06-16T06:33:32+08:00"
         }
       ],
       "tone": "深沉",
@@ -2709,6 +2737,13 @@
           "path": "src/resource/大明墨工/第39章 先作後正.txt",
           "charCount": 6205,
           "generatedAt": "2026-06-16T00:14:59+08:00"
+        },
+        {
+          "number": 40,
+          "title": "定前再驗",
+          "path": "src/resource/大明墨工/第40章 定前再驗.txt",
+          "charCount": 6280,
+          "generatedAt": "2026-06-16T06:33:32+08:00"
         }
       ],
       "tone": "深沉",
