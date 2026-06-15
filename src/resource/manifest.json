@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T23:26:17+08:00",
+  "generatedAt": "2026-06-15T09:57:15+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -284,6 +284,13 @@
           "path": "src/resource/星骸王座/文章/第35章 落肩舊訣.txt",
           "charCount": 6003,
           "generatedAt": "2026-06-14T23:26:17+08:00"
+        },
+        {
+          "number": 36,
+          "title": "分肩白路",
+          "path": "src/resource/星骸王座/文章/第36章 分肩白路.txt",
+          "charCount": 6053,
+          "generatedAt": "2026-06-15T09:57:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -856,6 +863,13 @@
           "path": "src/resource/灰塔觀測者/第35章 槽粉合路.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-14T23:26:17+08:00"
+        },
+        {
+          "number": 36,
+          "title": "黑粉重合",
+          "path": "src/resource/灰塔觀測者/第36章 黑粉重合.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-15T09:57:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -1427,6 +1441,13 @@
           "path": "src/resource/雪刃照孤城/第35章 再響封口.txt",
           "charCount": 6004,
           "generatedAt": "2026-06-14T23:26:17+08:00"
+        },
+        {
+          "number": 36,
+          "title": "讓肩回刃",
+          "path": "src/resource/雪刃照孤城/第36章 讓肩回刃.txt",
+          "charCount": 6007,
+          "generatedAt": "2026-06-15T09:57:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -1998,6 +2019,13 @@
           "path": "src/resource/凌晨三點的演算法/第35章 樓上補欄.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-14T23:26:17+08:00"
+        },
+        {
+          "number": 36,
+          "title": "放人白單",
+          "path": "src/resource/凌晨三點的演算法/第36章 放人白單.txt",
+          "charCount": 6003,
+          "generatedAt": "2026-06-15T09:57:15+08:00"
         }
       ],
       "tone": "深沉",
@@ -2569,6 +2597,13 @@
           "path": "src/resource/大明墨工/第35章 雙尺定弧.txt",
           "charCount": 6018,
           "generatedAt": "2026-06-14T23:26:17+08:00"
+        },
+        {
+          "number": 36,
+          "title": "府線對弧",
+          "path": "src/resource/大明墨工/第36章 府線對弧.txt",
+          "charCount": 6009,
+          "generatedAt": "2026-06-15T09:57:15+08:00"
         }
       ],
       "tone": "深沉",
