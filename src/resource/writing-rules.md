@@ -86,6 +86,8 @@
 - Brainstorming is not plot. A premise becomes plot only after its extreme rule change creates lived consequences for ordinary people, institutions, status, money, food, work, family, language, or public behavior.
 - Before adding a new rule, ask: what is its limit, who profits from it, who is quietly harmed by it, and what ordinary routine becomes dangerous because of it.
 - Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage. Strong scenes are allowed to take a larger share of the chapter.
+- Do not overuse micro-paragraphs and clipped one-line beats. Short sentences should puncture a scene, not become the scene's default breathing pattern. If too many consecutive paragraphs can be read as single-line slogan beats, merge them back into fuller scene paragraphs.
+- For audiobook and read-aloud flow, prefer connected white-language syntax over constant stop-start emphasis. A strong chapter may contain sharp short lines, but the surrounding prose should carry people, action, and cause-and-effect in longer flowing units so the listener can sink in instead of being repeatedly jolted out.
 - Prefer specific physical detail over abstract labels. Use concrete rooms, weather, sounds, small habits, money, work, wounds, tools, documents, and social pressure.
 - Use precision instead of adjective stacking. Replace generic statements like "he was poor", "she was afraid", or "the room was chaotic" with an object, gesture, cost, sound, stain, or interrupted routine.
 - Use verbs to create image momentum. Important scenes should move through concrete actions before interpretation: push, hide, count, tear, lift, press, listen, wait, misread, correct.
