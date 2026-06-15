@@ -7,6 +7,7 @@
 - The target reader is here for story, tension, emotion, payoff, and curiosity. Do not explain how the chapter is structured.
 - Each chapter should create enough unresolved curiosity that the reader wants the next update, but it should still feel satisfying on its own.
 - The core reader wants relaxed, direct, satisfying serial fiction. Make the prose easy to enter, the stakes concrete, the protagonist's pressure clear, and the chapter rewarding even while the long mystery remains unresolved.
+- Every chapter needs a reader-facing promise, not just a plot task. Define the emotional reason someone would keep reading: revenge against fate, fear of being erased, a blade held back, a black-box process made public, or a craft truth forcing power to show its crack.
 - Aim for雅俗共賞: tension and depth should coexist with readable scenes, clear emotional pressure, lived daily details, small wins, and momentum.
 - Audience experience comes first. Use reader and user feedback to adjust pacing, emphasis, mystery density, emotional spacing, and spotlight allocation when that feedback improves engagement or clarity.
 - Long-term serialization is a rhythm, not only a mystery reserve. After a local high point, allow cooling space: aftermath, fatigue, ordinary costs, small humor, repaired trust, witness reactions, or a concrete practical problem before the next pressure wave.
@@ -27,7 +28,7 @@
 
 ## Continuity
 
-- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, the novel's `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, `反思.md`, and all existing `.txt` chapters for that novel. For migrated folders, read continuity Markdown from `src/resource/<novel title>/素材/` and chapters from `src/resource/<novel title>/文章/`.
+- Before writing a new chapter, read `src/resource/manifest.json`, this rules file, `agent.md`, `src/resource/五本長篇共通管理規範.md`, `src/resource/Share/Rule-of-Style.md`, the novel's `風格規則.md`, `核心靈魂檔案.md`, `作者思路.md`, `人物架構.md`, `每日寫作狀態.md`, `伏筆事件台帳.md`, `反思.md`, and all existing `.txt` chapters for that novel. For migrated folders, read continuity Markdown from `src/resource/<novel title>/素材/` and chapters from `src/resource/<novel title>/文章/`.
 - Unless the user explicitly requests otherwise, all new content extends existing canon. Do not go back and revise earlier chapter events, outcomes, or facts just to make the next chapter easier.
 - Preserve character state, setting rules, unresolved hooks, emotional consequences, clues, debts, injuries, secrets, and relationship changes.
 - Do not contradict previous chapters. If a prior scene leaves a mystery, either deepen it or pay off only part of it.
@@ -53,6 +54,7 @@
 - Build around one clear event or problem per chapter. Let it breathe before adding another major turn.
 - Default to one primary viewpoint center at the start of the chapter. Let the reader settle into one person, one pressure, and one immediate situation before expanding the scope.
 - Use the long-serial rhythm of "small event fast, major truth slow": the day's concrete incident should move, hurt, and resolve partially; the central mystery should advance only by one controlled layer.
+- Each chapter must move from A to B. A is the reader/character's current misunderstanding, helplessness, isolation, or missing proof; B is one concrete improvement, one sharper danger, and one deeper unanswered question.
 - The 6,000-6,500 character format should support stronger audiobook retention: deepen scene continuity, let danger breathe, add concrete minor-character pressure, and include one or two staged reversals. Do not use the added length for repeated inspection beats, repeated silence, or abstract explanation.
 - Depth must not come from archaic diction, harder-to-read phrasing, or lore dumps. Add layers through competing motives, ordinary costs, small betrayals, emotional restraint, institutional pressure, and clues that mean one thing now but can mean something sharper later.
 - Do not treat every chapter as a bigger explosion than the last. A long serial should alternate pressure and release, letting a smaller consequence, meal, walk, injury, debt, search, or conversation carry interest between peaks.
@@ -79,18 +81,27 @@
 
 - Vary tone by book and genre. Some serials can be deep, restrained, and oppressive; others can be爽文, direct, clever, and momentum-driven.
 - Prose should feel human: less template rhythm, fewer repeated sentence structures, clearer cause and effect, more intuitive transitions.
+- AI assistance may provide speed, alternate plot routes, names, and research scaffolding, but final prose must be governed by author persona and human emotional judgment. Never let production speed flatten voice, character contradiction, or scene texture.
+- If stuck, generate alternatives only as private scaffolding. Choose the route that best preserves continuity, forces a character cost, touches ordinary life, and protects long-arc mystery; do not choose the route merely because it is the newest or loudest.
+- Brainstorming is not plot. A premise becomes plot only after its extreme rule change creates lived consequences for ordinary people, institutions, status, money, food, work, family, language, or public behavior.
+- Before adding a new rule, ask: what is its limit, who profits from it, who is quietly harmed by it, and what ordinary routine becomes dangerous because of it.
 - Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage. Strong scenes are allowed to take a larger share of the chapter.
 - Prefer specific physical detail over abstract labels. Use concrete rooms, weather, sounds, small habits, money, work, wounds, tools, documents, and social pressure.
+- Use precision instead of adjective stacking. Replace generic statements like "he was poor", "she was afraid", or "the room was chaotic" with an object, gesture, cost, sound, stain, or interrupted routine.
+- Use verbs to create image momentum. Important scenes should move through concrete actions before interpretation: push, hide, count, tear, lift, press, listen, wait, misread, correct.
 - Prefer white-language clarity over literary stiffness. Depth should come from situation, choice, sensory detail, and consequence, not from archaic phrasing or abstract moralizing.
+- For mobile reading, keep paragraph breathing visible. Dense exposition walls, long lists of proper nouns, and consecutive abstract explanations should be broken into scene action or cut.
 - For audiobook listening, vary the emotional texture inside a chapter: pressure, watchfulness, small human noise, quiet tenderness, restrained humor, then renewed unease. A chapter that only explains a procedure or only sustains one tension note will feel flat when heard aloud.
 - After a climax or heavy reveal, allow a brief emotional reset before building toward the next pressure wave. Rest is part of pacing, not a failure of pacing.
 - Do not keep readers in nonstop high-arousal mode. Peak, release, and re-accumulation should form a readable curve.
 - Side plots may interact with the main line across many chapters. They do not need to close in the same chapter, but they must remain intentional, trackable, and eventually convergent rather than multiplying without return.
 - The reader should be able to inhabit the protagonist's body, stress, hesitation, and sensory field. Favor immersion over summary.
+- Each chapter should contain at least one tiny emotional cut that cannot be replaced by plot mechanics: an unanswered greeting, a withheld apology, someone saving food, a hand avoiding another hand, a familiar object used the wrong way, or a witness realizing they were part of the harm.
 - Make transitions natural. A new clue should arise from the prior action, not appear just because the chapter needs another twist.
 - Do not batch-write books by reusing the same paragraph skeleton and only replacing names, objects, factions, or settings. Each novel needs its own scene logic, clue sequence, emotional pressure, and rhythm.
 - Long serials need renewable pressure. Build recurring institutions, obligations, resentments, professions, geography, and power costs that can keep producing conflict without repeating the same scene skeleton.
 - Respect the writer/reader yin-yang. The writer pushes instinct and scene life forward; the paired reader in `反思.md` pushes back on weak tension, lazy explanation, false高潮, overexposure, and emotional blur.
+- Preserve five-author separation. If a paragraph from one title could be pasted into another title after swapping nouns, rewrite it until the author's worldview, sentence rhythm, and type of pressure are unmistakable.
 
 ## Social Promotion And Cover Art
 
@@ -144,6 +155,9 @@
   - The chapter is immersive enough that the reader can stay inside the protagonist's lived experience.
   - The chapter follows one main event with natural transitions.
   - The final hook is intriguing but not over-explained.
+  - The chapter passes the rule-change test: the new idea changes a routine, a class relation, a work process, or a value judgment beyond the protagonist alone.
+  - The chapter passes the precision test: important emotion is carried by concrete detail and action, not adjective stacking.
+  - The chapter passes the five-author test: its rhythm and pressure cannot be mistaken for another active title.
   - The chapter does not exhaust the novel's long-term runway and leaves future arc space consistent with a 1,500+ chapter serial.
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
   - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
@@ -153,3 +167,11 @@
 ## 2026-06-08 補充節奏註記
 
 - 當敵方或制度性的黑路仰賴安靜、正常、順手來完成收尾時，反制不必先靠硬闖。優先考慮把現場叫醒、弄髒、弄亮，讓普通人的聲音、腳步、火氣與日常流程一起破壞那條路。
+
+## 2026-06-14 Rule of Style 補充
+
+- `src/resource/Share/Rule-of-Style.md` 是五本 active title 的共通風格規則。未發布章節改稿與新章生成都必須先過該檔的 AI 輔助邊界、腦洞三問、需求階梯與四項文筆檢查。
+- AI 可以提高產能，但不能取代作者的獨特視角。每次寫作都要讓「資料與規則」服務於角色感受，而不是讓角色成為規則展示架。
+- 新規則、新能力、新制度、新黑箱必須展示連帶反應：主角生活、普通人日常、階層秩序與價值觀至少要被碰到其中兩項。
+- 市場與包裝建議只能用來校準讀者承諾，不可用來追逐模板或仿寫爆款。天書要賣的是五位作者的獨特情緒解方，不是可替換的 AI 產能。
+- 章節改稿要過 A 到 B 檢查、情緒切口檢查與五作者反同質化檢查；若刪掉書名和人名後像另一部作品，必須重寫作者聲音。
