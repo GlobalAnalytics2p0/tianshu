@@ -121,7 +121,7 @@
           "number": 12,
           "title": "東槽回認",
           "path": "src/resource/星骸王座/文章/第12章 東槽回認.txt",
-          "charCount": 6094,
+          "charCount": 6112,
           "generatedAt": "2026-06-09T02:32:10+08:00"
         },
         {
@@ -149,7 +149,7 @@
           "number": 16,
           "title": "墊靜灰底",
           "path": "src/resource/星骸王座/文章/第16章 墊靜灰底.txt",
-          "charCount": 6417,
+          "charCount": 6416,
           "generatedAt": "2026-06-10T02:22:17+08:00"
         },
         {
@@ -616,7 +616,7 @@
           "number": 1,
           "title": "黑點晨光",
           "path": "src/resource/灰塔觀測者/第01章 黑點晨光.txt",
-          "charCount": 6041,
+          "charCount": 6040,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
@@ -651,14 +651,14 @@
           "number": 6,
           "title": "洗灰浮名",
           "path": "src/resource/灰塔觀測者/第06章 洗灰浮名.txt",
-          "charCount": 6002,
+          "charCount": 6000,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
         },
         {
           "number": 7,
           "title": "夜記停筆",
           "path": "src/resource/灰塔觀測者/第07章 夜記停筆.txt",
-          "charCount": 6014,
+          "charCount": 6016,
           "generatedAt": "2026-06-08T17:26:36.000+08:00"
         },
         {
@@ -679,14 +679,14 @@
           "number": 10,
           "title": "曬板半息",
           "path": "src/resource/灰塔觀測者/第10章 曬板半息.txt",
-          "charCount": 6265,
+          "charCount": 6263,
           "generatedAt": "2026-06-08T20:24:08.000+08:00"
         },
         {
           "number": 11,
           "title": "頂腹繩輪",
           "path": "src/resource/灰塔觀測者/第11章 頂腹繩輪.txt",
-          "charCount": 6054,
+          "charCount": 6053,
           "generatedAt": "2026-06-08T21:25:45+08:00"
         },
         {
@@ -700,14 +700,14 @@
           "number": 13,
           "title": "第二格輪",
           "path": "src/resource/灰塔觀測者/第13章 第二格輪.txt",
-          "charCount": 6472,
+          "charCount": 6471,
           "generatedAt": "2026-06-09T08:03:08+08:00"
         },
         {
           "number": 14,
           "title": "拖邊白尾",
           "path": "src/resource/灰塔觀測者/第14章 拖邊白尾.txt",
-          "charCount": 6019,
+          "charCount": 6017,
           "generatedAt": "2026-06-09T14:29:45+08:00"
         },
         {
@@ -749,7 +749,7 @@
           "number": 20,
           "title": "東簿清尾",
           "path": "src/resource/灰塔觀測者/第20章 東簿清尾.txt",
-          "charCount": 6017,
+          "charCount": 6018,
           "generatedAt": "2026-06-11T00:00:00+08:00"
         },
         {
@@ -812,7 +812,7 @@
           "number": 29,
           "title": "木嘴補鳴",
           "path": "src/resource/灰塔觀測者/第29章 木嘴補鳴.txt",
-          "charCount": 6002,
+          "charCount": 6005,
           "generatedAt": "2026-06-13T06:26:13+08:00"
         },
         {
@@ -1201,14 +1201,14 @@
           "number": 3,
           "title": "三人學刀",
           "path": "src/resource/雪刃照孤城/第03章 三人學刀.txt",
-          "charCount": 6049,
+          "charCount": 6050,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 4,
           "title": "雪犬炭棚",
           "path": "src/resource/雪刃照孤城/第04章 雪犬炭棚.txt",
-          "charCount": 6494,
+          "charCount": 6495,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
         },
         {
@@ -1299,7 +1299,7 @@
           "number": 17,
           "title": "守位薄尺",
           "path": "src/resource/雪刃照孤城/第17章 守位薄尺.txt",
-          "charCount": 6520,
+          "charCount": 6484,
           "generatedAt": "2026-06-10T08:24:41+08:00"
         },
         {
@@ -1313,14 +1313,14 @@
           "number": 19,
           "title": "藥檐舊簽",
           "path": "src/resource/雪刃照孤城/第19章 藥檐舊簽.txt",
-          "charCount": 6004,
+          "charCount": 6005,
           "generatedAt": "2026-06-10T18:00:00+08:00"
         },
         {
           "number": 20,
           "title": "守暖紙",
           "path": "src/resource/雪刃照孤城/第20章 守暖紙.txt",
-          "charCount": 6046,
+          "charCount": 6048,
           "generatedAt": "2026-06-11T00:00:00+08:00"
         },
         {
@@ -1383,7 +1383,7 @@
           "number": 29,
           "title": "鞘背收主",
           "path": "src/resource/雪刃照孤城/第29章 鞘背收主.txt",
-          "charCount": 6003,
+          "charCount": 6002,
           "generatedAt": "2026-06-13T06:26:13+08:00"
         },
         {
@@ -1786,7 +1786,7 @@
           "number": 5,
           "title": "父案模板",
           "path": "src/resource/凌晨三點的演算法/第05章 父案模板.txt",
-          "charCount": 6066,
+          "charCount": 6065,
           "generatedAt": "2026-06-08T15:27:03.000+08:00"
         },
         {
@@ -1849,7 +1849,7 @@
           "number": 14,
           "title": "坡道備轉",
           "path": "src/resource/凌晨三點的演算法/第14章 坡道備轉.txt",
-          "charCount": 6001,
+          "charCount": 6002,
           "generatedAt": "2026-06-09T14:29:45+08:00"
         },
         {
@@ -1870,7 +1870,7 @@
           "number": 17,
           "title": "館配薄套",
           "path": "src/resource/凌晨三點的演算法/第17章 館配薄套.txt",
-          "charCount": 6520,
+          "charCount": 6496,
           "generatedAt": "2026-06-10T08:24:41+08:00"
         },
         {
@@ -1954,7 +1954,7 @@
           "number": 29,
           "title": "家套回彈",
           "path": "src/resource/凌晨三點的演算法/第29章 家套回彈.txt",
-          "charCount": 6002,
+          "charCount": 6000,
           "generatedAt": "2026-06-13T06:26:13+08:00"
         },
         {
@@ -2329,7 +2329,7 @@
           "number": 1,
           "title": "墨線鬼河",
           "path": "src/resource/大明墨工/第01章 墨線鬼河.txt",
-          "charCount": 6104,
+          "charCount": 6105,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
@@ -2343,14 +2343,14 @@
           "number": 3,
           "title": "第三條河",
           "path": "src/resource/大明墨工/第03章 第三條河.txt",
-          "charCount": 6152,
+          "charCount": 6151,
           "generatedAt": "2026-06-08T00:00:00.000+08:00"
         },
         {
           "number": 4,
           "title": "灶火河意",
           "path": "src/resource/大明墨工/第04章 灶火河意.txt",
-          "charCount": 6031,
+          "charCount": 6032,
           "generatedAt": "2026-06-08T09:40:41.000+08:00"
         },
         {
@@ -2364,7 +2364,7 @@
           "number": 6,
           "title": "先對井",
           "path": "src/resource/大明墨工/第06章 先對井.txt",
-          "charCount": 6079,
+          "charCount": 6080,
           "generatedAt": "2026-06-08T16:45:00.000+08:00"
         },
         {
@@ -2406,14 +2406,14 @@
           "number": 12,
           "title": "後簿借名",
           "path": "src/resource/大明墨工/第12章 後簿借名.txt",
-          "charCount": 6001,
+          "charCount": 6002,
           "generatedAt": "2026-06-09T02:32:10+08:00"
         },
         {
           "number": 13,
           "title": "西庫押名",
           "path": "src/resource/大明墨工/第13章 西庫押名.txt",
-          "charCount": 6170,
+          "charCount": 6169,
           "generatedAt": "2026-06-09T08:03:08+08:00"
         },
         {
@@ -2441,21 +2441,21 @@
           "number": 17,
           "title": "摸邊手",
           "path": "src/resource/大明墨工/第17章 摸邊手.txt",
-          "charCount": 6507,
+          "charCount": 6498,
           "generatedAt": "2026-06-10T08:24:41+08:00"
         },
         {
           "number": 18,
           "title": "封邊紙",
           "path": "src/resource/大明墨工/第18章 封邊紙.txt",
-          "charCount": 6367,
+          "charCount": 6369,
           "generatedAt": "2026-06-10T12:00:00+08:00"
         },
         {
           "number": 19,
           "title": "晚算灰紙",
           "path": "src/resource/大明墨工/第19章 晚算灰紙.txt",
-          "charCount": 6004,
+          "charCount": 6005,
           "generatedAt": "2026-06-10T18:00:00+08:00"
         },
         {
@@ -2525,7 +2525,7 @@
           "number": 29,
           "title": "短聲問主",
           "path": "src/resource/大明墨工/第29章 短聲問主.txt",
-          "charCount": 6001,
+          "charCount": 6000,
           "generatedAt": "2026-06-13T06:26:13+08:00"
         },
         {
