@@ -43,6 +43,8 @@ python3 -m http.server 4173
 
 發佈完成的判定不能只看 commit 或 push。six-hour automation 在 push 後必須再跑 `node scripts/verify-site-publication.mjs`，確認本地 manifest、GitHub raw manifest、實際網站 manifest 三者一致，才可回報網站已更新。
 
+另外，`git status --short` 有殘留髒檔不等於「最新 commit 沒推上去」。未來要分開回報三件事：`HEAD 是否等於 origin/main`、網站 verify 是否通過、以及工作樹裡還有哪些不相關殘留修改。
+
 ## 影片產出
 
 影片製作預設使用本機 FFmpeg 流程：小說章節文字、同次 TTS 旁白時間軸、硬字幕、固定圖切換，以及雨聲白噪音背景。每本小說與每個章節的影片安排應放在小說自己的資料夾，例如 `src/resource/<小說名>/影片/<章節名>/`。

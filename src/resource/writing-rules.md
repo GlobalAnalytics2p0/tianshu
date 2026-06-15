@@ -26,6 +26,7 @@
 - Already published video/audiobook chapter titles are locked with their public assets. Do not rename published chapters unless the user explicitly approves a public metadata correction.
 - For automation runs, treat `local chapter written`, `manifest updated`, `commit created`, `push succeeded`, and `live site updated` as separate states. Do not report the chapter as published on the site until the live manifest matches the local manifest.
 - At the start of every six-hour automation run, check for deferred publish debt with `node scripts/check-publish-state.mjs --auto-publish-if-ahead`. If old local-only commits are still ahead of upstream and origin is reachable again, publish them before generating more chapters. If origin is unreachable, record that deferred publish debt explicitly instead of leaving the website state ambiguous.
+- Do not treat a dirty worktree as proof that the latest commit was not pushed. Publish state must be judged by branch sync and site verification, while unrelated modified/untracked files must be reported separately as residual workspace dirt.
 
 ## Continuity
 
@@ -169,6 +170,7 @@
   - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
   - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.
   - For automation publishes, `node scripts/verify-site-publication.mjs` passes after push. If it does not pass, the run may be locally complete or pushed, but it must not be described as live on the website.
+  - For automation publish reporting, include explicit evidence for `HEAD`, `origin/main`, `ahead/behind`, and whether any remaining dirty paths are unrelated to the published batch. Never compress these into a vague "有推上去/沒推上去" judgment.
 
 ## 2026-06-08 補充節奏註記
 
