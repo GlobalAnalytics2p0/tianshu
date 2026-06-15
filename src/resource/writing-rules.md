@@ -11,6 +11,7 @@
 - Aim for雅俗共賞: tension and depth should coexist with readable scenes, clear emotional pressure, lived daily details, small wins, and momentum.
 - Audience experience comes first. Use reader and user feedback to adjust pacing, emphasis, mystery density, emotional spacing, and spotlight allocation when that feedback improves engagement or clarity.
 - Long-term serialization is a rhythm, not only a mystery reserve. After a local high point, allow cooling space: aftermath, fatigue, ordinary costs, small humor, repaired trust, witness reactions, or a concrete practical problem before the next pressure wave.
+- AI output speed is only an internal production aid. It is never the artistic goal, never public-facing value, and never a reason to accept flat prose, thin emotion, or interchangeable author voices.
 
 ## Length And Storage
 
@@ -18,7 +19,7 @@
 - Save every chapter as an independent `.txt` file. For migrated title folders, use `src/resource/<novel title>/文章/`; for unmigrated folders, use the existing `src/resource/<novel title>/` root until that title is reorganized.
 - Update `src/resource/manifest.json` after writing or revising chapter files.
 - Never store chapter bodies inline in `app.js`.
-- Published chapters are locked canon. Do not edit an already published chapter unless the user explicitly authorizes a post-publication correction. For `星骸王座`, `第01章 星核在雨夜說謊` is already published and must remain unchanged.
+- Published chapters are locked canon. Do not edit an already published chapter unless the user explicitly authorizes a post-publication correction. For `星骸王座`, Chapters 1 through 7 are already public-facing audiobook/video releases and must remain unchanged during routine prose cleanup.
 - Chapter titles should be short, memorable, and production-friendly. For unpublished or newly generated chapters, prefer clear, immediately understandable titles in roughly 4-7 Traditional Chinese characters and do not exceed 7 unless the user explicitly approves a longer title.
 - Do not over-compress chapter titles into opaque four-character shorthand when a clearer 5-7 character title reads better. Reduce polyphonic/易誤讀字 when practical, especially for reader-facing chapter cards and narration metadata.
 - Do not use long sentence-like chapter titles as a routine pattern, especially repeated structures such as `先...的人...`, `...先把...`, or titles that explain the whole scene. Use an evocative object, place, action, or threat instead.
@@ -82,12 +83,14 @@
 - Vary tone by book and genre. Some serials can be deep, restrained, and oppressive; others can be爽文, direct, clever, and momentum-driven.
 - Prose should feel human: less template rhythm, fewer repeated sentence structures, clearer cause and effect, more intuitive transitions.
 - AI assistance may provide speed, alternate plot routes, names, and research scaffolding, but final prose must be governed by author persona and human emotional judgment. Never let production speed flatten voice, character contradiction, or scene texture.
+- Use AI internally for productivity, brainstorming branches, naming, and fact scaffolding only. Public-facing site, chapter, and promotion surfaces should foreground `天書原創` and author persona rather than the AI workflow itself.
 - If stuck, generate alternatives only as private scaffolding. Choose the route that best preserves continuity, forces a character cost, touches ordinary life, and protects long-arc mystery; do not choose the route merely because it is the newest or loudest.
 - Brainstorming is not plot. A premise becomes plot only after its extreme rule change creates lived consequences for ordinary people, institutions, status, money, food, work, family, language, or public behavior.
 - Before adding a new rule, ask: what is its limit, who profits from it, who is quietly harmed by it, and what ordinary routine becomes dangerous because of it.
 - Paragraphs can be longer when staying with one event, conversation, or emotional beat. Avoid jumpy short-section montage. Strong scenes are allowed to take a larger share of the chapter.
 - Do not overuse micro-paragraphs and clipped one-line beats. Short sentences should puncture a scene, not become the scene's default breathing pattern. If too many consecutive paragraphs can be read as single-line slogan beats, merge them back into fuller scene paragraphs.
 - For audiobook and read-aloud flow, prefer connected white-language syntax over constant stop-start emphasis. A strong chapter may contain sharp short lines, but the surrounding prose should carry people, action, and cause-and-effect in longer flowing units so the listener can sink in instead of being repeatedly jolted out.
+- Do not reuse a default chapter-opening chassis across titles or across consecutive chapters. If an opening can be reduced to a fill-in-the-blank pattern such as `某地這一日最先……` or a stock pivot like `真正露手的是……`, rewrite it until the author, pressure, and object feel title-specific.
 - Prefer specific physical detail over abstract labels. Use concrete rooms, weather, sounds, small habits, money, work, wounds, tools, documents, and social pressure.
 - Use precision instead of adjective stacking. Replace generic statements like "he was poor", "she was afraid", or "the room was chaotic" with an object, gesture, cost, sound, stain, or interrupted routine.
 - Use verbs to create image momentum. Important scenes should move through concrete actions before interpretation: push, hide, count, tear, lift, press, listen, wait, misread, correct.
@@ -104,6 +107,7 @@
 - Long serials need renewable pressure. Build recurring institutions, obligations, resentments, professions, geography, and power costs that can keep producing conflict without repeating the same scene skeleton.
 - Respect the writer/reader yin-yang. The writer pushes instinct and scene life forward; the paired reader in `反思.md` pushes back on weak tension, lazy explanation, false高潮, overexposure, and emotional blur.
 - Preserve five-author separation. If a paragraph from one title could be pasted into another title after swapping nouns, rewrite it until the author's worldview, sentence rhythm, and type of pressure are unmistakable.
+- Unpublished chapters are eligible for aggressive cleanup. If a stored draft still feels templated, over-procedural, emotionally thin, or too clipped for audiobook/listening flow, revise it before treating it as stable canon.
 
 ## Social Promotion And Cover Art
 
