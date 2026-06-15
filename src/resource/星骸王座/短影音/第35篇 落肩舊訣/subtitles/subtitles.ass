@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.46,Hit,,0,0,0,,它不問左\N也不問名
+Dialogue: 0,0:00:02.46,0:00:06.46,Hit,,0,0,0,,它先問誰的肩最肯替人沉下去
+Dialogue: 0,0:00:06.46,0:00:10.24,Default,,0,0,0,,瘦女人不開口\N北街就看她眼神
+Dialogue: 0,0:00:10.24,0:00:13.73,Default,,0,0,0,,她怕哪件器\N哪條路就露出來
+Dialogue: 0,0:00:13.73,0:00:16.89,Choice,,0,0,0,,布套拿開\N她看的不是人
+Dialogue: 0,0:00:16.89,0:00:18.79,Choice,,0,0,0,,是落肩
+Dialogue: 0,0:00:18.79,0:00:21.15,Default,,0,0,0,,磨刀人想借輪聲藏手
+Dialogue: 0,0:00:21.15,0:00:23.76,Default,,0,0,0,,阿棠一把濕布砸住石輪
+Dialogue: 0,0:00:23.76,0:00:27.86,Choice,,0,0,0,,先別看他的刀\N看牆縫裡那一下
+Dialogue: 0,0:00:27.86,0:00:31.28,Default,,0,0,0,,掉出來的\N是一塊黑木肩板
+Dialogue: 0,0:00:31.28,0:00:33.14,Default,,0,0,0,,弧面磨得發亮
+Dialogue: 0,0:00:33.14,0:00:37.44,Choice,,0,0,0,,它偷的不是一口盆\N是你替人扛下第二下
+Dialogue: 0,0:00:37.44,0:00:39.94,Hit,,0,0,0,,肩若肯回\N器便自服
+Dialogue: 0,0:00:39.94,0:00:44.33,Hit,,0,0,0,,照壁缺的\N是肯替很多肩都回的人
+Dialogue: 0,0:00:44.33,0:00:47.95,Default,,0,0,0,,完整連載\N到官網看星骸王座

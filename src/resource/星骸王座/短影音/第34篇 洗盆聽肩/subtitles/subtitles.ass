@@ -1,0 +1,25 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:05.28,Hit,,0,0,0,,那口共盆不是盆了\N它成了整條街的耳朵
+Dialogue: 0,0:00:05.28,0:00:08.94,Default,,0,0,0,,巷尾大共盆被拖到街心\N銅鈴掛上
+Dialogue: 0,0:00:08.94,0:00:10.51,Default,,0,0,0,,誰碰都會響
+Dialogue: 0,0:00:10.51,0:00:15.89,Choice,,0,0,0,,有人下午又摸過\N它在找能藏第二下的盆
+Dialogue: 0,0:00:15.89,0:00:20.40,Choice,,0,0,0,,別在它面前露肩\N它等的就是你累時那一下
+Dialogue: 0,0:00:20.40,0:00:24.91,Default,,0,0,0,,夜裡收耳女人被拿住\N手上全是器口細繭
+Dialogue: 0,0:00:24.91,0:00:28.30,Choice,,0,0,0,,你做的不是補盆\N是收耳
+Dialogue: 0,0:00:28.30,0:00:31.99,Choice,,0,0,0,,守得住共盆\N明天還有別的盆
+Dialogue: 0,0:00:31.99,0:00:36.01,Hit,,0,0,0,,周嬸一錘敲醒全街\N照壁最怕的
+Dialogue: 0,0:00:36.01,0:00:38.78,Hit,,0,0,0,,不是刀\N是活人的亂聲
+Dialogue: 0,0:00:38.78,0:00:42.41,Default,,0,0,0,,完整連載\N到官網看星骸王座

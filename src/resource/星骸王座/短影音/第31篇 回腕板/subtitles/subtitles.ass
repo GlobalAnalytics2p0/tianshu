@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.37,Hit,,0,0,0,,他偷的不是箱子\N是你半夜摸藥時
+Dialogue: 0,0:00:04.37,0:00:06.55,Hit,,0,0,0,,手腕回去那一下
+Dialogue: 0,0:00:06.55,0:00:08.51,Default,,0,0,0,,北街把鹽匣\N藥盒
+Dialogue: 0,0:00:08.51,0:00:12.43,Default,,0,0,0,,炭櫃全搬到白天\N一戶戶自己記手
+Dialogue: 0,0:00:12.43,0:00:15.62,Choice,,0,0,0,,妳記得住\N它就偷不乾淨
+Dialogue: 0,0:00:15.62,0:00:18.76,Default,,0,0,0,,補背婦人帶著熟油和窄板進街
+Dialogue: 0,0:00:18.76,0:00:21.17,Default,,0,0,0,,眼睛卻只看誰的手會回
+Dialogue: 0,0:00:21.17,0:00:25.51,Choice,,0,0,0,,先不要追她的臉\N看她籃底那塊窄板
+Dialogue: 0,0:00:25.51,0:00:28.95,Default,,0,0,0,,灰架簿角一露\N冷句只剩一半
+Dialogue: 0,0:00:28.95,0:00:31.25,Default,,0,0,0,,先問回腕\N再借沈手
+Dialogue: 0,0:00:31.25,0:00:33.48,Default,,0,0,0,,程舊屋後牆落出黑粉
+Dialogue: 0,0:00:33.48,0:00:36.46,Default,,0,0,0,,像更深那件舊器剛被對過聲
+Dialogue: 0,0:00:36.46,0:00:39.81,Hit,,0,0,0,,今晚來的\N不會只是收板人
+Dialogue: 0,0:00:39.81,0:00:42.86,Hit,,0,0,0,,它要看哪隻沈手還活著
+Dialogue: 0,0:00:42.86,0:00:46.49,Default,,0,0,0,,完整連載\N到官網看星骸王座

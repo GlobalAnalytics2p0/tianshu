@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.85,Hit,,0,0,0,,空背鹽箱立在街心\N不是補洞
+Dialogue: 0,0:00:03.85,0:00:06.10,Hit,,0,0,0,,是等那隻手來看
+Dialogue: 0,0:00:06.10,0:00:10.18,Default,,0,0,0,,阿棠把裂盆放到程舊屋後牆\N盆耳抹灰
+Dialogue: 0,0:00:10.18,0:00:11.71,Default,,0,0,0,,只留一個活口
+Dialogue: 0,0:00:11.71,0:00:15.70,Choice,,0,0,0,,它想聽我的手\N那就只給它半聲
+Dialogue: 0,0:00:15.70,0:00:19.39,Default,,0,0,0,,三輕一重剛落\N牆後只回了一下
+Dialogue: 0,0:00:19.39,0:00:21.38,Default,,0,0,0,,沉得像認\N又像躲
+Dialogue: 0,0:00:21.38,0:00:23.64,Choice,,0,0,0,,他在等你再敲
+Dialogue: 0,0:00:23.64,0:00:28.13,Choice,,0,0,0,,不能再敲了\N這一聲不能送進牆裡
+Dialogue: 0,0:00:28.13,0:00:31.05,Default,,0,0,0,,沈曜看懂了\N它不是問盆
+Dialogue: 0,0:00:31.05,0:00:34.56,Default,,0,0,0,,是逼他把沈家回腕送回牆裡
+Dialogue: 0,0:00:34.56,0:00:38.12,Hit,,0,0,0,,他把盆交給阿棠\N也把那一下重答
+Dialogue: 0,0:00:38.12,0:00:39.65,Hit,,0,0,0,,牢牢記住
+Dialogue: 0,0:00:39.65,0:00:43.27,Default,,0,0,0,,完整連載\N到官網看星骸王座

@@ -24,4 +24,9 @@
 
 ## 最終 QA
 
-- 待 build 後更新。
+- 影片輸出：60.000 秒，1080x1920，9:16，30fps，SAR 1:1。
+- 音訊輸出：AAC，24000 Hz，mono；主檔沒有外部背景音。
+- Voice source：46.760 秒，低於 54 秒字幕安全線，沒有被 final MP4 截斷。
+- 字幕最後 cue：45.96 秒，CTA 之前已結束。
+- 授權掃描：source/build 嚴格關鍵字未命中；MP4 用 `strings -n 8` 複查具體曲名與授權詞，結果 clean。
+- 抽查：已納入 `qa-video-contact-sheet-25-30.png` 與本篇 `qa/contact-sheet.png`。

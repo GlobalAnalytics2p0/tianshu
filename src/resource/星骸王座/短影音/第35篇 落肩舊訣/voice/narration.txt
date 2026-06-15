@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 它不問左，也不問名。它先問誰的肩最肯替人沉下去。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 瘦女人不開口，北街就看她眼神。她怕哪件器，哪條路就露出來。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 布套拿開。她看的不是人，是落肩。
+04. [grinder] zh-TW-HsiaoChenNeural +5% -3Hz 磨刀人想借輪聲藏手，阿棠一把濕布砸住石輪。
+05. [shen] zh-CN-YunxiNeural -3% -3Hz 先別看他的刀。看牆縫裡那一下。
+06. [board] zh-TW-HsiaoChenNeural +5% -3Hz 掉出來的，是一塊黑木肩板。弧面磨得發亮。
+07. [zhou] zh-TW-HsiaoChenNeural +5% -3Hz 它偷的不是一口盆，是你替人扛下第二下。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 肩若肯回，器便自服。照壁缺的，是肯替很多肩都回的人。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 完整連載，到官網看星骸王座。

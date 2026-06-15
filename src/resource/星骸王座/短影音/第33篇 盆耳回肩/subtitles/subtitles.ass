@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.47,Hit,,0,0,0,,它開始問盆耳了\N誰夜裡先扶那一口
+Dialogue: 0,0:00:04.47,0:00:06.55,Hit,,0,0,0,,誰就可能被借肩
+Dialogue: 0,0:00:06.55,0:00:09.90,Default,,0,0,0,,北街把藥盆全搬出來\N盆耳朝外
+Dialogue: 0,0:00:09.90,0:00:12.22,Default,,0,0,0,,灰水一擦就露出舊熱
+Dialogue: 0,0:00:12.22,0:00:16.68,Choice,,0,0,0,,它問的不是盆\N是誰一到夜裡會先去扶
+Dialogue: 0,0:00:16.68,0:00:18.62,Default,,0,0,0,,賣紙婦人笑著量紙
+Dialogue: 0,0:00:18.62,0:00:21.29,Default,,0,0,0,,紙沿卻先擦過最熟的盆耳
+Dialogue: 0,0:00:21.29,0:00:24.96,Choice,,0,0,0,,她不是賣紙\N她在試肩
+Dialogue: 0,0:00:24.96,0:00:29.06,Default,,0,0,0,,阿豆亂敲共盆\N牆外立刻回了一聲細響
+Dialogue: 0,0:00:29.06,0:00:32.09,Choice,,0,0,0,,真肩落盆耳\N不會先躲
+Dialogue: 0,0:00:32.09,0:00:35.66,Hit,,0,0,0,,試肩板背後抹出兩個字\N舊肩
+Dialogue: 0,0:00:35.66,0:00:38.93,Hit,,0,0,0,,照壁沿著沈家舊傷回來了
+Dialogue: 0,0:00:38.93,0:00:42.55,Default,,0,0,0,,完整連載\N到官網看星骸王座

@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他偷的不是箱子。是你半夜摸藥時，手腕回去那一下。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 北街把鹽匣、藥盒、炭櫃全搬到白天，一戶戶自己記手。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 妳記得住，它就偷不乾淨。
+04. [woman] zh-TW-HsiaoChenNeural +5% -3Hz 補背婦人帶著熟油和窄板進街，眼睛卻只看誰的手會回。
+05. [shen] zh-CN-YunxiNeural -3% -3Hz 先不要追她的臉。看她籃底那塊窄板。
+06. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 灰架簿角一露，冷句只剩一半：先問回腕，再借沈手。
+07. [wall] zh-TW-HsiaoChenNeural +5% -3Hz 程舊屋後牆落出黑粉，像更深那件舊器剛被對過聲。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 今晚來的，不會只是收板人。它要看哪隻沈手還活著。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 完整連載，到官網看星骸王座。

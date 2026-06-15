@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 它開始問盆耳了。誰夜裡先扶那一口，誰就可能被借肩。
+02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 北街把藥盆全搬出來，盆耳朝外，灰水一擦就露出舊熱。
+03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 它問的不是盆，是誰一到夜裡會先去扶。
+04. [paper] zh-TW-HsiaoChenNeural +5% -3Hz 賣紙婦人笑著量紙，紙沿卻先擦過最熟的盆耳。
+05. [shen] zh-CN-YunxiNeural -3% -3Hz 她不是賣紙。她在試肩。
+06. [boy] zh-TW-HsiaoChenNeural +6% -3Hz 阿豆亂敲共盆，牆外立刻回了一聲細響。
+07. [old] zh-TW-HsiaoChenNeural +1% -6Hz 真肩落盆耳，不會先躲。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 試肩板背後抹出兩個字：舊肩。照壁沿著沈家舊傷回來了。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 完整連載，到官網看星骸王座。

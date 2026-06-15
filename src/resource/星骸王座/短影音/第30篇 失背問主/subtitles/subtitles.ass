@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.64,Hit,,0,0,0,,鹽箱背板整面不見了\N它偷走的不是木
+Dialogue: 0,0:00:04.64,0:00:06.67,Hit,,0,0,0,,是一條救命手路
+Dialogue: 0,0:00:06.67,0:00:09.44,Default,,0,0,0,,老高頭說\N昨夜箱背還在
+Dialogue: 0,0:00:09.44,0:00:11.93,Default,,0,0,0,,今早箱肚空聲全變了
+Dialogue: 0,0:00:11.93,0:00:15.99,Default,,0,0,0,,阿棠從木縫挑出薄鹽皮\N逼出一句
+Dialogue: 0,0:00:15.99,0:00:18.31,Default,,0,0,0,,主手先鹹\N後問回腕
+Dialogue: 0,0:00:18.31,0:00:22.06,Choice,,0,0,0,,它要的不是箱子\N是這條手路
+Dialogue: 0,0:00:22.06,0:00:26.47,Choice,,0,0,0,,這口箱別收\N今夜照樣放著
+Dialogue: 0,0:00:26.47,0:00:29.92,Default,,0,0,0,,她用真鹽霜和藥灰養出一面假\N背
+Dialogue: 0,0:00:29.92,0:00:32.14,Default,,0,0,0,,等那隻手夜裡回來摸
+Dialogue: 0,0:00:32.14,0:00:35.16,Default,,0,0,0,,灰粉落下\N女人腕內白線一亮
+Dialogue: 0,0:00:35.16,0:00:38.18,Default,,0,0,0,,竟和阿棠舊疤在同一條路上
+Dialogue: 0,0:00:38.18,0:00:41.85,Hit,,0,0,0,,她們不是在問主\N她們是在等主
+Dialogue: 0,0:00:41.85,0:00:43.54,Hit,,0,0,0,,自己回手
+Dialogue: 0,0:00:43.54,0:00:47.16,Default,,0,0,0,,完整連載\N到官網看星骸王座

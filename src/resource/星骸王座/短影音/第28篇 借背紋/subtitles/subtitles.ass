@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.27,Hit,,0,0,0,,有人整城撿舊木紋\N不是修箱
+Dialogue: 0,0:00:03.27,0:00:06.00,Hit,,0,0,0,,是替一件東西找回身子
+Dialogue: 0,0:00:06.00,0:00:08.83,Default,,0,0,0,,北檐把老箱背板全翻出來
+Dialogue: 0,0:00:08.83,0:00:10.90,Default,,0,0,0,,用苦艾水逼出暗紋
+Dialogue: 0,0:00:10.90,0:00:14.93,Choice,,0,0,0,,它離真正認回自己\N只差一面背
+Dialogue: 0,0:00:14.93,0:00:17.83,Default,,0,0,0,,李嬸的炭櫃\N胡老頭的鹽箱
+Dialogue: 0,0:00:17.83,0:00:20.21,Default,,0,0,0,,竟咬著相同的灰星痕
+Dialogue: 0,0:00:20.21,0:00:23.47,Choice,,0,0,0,,那就把全街的背都翻出來
+Dialogue: 0,0:00:23.47,0:00:26.31,Default,,0,0,0,,舊紋一張張浮起\N北街才懂
+Dialogue: 0,0:00:26.31,0:00:28.90,Default,,0,0,0,,家裡破箱可能早被借過
+Dialogue: 0,0:00:28.90,0:00:33.45,Default,,0,0,0,,阿福忽然跑回來\N巷尾老高頭的鹽箱背板
+Dialogue: 0,0:00:33.45,0:00:35.06,Default,,0,0,0,,整面不見了
+Dialogue: 0,0:00:35.06,0:00:38.25,Hit,,0,0,0,,它現在最急的\N不是腹
+Dialogue: 0,0:00:38.25,0:00:40.37,Hit,,0,0,0,,不是背\N是主
+Dialogue: 0,0:00:40.37,0:00:43.99,Default,,0,0,0,,完整連載\N到官網看星骸王座
