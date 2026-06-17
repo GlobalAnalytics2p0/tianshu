@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T11:28:44+08:00",
+  "generatedAt": "2026-06-17T12:20:55+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -340,6 +340,13 @@
           "path": "src/resource/星骸王座/文章/第43章 翻簾留手.txt",
           "charCount": 6025,
           "generatedAt": "2026-06-17T11:28:44+08:00"
+        },
+        {
+          "number": 44,
+          "title": "公勺留肩",
+          "path": "src/resource/星骸王座/文章/第44章 公勺留肩.txt",
+          "charCount": 6013,
+          "generatedAt": "2026-06-17T12:20:55+08:00"
         }
       ],
       "tone": "深沉",
@@ -968,6 +975,13 @@
           "path": "src/resource/灰塔觀測者/第43章 總簿留空.txt",
           "charCount": 6126,
           "generatedAt": "2026-06-17T11:28:44+08:00"
+        },
+        {
+          "number": 44,
+          "title": "承位藍頁",
+          "path": "src/resource/灰塔觀測者/第44章 承位藍頁.txt",
+          "charCount": 6209,
+          "generatedAt": "2026-06-17T12:20:55+08:00"
         }
       ],
       "tone": "深沉",
@@ -1595,6 +1609,13 @@
           "path": "src/resource/雪刃照孤城/第43章 鞘痕問主.txt",
           "charCount": 6167,
           "generatedAt": "2026-06-17T11:28:44+08:00"
+        },
+        {
+          "number": 44,
+          "title": "鞘簿留掌",
+          "path": "src/resource/雪刃照孤城/第44章 鞘簿留掌.txt",
+          "charCount": 6093,
+          "generatedAt": "2026-06-17T12:20:55+08:00"
         }
       ],
       "tone": "深沉",
@@ -2222,6 +2243,13 @@
           "path": "src/resource/凌晨三點的演算法/第43章 同列簽收.txt",
           "charCount": 6085,
           "generatedAt": "2026-06-17T11:28:44+08:00"
+        },
+        {
+          "number": 44,
+          "title": "列碼共證",
+          "path": "src/resource/凌晨三點的演算法/第44章 列碼共證.txt",
+          "charCount": 6009,
+          "generatedAt": "2026-06-17T12:20:55+08:00"
         }
       ],
       "tone": "深沉",
@@ -2849,6 +2877,13 @@
           "path": "src/resource/大明墨工/第43章 膠氣問手.txt",
           "charCount": 6023,
           "generatedAt": "2026-06-17T11:28:44+08:00"
+        },
+        {
+          "number": 44,
+          "title": "掌簿留工",
+          "path": "src/resource/大明墨工/第44章 掌簿留工.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-17T12:20:55+08:00"
         }
       ],
       "tone": "深沉",
