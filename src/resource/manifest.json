@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T18:25:42+08:00",
+  "generatedAt": "2026-06-17T11:28:44+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -333,6 +333,13 @@
           "path": "src/resource/星骸王座/文章/第42章 餘手留痕.txt",
           "charCount": 6253,
           "generatedAt": "2026-06-16T18:25:42+08:00"
+        },
+        {
+          "number": 43,
+          "title": "翻簾留手",
+          "path": "src/resource/星骸王座/文章/第43章 翻簾留手.txt",
+          "charCount": 6025,
+          "generatedAt": "2026-06-17T11:28:44+08:00"
         }
       ],
       "tone": "深沉",
@@ -954,6 +961,13 @@
           "path": "src/resource/灰塔觀測者/第42章 晨簿亮格.txt",
           "charCount": 6018,
           "generatedAt": "2026-06-16T18:25:42+08:00"
+        },
+        {
+          "number": 43,
+          "title": "總簿留空",
+          "path": "src/resource/灰塔觀測者/第43章 總簿留空.txt",
+          "charCount": 6126,
+          "generatedAt": "2026-06-17T11:28:44+08:00"
         }
       ],
       "tone": "深沉",
@@ -1574,6 +1588,13 @@
           "path": "src/resource/雪刃照孤城/第42章 局後餘手.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-16T18:25:42+08:00"
+        },
+        {
+          "number": 43,
+          "title": "鞘痕問主",
+          "path": "src/resource/雪刃照孤城/第43章 鞘痕問主.txt",
+          "charCount": 6167,
+          "generatedAt": "2026-06-17T11:28:44+08:00"
         }
       ],
       "tone": "深沉",
@@ -2194,6 +2215,13 @@
           "path": "src/resource/凌晨三點的演算法/第42章 代答入列.txt",
           "charCount": 6010,
           "generatedAt": "2026-06-16T18:25:42+08:00"
+        },
+        {
+          "number": 43,
+          "title": "同列簽收",
+          "path": "src/resource/凌晨三點的演算法/第43章 同列簽收.txt",
+          "charCount": 6085,
+          "generatedAt": "2026-06-17T11:28:44+08:00"
         }
       ],
       "tone": "深沉",
@@ -2814,6 +2842,13 @@
           "path": "src/resource/大明墨工/第42章 料單照手.txt",
           "charCount": 6066,
           "generatedAt": "2026-06-16T18:25:42+08:00"
+        },
+        {
+          "number": 43,
+          "title": "膠氣問手",
+          "path": "src/resource/大明墨工/第43章 膠氣問手.txt",
+          "charCount": 6023,
+          "generatedAt": "2026-06-17T11:28:44+08:00"
         }
       ],
       "tone": "深沉",
