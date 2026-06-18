@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T06:00:00+08:00",
+  "generatedAt": "2026-06-18T12:05:34+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "更新至第47章〈白屋後門〉",
+      "updateNote": "更新至第48章〈白石藥手〉",
       "score": "9.8",
       "heat": "328 萬",
       "chapters": [
@@ -368,6 +368,13 @@
           "path": "src/resource/星骸王座/文章/第47章 白屋後門.txt",
           "charCount": 6093,
           "generatedAt": "2026-06-18T06:00:00+08:00"
+        },
+        {
+          "number": 48,
+          "title": "白石藥手",
+          "path": "src/resource/星骸王座/文章/第48章 白石藥手.txt",
+          "charCount": 6008,
+          "generatedAt": "2026-06-18T12:05:34+08:00"
         }
       ],
       "tone": "深沉",
@@ -692,7 +699,7 @@
       "setting": "北境灰塔",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "灰塔的晨光少了一塊，艾文只是在簿冊上補了一筆，整座塔卻像忽然記起某個不該存在的人。",
-      "updateNote": "更新至第47章〈續口總頁〉",
+      "updateNote": "更新至第48章〈總口草頁〉",
       "score": "9.2",
       "heat": "288 萬",
       "chapters": [
@@ -1024,6 +1031,13 @@
           "path": "src/resource/灰塔觀測者/第47章 續口總頁.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-18T06:00:00+08:00"
+        },
+        {
+          "number": 48,
+          "title": "總口草頁",
+          "path": "src/resource/灰塔觀測者/第48章 總口草頁.txt",
+          "charCount": 6030,
+          "generatedAt": "2026-06-18T12:05:34+08:00"
         }
       ],
       "tone": "深沉",
@@ -1347,7 +1361,7 @@
       "setting": "北雪孤城",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "孤城大雪封門，沈照夜聽見一聲不該存在的刀鳴；那一夜開始，舊案、暗道與欠下的命全都醒了。",
-      "updateNote": "更新至第47章〈白石後門〉",
+      "updateNote": "更新至第48章〈白扣藥路〉",
       "score": "9.2",
       "heat": "248 萬",
       "chapters": [
@@ -1679,6 +1693,13 @@
           "path": "src/resource/雪刃照孤城/第47章 白石後門.txt",
           "charCount": 6000,
           "generatedAt": "2026-06-18T06:00:00+08:00"
+        },
+        {
+          "number": 48,
+          "title": "白扣藥路",
+          "path": "src/resource/雪刃照孤城/第48章 白扣藥路.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-18T12:05:34+08:00"
         }
       ],
       "tone": "深沉",
@@ -2002,7 +2023,7 @@
       "setting": "海城科技園",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "凌晨三點，周祈的手機推送了自己的死訊。真正可怕的不是預測錯誤，而是有人正在讓預測成真。",
-      "updateNote": "更新至第47章〈夜班影手〉",
+      "updateNote": "更新至第48章〈陪走學線〉",
       "score": "9.3",
       "heat": "208 萬",
       "chapters": [
@@ -2334,6 +2355,13 @@
           "path": "src/resource/凌晨三點的演算法/第47章 夜班影手.txt",
           "charCount": 6018,
           "generatedAt": "2026-06-18T06:00:00+08:00"
+        },
+        {
+          "number": 48,
+          "title": "陪走學線",
+          "path": "src/resource/凌晨三點的演算法/第48章 陪走學線.txt",
+          "charCount": 6004,
+          "generatedAt": "2026-06-18T12:05:34+08:00"
         }
       ],
       "tone": "深沉",
@@ -2657,7 +2685,7 @@
       "setting": "大明工部",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "沈墨在御用輿圖下看見一條不存在的河；墨線一動，藏在河工、糧道與官場裡的殺局也跟著浮上來。",
-      "updateNote": "更新至第47章〈甲匣整牌〉",
+      "updateNote": "更新至第48章〈骨點留名〉",
       "score": "9.4",
       "heat": "168 萬",
       "chapters": [
@@ -2989,6 +3017,13 @@
           "path": "src/resource/大明墨工/第47章 甲匣整牌.txt",
           "charCount": 6001,
           "generatedAt": "2026-06-18T06:00:00+08:00"
+        },
+        {
+          "number": 48,
+          "title": "骨點留名",
+          "path": "src/resource/大明墨工/第48章 骨點留名.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-18T12:05:34+08:00"
         }
       ],
       "tone": "深沉",
