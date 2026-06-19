@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T22:23:35+08:00",
+  "generatedAt": "2026-06-20T00:18:38+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -389,6 +389,13 @@
           "path": "src/resource/星骸王座/文章/第50章 白篩回句.txt",
           "charCount": 6185,
           "generatedAt": "2026-06-19T22:23:35+08:00"
+        },
+        {
+          "number": 51,
+          "title": "白屋問回",
+          "path": "src/resource/星骸王座/文章/第51章 白屋問回.txt",
+          "charCount": 6028,
+          "generatedAt": "2026-06-20T00:18:38+08:00"
         }
       ],
       "tone": "深沉",
@@ -1066,6 +1073,13 @@
           "path": "src/resource/灰塔觀測者/文章/第50章 省眼木簽.txt",
           "charCount": 6033,
           "generatedAt": "2026-06-19T22:23:35+08:00"
+        },
+        {
+          "number": 51,
+          "title": "無色木簽",
+          "path": "src/resource/灰塔觀測者/文章/第51章 無色木簽.txt",
+          "charCount": 6030,
+          "generatedAt": "2026-06-20T00:18:38+08:00"
         }
       ],
       "tone": "深沉",
@@ -1742,6 +1756,13 @@
           "path": "src/resource/雪刃照孤城/文章/第50章 青灰肩線.txt",
           "charCount": 6222,
           "generatedAt": "2026-06-19T22:23:35+08:00"
+        },
+        {
+          "number": 51,
+          "title": "看肩簿",
+          "path": "src/resource/雪刃照孤城/文章/第51章 看肩簿.txt",
+          "charCount": 6034,
+          "generatedAt": "2026-06-20T00:18:38+08:00"
         }
       ],
       "tone": "深沉",
@@ -2418,6 +2439,13 @@
           "path": "src/resource/凌晨三點的演算法/文章/第50章 回頭接手.txt",
           "charCount": 6232,
           "generatedAt": "2026-06-19T22:23:35+08:00"
+        },
+        {
+          "number": 51,
+          "title": "回問桌",
+          "path": "src/resource/凌晨三點的演算法/文章/第51章 回問桌.txt",
+          "charCount": 6011,
+          "generatedAt": "2026-06-20T00:18:38+08:00"
         }
       ],
       "tone": "深沉",
@@ -3094,6 +3122,13 @@
           "path": "src/resource/大明墨工/文章/第50章 見者上簽.txt",
           "charCount": 6427,
           "generatedAt": "2026-06-19T22:23:35+08:00"
+        },
+        {
+          "number": 51,
+          "title": "沈尺暗痕",
+          "path": "src/resource/大明墨工/文章/第51章 沈尺暗痕.txt",
+          "charCount": 6000,
+          "generatedAt": "2026-06-20T00:18:38+08:00"
         }
       ],
       "tone": "深沉",
