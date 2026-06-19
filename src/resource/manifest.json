@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "更新至第49章〈晨市穩手〉",
+      "updateNote": "更新至第50章〈白篩回句〉",
       "score": "9.8",
       "heat": "328 萬",
       "chapters": [
@@ -382,6 +382,13 @@
           "path": "src/resource/星骸王座/文章/第49章 晨市穩手.txt",
           "charCount": 6027,
           "generatedAt": "2026-06-18T18:21:58+08:00"
+        },
+        {
+          "number": 50,
+          "title": "白篩回句",
+          "path": "src/resource/星骸王座/文章/第50章 白篩回句.txt",
+          "charCount": 6185,
+          "generatedAt": "2026-06-19T07:05:00+08:00"
         }
       ],
       "tone": "深沉",
