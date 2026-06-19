@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.56,Hit,,0,0,0,,有人不搶第一手\N也不碰最後一手
+Dialogue: 0,0:00:03.56,0:00:06.10,Hit,,0,0,0,,卻總能把亂局悄悄收平
+Dialogue: 0,0:00:06.10,0:00:09.57,Default,,0,0,0,,阿棠昨夜故意把洗布槽弄亂\N天一亮
+Dialogue: 0,0:00:09.57,0:00:11.88,Default,,0,0,0,,居然又被人收得太乾淨
+Dialogue: 0,0:00:11.88,0:00:15.61,Default,,0,0,0,,那個人不是英雄\N只是看見門歪了就扶
+Dialogue: 0,0:00:15.61,0:00:17.47,Default,,0,0,0,,看見被角亂了就掖
+Dialogue: 0,0:00:17.47,0:00:21.23,Default,,0,0,0,,暖肩墊裡只留一句\N最像善意的那一手
+Dialogue: 0,0:00:21.23,0:00:23.11,Default,,0,0,0,,最容易先沒有名字
+Dialogue: 0,0:00:23.11,0:00:26.54,Default,,0,0,0,,沈曜當場立新規\N誰手一癢想補
+Dialogue: 0,0:00:26.54,0:00:28.13,Default,,0,0,0,,就先按灰留痕
+Dialogue: 0,0:00:28.13,0:00:30.95,Default,,0,0,0,,北街第一次逼自己把亂留下來
+Dialogue: 0,0:00:30.95,0:00:33.34,Default,,0,0,0,,不准再悶聲把日子收漂亮
+Dialogue: 0,0:00:33.34,0:00:36.64,Hit,,0,0,0,,星核只提醒一句\N最先沒名字的
+Dialogue: 0,0:00:36.64,0:00:40.20,Hit,,0,0,0,,往往就是最會替人收平亂局的\N人
+Dialogue: 0,0:00:40.20,0:00:42.96,Default,,0,0,0,,所以這一次\N北街不求好看
+Dialogue: 0,0:00:42.96,0:00:45.22,Default,,0,0,0,,只求先把那雙手看清
+Dialogue: 0,0:00:45.22,0:00:47.81,Default,,0,0,0,,如果連善後都能被養成路
+Dialogue: 0,0:00:47.81,0:00:51.34,Default,,0,0,0,,下一個被整條街推回去的人會\N是誰
+Dialogue: 0,0:00:51.34,0:00:52.99,Default,,0,0,0,,官網看星骸王座

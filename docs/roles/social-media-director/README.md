@@ -36,7 +36,8 @@
 - 若 YouTube 縮圖沒有套用、仍顯示 auto-generated、或需要使用者手動介入，必須在該章 `production-notes.md` 記錄原因與結果，並在 final 回覆中明確說明。除非使用者同意，不要把自動縮圖當作已完成的自訂縮圖。
 - YouTube 發布前必須等 copyright 與 Community Guidelines checks 完成且為 `No issues found`，再按 Public/Publish。若平台跳出 `Publish anyway`，預設退回等待，不硬闖。
 - YouTube 發布後要用公開 watch URL 驗證：影片標題可見、沒有 `Private` 標記、播放頁可載入，再開始導流到社群。
-- Instagram 圖片上傳優先準備 `/tmp/tianshu-upload/` 下的 ASCII real-copy 圖檔。若 Chrome `fileChooser.setFiles` 回 `Not allowed`，不要重試同一路徑；改用畫面上的 `從電腦選擇` 讓原生 macOS 檔案選擇器出現，再用 `Cmd+Shift+G` 貼入絕對路徑。不要用二進位圖片剪貼簿貼入，容易中斷 Chrome 控制。
+- Instagram 圖片上傳優先準備 `/tmp/tianshu-upload/` 下的 ASCII real-copy 圖檔。若 Chrome `fileChooser.setFiles` 回 `Not allowed`，不要重試同一路徑；改用畫面上的 `從電腦選擇` 讓原生 macOS 檔案選擇器出現，再用 `Cmd+Shift+G` 貼入絕對路徑。嚴禁用二進位圖片剪貼簿貼入作為 fallback，這會讓 Chrome 控制連線不穩或中斷。
+- 如果 Chrome 控制已因 IG 上傳嘗試中斷，且本機畫面控制無法穩定鎖定 IG 分頁，停止操作並回報使用者需要開啟 Codex Chrome Extension 的本機檔案存取權，或請使用者先把 IG `建立新貼文` / 檔案選擇器畫面帶回前景後再接續。不要在多個無關分頁之間用座標硬闖。
 - Instagram 發布前確認方圖完整、caption 已填，並以畫面截圖或可見控制確認 `分享到` 裡的 Facebook/Threads 同步開關沒有打開。若狀態不夠清楚，發布後立刻檢查 Facebook/Threads 是否出現同步重複貼文。
 - Instagram 發布後用 profile 貼文數、新貼文 URL、caption 文字與圖片實際載入狀態驗證。
 - Threads 文字貼文流程目前穩定；發文後用 profile 頂部新串文、時間戳與連結 preview 驗證。

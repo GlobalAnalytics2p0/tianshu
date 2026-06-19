@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.20,Hit,,0,0,0,,你還沒開口\N他就先把第二桶接走了
+Dialogue: 0,0:00:04.20,0:00:07.69,Default,,0,0,0,,北街今天打井掛牌\N誰下桶誰接手
+Dialogue: 0,0:00:07.69,0:00:09.19,Default,,0,0,0,,當場說清
+Dialogue: 0,0:00:09.19,0:00:12.33,Choice,,0,0,0,,沈曜只看\N誰總在沒人喊前
+Dialogue: 0,0:00:12.33,0:00:14.33,Choice,,0,0,0,,先把那口重接走
+Dialogue: 0,0:00:14.33,0:00:16.92,Default,,0,0,0,,老婦故意讓兩桶水一起晃
+Dialogue: 0,0:00:16.92,0:00:19.27,Default,,0,0,0,,逼人把那一下吞回肩上
+Dialogue: 0,0:00:19.27,0:00:23.11,Default,,0,0,0,,阿福差點又補\N短繩卻先把他勒停
+Dialogue: 0,0:00:23.11,0:00:26.16,Default,,0,0,0,,黑木塞掉下來\N只寫一句
+Dialogue: 0,0:00:26.16,0:00:27.98,Default,,0,0,0,,肩肯分\N路就斷
+Dialogue: 0,0:00:27.98,0:00:31.44,Default,,0,0,0,,大家這才懂\N最危的不是會喊的人
+Dialogue: 0,0:00:31.44,0:00:32.93,Default,,0,0,0,,是先來接的人
+Dialogue: 0,0:00:32.93,0:00:36.16,Default,,0,0,0,,北街當場改規矩\N夜裡打第二桶
+Dialogue: 0,0:00:36.16,0:00:37.66,Default,,0,0,0,,得先喊名字
+Dialogue: 0,0:00:37.66,0:00:39.64,Default,,0,0,0,,可最讓沈曜變臉的
+Dialogue: 0,0:00:39.64,0:00:43.36,Default,,0,0,0,,還是跑腿孩子又先把第二手接\N穩了
+Dialogue: 0,0:00:43.36,0:00:45.10,Default,,0,0,0,,官網看星骸王座

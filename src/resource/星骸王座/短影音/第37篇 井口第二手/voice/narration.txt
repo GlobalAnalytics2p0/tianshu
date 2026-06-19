@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 你還沒開口，他就先把第二桶接走了。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街今天打井掛牌，誰下桶誰接手，當場說清。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 沈曜只看：誰總在沒人喊前，先把那口重接走。
+04. [oldwoman] zh-TW-HsiaoChenNeural +8% -3Hz 老婦故意讓兩桶水一起晃，逼人把那一下吞回肩上。
+05. [rope] zh-TW-HsiaoChenNeural +8% -3Hz 阿福差點又補，短繩卻先把他勒停。
+06. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 黑木塞掉下來，只寫一句：肩肯分，路就斷。
+07. [reveal] zh-TW-HsiaoChenNeural +8% -3Hz 大家這才懂，最危的不是會喊的人，是先來接的人。
+08. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街當場改規矩：夜裡打第二桶，得先喊名字。
+09. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 可最讓沈曜變臉的，還是跑腿孩子又先把第二手接穩了。官網看星骸王座。

@@ -47,3 +47,11 @@
 - Middle frames show hidden-slot evidence, the trace-cleaner capture, and west-room records.
 - Late frames show the washing yard being publicly woken, then the wet-paper closing reversal.
 - Thumbnail and Instagram promo were inspected for title fit, text clipping, main-object visibility, and redundant watermark issues.
+
+## Publishing / Social
+
+- YouTube: user reported the video/post is visible; public video URL is `https://youtu.be/R_tGf3y4hPg`.
+- Facebook: user reported the promotional post is visible; do not duplicate.
+- Threads: chapter 9 was missing from the profile, then posted independently and verified at the top of `@tianshu_novel` with URL path `/@tianshu_novel/post/DZr_e0-k6rV`.
+- Instagram: posted independently and verified at `https://www.instagram.com/p/DZsB2_kmROL/`. The post shows the chapter 9 caption, YouTube/website CTA, and hashtags `#星骸王座 #天書小說 #有聲書 #玄幻小說 #繁體中文小說 #原創小說`.
+- Cross-platform sync: not used. IG, Threads, Facebook, and YouTube remain independent posting surfaces.

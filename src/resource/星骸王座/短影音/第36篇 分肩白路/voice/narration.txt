@@ -6,4 +6,4 @@
 06. [trap] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜臨時改成三人共肩，硬把那一下拆開。
 07. [rings] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠把第一枚木環掛上去，專門記誰總在接第二手。
 08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 北街這才明白，對方現在盯的不是哪一口盆，是哪一個人最愛替所有人扛事。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 一直替別人接第二手的人，最後會不會先被那條白路記住，官網看星骸王座。
+09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 一直替別人接第二手的人，最後會不會先被它記住，官網看星骸王座。

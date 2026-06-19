@@ -1,9 +1,9 @@
 01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 鹽箱背板整面被拆走，像有人半夜把這戶人的手也一起偷走。
-02. [gaotou] zh-TW-HsiaoChenNeural +5% -3Hz 老高頭說得更怕：昨晚背板還在，今早連箱子的回聲都變了。
-03. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠從木縫裡挑出一層鹽皮，只逼出一句話：先看這雙手，再等它自己回來。
-04. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 也就是說，對方要的不是箱子，是這戶人家平常怎麼摸藥抓鹽。
-05. [shen] zh-TW-YunJheNeural -3% -3Hz 沈曜反而不收箱子，今晚照樣擺著。
-06. [trap] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠還用真鹽霜和藥灰養出一塊假背板，就等那隻手自己回來摸。
-07. [scar] zh-TW-HsiaoChenNeural +5% -3Hz 結果灰粉一落，女人手腕內側那條白線當場露出來。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 她們不是來偷東西，是在等這戶人家最熟的那雙手自己送上門。
+02. [gaotou] zh-TW-HsiaoChenNeural +5% -3Hz 老高頭說：昨晚背板還在，今早連箱子的回聲都空了。
+03. [clue] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠從木縫挑出鹽皮，只看出一句：先看這雙手。
+04. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 對方要的不是箱子，是這戶人平常怎麼摸藥抓鹽。
+05. [shen] zh-TW-YunJheNeural -3% -3Hz 沈曜偏不收箱子，今晚照樣擺著。
+06. [trap] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠拿真鹽霜和藥灰做一塊假背板，等那隻手回來摸。
+07. [scar] zh-TW-HsiaoChenNeural +5% -3Hz 灰粉一落，女人手腕那條白疤立刻露出來。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 她們不是來偷箱，是在等這戶人最熟的那雙手自己送上門。
 09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 被盯上的那雙手，最後還拿不拿得回來，官網看星骸王座。

@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.79,Hit,,0,0,0,,最危險的不是刀
+Dialogue: 0,0:00:01.79,0:00:04.87,Hit,,0,0,0,,是全街一急就先喊你的名字
+Dialogue: 0,0:00:04.87,0:00:07.70,Default,,0,0,0,,北街今天先報缺藥\N缺火
+Dialogue: 0,0:00:07.70,0:00:10.25,Default,,0,0,0,,缺手\N不准先喊誰來救
+Dialogue: 0,0:00:10.25,0:00:13.83,Choice,,0,0,0,,阿棠把藥鋪和井邊全改成先報\N活
+Dialogue: 0,0:00:13.83,0:00:15.36,Choice,,0,0,0,,不先想熟人
+Dialogue: 0,0:00:15.36,0:00:17.39,Default,,0,0,0,,因為名字一喊熟\N水
+Dialogue: 0,0:00:17.39,0:00:18.91,Default,,0,0,0,,火\N藥
+Dialogue: 0,0:00:18.91,0:00:21.70,Default,,0,0,0,,門\N最後都會自己往那邊靠
+Dialogue: 0,0:00:21.70,0:00:24.71,Default,,0,0,0,,灰桶裡掉出木葉\N名字一喊熟
+Dialogue: 0,0:00:24.71,0:00:27.22,Default,,0,0,0,,所有力氣都會自己回去
+Dialogue: 0,0:00:27.22,0:00:30.11,Default,,0,0,0,,看火老頭一天被翻了四次牌
+Dialogue: 0,0:00:30.11,0:00:32.04,Default,,0,0,0,,連他自己都愣住了
+Dialogue: 0,0:00:32.04,0:00:35.30,Default,,0,0,0,,藥鋪門口立刻改規矩\N先報活
+Dialogue: 0,0:00:35.30,0:00:36.94,Default,,0,0,0,,不准先喊阿棠
+Dialogue: 0,0:00:36.94,0:00:38.94,Hit,,0,0,0,,可孩子摔碗那一刻
+Dialogue: 0,0:00:38.94,0:00:42.94,Hit,,0,0,0,,整條街第一個脫口而出的\N卻還是沈曜
+Dialogue: 0,0:00:42.94,0:00:46.05,Default,,0,0,0,,如果連名字都能被人養成路
+Dialogue: 0,0:00:46.05,0:00:49.68,Default,,0,0,0,,沈曜還能躲多久\N官網看星骸王座

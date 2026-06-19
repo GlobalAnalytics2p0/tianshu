@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最危險的不是毒，是第一包藥總被交給同一雙手。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 白石巷今天把抓藥、送藥、餵藥全拆成三份，不准同人從頭拿到底。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 藥不能再認手。先把送藥名單攤開。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 可病人一咳，大家還是本能地把第一包藥塞給最穩的那個。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠在藥紙背面看見抹痕。連送藥那條路，都在學誰會先伸手。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街把晨市路牌全換掉，半步也拆，不准再讓一個人拿到底。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可最冷的不是藥，是整條街都開始等那雙手先動。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果第一包藥已經知道該去找誰，他還能把這條路切開嗎？官網看星骸王座。

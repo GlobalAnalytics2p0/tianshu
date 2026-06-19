@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 更冷的是，你還沒開口，路就先被磨進藥包裡了。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街今天拆藥時，藥紙邊竟全沾著一樣的細白粉。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 先別聞藥。先看那包藥想把你帶去哪隻手。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 阿棠刮開藥紙角，連第一撮暖藥邊上都磨著同一層粉。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 那不是舊白石，是晨市磨盤的新粉，還混了會留路的薄白附。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街立刻改法：藥先拆三手，誰碰過藥紙都得當場留痕。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 這才知道，對方不是先寫路再配藥，是配藥時就把順序磨進去了。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連藥包都會替你先認手，下一個一開紙就被帶走的人會是誰？官網看星骸王座。

@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +2% -4Hz 有人不搶第一手，也不碰最後一手，卻總能把亂局悄悄收平。
+02. [setup] zh-TW-HsiaoChenNeural +10% -3Hz 阿棠昨夜故意把洗布槽弄亂，天一亮，居然又被人收得太乾淨。
+03. [reveal] zh-TW-HsiaoChenNeural +10% -3Hz 那個人不是英雄，只是看見門歪了就扶，看見被角亂了就掖。
+04. [clue] zh-TW-HsiaoChenNeural +10% -4Hz 暖肩墊裡只留一句：最像善意的那一手，最容易先沒有名字。
+05. [payoff] zh-TW-HsiaoChenNeural +10% -3Hz 沈曜當場立新規，誰手一癢想補，就先按灰留痕。
+06. [rule] zh-TW-HsiaoChenNeural +10% -3Hz 北街第一次逼自己把亂留下來，不准再悶聲把日子收漂亮。
+07. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 星核只提醒一句：最先沒名字的，往往就是最會替人收平亂局的人。
+08. [twist] zh-TW-HsiaoChenNeural +10% -3Hz 所以這一次，北街不求好看，只求先把那雙手看清。
+09. [lead] zh-TW-HsiaoChenNeural +12% -3Hz 如果連善後都能被養成路，下一個被整條街推回去的人會是誰？官網看星骸王座。

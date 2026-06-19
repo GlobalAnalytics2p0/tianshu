@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最危險的不是刀，是全街一急就先喊你的名字。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街今天先報缺藥、缺火、缺手，不准先喊誰來救。
+03. [atang] zh-TW-HsiaoChenNeural +2% -5Hz 阿棠把藥鋪和井邊全改成先報活，不先想熟人。
+04. [reveal] zh-TW-HsiaoChenNeural +8% -3Hz 因為名字一喊熟，水、火、藥、門，最後都會自己往那邊靠。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 灰桶裡掉出木葉：名字一喊熟，所有力氣都會自己回去。
+06. [oldman] zh-TW-HsiaoChenNeural +8% -3Hz 看火老頭一天被翻了四次牌，連他自己都愣住了。
+07. [cut] zh-TW-HsiaoChenNeural +8% -3Hz 藥鋪門口立刻改規矩：先報活，不准先喊阿棠。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 可孩子摔碗那一刻，整條街第一個脫口而出的，卻還是沈曜。
+09. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連名字都能被人養成路，沈曜還能躲多久？官網看星骸王座。

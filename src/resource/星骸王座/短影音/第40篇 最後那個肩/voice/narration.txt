@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 名字可以藏，肩膀藏不了。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街昨天才學會別先喊熟名，今天照壁就改問最後那個後肩。
+03. [crowd] zh-TW-HsiaoChenNeural +8% -3Hz 水、病人、灰盆一撞上去，大家眼睛還是會先找最扛得住的人。
+04. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 舊橫擔裡掉出一句話：名字可以少喊，最後那個肩還是會自己回去。
+05. [atang] zh-TW-HsiaoChenNeural +2% -5Hz 阿棠立刻把前肩、後肩、換肩全分開。
+06. [pad] zh-TW-HsiaoChenNeural +8% -3Hz 可對方又送來一條暖肩墊，想把沈曜那道舊傷重新喚回來。
+07. [payoff] zh-TW-HsiaoChenNeural +8% -3Hz 北街第一次看懂，原來後肩也能分。
+08. [twist] zh-TW-HsiaoChenNeural +2% -4Hz 但沈曜更怕的，是大家一急，還是會把最後那一下默默遞給他。
+09. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果整條街最習慣把重壓回他那道舊傷上，他還能躲多久？官網看星骸王座。

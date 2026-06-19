@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.14,Hit,,0,0,0,,最危險的\N不是病人
+Dialogue: 0,0:00:02.14,0:00:06.14,Hit,,0,0,0,,是那支誰都會順手扶正的公用\N器具
+Dialogue: 0,0:00:06.14,0:00:08.24,Default,,0,0,0,,北街把簾桿\N水桶
+Dialogue: 0,0:00:08.24,0:00:11.23,Default,,0,0,0,,矮凳全掛牌\N誰碰先留灰
+Dialogue: 0,0:00:11.23,0:00:15.86,Choice,,0,0,0,,先別救急\N先看今天誰又去扶那支桿
+Dialogue: 0,0:00:15.86,0:00:18.33,Default,,0,0,0,,破簾一歪\N有人去扶
+Dialogue: 0,0:00:18.33,0:00:21.72,Default,,0,0,0,,木桶一滑\N又有人順手擺正
+Dialogue: 0,0:00:21.72,0:00:24.83,Default,,0,0,0,,阿棠在灰上看見同一種手痕
+Dialogue: 0,0:00:24.83,0:00:28.73,Default,,0,0,0,,對方不是追病人\N是追最愛補位的人
+Dialogue: 0,0:00:28.73,0:00:31.99,Default,,0,0,0,,北街連公用器具都拆手輪\N誰扶
+Dialogue: 0,0:00:31.99,0:00:33.49,Default,,0,0,0,,誰搬\N誰收
+Dialogue: 0,0:00:33.49,0:00:34.99,Default,,0,0,0,,全都分開
+Dialogue: 0,0:00:34.99,0:00:38.81,Hit,,0,0,0,,可風一再起\N最先把那支桿扶回去的
+Dialogue: 0,0:00:38.81,0:00:40.85,Hit,,0,0,0,,還是那個跑腿孩子
+Dialogue: 0,0:00:40.85,0:00:44.86,Default,,0,0,0,,如果連公家的東西都開始等同\N一雙手
+Dialogue: 0,0:00:44.86,0:00:48.62,Default,,0,0,0,,這雙手還能躲多久\N官網看星骸王座

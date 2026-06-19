@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 市場最危險的，不是假藥，是那句先找最穩那雙手。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 這句話聽起來像好心，病家一急，卻最容易把命直接交出去。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 越像省事，越像有人在替你挑手。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 有人教你先藥後驚，有人教你別過白板，有人教你只信昨夜救過人的那個。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 沈曜一看就懂，這不是亂講，是整條晨市在替同一句話接力。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 阿棠把藥、驚、人三只碗排開，當場教病家別讓同一隻手一路走滿。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可老人一抖，大家嘴上說會分，眼睛還是先去找最穩那個。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果一條街都被教成先找最穩那雙手，誰會被它越養越像主手？官網看星骸王座。

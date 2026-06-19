@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 那道暖門不是在救人，它在挑誰最先替人擋風。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 暖屋門前排成三列，送人、守夜、送炭，就是不准同一肩全包。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 先問門。誰一冷，就先替別人擋上去。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 風一灌進來，總有人先側身堵門。門一歪，又有人先把它關穩。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠在門內摸到熱痕。這條暖路記住的不是臉，是肩膀。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 白屋門前立新規，守門得輪，不能讓同一肩連站。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可半夜孩子一抖，最先堵在門縫前的，還是那個舊傷沒好的男人。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果那道門已經記住他的肩，下一次誰能把他拉開？官網看星骸王座。

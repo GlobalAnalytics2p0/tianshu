@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.76,Hit,,0,0,0,,最危險的不是毒
+Dialogue: 0,0:00:01.76,0:00:05.02,Hit,,0,0,0,,是第一包藥總被交給同一雙手
+Dialogue: 0,0:00:05.02,0:00:07.54,Default,,0,0,0,,白石巷今天把抓藥\N送藥
+Dialogue: 0,0:00:07.54,0:00:11.57,Default,,0,0,0,,餵藥全拆成三份\N不准同人從頭拿到底
+Dialogue: 0,0:00:11.57,0:00:15.70,Choice,,0,0,0,,藥不能再認手\N先把送藥名單攤開
+Dialogue: 0,0:00:15.70,0:00:19.57,Default,,0,0,0,,可病人一咳\N大家還是本能地把第一包藥塞
+Dialogue: 0,0:00:19.57,0:00:20.86,Default,,0,0,0,,給最穩的那個
+Dialogue: 0,0:00:20.86,0:00:25.36,Default,,0,0,0,,阿棠在藥紙背面看見抹痕\N連送藥那條路
+Dialogue: 0,0:00:25.36,0:00:27.48,Default,,0,0,0,,都在學誰會先伸手
+Dialogue: 0,0:00:27.48,0:00:30.77,Default,,0,0,0,,北街把晨市路牌全換掉\N半步也拆
+Dialogue: 0,0:00:30.77,0:00:33.12,Default,,0,0,0,,不准再讓一個人拿到底
+Dialogue: 0,0:00:33.12,0:00:34.85,Hit,,0,0,0,,可最冷的不是藥
+Dialogue: 0,0:00:34.85,0:00:38.06,Hit,,0,0,0,,是整條街都開始等那雙手先動
+Dialogue: 0,0:00:38.06,0:00:41.42,Default,,0,0,0,,如果第一包藥已經知道該去找\N誰
+Dialogue: 0,0:00:41.42,0:00:45.50,Default,,0,0,0,,他還能把這條路切開嗎\N官網看星骸王座

@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.62,Hit,,0,0,0,,北街現在先問的\N不是病
+Dialogue: 0,0:00:02.62,0:00:05.50,Hit,,0,0,0,,是誰教你把藥交給那隻手
+Dialogue: 0,0:00:05.50,0:00:08.28,Default,,0,0,0,,因為真正可怕的\N不是病家亂
+Dialogue: 0,0:00:08.28,0:00:11.30,Default,,0,0,0,,是很多戶都被教成同一種亂法
+Dialogue: 0,0:00:11.30,0:00:15.29,Choice,,0,0,0,,先報哪裡聽的\N再報誰碰了第一包
+Dialogue: 0,0:00:15.29,0:00:17.37,Default,,0,0,0,,周嬸把晨市分成四口
+Dialogue: 0,0:00:17.37,0:00:20.83,Default,,0,0,0,,每一口都要先說這句話是誰教\N你的
+Dialogue: 0,0:00:20.83,0:00:24.22,Default,,0,0,0,,一戶從磨石攤聽\N一戶從豆皮口聽
+Dialogue: 0,0:00:24.22,0:00:27.12,Default,,0,0,0,,一戶從粥桶旁又被補了一句
+Dialogue: 0,0:00:27.12,0:00:30.71,Default,,0,0,0,,北街把求藥順序也拖成白天工\N規
+Dialogue: 0,0:00:30.71,0:00:32.76,Default,,0,0,0,,先問哪戶\N再問哪手
+Dialogue: 0,0:00:32.76,0:00:35.70,Hit,,0,0,0,,最尷尬的是\N很多人回頭一想
+Dialogue: 0,0:00:35.70,0:00:39.62,Hit,,0,0,0,,自己根本說不出第一句是誰塞\N進來的
+Dialogue: 0,0:00:39.62,0:00:42.73,Default,,0,0,0,,如果一條街都忘了是誰先教的
+Dialogue: 0,0:00:42.73,0:00:45.83,Default,,0,0,0,,那隻手不是更容易被養成熟路
+Dialogue: 0,0:00:45.83,0:00:47.50,Default,,0,0,0,,官網看星骸王座

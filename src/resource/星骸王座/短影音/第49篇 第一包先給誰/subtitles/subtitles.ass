@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.49,Hit,,0,0,0,,最毒的不是藥
+Dialogue: 0,0:00:01.49,0:00:05.71,Hit,,0,0,0,,是病家一急就把第一包先塞給\N同一雙手
+Dialogue: 0,0:00:05.71,0:00:08.63,Default,,0,0,0,,白石巷最近都在教\N孩子一抖
+Dialogue: 0,0:00:08.63,0:00:10.82,Default,,0,0,0,,第一包先給最穩那個
+Dialogue: 0,0:00:10.82,0:00:14.91,Choice,,0,0,0,,先別找人情\N先看誰又把第一包往同一隻手
+Dialogue: 0,0:00:14.91,0:00:16.27,Choice,,0,0,0,,塞
+Dialogue: 0,0:00:16.27,0:00:17.99,Default,,0,0,0,,昨夜才救過孩子
+Dialogue: 0,0:00:17.99,0:00:21.19,Default,,0,0,0,,今晨整條街就拿那件事當招牌
+Dialogue: 0,0:00:21.19,0:00:22.62,Default,,0,0,0,,阿棠拆開藥包
+Dialogue: 0,0:00:22.62,0:00:25.97,Default,,0,0,0,,發現連分藥次序都被人先寫好\N了
+Dialogue: 0,0:00:25.97,0:00:29.25,Default,,0,0,0,,北街當場改規矩\N先報哪裡聽的
+Dialogue: 0,0:00:29.25,0:00:30.77,Default,,0,0,0,,再拆第一包
+Dialogue: 0,0:00:30.77,0:00:32.86,Hit,,0,0,0,,可真有老人發寒時
+Dialogue: 0,0:00:32.86,0:00:36.26,Hit,,0,0,0,,所有眼睛還是先往那雙手看去
+Dialogue: 0,0:00:36.26,0:00:39.02,Default,,0,0,0,,如果第一包一急就會認人
+Dialogue: 0,0:00:39.02,0:00:43.54,Default,,0,0,0,,後頭兩包會把誰一路養熟\N官網看星骸王座

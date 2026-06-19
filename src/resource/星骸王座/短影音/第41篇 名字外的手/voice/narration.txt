@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最容易被偷走的，不是前面那雙手，是做完後又補一下的人。
+02. [setup] zh-TW-HsiaoChenNeural +10% -3Hz 阿棠今天把熄火、送藥、補門、收布，全做成尾事牌。
+03. [reveal] zh-TW-HsiaoChenNeural +10% -3Hz 誰一亂就把最後幾口一起做完，誰就最危險。
+04. [guobo] zh-CN-YunxiNeural +4% -3Hz 郭伯本來只提一桶水，轉眼卻連端湯、壓風、補炭都想補完。
+05. [clue] zh-TW-HsiaoChenNeural +10% -4Hz 門楔裡掉出黑紙：你不點名，那隻手最後會自己變成命。
+06. [payoff] zh-TW-HsiaoChenNeural +10% -3Hz 北街第一次把尾事一口口分出去，最會收尾的人也得站著看。
+07. [twist] zh-TW-HsiaoChenNeural +10% -3Hz 很多以為非誰不可的事，其實只是你太習慣讓他全吞。
+08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 阿福這次沒有再把所有亂一起補完，他只守住那一口收聲。
+09. [lead] zh-TW-HsiaoChenNeural +10% -3Hz 當所有人都學會分尾，照壁下一步還會去找哪一雙更安靜的手？官網看星骸王座。

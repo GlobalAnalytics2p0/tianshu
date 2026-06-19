@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最毒的不是藥，是病家一急就把第一包先塞給同一雙手。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 白石巷最近都在教：孩子一抖，第一包先給最穩那個。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 先別找人情。先看誰又把第一包往同一隻手塞。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 昨夜才救過孩子，今晨整條街就拿那件事當招牌。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠拆開藥包，發現連分藥次序都被人先寫好了。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街當場改規矩：先報哪裡聽的，再拆第一包。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可真有老人發寒時，所有眼睛還是先往那雙手看去。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果第一包一急就會認人，後頭兩包會把誰一路養熟？官網看星骸王座。

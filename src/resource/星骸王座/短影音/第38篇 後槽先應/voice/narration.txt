@@ -1,0 +1,9 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 比井口更會偷人的，是洗布棚後那條長木槽。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 大家明明學會先喊名字，一忙起來，卻還是有人補完後面那一下。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 沈曜只看：誰總把後槽做掉。
+04. [runner] zh-TW-HsiaoChenNeural +8% -3Hz 小腳夫剛接完熱水，下一息又想把槽尾灰水一起送走。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠從木槽裡挑出木舌：力走久了，最後還是會滑回同一個人。
+06. [payoff] zh-TW-HsiaoChenNeural +8% -3Hz 北街第一次把先手和後槽分開掛牌。
+07. [twist] zh-TW-HsiaoChenNeural +8% -3Hz 照壁還在等你嫌麻煩，等你又把那一下吞回去。
+08. [expose] zh-TW-HsiaoChenNeural +8% -4Hz 瘦高漢一碰木牌就露餡，因為他要試的是誰會補到最後。
+09. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果每件雜事最後都落到同一個人，他是不是早被整條街養成熟路？官網看星骸王座。

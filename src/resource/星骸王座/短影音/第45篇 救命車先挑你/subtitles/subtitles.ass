@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.77,Hit,,0,0,0,,這台救命車會自己挑人站左前
+Dialogue: 0,0:00:03.77,0:00:05.91,Default,,0,0,0,,送病人的車一進北街
+Dialogue: 0,0:00:05.91,0:00:08.76,Default,,0,0,0,,大家只想快一點把人推出去
+Dialogue: 0,0:00:08.76,0:00:13.22,Choice,,0,0,0,,別搶著推\N先看車把會往誰那邊偏
+Dialogue: 0,0:00:13.22,0:00:17.32,Default,,0,0,0,,可不管換幾個人\N左前那個位子總先吃力
+Dialogue: 0,0:00:17.32,0:00:19.25,Default,,0,0,0,,逼人把肩膀頂上去
+Dialogue: 0,0:00:19.25,0:00:23.84,Default,,0,0,0,,阿棠在車轅下摸到記號\N對方不要最強的人
+Dialogue: 0,0:00:23.84,0:00:26.14,Default,,0,0,0,,只要最習慣先扛的人
+Dialogue: 0,0:00:26.14,0:00:29.51,Default,,0,0,0,,北街第一次把推車位拆成四角\N輪替
+Dialogue: 0,0:00:29.51,0:00:31.54,Default,,0,0,0,,誰也不能一路站左前
+Dialogue: 0,0:00:31.54,0:00:32.97,Hit,,0,0,0,,可車一過泥坑
+Dialogue: 0,0:00:32.97,0:00:36.79,Hit,,0,0,0,,還是有人本能地把最重那一下\N接回去
+Dialogue: 0,0:00:36.79,0:00:40.12,Default,,0,0,0,,如果連救命車都知道該去找誰
+Dialogue: 0,0:00:40.12,0:00:44.47,Default,,0,0,0,,這條路最後會把誰拖熟\N官網看星骸王座

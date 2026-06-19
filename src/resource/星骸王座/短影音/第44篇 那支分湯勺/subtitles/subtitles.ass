@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,STHeiti,72,&H00FFFFFF,&H00FFFFFF,&HDD070402,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,320,1
+Style: Hit,STHeiti,84,&H00FFFFFF,&H00FFFFFF,&HDD180600,&HAA000000,-1,0,0,0,100,100,1,0,3,7,0,2,65,65,350,1
+Style: Choice,STHeiti,76,&H00EAF8FF,&H00FFFFFF,&HDD160B03,&HAA000000,-1,0,0,0,100,100,1,0,3,5,0,2,70,70,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.35,Hit,,0,0,0,,這支勺子不是在救人
+Dialogue: 0,0:00:02.35,0:00:05.23,Hit,,0,0,0,,它在挑誰最像照護那雙手
+Dialogue: 0,0:00:05.23,0:00:07.01,Default,,0,0,0,,北街把熱湯\N熱布
+Dialogue: 0,0:00:07.01,0:00:11.09,Default,,0,0,0,,照護棚全改成輪手\N不准誰一個人包辦
+Dialogue: 0,0:00:11.09,0:00:16.06,Choice,,0,0,0,,先別看病人\N先看誰一伸手就去拿那支勺
+Dialogue: 0,0:00:16.06,0:00:18.69,Default,,0,0,0,,病人一多\N大家嘴上說輪手
+Dialogue: 0,0:00:18.69,0:00:22.03,Default,,0,0,0,,最後那一口卻還是往熟手那邊\N遞
+Dialogue: 0,0:00:22.03,0:00:25.18,Default,,0,0,0,,阿棠在勺柄抹灰\N第一個留痕的
+Dialogue: 0,0:00:25.18,0:00:28.32,Default,,0,0,0,,不是掌櫃\N是最會照顧人的那個
+Dialogue: 0,0:00:28.32,0:00:30.16,Default,,0,0,0,,公勺\N熱布架
+Dialogue: 0,0:00:30.16,0:00:32.93,Default,,0,0,0,,守棚位\N全都拆開報名
+Dialogue: 0,0:00:32.93,0:00:34.88,Hit,,0,0,0,,可孩子一咳到彎腰
+Dialogue: 0,0:00:34.88,0:00:38.54,Hit,,0,0,0,,那支勺子還是自己回到同一雙\N手上
+Dialogue: 0,0:00:38.54,0:00:41.83,Default,,0,0,0,,如果連照顧人的那一勺都會認\N手
+Dialogue: 0,0:00:41.83,0:00:44.65,Default,,0,0,0,,下一個被它拖住的人會是誰
+Dialogue: 0,0:00:44.65,0:00:46.30,Default,,0,0,0,,官網看星骸王座

@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最陰的不是偷藥路，是它開始學你怎麼救人。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 白巾婆子不只抄路紙，連北街自己立的四格都學著做了一份。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 它學得越像，越代表它想把你們自己的笨規矩拿回去用。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 晨市車底翻出一卷倒格舊布，寫的也是藥、牌、驚、門，只是次序全反了。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 對方已經開始拿北街的救命法去試，哪一戶最肯先把人情交出去。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 阿棠把那卷布直接釘上白板，只寫一句：學咱們的，也會錯。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 因為它會學牌、會學分藥，卻學不走周嬸那口罵，和病家自己按住的那隻手。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連救人的笨規矩都有人偷學，北街下一次得把什麼活法先護住？官網看星骸王座。

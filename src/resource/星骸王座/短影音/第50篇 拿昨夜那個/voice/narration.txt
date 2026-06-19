@@ -1,0 +1,8 @@
+01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 更陰的是，他們現在連你昨夜救回來的孩子，都拿來教你把命交出去。
+02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 晨市今天到處都在說：昨夜那個孩子，就是靠穩手活回來的。
+03. [shen] zh-CN-YunxiNeural +2% -3Hz 別信那句。那不是救命經驗，是拿人活命來帶路。
+04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 磨石攤、豆皮口、賣粥婦人，一個接一個把同一句送進病家耳裡。
+05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 路紙最角落只寫一句：若有人問，就說昨夜那個。
+06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街今天先不問病，先問誰拿昨夜的孩子教你。
+07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 最先被說動的，不是外人，是想幫忙的晨市小姑娘。
+08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連你活下來那一夜都能被拿去騙下一戶，這條路到底想收走誰？官網看星骸王座。

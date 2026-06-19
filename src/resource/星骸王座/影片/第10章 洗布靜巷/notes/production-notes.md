@@ -44,3 +44,16 @@ python3 scripts/build-audiobook-chapter-video.py \
 - Visual sequence matches the chapter: kitchen gray paper, washing yard measuring, public disruption, ledger theft, hidden route marks, gray cart, white shed ending hook.
 - Thumbnail and IG cover were visually checked for no clipped text, no decorative line crossing title glyphs, and no extra corner watermark.
 - Final audio is within the current soft sleep-listening target after attenuation.
+
+## Publish Log
+
+- Published on YouTube: https://youtu.be/Wzcv9EkymDE
+- YouTube public watch page verified: title visible, no private/unavailable marker.
+- YouTube Studio checks completed before publishing: Copyright `No issues found`; Community Guidelines `No issues found`.
+- YouTube thumbnail was visually verified in the publish modal / public page as the chapter 10 custom image.
+- YouTube Community post: https://www.youtube.com/post/UgkxdSqxM7iAl6KxFYjl86SENhY0VfoYpV5V
+- Threads post: https://www.threads.com/@tianshu_novel/post/DZwmvydE3i-
+- Facebook fan page post: verified at the top of https://www.facebook.com/profile.php?id=61590406722346 with YouTube preview; no permalink exposed in the current DOM.
+- Instagram post: https://www.instagram.com/tianshu_novel/p/DZwo-j3GWZu/
+- Instagram share switches for Threads and Facebook were checked before publish and both were `false`; platforms were posted independently.
+- Chrome file upload API returned `Not allowed` during IG upload, but the upload still advanced to the caption screen and published successfully. Future runs should keep the native file picker fallback ready or enable Chrome Extension local file access.
