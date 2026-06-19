@@ -219,6 +219,8 @@ def has_usable_file(path: Path) -> bool:
 
 
 def temp_path_for(path: Path) -> Path:
+    if path.suffix:
+        return path.with_name(f".{path.stem}.tmp-{os.getpid()}{path.suffix}")
     return path.with_name(f".{path.name}.tmp-{os.getpid()}")
 
 
@@ -297,28 +299,31 @@ def concat_audio(chunks: list[Path], out: Path) -> None:
         escaped = str(chunk.resolve()).replace("'", "'\\''")
         lines.append(f"file '{escaped}'")
     list_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    subprocess.run(
-        [
-            "/opt/homebrew/bin/ffmpeg",
-            "-hide_banner",
-            "-loglevel",
-            "error",
-            "-y",
-            "-f",
-            "concat",
-            "-safe",
-            "0",
-            "-i",
-            str(list_file),
-            "-c:a",
-            "libmp3lame",
-            "-b:a",
-            "48k",
-            str(out),
-        ],
-        check=True,
-        cwd=ROOT,
-    )
+    try:
+        subprocess.run(
+            [
+                "/opt/homebrew/bin/ffmpeg",
+                "-hide_banner",
+                "-loglevel",
+                "error",
+                "-y",
+                "-f",
+                "concat",
+                "-safe",
+                "0",
+                "-i",
+                str(list_file),
+                "-c:a",
+                "libmp3lame",
+                "-b:a",
+                "48k",
+                str(out),
+            ],
+            check=True,
+            cwd=ROOT,
+        )
+    finally:
+        clean_temp_path(list_file)
 
 
 def synthesize_timed_narration_chunked(
