@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T21:51:12+08:00",
+  "generatedAt": "2026-06-19T22:23:35+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -26,8 +26,8 @@
           "number": 1,
           "title": "星核在雨夜說謊",
           "path": "src/resource/星骸王座/文章/第01章 星核在雨夜說謊.txt",
-          "charCount": 6011,
-          "generatedAt": "2026-06-19T21:51:12+08:00",
+          "charCount": 6014,
+          "generatedAt": "2026-06-19T22:23:35+08:00",
           "audio": {
             "path": "src/resource/星骸王座/有聲書/第01章 星核在雨夜說謊/星骸王座-第01章-星核在雨夜說謊-Edge-YunJhe.zh-TW.m4a",
             "narrator": "雲哲",
@@ -40,7 +40,7 @@
           "title": "暗縫裡的舊雪",
           "path": "src/resource/星骸王座/文章/第02章 暗縫裡的舊雪.txt",
           "charCount": 6044,
-          "generatedAt": "2026-06-19T21:51:12+08:00",
+          "generatedAt": "2026-06-19T22:23:35+08:00",
           "audio": {
             "path": "src/resource/星骸王座/有聲書/第02章 暗縫裡的舊雪/星骸王座-第02章-暗縫裡的舊雪-Edge-YunJhe.zh-TW.m4a",
             "narrator": "雲哲",
@@ -53,7 +53,7 @@
           "title": "墓牆舊名",
           "path": "src/resource/星骸王座/文章/第03章 墓牆舊名.txt",
           "charCount": 6276,
-          "generatedAt": "2026-06-19T21:51:12+08:00",
+          "generatedAt": "2026-06-19T22:23:35+08:00",
           "audio": {
             "path": "src/resource/星骸王座/有聲書/第03章 墓牆後的舊名/星骸王座-第03章-墓牆後的舊名-Edge-YunJhe.zh-TW.m4a",
             "narrator": "雲哲",
@@ -66,329 +66,329 @@
           "title": "聽星犬",
           "path": "src/resource/星骸王座/文章/第04章 聽星犬.txt",
           "charCount": 6415,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 5,
           "title": "北牆缺燈",
           "path": "src/resource/星骸王座/文章/第05章 北牆缺燈.txt",
-          "charCount": 6073,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6074,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 6,
           "title": "灶火醒樓",
           "path": "src/resource/星骸王座/文章/第06章 灶火醒樓.txt",
           "charCount": 6010,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 7,
           "title": "翻燈問藥",
           "path": "src/resource/星骸王座/文章/第07章 翻燈問藥.txt",
           "charCount": 6058,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 8,
           "title": "藍灰木籤",
           "path": "src/resource/星骸王座/文章/第08章 藍灰木籤.txt",
           "charCount": 6000,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 9,
           "title": "後井濕鞋",
           "path": "src/resource/星骸王座/文章/第09章 後井濕鞋.txt",
           "charCount": 6099,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 10,
           "title": "洗布靜巷",
           "path": "src/resource/星骸王座/文章/第10章 洗布靜巷.txt",
           "charCount": 6134,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 11,
           "title": "灰棚錯結",
           "path": "src/resource/星骸王座/文章/第11章 灰棚錯結.txt",
           "charCount": 6142,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 12,
           "title": "東槽回認",
           "path": "src/resource/星骸王座/文章/第12章 東槽回認.txt",
           "charCount": 6112,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 13,
           "title": "活手亂槽",
           "path": "src/resource/星骸王座/文章/第13章 活手亂槽.txt",
-          "charCount": 6383,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6417,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 14,
           "title": "穩手北折",
           "path": "src/resource/星骸王座/文章/第14章 穩手北折.txt",
           "charCount": 6122,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 15,
           "title": "簍口留灰",
           "path": "src/resource/星骸王座/文章/第15章 簍口留灰.txt",
           "charCount": 6064,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 16,
           "title": "墊靜灰底",
           "path": "src/resource/星骸王座/文章/第16章 墊靜灰底.txt",
           "charCount": 6416,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 17,
           "title": "灰架記底",
           "path": "src/resource/星骸王座/文章/第17章 灰架記底.txt",
           "charCount": 6082,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 18,
           "title": "午後聽勺",
           "path": "src/resource/星骸王座/文章/第18章 午後聽勺.txt",
           "charCount": 6500,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 19,
           "title": "裂腹舊屋",
           "path": "src/resource/星骸王座/文章/第19章 裂腹舊屋.txt",
           "charCount": 6456,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 20,
           "title": "北街問炭",
           "path": "src/resource/星骸王座/文章/第20章 北街問炭.txt",
           "charCount": 6000,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 21,
           "title": "檐後喚炭",
           "path": "src/resource/星骸王座/文章/第21章 檐後喚炭.txt",
           "charCount": 6014,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 22,
           "title": "閘後細紅",
           "path": "src/resource/星骸王座/文章/第22章 閘後細紅.txt",
           "charCount": 6500,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 23,
           "title": "更北細紅",
           "path": "src/resource/星骸王座/文章/第23章 更北細紅.txt",
           "charCount": 6420,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 24,
           "title": "盤腳偏熱",
           "path": "src/resource/星骸王座/文章/第24章 盤腳偏熱.txt",
-          "charCount": 6228,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6231,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 25,
           "title": "偏肩護皮",
           "path": "src/resource/星骸王座/文章/第25章 偏肩護皮.txt",
           "charCount": 6333,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 26,
           "title": "北耳試牆",
           "path": "src/resource/星骸王座/文章/第26章 北耳試牆.txt",
           "charCount": 6007,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 27,
           "title": "老腹先暖",
           "path": "src/resource/星骸王座/文章/第27章 老腹先暖.txt",
           "charCount": 6003,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 28,
           "title": "借背紋",
           "path": "src/resource/星骸王座/文章/第28章 借背紋.txt",
-          "charCount": 6006,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6036,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 29,
           "title": "鹽箱問主",
           "path": "src/resource/星骸王座/文章/第29章 鹽箱問主.txt",
           "charCount": 6161,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 30,
           "title": "失背問主",
           "path": "src/resource/星骸王座/文章/第30章 失背問主.txt",
-          "charCount": 6001,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6042,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 31,
           "title": "回腕板",
           "path": "src/resource/星骸王座/文章/第31章 回腕板.txt",
           "charCount": 6257,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 32,
           "title": "空背來手",
           "path": "src/resource/星骸王座/文章/第32章 空背來手.txt",
-          "charCount": 6196,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6257,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 33,
           "title": "盆耳回肩",
           "path": "src/resource/星骸王座/文章/第33章 盆耳回肩.txt",
-          "charCount": 6104,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6123,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 34,
           "title": "洗盆聽肩",
           "path": "src/resource/星骸王座/文章/第34章 洗盆聽肩.txt",
           "charCount": 6034,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 35,
           "title": "落肩舊訣",
           "path": "src/resource/星骸王座/文章/第35章 落肩舊訣.txt",
           "charCount": 6269,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 36,
           "title": "分肩白路",
           "path": "src/resource/星骸王座/文章/第36章 分肩白路.txt",
           "charCount": 6128,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 37,
           "title": "井繩共肩",
           "path": "src/resource/星骸王座/文章/第37章 井繩共肩.txt",
-          "charCount": 6001,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6034,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 38,
           "title": "井槽點名",
           "path": "src/resource/星骸王座/文章/第38章 井槽點名.txt",
-          "charCount": 6075,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6093,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 39,
           "title": "先名後力",
           "path": "src/resource/星骸王座/文章/第39章 先名後力.txt",
-          "charCount": 6290,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6298,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 40,
           "title": "後肩回名",
           "path": "src/resource/星骸王座/文章/第40章 後肩回名.txt",
-          "charCount": 6126,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6133,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 41,
           "title": "後手分名",
           "path": "src/resource/星骸王座/文章/第41章 後手分名.txt",
           "charCount": 6201,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 42,
           "title": "餘手留痕",
           "path": "src/resource/星骸王座/文章/第42章 餘手留痕.txt",
           "charCount": 6498,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 43,
           "title": "翻簾留手",
           "path": "src/resource/星骸王座/文章/第43章 翻簾留手.txt",
           "charCount": 6025,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 44,
           "title": "公勺留肩",
           "path": "src/resource/星骸王座/文章/第44章 公勺留肩.txt",
           "charCount": 6013,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 45,
           "title": "義車候掌",
           "path": "src/resource/星骸王座/文章/第45章 義車候掌.txt",
           "charCount": 6060,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 46,
           "title": "暖屋候肩",
           "path": "src/resource/星骸王座/文章/第46章 暖屋候肩.txt",
           "charCount": 6135,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 47,
           "title": "白屋後門",
           "path": "src/resource/星骸王座/文章/第47章 白屋後門.txt",
           "charCount": 6093,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 48,
           "title": "白石藥手",
           "path": "src/resource/星骸王座/文章/第48章 白石藥手.txt",
-          "charCount": 6070,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6086,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 49,
           "title": "晨市穩手",
           "path": "src/resource/星骸王座/文章/第49章 晨市穩手.txt",
-          "charCount": 6077,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6100,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 50,
           "title": "白篩回句",
           "path": "src/resource/星骸王座/文章/第50章 白篩回句.txt",
           "charCount": 6185,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         }
       ],
       "tone": "深沉",
@@ -722,350 +722,350 @@
           "title": "黑點晨光",
           "path": "src/resource/灰塔觀測者/文章/第01章 黑點晨光.txt",
           "charCount": 6080,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "黑痕指層",
           "path": "src/resource/灰塔觀測者/文章/第02章 黑痕指層.txt",
           "charCount": 6183,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 3,
           "title": "負層敲窗",
           "path": "src/resource/灰塔觀測者/文章/第03章 負層敲窗.txt",
           "charCount": 6095,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 4,
           "title": "刪位值守",
           "path": "src/resource/灰塔觀測者/文章/第04章 刪位值守.txt",
           "charCount": 6153,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 5,
           "title": "換簿暗梯",
           "path": "src/resource/灰塔觀測者/文章/第05章 換簿暗梯.txt",
           "charCount": 6053,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 6,
           "title": "洗灰浮名",
           "path": "src/resource/灰塔觀測者/文章/第06章 洗灰浮名.txt",
           "charCount": 6030,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 7,
           "title": "夜記停筆",
           "path": "src/resource/灰塔觀測者/文章/第07章 夜記停筆.txt",
           "charCount": 6048,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 8,
           "title": "補鐘抹拍",
           "path": "src/resource/灰塔觀測者/文章/第08章 補鐘抹拍.txt",
           "charCount": 6035,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 9,
           "title": "油桶換輕",
           "path": "src/resource/灰塔觀測者/文章/第09章 油桶換輕.txt",
           "charCount": 6034,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 10,
           "title": "曬板半息",
           "path": "src/resource/灰塔觀測者/文章/第10章 曬板半息.txt",
           "charCount": 6297,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 11,
           "title": "頂腹繩輪",
           "path": "src/resource/灰塔觀測者/文章/第11章 頂腹繩輪.txt",
           "charCount": 6086,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 12,
           "title": "鐘後白格",
           "path": "src/resource/灰塔觀測者/文章/第12章 鐘後白格.txt",
           "charCount": 6068,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 13,
           "title": "第二格輪",
           "path": "src/resource/灰塔觀測者/文章/第13章 第二格輪.txt",
           "charCount": 6493,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 14,
           "title": "拖邊白尾",
           "path": "src/resource/灰塔觀測者/文章/第14章 拖邊白尾.txt",
           "charCount": 6043,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 15,
           "title": "借晾尾尺",
           "path": "src/resource/灰塔觀測者/文章/第15章 借晾尾尺.txt",
           "charCount": 6032,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 16,
           "title": "鐘背斷線",
           "path": "src/resource/灰塔觀測者/文章/第16章 鐘背斷線.txt",
           "charCount": 6034,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 17,
           "title": "補線灰標",
           "path": "src/resource/灰塔觀測者/文章/第17章 補線灰標.txt",
           "charCount": 6029,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 18,
           "title": "外簿白釘",
           "path": "src/resource/灰塔觀測者/文章/第18章 外簿白釘.txt",
           "charCount": 6410,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 19,
           "title": "折梯回灰",
           "path": "src/resource/灰塔觀測者/文章/第19章 折梯回灰.txt",
           "charCount": 6039,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 20,
           "title": "東簿清尾",
           "path": "src/resource/灰塔觀測者/文章/第20章 東簿清尾.txt",
           "charCount": 6047,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 21,
           "title": "晨前三尺",
           "path": "src/resource/灰塔觀測者/文章/第21章 晨前三尺.txt",
           "charCount": 6041,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 22,
           "title": "鐘前量位",
           "path": "src/resource/灰塔觀測者/文章/第22章 鐘前量位.txt",
           "charCount": 6317,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 23,
           "title": "更裡換卡",
           "path": "src/resource/灰塔觀測者/文章/第23章 更裡換卡.txt",
           "charCount": 6483,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 24,
           "title": "借牙回位",
           "path": "src/resource/灰塔觀測者/文章/第24章 借牙回位.txt",
           "charCount": 6370,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 25,
           "title": "空齒留白",
           "path": "src/resource/灰塔觀測者/文章/第25章 空齒留白.txt",
           "charCount": 6196,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 26,
           "title": "腹口借齒",
           "path": "src/resource/灰塔觀測者/文章/第26章 腹口借齒.txt",
           "charCount": 6035,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 27,
           "title": "暖腹缺聲",
           "path": "src/resource/灰塔觀測者/文章/第27章 暖腹缺聲.txt",
           "charCount": 6034,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 28,
           "title": "缺聲木舌",
           "path": "src/resource/灰塔觀測者/文章/第28章 缺聲木舌.txt",
           "charCount": 6030,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 29,
           "title": "木嘴補鳴",
           "path": "src/resource/灰塔觀測者/文章/第29章 木嘴補鳴.txt",
           "charCount": 6039,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 30,
           "title": "半聲回名",
           "path": "src/resource/灰塔觀測者/文章/第30章 半聲回名.txt",
           "charCount": 6119,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 31,
           "title": "折梯缺名",
           "path": "src/resource/灰塔觀測者/文章/第31章 折梯缺名.txt",
           "charCount": 6164,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 32,
           "title": "通梁接名",
           "path": "src/resource/灰塔觀測者/文章/第32章 通梁接名.txt",
           "charCount": 6057,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 33,
           "title": "後簿補名",
           "path": "src/resource/灰塔觀測者/文章/第33章 後簿補名.txt",
           "charCount": 6028,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 34,
           "title": "黑板哭路",
           "path": "src/resource/灰塔觀測者/文章/第34章 黑板哭路.txt",
           "charCount": 6474,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 35,
           "title": "槽粉合路",
           "path": "src/resource/灰塔觀測者/文章/第35章 槽粉合路.txt",
           "charCount": 6070,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 36,
           "title": "黑粉重合",
           "path": "src/resource/灰塔觀測者/文章/第36章 黑粉重合.txt",
           "charCount": 6072,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 37,
           "title": "黑井後合",
           "path": "src/resource/灰塔觀測者/文章/第37章 黑井後合.txt",
           "charCount": 6068,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 38,
           "title": "井底同缺",
           "path": "src/resource/灰塔觀測者/文章/第38章 井底同缺.txt",
           "charCount": 6018,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 39,
           "title": "分承夜面",
           "path": "src/resource/灰塔觀測者/文章/第39章 分承夜面.txt",
           "charCount": 6092,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 40,
           "title": "先照自己",
           "path": "src/resource/灰塔觀測者/文章/第40章 先照自己.txt",
           "charCount": 6088,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 41,
           "title": "亮縫借工",
           "path": "src/resource/灰塔觀測者/文章/第41章 亮縫借工.txt",
           "charCount": 6188,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 42,
           "title": "晨簿亮格",
           "path": "src/resource/灰塔觀測者/文章/第42章 晨簿亮格.txt",
           "charCount": 6208,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 43,
           "title": "總簿留空",
           "path": "src/resource/灰塔觀測者/文章/第43章 總簿留空.txt",
           "charCount": 6194,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 44,
           "title": "承位藍頁",
           "path": "src/resource/灰塔觀測者/文章/第44章 承位藍頁.txt",
           "charCount": 6280,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 45,
           "title": "哭路承位",
           "path": "src/resource/灰塔觀測者/文章/第45章 哭路承位.txt",
           "charCount": 6085,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 46,
           "title": "哀頁後簿",
           "path": "src/resource/灰塔觀測者/文章/第46章 哀頁後簿.txt",
           "charCount": 6108,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 47,
           "title": "續口總頁",
           "path": "src/resource/灰塔觀測者/文章/第47章 續口總頁.txt",
           "charCount": 6029,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 48,
           "title": "總口草頁",
           "path": "src/resource/灰塔觀測者/文章/第48章 總口草頁.txt",
           "charCount": 6093,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 49,
           "title": "待並物架",
           "path": "src/resource/灰塔觀測者/文章/第49章 待並物架.txt",
           "charCount": 6491,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 50,
           "title": "省眼木簽",
           "path": "src/resource/灰塔觀測者/文章/第50章 省眼木簽.txt",
           "charCount": 6033,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         }
       ],
       "tone": "深沉",
@@ -1398,350 +1398,350 @@
           "title": "雪夜刀聲",
           "path": "src/resource/雪刃照孤城/文章/第01章 雪夜刀聲.txt",
           "charCount": 6239,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "暗道藏鋒",
           "path": "src/resource/雪刃照孤城/文章/第02章 暗道藏鋒.txt",
           "charCount": 6222,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 3,
           "title": "三人學刀",
           "path": "src/resource/雪刃照孤城/文章/第03章 三人學刀.txt",
           "charCount": 6191,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 4,
           "title": "雪犬炭棚",
           "path": "src/resource/雪刃照孤城/文章/第04章 雪犬炭棚.txt",
           "charCount": 6332,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 5,
           "title": "煙道冷刀",
           "path": "src/resource/雪刃照孤城/文章/第05章 煙道冷刀.txt",
           "charCount": 6193,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 6,
           "title": "北三門牌",
           "path": "src/resource/雪刃照孤城/文章/第06章 北三門牌.txt",
           "charCount": 6144,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 7,
           "title": "借簿缺口",
           "path": "src/resource/雪刃照孤城/文章/第07章 借簿缺口.txt",
           "charCount": 6124,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 8,
           "title": "舊主刀位",
           "path": "src/resource/雪刃照孤城/文章/第08章 舊主刀位.txt",
           "charCount": 6149,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 9,
           "title": "舊燈掛矮",
           "path": "src/resource/雪刃照孤城/文章/第09章 舊燈掛矮.txt",
           "charCount": 6128,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 10,
           "title": "藥門低燈",
           "path": "src/resource/雪刃照孤城/文章/第10章 藥門低燈.txt",
           "charCount": 6446,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 11,
           "title": "北簍空匣",
           "path": "src/resource/雪刃照孤城/文章/第11章 北簍空匣.txt",
           "charCount": 6187,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 12,
           "title": "內庫記欠",
           "path": "src/resource/雪刃照孤城/文章/第12章 內庫記欠.txt",
           "charCount": 6209,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 13,
           "title": "西庫半扣",
           "path": "src/resource/雪刃照孤城/文章/第13章 西庫半扣.txt",
           "charCount": 6416,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 14,
           "title": "退扣對位",
           "path": "src/resource/雪刃照孤城/文章/第14章 退扣對位.txt",
           "charCount": 6142,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 15,
           "title": "照壁退線",
           "path": "src/resource/雪刃照孤城/文章/第15章 照壁退線.txt",
           "charCount": 6127,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 16,
           "title": "半寸影差",
           "path": "src/resource/雪刃照孤城/文章/第16章 半寸影差.txt",
           "charCount": 6153,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 17,
           "title": "守位薄尺",
           "path": "src/resource/雪刃照孤城/文章/第17章 守位薄尺.txt",
           "charCount": 6329,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 18,
           "title": "退心黑簽",
           "path": "src/resource/雪刃照孤城/文章/第18章 退心黑簽.txt",
           "charCount": 6290,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 19,
           "title": "藥檐舊簽",
           "path": "src/resource/雪刃照孤城/文章/第19章 藥檐舊簽.txt",
           "charCount": 6128,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 20,
           "title": "守暖紙",
           "path": "src/resource/雪刃照孤城/文章/第20章 守暖紙.txt",
           "charCount": 6174,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 21,
           "title": "北閘回炭",
           "path": "src/resource/雪刃照孤城/文章/第21章 北閘回炭.txt",
           "charCount": 6147,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 22,
           "title": "閘後吊紙",
           "path": "src/resource/雪刃照孤城/文章/第22章 閘後吊紙.txt",
           "charCount": 6342,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 23,
           "title": "風道位骨",
           "path": "src/resource/雪刃照孤城/文章/第23章 風道位骨.txt",
           "charCount": 6161,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 24,
           "title": "舊鞘回皮",
           "path": "src/resource/雪刃照孤城/文章/第24章 舊鞘回皮.txt",
           "charCount": 6425,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 25,
           "title": "暖牆回弧",
           "path": "src/resource/雪刃照孤城/文章/第25章 暖牆回弧.txt",
           "charCount": 6337,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 26,
           "title": "問耳窄皮",
           "path": "src/resource/雪刃照孤城/文章/第26章 問耳窄皮.txt",
           "charCount": 6158,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 27,
           "title": "櫃口先暖",
           "path": "src/resource/雪刃照孤城/文章/第27章 櫃口先暖.txt",
           "charCount": 6139,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 28,
           "title": "簧邊回力",
           "path": "src/resource/雪刃照孤城/文章/第28章 簧邊回力.txt",
           "charCount": 6403,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 29,
           "title": "鞘背收主",
           "path": "src/resource/雪刃照孤城/文章/第29章 鞘背收主.txt",
           "charCount": 6135,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 30,
           "title": "鞘背回聲",
           "path": "src/resource/雪刃照孤城/文章/第30章 鞘背回聲.txt",
           "charCount": 6084,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 31,
           "title": "匣芯回位",
           "path": "src/resource/雪刃照孤城/文章/第31章 匣芯回位.txt",
           "charCount": 6131,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 32,
           "title": "灰門送芯",
           "path": "src/resource/雪刃照孤城/文章/第32章 灰門送芯.txt",
           "charCount": 6217,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 33,
           "title": "灰牆補口",
           "path": "src/resource/雪刃照孤城/文章/第33章 灰牆補口.txt",
           "charCount": 6137,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 34,
           "title": "舊口再響",
           "path": "src/resource/雪刃照孤城/文章/第34章 舊口再響.txt",
           "charCount": 6460,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 35,
           "title": "再響封口",
           "path": "src/resource/雪刃照孤城/文章/第35章 再響封口.txt",
           "charCount": 6156,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 36,
           "title": "讓肩回刃",
           "path": "src/resource/雪刃照孤城/文章/第36章 讓肩回刃.txt",
           "charCount": 6206,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 37,
           "title": "斷門回鞘",
           "path": "src/resource/雪刃照孤城/文章/第37章 斷門回鞘.txt",
           "charCount": 6116,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 38,
           "title": "高門應刃",
           "path": "src/resource/雪刃照孤城/文章/第38章 高門應刃.txt",
           "charCount": 6179,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 39,
           "title": "避名守門",
           "path": "src/resource/雪刃照孤城/文章/第39章 避名守門.txt",
           "charCount": 6126,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 40,
           "title": "鼓後收門",
           "path": "src/resource/雪刃照孤城/文章/第40章 鼓後收門.txt",
           "charCount": 6373,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 41,
           "title": "了尾換手",
           "path": "src/resource/雪刃照孤城/文章/第41章 了尾換手.txt",
           "charCount": 6231,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 42,
           "title": "局後餘手",
           "path": "src/resource/雪刃照孤城/文章/第42章 局後餘手.txt",
           "charCount": 6121,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 43,
           "title": "鞘痕問主",
           "path": "src/resource/雪刃照孤城/文章/第43章 鞘痕問主.txt",
           "charCount": 6293,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 44,
           "title": "鞘簿留掌",
           "path": "src/resource/雪刃照孤城/文章/第44章 鞘簿留掌.txt",
           "charCount": 6222,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 45,
           "title": "病路留鞘",
           "path": "src/resource/雪刃照孤城/文章/第45章 病路留鞘.txt",
           "charCount": 6125,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 46,
           "title": "暖廊候掌",
           "path": "src/resource/雪刃照孤城/文章/第46章 暖廊候掌.txt",
           "charCount": 6138,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 47,
           "title": "白石後門",
           "path": "src/resource/雪刃照孤城/文章/第47章 白石後門.txt",
           "charCount": 6174,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 48,
           "title": "白扣藥路",
           "path": "src/resource/雪刃照孤城/文章/第48章 白扣藥路.txt",
           "charCount": 6125,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 49,
           "title": "巷底分肩",
           "path": "src/resource/雪刃照孤城/文章/第49章 巷底分肩.txt",
           "charCount": 6147,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 50,
           "title": "青灰肩線",
           "path": "src/resource/雪刃照孤城/文章/第50章 青灰肩線.txt",
           "charCount": 6222,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         }
       ],
       "tone": "深沉",
@@ -2074,350 +2074,350 @@
           "title": "三點死訊",
           "path": "src/resource/凌晨三點的演算法/文章/第01章 三點死訊.txt",
           "charCount": 6063,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "權重指紋",
           "path": "src/resource/凌晨三點的演算法/文章/第02章 權重指紋.txt",
           "charCount": 6111,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 3,
           "title": "死訊確認",
           "path": "src/resource/凌晨三點的演算法/文章/第03章 死訊確認.txt",
           "charCount": 6230,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 4,
           "title": "舊機連網",
           "path": "src/resource/凌晨三點的演算法/文章/第04章 舊機連網.txt",
           "charCount": 6079,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 5,
           "title": "父案模板",
           "path": "src/resource/凌晨三點的演算法/文章/第05章 父案模板.txt",
           "charCount": 6005,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 6,
           "title": "夜巡端亮",
           "path": "src/resource/凌晨三點的演算法/文章/第06章 夜巡端亮.txt",
           "charCount": 6040,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 7,
           "title": "垃圾門醒",
           "path": "src/resource/凌晨三點的演算法/文章/第07章 垃圾門醒.txt",
           "charCount": 6060,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 8,
           "title": "先巡嫌鬧",
           "path": "src/resource/凌晨三點的演算法/文章/第08章 先巡嫌鬧.txt",
           "charCount": 6105,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 9,
           "title": "寄櫃待取",
           "path": "src/resource/凌晨三點的演算法/文章/第09章 寄櫃待取.txt",
           "charCount": 6076,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 10,
           "title": "退件架醒",
           "path": "src/resource/凌晨三點的演算法/文章/第10章 退件架醒.txt",
           "charCount": 6268,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 11,
           "title": "回收箱醒",
           "path": "src/resource/凌晨三點的演算法/文章/第11章 回收箱醒.txt",
           "charCount": 6079,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 12,
           "title": "市檔醒口",
           "path": "src/resource/凌晨三點的演算法/文章/第12章 市檔醒口.txt",
           "charCount": 6068,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 13,
           "title": "暫口留單",
           "path": "src/resource/凌晨三點的演算法/文章/第13章 暫口留單.txt",
           "charCount": 6244,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 14,
           "title": "坡道備轉",
           "path": "src/resource/凌晨三點的演算法/文章/第14章 坡道備轉.txt",
           "charCount": 6023,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 15,
           "title": "貨梯補簽",
           "path": "src/resource/凌晨三點的演算法/文章/第15章 貨梯補簽.txt",
           "charCount": 6008,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 16,
           "title": "東口白臉",
           "path": "src/resource/凌晨三點的演算法/文章/第16章 東口白臉.txt",
           "charCount": 6067,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 17,
           "title": "館配薄套",
           "path": "src/resource/凌晨三點的演算法/文章/第17章 館配薄套.txt",
           "charCount": 6395,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 18,
           "title": "熱封頁心",
           "path": "src/resource/凌晨三點的演算法/文章/第18章 熱封頁心.txt",
           "charCount": 6286,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 19,
           "title": "三室停架",
           "path": "src/resource/凌晨三點的演算法/文章/第19章 三室停架.txt",
           "charCount": 6093,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 20,
           "title": "兩點白燈",
           "path": "src/resource/凌晨三點的演算法/文章/第20章 兩點白燈.txt",
           "charCount": 6082,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 21,
           "title": "白盒對時",
           "path": "src/resource/凌晨三點的演算法/文章/第21章 白盒對時.txt",
           "charCount": 6054,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 22,
           "title": "座牌抽位",
           "path": "src/resource/凌晨三點的演算法/文章/第22章 座牌抽位.txt",
           "charCount": 6419,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 23,
           "title": "二五三交接",
           "path": "src/resource/凌晨三點的演算法/文章/第23章 二五三交接.txt",
           "charCount": 6040,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 24,
           "title": "失櫃白槽",
           "path": "src/resource/凌晨三點的演算法/文章/第24章 失櫃白槽.txt",
           "charCount": 6098,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 25,
           "title": "零一回簽",
           "path": "src/resource/凌晨三點的演算法/文章/第25章 零一回簽.txt",
           "charCount": 6072,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 26,
           "title": "下鎖回車",
           "path": "src/resource/凌晨三點的演算法/文章/第26章 下鎖回車.txt",
           "charCount": 6027,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 27,
           "title": "灰簾下槽",
           "path": "src/resource/凌晨三點的演算法/文章/第27章 灰簾下槽.txt",
           "charCount": 6024,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 28,
           "title": "籠下家套",
           "path": "src/resource/凌晨三點的演算法/文章/第28章 籠下家套.txt",
           "charCount": 6057,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 29,
           "title": "家套回彈",
           "path": "src/resource/凌晨三點的演算法/文章/第29章 家套回彈.txt",
           "charCount": 6007,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 30,
           "title": "前燈守頁",
           "path": "src/resource/凌晨三點的演算法/文章/第30章 前燈守頁.txt",
           "charCount": 6324,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 31,
           "title": "頁數差",
           "path": "src/resource/凌晨三點的演算法/文章/第31章 頁數差.txt",
           "charCount": 6073,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 32,
           "title": "右燈吃頁",
           "path": "src/resource/凌晨三點的演算法/文章/第32章 右燈吃頁.txt",
           "charCount": 6073,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 33,
           "title": "側窗借位",
           "path": "src/resource/凌晨三點的演算法/文章/第33章 側窗借位.txt",
           "charCount": 6079,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 34,
           "title": "在場改欄",
           "path": "src/resource/凌晨三點的演算法/文章/第34章 在場改欄.txt",
           "charCount": 6067,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 35,
           "title": "樓上補欄",
           "path": "src/resource/凌晨三點的演算法/文章/第35章 樓上補欄.txt",
           "charCount": 6049,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 36,
           "title": "放人白單",
           "path": "src/resource/凌晨三點的演算法/文章/第36章 放人白單.txt",
           "charCount": 6079,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 37,
           "title": "高門白證",
           "path": "src/resource/凌晨三點的演算法/文章/第37章 高門白證.txt",
           "charCount": 6079,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 38,
           "title": "灰印回執",
           "path": "src/resource/凌晨三點的演算法/文章/第38章 灰印回執.txt",
           "charCount": 6028,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 39,
           "title": "號牌守位",
           "path": "src/resource/凌晨三點的演算法/文章/第39章 號牌守位.txt",
           "charCount": 6042,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 40,
           "title": "先看誰喊",
           "path": "src/resource/凌晨三點的演算法/文章/第40章 先看誰喊.txt",
           "charCount": 6382,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 41,
           "title": "旁席代應",
           "path": "src/resource/凌晨三點的演算法/文章/第41章 旁席代應.txt",
           "charCount": 6171,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 42,
           "title": "代答入列",
           "path": "src/resource/凌晨三點的演算法/文章/第42章 代答入列.txt",
           "charCount": 6059,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 43,
           "title": "同列簽收",
           "path": "src/resource/凌晨三點的演算法/文章/第43章 同列簽收.txt",
           "charCount": 6101,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 44,
           "title": "列碼共證",
           "path": "src/resource/凌晨三點的演算法/文章/第44章 列碼共證.txt",
           "charCount": 6038,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 45,
           "title": "代筆白欄",
           "path": "src/resource/凌晨三點的演算法/文章/第45章 代筆白欄.txt",
           "charCount": 6083,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 46,
           "title": "三樓影手",
           "path": "src/resource/凌晨三點的演算法/文章/第46章 三樓影手.txt",
           "charCount": 6100,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 47,
           "title": "夜班影手",
           "path": "src/resource/凌晨三點的演算法/文章/第47章 夜班影手.txt",
           "charCount": 6016,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 48,
           "title": "陪走學線",
           "path": "src/resource/凌晨三點的演算法/文章/第48章 陪走學線.txt",
           "charCount": 6074,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 49,
           "title": "場景貼紙",
           "path": "src/resource/凌晨三點的演算法/文章/第49章 場景貼紙.txt",
           "charCount": 6039,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 50,
           "title": "回頭接手",
           "path": "src/resource/凌晨三點的演算法/文章/第50章 回頭接手.txt",
           "charCount": 6232,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         }
       ],
       "tone": "深沉",
@@ -2750,350 +2750,350 @@
           "title": "墨線鬼河",
           "path": "src/resource/大明墨工/文章/第01章 墨線鬼河.txt",
           "charCount": 6398,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "真地墨痕",
           "path": "src/resource/大明墨工/文章/第02章 真地墨痕.txt",
           "charCount": 6279,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 3,
           "title": "第三條河",
           "path": "src/resource/大明墨工/文章/第03章 第三條河.txt",
           "charCount": 6327,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 4,
           "title": "灶火河意",
           "path": "src/resource/大明墨工/文章/第04章 灶火河意.txt",
           "charCount": 6057,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 5,
           "title": "木匣驗河",
           "path": "src/resource/大明墨工/文章/第05章 木匣驗河.txt",
           "charCount": 6166,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 6,
           "title": "先對井",
           "path": "src/resource/大明墨工/文章/第06章 先對井.txt",
           "charCount": 6348,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 7,
           "title": "看井掉鉤",
           "path": "src/resource/大明墨工/文章/第07章 看井掉鉤.txt",
           "charCount": 6089,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 8,
           "title": "問鉤火鋪",
           "path": "src/resource/大明墨工/文章/第08章 問鉤火鋪.txt",
           "charCount": 6145,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 9,
           "title": "小件避井",
           "path": "src/resource/大明墨工/文章/第09章 小件避井.txt",
           "charCount": 6147,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 10,
           "title": "長槽試重",
           "path": "src/resource/大明墨工/文章/第10章 長槽試重.txt",
           "charCount": 6463,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 11,
           "title": "二風偏秤",
           "path": "src/resource/大明墨工/文章/第11章 二風偏秤.txt",
           "charCount": 6260,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 12,
           "title": "後簿借名",
           "path": "src/resource/大明墨工/文章/第12章 後簿借名.txt",
           "charCount": 6243,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 13,
           "title": "西庫押名",
           "path": "src/resource/大明墨工/文章/第13章 西庫押名.txt",
           "charCount": 6413,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 14,
           "title": "南匠白牌",
           "path": "src/resource/大明墨工/文章/第14章 南匠白牌.txt",
           "charCount": 6174,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 15,
           "title": "南口試榫",
           "path": "src/resource/大明墨工/文章/第15章 南口試榫.txt",
           "charCount": 6269,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 16,
           "title": "小口藏心",
           "path": "src/resource/大明墨工/文章/第16章 小口藏心.txt",
           "charCount": 6482,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 17,
           "title": "摸邊手",
           "path": "src/resource/大明墨工/文章/第17章 摸邊手.txt",
           "charCount": 6493,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 18,
           "title": "封邊紙",
           "path": "src/resource/大明墨工/文章/第18章 封邊紙.txt",
           "charCount": 6435,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 19,
           "title": "晚算灰紙",
           "path": "src/resource/大明墨工/文章/第19章 晚算灰紙.txt",
           "charCount": 6078,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 20,
           "title": "板後窄腹",
           "path": "src/resource/大明墨工/文章/第20章 板後窄腹.txt",
           "charCount": 6110,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 21,
           "title": "二響來手",
           "path": "src/resource/大明墨工/文章/第21章 二響來手.txt",
           "charCount": 6186,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 22,
           "title": "河坡冷板",
           "path": "src/resource/大明墨工/文章/第22章 河坡冷板.txt",
           "charCount": 6498,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 23,
           "title": "冷白照腳",
           "path": "src/resource/大明墨工/文章/第23章 冷白照腳.txt",
           "charCount": 6434,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 24,
           "title": "沉樁冷白",
           "path": "src/resource/大明墨工/文章/第24章 沉樁冷白.txt",
           "charCount": 6414,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 25,
           "title": "第二陰問肩",
           "path": "src/resource/大明墨工/文章/第25章 第二陰問肩.txt",
           "charCount": 6111,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 26,
           "title": "暖腹老箱",
           "path": "src/resource/大明墨工/文章/第26章 暖腹老箱.txt",
           "charCount": 6046,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 27,
           "title": "老腹問榫",
           "path": "src/resource/大明墨工/文章/第27章 老腹問榫.txt",
           "charCount": 6080,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 28,
           "title": "木舌回聲",
           "path": "src/resource/大明墨工/文章/第28章 木舌回聲.txt",
           "charCount": 6146,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 29,
           "title": "短聲問主",
           "path": "src/resource/大明墨工/文章/第29章 短聲問主.txt",
           "charCount": 6046,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 30,
           "title": "回腕試主",
           "path": "src/resource/大明墨工/文章/第30章 回腕試主.txt",
           "charCount": 6348,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 31,
           "title": "潮前試手",
           "path": "src/resource/大明墨工/文章/第31章 潮前試手.txt",
           "charCount": 6142,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 32,
           "title": "回潮模手",
           "path": "src/resource/大明墨工/文章/第32章 回潮模手.txt",
           "charCount": 6294,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 33,
           "title": "女尺照尾",
           "path": "src/resource/大明墨工/文章/第33章 女尺照尾.txt",
           "charCount": 6196,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 34,
           "title": "淨尺再亮",
           "path": "src/resource/大明墨工/文章/第34章 淨尺再亮.txt",
           "charCount": 6178,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 35,
           "title": "雙尺定弧",
           "path": "src/resource/大明墨工/文章/第35章 雙尺定弧.txt",
           "charCount": 6215,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 36,
           "title": "府線對弧",
           "path": "src/resource/大明墨工/文章/第36章 府線對弧.txt",
           "charCount": 6333,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 37,
           "title": "官匣定名",
           "path": "src/resource/大明墨工/文章/第37章 官匣定名.txt",
           "charCount": 6347,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 38,
           "title": "插位試名",
           "path": "src/resource/大明墨工/文章/第38章 插位試名.txt",
           "charCount": 6071,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 39,
           "title": "先作後正",
           "path": "src/resource/大明墨工/文章/第39章 先作後正.txt",
           "charCount": 6066,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 40,
           "title": "定前再驗",
           "path": "src/resource/大明墨工/文章/第40章 定前再驗.txt",
           "charCount": 6081,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 41,
           "title": "代作掛牌",
           "path": "src/resource/大明墨工/文章/第41章 代作掛牌.txt",
           "charCount": 6271,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 42,
           "title": "料單照手",
           "path": "src/resource/大明墨工/文章/第42章 料單照手.txt",
           "charCount": 6021,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 43,
           "title": "膠氣問手",
           "path": "src/resource/大明墨工/文章/第43章 膠氣問手.txt",
           "charCount": 6290,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 44,
           "title": "掌簿留工",
           "path": "src/resource/大明墨工/文章/第44章 掌簿留工.txt",
           "charCount": 6082,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 45,
           "title": "官牌問掌",
           "path": "src/resource/大明墨工/文章/第45章 官牌問掌.txt",
           "charCount": 6245,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 46,
           "title": "匣房拆行",
           "path": "src/resource/大明墨工/文章/第46章 匣房拆行.txt",
           "charCount": 6210,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 47,
           "title": "甲匣整牌",
           "path": "src/resource/大明墨工/文章/第47章 甲匣整牌.txt",
           "charCount": 6113,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 48,
           "title": "骨點留名",
           "path": "src/resource/大明墨工/文章/第48章 骨點留名.txt",
           "charCount": 6464,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 49,
           "title": "六骨誰見",
           "path": "src/resource/大明墨工/文章/第49章 六骨誰見.txt",
           "charCount": 6498,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 50,
           "title": "見者上簽",
           "path": "src/resource/大明墨工/文章/第50章 見者上簽.txt",
-          "charCount": 6478,
-          "generatedAt": "2026-06-19T21:51:12+08:00"
+          "charCount": 6427,
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         }
       ],
       "tone": "深沉",
