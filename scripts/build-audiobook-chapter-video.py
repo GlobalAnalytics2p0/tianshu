@@ -30,7 +30,10 @@ RAIN_FINE_VOLUME = 0.020
 RAIN_LOW_VOLUME = 0.010
 FINAL_MIX_VOLUME = 0.84
 CLOSING_PUNCTUATION = "，、。：；！？）」』》】"
-EDGE_TTS_RETRY_ATTEMPTS = 4
+EDGE_TTS_RETRY_ATTEMPTS = 2
+EDGE_TTS_TIMEOUT_SECONDS = 90
+FFMPEG_AUDIO_TIMEOUT_SECONDS = 180
+FFMPEG_VIDEO_TIMEOUT_SECONDS = 900
 
 
 def assert_edge_tts_dns_available() -> None:
@@ -43,8 +46,8 @@ def assert_edge_tts_dns_available() -> None:
         ) from error
 
 
-def run(args: list[str], capture: bool = False) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(args, check=True, cwd=ROOT, text=True, capture_output=capture)
+def run(args: list[str], capture: bool = False, timeout: float | None = None) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(args, check=True, cwd=ROOT, text=True, capture_output=capture, timeout=timeout)
 
 
 def run_edge_tts_with_retries(
@@ -53,14 +56,14 @@ def run_edge_tts_with_retries(
     subtitles: Path,
     label: str,
 ) -> None:
-    last_error: subprocess.CalledProcessError | None = None
+    last_error: subprocess.CalledProcessError | subprocess.TimeoutExpired | None = None
     for attempt in range(1, EDGE_TTS_RETRY_ATTEMPTS + 1):
         for partial in (media, subtitles):
             if partial.exists():
                 partial.unlink()
         try:
-            run(args)
-        except subprocess.CalledProcessError as error:
+            run(args, timeout=EDGE_TTS_TIMEOUT_SECONDS)
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as error:
             last_error = error
         if has_usable_file(media) and has_usable_file(subtitles):
             return
@@ -321,6 +324,7 @@ def concat_audio(chunks: list[Path], out: Path) -> None:
             ],
             check=True,
             cwd=ROOT,
+            timeout=FFMPEG_AUDIO_TIMEOUT_SECONDS,
         )
     finally:
         clean_temp_path(list_file)
@@ -699,7 +703,45 @@ def build_video(stills: list[Path], srt: Path, narration: Path, output: Path, du
         "+faststart",
         str(output),
     ]
-    subprocess.run(cmd, check=True, cwd=ROOT)
+    subprocess.run(cmd, check=True, cwd=ROOT, timeout=FFMPEG_VIDEO_TIMEOUT_SECONDS)
+
+
+def audiobook_output_path(novel: str, chapter_title: str) -> Path:
+    chapter_dir = ROOT / "src/resource" / novel / "有聲書" / chapter_title
+    filename = f"{novel}-{chapter_title.replace(' ', '-')}-Edge-YunJhe.zh-TW.m4a"
+    return chapter_dir / filename
+
+
+def export_standalone_audiobook(narration: Path, out: Path) -> None:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    temp_out = temp_path_for(out)
+    clean_temp_path(temp_out)
+    try:
+        subprocess.run(
+            [
+                "/opt/homebrew/bin/ffmpeg",
+                "-hide_banner",
+                "-loglevel",
+                "error",
+                "-y",
+                "-i",
+                str(narration),
+                "-vn",
+                "-c:a",
+                "aac",
+                "-b:a",
+                "128k",
+                "-movflags",
+                "+faststart",
+                str(temp_out),
+            ],
+            check=True,
+            cwd=ROOT,
+            timeout=FFMPEG_AUDIO_TIMEOUT_SECONDS,
+        )
+        replace_file_after_success(temp_out, out)
+    finally:
+        clean_temp_path(temp_out)
 
 
 def normalize_script_text(value: str) -> str:
@@ -783,6 +825,10 @@ def main() -> None:
         raise ValueError("--slide-count must be at least 1")
     stills = build_stills(args.novel, args.chapter_title, source_dir, slide_count, args.regenerate_stills)
     build_grouped_srt(vtt, subtitle_file, duration)
+    standalone_audiobook = None
+    if args.preview_seconds is None and label == "字幕有聲書":
+        standalone_audiobook = audiobook_output_path(args.novel, args.chapter_title)
+        export_standalone_audiobook(narration, standalone_audiobook)
     build_video(stills, subtitle_file, narration, output, duration)
 
     slide_duration = duration / len(stills)
@@ -791,6 +837,8 @@ def main() -> None:
     print(f"slides={len(stills)}")
     print(f"slide_duration={slide_duration:.3f}")
     print(f"subtitles={subtitle_file}")
+    if standalone_audiobook:
+        print(f"audiobook={standalone_audiobook}")
 
 
 if __name__ == "__main__":
