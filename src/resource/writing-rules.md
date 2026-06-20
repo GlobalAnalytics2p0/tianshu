@@ -43,6 +43,7 @@
 - The full library can stay online, but routine maintenance is currently limited to 5 category leaders only: `星骸王座`, `灰塔觀測者`, `雪刃照孤城`, `凌晨三點的演算法`, and `大明墨工`.
 - Unless the user explicitly changes scope, six-hour scheduled work should update only the novel text and manifest metadata for those 5 titles. The other 35 titles remain frozen in `src/resource/backup/`.
 - Video planning, audiobook planning, and non-novel asset work are out of the default six-hour update path unless the user explicitly asks for them.
+- When the user explicitly requests media production, long-form video depends on audiobook completion. For each chapter, first create or verify the standalone audiobook under `src/resource/<novel title>/有聲書/<chapter title>/` from the current canonical `.txt`; only then render or replace the matching video. If the standalone audiobook is missing, stale, or generated from different text, the video task is incomplete even if an MP4 exists.
 
 ## Automation Cadence
 
@@ -90,6 +91,9 @@
 
 - Vary tone by book and genre. Some serials can be deep, restrained, and oppressive; others can be爽文, direct, clever, and momentum-driven.
 - Prose should feel human: less template rhythm, fewer repeated sentence structures, clearer cause and effect, more intuitive transitions.
+- Audiobook readability is now a hard prose gate, not a media-stage afterthought. Before a chapter can enter audiobook or video production, read it as spoken Traditional Chinese and fix incomplete or unnatural phrases such as missing noun endings, clipped collocations, rare words that block first-pass listening, and sentences that sound like fragments rather than lived speech.
+- Do not confuse compression with depth. Shortened phrases must still be idiomatic and complete when heard aloud; if a listener would ask "聞到什麼味?" or lose the object of a sentence, revise to the natural spoken form.
+- For every revision pass, perform a plain-language oral check: one sentence should usually identify who acts, what changes, and why the sensory or emotional detail matters. Fragments are allowed only for deliberate emphasis, never as the default texture.
 - AI assistance may provide speed, alternate plot routes, names, and research scaffolding, but final prose must be governed by author persona and human emotional judgment. Never let production speed flatten voice, character contradiction, or scene texture.
 - Use AI internally for productivity, brainstorming branches, naming, and fact scaffolding only. Public-facing site, chapter, and promotion surfaces should foreground `天書原創` and author persona rather than the AI workflow itself.
 - If stuck, generate alternatives only as private scaffolding. Choose the route that best preserves continuity, forces a character cost, touches ordinary life, and protects long-arc mystery; do not choose the route merely because it is the newest or loudest.
@@ -179,13 +183,18 @@
   - The final three lines contain a concrete next-chapter pull: a person, object, place, time, threat, reversal, or unresolved line of dialogue that readers can remember.
   - The chapter passes the rule-change test: the new idea changes a routine, a class relation, a work process, or a value judgment beyond the protagonist alone.
   - The chapter passes the precision test: important emotion is carried by concrete detail and action, not adjective stacking.
+  - The chapter passes the spoken-flow test: no obvious clipped phrases, missing objects, unfinished collocations, awkward literary compression, or rare wording that makes audiobook listening harder than silent reading.
+  - The chapter passes the addiction-pull test from a relaxed serial reader's view: one clear pressure, one scene-level pleasure, one emotional cut, one partial win or reversal, and one concrete next reason to continue.
+  - The chapter's local rhythm supports small, medium, and large climax layering: small reader rewards may happen within a chapter, medium reversals should accumulate across several chapters, and major arc peaks must be prepared over long spans rather than forced by constant emergency.
   - The chapter passes the five-author test: its rhythm and pressure cannot be mistaken for another active title.
   - The chapter does not exhaust the novel's long-term runway and leaves future arc space consistent with a 1,500+ chapter serial.
   - `每日寫作狀態.md` and `伏筆事件台帳.md` are updated when the chapter changes continuity, clues, relationships, debts, injuries, secrets, or next-event direction.
   - `反思.md` has been consulted before writing and updated after every successful new chapter with the paired reader's latest durable criticism, praise-with-condition, or direct corrective suggestion.
   - If the writing pass revealed a reusable lesson, it has been recorded in the right durable file instead of being left implicit.
-  - For automation publishes, `node scripts/verify-site-publication.mjs` passes after push. If it does not pass, the run may be locally complete or pushed, but it must not be described as live on the website.
+- For automation publishes, `node scripts/verify-site-publication.mjs` passes after push. If it does not pass, the run may be locally complete or pushed, but it must not be described as live on the website.
   - For automation publish reporting, include explicit evidence for `HEAD`, `origin/main`, `ahead/behind`, and whether any remaining dirty paths are unrelated to the published batch. Never compress these into a vague "有推上去/沒推上去" judgment.
+  - For media production requests, verify `文章/`, `有聲書/`, and `影片/` coverage separately. A chapter must not be reported as fully media-ready unless the canonical article, standalone audiobook, video narration source, subtitle file, and MP4 all exist and are generated from the same chapter text.
+  - For audiobook/video production, do not begin or continue media generation if the canonical text has not passed the spoken-flow test. Fix the prose first, then regenerate audiobook, subtitles, and video from the corrected `.txt`.
 
 ## Active-Series Quality Audit
 
