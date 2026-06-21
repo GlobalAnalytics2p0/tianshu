@@ -57,7 +57,7 @@ const coverPalettes = [
 
 const resourceManifestPath = "src/resource/manifest.json";
 const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
-const youtubeShareText = "來看天書小說：每日 00/06/12/18 原創連載、爆款小說、有聲短劇";
+const youtubeShareText = "來看天書小說：每日 00/06/12/18 原創連載、爆款小說與 YouTube 說書影片";
 const activeRankingTitles = [
   "星骸王座",
   "灰塔觀測者",
@@ -67,17 +67,27 @@ const activeRankingTitles = [
 ];
 const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
 const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
+const readingProgressStorageKey = "tianshu-reading-progress-v1";
+const readerSettingsStorageKey = "tianshu-reader-settings-v1";
 const manifestPollIntervalMs = 60000;
+const defaultReaderSettings = {
+  size: "medium",
+  line: "relaxed",
+  width: "standard"
+};
 
 let allBooks = [];
 
 let currentRankTab = "recommended";
 let currentModalBook = null;
 let currentChapterIndex = 0;
+let pendingReaderRestore = null;
+let readerProgressSaveTimer = null;
 let toastTimer = null;
 let currentManifestSignature = "";
 let manifestPollTimer = null;
 let manifestPollInFlight = false;
+let readerSettings = loadReaderSettings();
 const resourceAvailabilityCache = new Map();
 
 function buildShareUrls() {
@@ -108,6 +118,52 @@ function latestChapterLabel(book) {
   const latestChapter = book.chapters?.at(-1);
   if (!latestChapter) return "最新章節待同步";
   return `更新至 第${String(latestChapter.number).padStart(2, "0")}章`;
+}
+
+function safeReadJson(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function safeWriteJson(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    // Private browsing or strict storage settings can reject writes.
+  }
+}
+
+function loadReaderSettings() {
+  return {
+    ...defaultReaderSettings,
+    ...safeReadJson(readerSettingsStorageKey, {})
+  };
+}
+
+function saveReaderSettings() {
+  safeWriteJson(readerSettingsStorageKey, readerSettings);
+}
+
+function getReadingProgressMap() {
+  return safeReadJson(readingProgressStorageKey, {});
+}
+
+function getReadingProgress(bookId) {
+  return getReadingProgressMap()[bookId] || null;
+}
+
+function saveReadingProgress(bookId, progress) {
+  const map = getReadingProgressMap();
+  map[bookId] = {
+    ...map[bookId],
+    ...progress,
+    updatedAt: new Date().toISOString()
+  };
+  safeWriteJson(readingProgressStorageKey, map);
 }
 
 function chapterNavButton(direction, chapter, disabled) {
@@ -206,9 +262,7 @@ async function loadLibrary() {
       ...chapter,
       displayTitle: chapterDisplayTitle(chapter),
       content: "",
-      contentState: "idle",
-      audioState: chapter.audio?.path ? "idle" : "none",
-      audioAvailable: false
+      contentState: "idle"
     }));
 
     return {
@@ -387,7 +441,10 @@ function openBook(bookId) {
   }
 
   currentModalBook = book;
-  currentChapterIndex = 0;
+  const saved = getReadingProgress(book.id);
+  const lastIndex = Math.max(book.chapters.length - 1, 0);
+  currentChapterIndex = Number.isInteger(saved?.chapterIndex) ? Math.min(Math.max(saved.chapterIndex, 0), lastIndex) : 0;
+  pendingReaderRestore = saved?.chapterIndex === currentChapterIndex ? saved.readerRatio || 0 : null;
   renderModal();
 
   const modal = document.getElementById("bookModal");
@@ -400,6 +457,11 @@ function setModalChapterIndex(index, shouldScroll = true) {
   if (!currentModalBook) return;
   const lastIndex = Math.max(currentModalBook.chapters.length - 1, 0);
   currentChapterIndex = Math.min(Math.max(index, 0), lastIndex);
+  pendingReaderRestore = null;
+  saveReadingProgress(currentModalBook.id, {
+    chapterIndex: currentChapterIndex,
+    readerRatio: 0
+  });
   renderModal();
 
   if (shouldScroll) {
@@ -412,8 +474,14 @@ function setModalChapterIndex(index, shouldScroll = true) {
 function renderLoadingBlock(message = "章節文字載入中") {
   return `
     <div class="reader-loading" role="status" aria-live="polite">
-      <span class="loading-spinner" aria-hidden="true"></span>
-      <span>${escapeHtml(message)}</span>
+      <span class="reader-loading__topline">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <span>${escapeHtml(message)}</span>
+      </span>
+      <span class="reader-loading__hint">章節標題與導覽已可操作，正文載入完成後會直接接上。</span>
+      <span class="reader-skeleton" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
     </div>
   `;
 }
@@ -429,59 +497,15 @@ function renderChapterText(chapter) {
       </div>
     `;
   }
-  return renderLoadingBlock("正在載入章節內容");
-}
-
-function renderChapterAudio(chapter) {
-  if (!chapter?.audio?.path || chapter.audioState === "missing") return "";
-  if (chapter.audioState !== "available") {
-    return `
-      <div class="chapter-audio chapter-audio--checking" data-audio-panel>
-        <span class="chapter-audio__icon"><span class="loading-spinner" aria-hidden="true"></span></span>
-        <span>
-          <strong>有聲書確認中</strong>
-          <small>如果本章音檔已部署，播放器會自動出現。</small>
-        </span>
-      </div>
-    `;
-  }
-
-  const audio = chapter.audio;
-  return `
-    <div class="chapter-audio" data-audio-panel>
-      <div class="chapter-audio__header">
-        <span class="chapter-audio__icon"><span class="icon" data-icon="play"></span></span>
-        <span>
-          <strong>播放有聲書</strong>
-          <small>${escapeHtml(audio.narrator || "天書小說")} · ${escapeHtml(audio.format || "M4A")}</small>
-        </span>
-      </div>
-      <audio controls preload="none" src="${escapeHtml(resourceUrl(audio.path, audio.generatedAt || chapter.generatedAt || currentManifestSignature))}"></audio>
-    </div>
-  `;
+  return renderLoadingBlock(`正在載入 ${chapter.displayTitle}`);
 }
 
 function updateReaderPane(book, index) {
   if (!currentModalBook || currentModalBook.id !== book.id || currentChapterIndex !== index) return;
   const chapter = book.chapters[index];
   const readerText = document.querySelector("[data-reader-text]");
-  const audioSlot = document.querySelector("[data-audio-slot]");
   if (readerText) readerText.innerHTML = renderChapterText(chapter);
-  if (audioSlot) {
-    audioSlot.innerHTML = renderChapterAudio(chapter);
-    hydrateIcons(audioSlot);
-  }
-}
-
-async function ensureChapterAudioAvailability(book, index) {
-  const chapter = book.chapters[index];
-  if (!chapter?.audio?.path || chapter.audioState === "available" || chapter.audioState === "missing") return;
-  chapter.audioState = "checking";
-  updateReaderPane(book, index);
-  const exists = await resourceExists(chapter.audio.path, chapter.audio.generatedAt || chapter.generatedAt || currentManifestSignature);
-  chapter.audioAvailable = exists;
-  chapter.audioState = exists ? "available" : "missing";
-  updateReaderPane(book, index);
+  updateReaderProgress();
 }
 
 async function ensureChapterContent(book, index, { silent = false } = {}) {
@@ -518,6 +542,125 @@ function warmNearbyChapters(book, index) {
   });
 }
 
+function renderReaderSettings() {
+  const options = {
+    size: [
+      ["small", "小字"],
+      ["medium", "中字"],
+      ["large", "大字"]
+    ],
+    line: [
+      ["compact", "緊湊"],
+      ["relaxed", "舒適"],
+      ["wide", "寬行"]
+    ],
+    width: [
+      ["standard", "標準"],
+      ["narrow", "窄版"],
+      ["wide", "寬版"]
+    ]
+  };
+
+  const control = (key, label) => `
+    <label>
+      <span>${label}</span>
+      <select data-reader-setting="${key}">
+        ${options[key].map(([value, text]) => `
+          <option value="${value}" ${readerSettings[key] === value ? "selected" : ""}>${text}</option>
+        `).join("")}
+      </select>
+    </label>
+  `;
+
+  return `
+    <div class="reader-toolbar">
+      <div class="reader-settings" aria-label="閱讀設定">
+        ${control("size", "字級")}
+        ${control("line", "行距")}
+        ${control("width", "版寬")}
+      </div>
+    </div>
+  `;
+}
+
+function renderReaderProgress() {
+  return `
+    <div class="reader-progress" aria-label="本章閱讀進度">
+      <span>進度</span>
+      <strong data-reader-progress-label>0%</strong>
+      <i><b data-reader-progress-bar></b></i>
+    </div>
+  `;
+}
+
+function readerPaneClass() {
+  return [
+    "reader-pane",
+    `reader-pane--size-${readerSettings.size}`,
+    `reader-pane--line-${readerSettings.line}`,
+    `reader-pane--width-${readerSettings.width}`
+  ].join(" ");
+}
+
+function calculateReaderRatio() {
+  const layout = document.querySelector(".modal-layout");
+  const reader = document.querySelector("[data-reader-text]");
+  if (!layout || !reader) return 0;
+
+  const readerTop = reader.getBoundingClientRect().top - layout.getBoundingClientRect().top + layout.scrollTop;
+  const start = Math.max(readerTop - 72, 0);
+  const end = Math.max(readerTop + reader.scrollHeight - layout.clientHeight + 96, start + 1);
+  return Math.min(Math.max((layout.scrollTop - start) / (end - start), 0), 1);
+}
+
+function updateReaderProgress() {
+  const ratio = calculateReaderRatio();
+  const percent = Math.round(ratio * 100);
+  const bars = document.querySelectorAll("[data-reader-progress-bar]");
+  const label = document.querySelector("[data-reader-progress-label]");
+  bars.forEach((bar) => {
+    bar.style.width = `${percent}%`;
+    bar.style.height = `${percent}%`;
+  });
+  if (label) label.textContent = `${percent}%`;
+}
+
+function queueReadingProgressSave() {
+  window.clearTimeout(readerProgressSaveTimer);
+  readerProgressSaveTimer = window.setTimeout(() => {
+    if (!currentModalBook) return;
+    saveReadingProgress(currentModalBook.id, {
+      chapterIndex: currentChapterIndex,
+      readerRatio: calculateReaderRatio()
+    });
+    renderRanking();
+  }, 180);
+}
+
+function restoreReaderPositionIfNeeded() {
+  if (pendingReaderRestore === null) {
+    updateReaderProgress();
+    return;
+  }
+
+  const ratio = Number(pendingReaderRestore) || 0;
+  pendingReaderRestore = null;
+  window.requestAnimationFrame(() => {
+    const layout = document.querySelector(".modal-layout");
+    const reader = document.querySelector("[data-reader-text]");
+    if (!layout || !reader || ratio <= 0) {
+      updateReaderProgress();
+      return;
+    }
+
+    const readerTop = reader.getBoundingClientRect().top - layout.getBoundingClientRect().top + layout.scrollTop;
+    const start = Math.max(readerTop - 72, 0);
+    const end = Math.max(readerTop + reader.scrollHeight - layout.clientHeight + 96, start);
+    layout.scrollTop = start + (end - start) * Math.min(Math.max(ratio, 0), 1);
+    updateReaderProgress();
+  });
+}
+
 function renderModal() {
   if (!currentModalBook) return;
   const book = currentModalBook;
@@ -525,13 +668,18 @@ function renderModal() {
   const displayedChapters = [...book.chapters].sort((a, b) => Number(b.number || 0) - Number(a.number || 0));
   const readerHook = book.readerHook || book.premise;
   const content = document.getElementById("modalContent");
+  const saved = getReadingProgress(book.id);
+  const primaryReadLabel = saved?.chapterIndex > 0 ? `繼續 ${book.chapters[saved.chapterIndex]?.displayTitle || "閱讀"}` : "開始閱讀";
 
   content.innerHTML = `
     <div class="modal-layout">
       <section class="modal-hero">
-        <span class="modal-cover ${book.coverImage ? "modal-cover--image" : ""}" style="${coverStyle(book)}">
-          ${renderCoverContent(book)}
-        </span>
+        <div class="modal-aside">
+          <span class="modal-cover ${book.coverImage ? "modal-cover--image" : ""}" style="${coverStyle(book)}">
+            ${renderCoverContent(book)}
+          </span>
+          ${renderReaderSettings()}
+        </div>
         <div class="modal-meta">
           <h2 id="modalTitle">${escapeHtml(book.title)}</h2>
           <div class="modal-meta__line">
@@ -553,7 +701,7 @@ function renderModal() {
           <div class="modal-actions">
             <button class="primary-action" type="button" id="readFirstChapter">
               <span class="icon" data-icon="reader"></span>
-              開始閱讀
+              ${escapeHtml(primaryReadLabel)}
             </button>
             <button class="secondary-action" type="button" id="downloadBook">
               <span class="icon" data-icon="download"></span>
@@ -567,21 +715,43 @@ function renderModal() {
         </div>
       </section>
       <section class="modal-sections">
-        <div class="chapter-list">
-          <h3>章節閱讀</h3>
-          ${displayedChapters.map((chapter) => {
-            const index = book.chapters.indexOf(chapter);
-            return `
-            <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}">
-              ${escapeHtml(chapter.displayTitle)}
-            </button>
-          `;
-          }).join("")}
-        </div>
-        <div class="reader-pane">
+        <aside class="chapter-drawer" aria-label="章節列表">
+          <button class="chapter-drawer__rail" type="button" data-toggle-chapter-list aria-expanded="false">
+            <span class="chapter-drawer__arrow">›</span>
+            <span class="chapter-drawer__rail-text">章節</span>
+          </button>
+          <div class="chapter-drawer__panel">
+            <div class="chapter-drawer__header">
+              <div>
+                <span>章節列表</span>
+                <strong>${escapeHtml(activeChapter.displayTitle)}</strong>
+              </div>
+              <button type="button" data-toggle-chapter-list aria-label="收起章節列表">‹</button>
+            </div>
+            <div class="chapter-drawer__scroll">
+              ${displayedChapters.map((chapter) => {
+                const index = book.chapters.indexOf(chapter);
+                return `
+                <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}">
+                  ${escapeHtml(chapter.displayTitle)}
+                </button>
+              `;
+              }).join("")}
+            </div>
+          </div>
+        </aside>
+        <div class="${readerPaneClass()}">
+          <label class="chapter-picker">
+            <span>快速跳章</span>
+            <select id="chapterPicker" aria-label="選擇章節">
+              ${book.chapters.map((chapter, index) => `
+                <option value="${index}" ${index === currentChapterIndex ? "selected" : ""}>${escapeHtml(chapter.displayTitle)}</option>
+              `).join("")}
+            </select>
+          </label>
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
-          <div data-audio-slot>${renderChapterAudio(activeChapter)}</div>
           ${renderChapterNav(book, "top")}
+          ${renderReaderProgress()}
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
         </div>
@@ -592,7 +762,7 @@ function renderModal() {
   hydrateIcons(content);
 
   document.getElementById("readFirstChapter").addEventListener("click", () => {
-    setModalChapterIndex(0);
+    setModalChapterIndex(currentChapterIndex);
   });
 
   document.getElementById("downloadBook").addEventListener("click", () => {
@@ -605,6 +775,45 @@ function renderModal() {
     });
   });
 
+  const drawer = content.querySelector(".chapter-drawer");
+  const modalSections = content.querySelector(".modal-sections");
+  const setChapterDrawerOpen = (isOpen) => {
+    modalSections.classList.toggle("is-chapter-open", isOpen);
+    drawer.classList.toggle("is-open", isOpen);
+    content.querySelectorAll("[data-toggle-chapter-list]").forEach((button) => {
+      button.setAttribute("aria-expanded", String(isOpen));
+    });
+    if (!isOpen) return;
+    window.requestAnimationFrame(() => {
+      drawer.querySelector("[data-chapter-index].is-active")?.scrollIntoView({
+        block: "center",
+        inline: "nearest"
+      });
+    });
+  };
+
+  content.querySelectorAll("[data-toggle-chapter-list]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setChapterDrawerOpen(!drawer.classList.contains("is-open"));
+    });
+  });
+
+  document.getElementById("chapterPicker").addEventListener("change", (event) => {
+    setModalChapterIndex(Number(event.target.value));
+  });
+
+  content.querySelectorAll("[data-reader-setting]").forEach((control) => {
+    control.addEventListener("change", () => {
+      readerSettings = {
+        ...readerSettings,
+        [control.dataset.readerSetting]: control.value
+      };
+      saveReaderSettings();
+      document.querySelector(".reader-pane").className = readerPaneClass();
+      updateReaderProgress();
+    });
+  });
+
   content.querySelectorAll("[data-chapter-nav]").forEach((button) => {
     button.addEventListener("click", () => {
       const direction = button.dataset.chapterNav;
@@ -613,13 +822,26 @@ function renderModal() {
     });
   });
 
-  void ensureChapterAudioAvailability(book, currentChapterIndex);
+  content.querySelector(".modal-layout").addEventListener("scroll", () => {
+    updateReaderProgress();
+    queueReadingProgressSave();
+  }, { passive: true });
+
   void ensureChapterContent(book, currentChapterIndex).then(() => {
+    restoreReaderPositionIfNeeded();
     warmNearbyChapters(book, currentChapterIndex);
   });
+  window.requestAnimationFrame(updateReaderProgress);
 }
 
 function closeModal() {
+  if (currentModalBook) {
+    saveReadingProgress(currentModalBook.id, {
+      chapterIndex: currentChapterIndex,
+      readerRatio: calculateReaderRatio()
+    });
+    renderRanking();
+  }
   const modal = document.getElementById("bookModal");
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");

@@ -27,39 +27,21 @@
           "title": "星核在雨夜說謊",
           "path": "src/resource/星骸王座/文章/第01章 星核在雨夜說謊.txt",
           "charCount": 6014,
-          "generatedAt": "2026-06-19T22:23:35+08:00",
-          "audio": {
-            "path": "src/resource/星骸王座/有聲書/第01章 星核在雨夜說謊/星骸王座-第01章-星核在雨夜說謊-Edge-YunJhe.zh-TW.m4a",
-            "narrator": "雲哲",
-            "format": "M4A",
-            "generatedAt": "2026-06-07"
-          }
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "暗縫裡的舊雪",
           "path": "src/resource/星骸王座/文章/第02章 暗縫裡的舊雪.txt",
           "charCount": 6044,
-          "generatedAt": "2026-06-19T22:23:35+08:00",
-          "audio": {
-            "path": "src/resource/星骸王座/有聲書/第02章 暗縫裡的舊雪/星骸王座-第02章-暗縫裡的舊雪-Edge-YunJhe.zh-TW.m4a",
-            "narrator": "雲哲",
-            "format": "M4A",
-            "generatedAt": "2026-06-07"
-          }
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 3,
           "title": "墓牆舊名",
           "path": "src/resource/星骸王座/文章/第03章 墓牆舊名.txt",
           "charCount": 6276,
-          "generatedAt": "2026-06-19T22:23:35+08:00",
-          "audio": {
-            "path": "src/resource/星骸王座/有聲書/第03章 墓牆後的舊名/星骸王座-第03章-墓牆後的舊名-Edge-YunJhe.zh-TW.m4a",
-            "narrator": "雲哲",
-            "format": "M4A",
-            "generatedAt": "2026-06-07"
-          }
+          "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 4,
