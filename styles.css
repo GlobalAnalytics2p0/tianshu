@@ -1738,12 +1738,14 @@ button {
 }
 
 .reader-text {
+  width: 85%;
   min-height: 220px;
   border-top: 1px solid var(--stroke);
   color: #dfe1e7;
   font-size: 14px;
   line-height: 1.9;
   padding: 14px 42px 14px 14px;
+  margin-inline: auto;
   white-space: pre-line;
 }
 
@@ -1764,12 +1766,15 @@ button {
 }
 
 .reader-pane--width-narrow .reader-text {
-  max-width: 58ch;
-  margin-inline: auto;
+  width: 80%;
 }
 
 .reader-pane--width-wide .reader-text {
-  max-width: none;
+  width: 90%;
+}
+
+.reader-pane--width-standard .reader-text {
+  width: 85%;
 }
 
 @keyframes spin {
@@ -2630,6 +2635,7 @@ button {
   }
 
   .reader-text {
+    width: 100%;
     min-height: 260px;
     font-size: 14px;
     padding: 16px;
