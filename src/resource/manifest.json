@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T20:42:00+08:00",
+  "generatedAt": "2026-06-21T08:35:08+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -417,13 +417,20 @@
           "path": "src/resource/星骸王座/文章/第54章 南井帶勺.txt",
           "charCount": 6023,
           "generatedAt": "2026-06-20T20:42:00+08:00"
+        },
+        {
+          "number": 55,
+          "title": "缺指問井",
+          "path": "src/resource/星骸王座/文章/第55章 缺指問井.txt",
+          "charCount": 6011,
+          "generatedAt": "2026-06-21T08:35:08+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "顧夜燼不寫天命的光，他寫人被逼到雪線下仍肯抬頭。冷硬邊境、說謊星核、每一次死法預見，都被他磨成少年逆命的刀口。",
       "coverImage": "src/resource/星骸王座/素材/圖像/主角圖片素材/星骸王座-沈曜阿棠.png",
       "heroImage": "src/resource/星骸王座/素材/圖像/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png",
-      "updatedAt": "2026-06-20T06:03:53+08:00"
+      "updatedAt": "2026-06-21T08:35:08+08:00"
     },
     {
       "id": "ai-02",
@@ -1123,12 +1130,19 @@
           "path": "src/resource/灰塔觀測者/文章/第54章 井底空牌.txt",
           "charCount": 6026,
           "generatedAt": "2026-06-20T20:42:00+08:00"
+        },
+        {
+          "number": 55,
+          "title": "梁後初鐘",
+          "path": "src/resource/灰塔觀測者/文章/第55章 梁後初鐘.txt",
+          "charCount": 6413,
+          "generatedAt": "2026-06-21T08:35:08+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "霧原相信恐懼最先出現在缺頁與錯拍之間。他寫灰塔、鐘聲與被刪去的人，像在昏燈下擦一面鏡：越乾淨，越照出不該存在的影子。",
       "coverImage": "src/resource/灰塔觀測者/素材/圖像/主角圖片素材/灰塔觀測者-艾文伊芙.png",
-      "updatedAt": "2026-06-20T06:03:53+08:00"
+      "updatedAt": "2026-06-21T08:35:08+08:00"
     },
     {
       "id": "ai-10",
@@ -1828,12 +1842,19 @@
           "path": "src/resource/雪刃照孤城/文章/第54章 南柴掛名.txt",
           "charCount": 6124,
           "generatedAt": "2026-06-20T20:42:00+08:00"
+        },
+        {
+          "number": 55,
+          "title": "井底破帽",
+          "path": "src/resource/雪刃照孤城/文章/第55章 井底破帽.txt",
+          "charCount": 6500,
+          "generatedAt": "2026-06-21T08:35:08+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "謝聽寒的江湖沒有多餘熱鬧，只有雪、刀、舊債和不能退的人。他讓每一次出手都帶著分寸，乾淨到見血，也克制到讓人心口發緊。",
       "coverImage": "src/resource/雪刃照孤城/素材/圖像/主角圖片素材/雪刃照孤城-沈照夜程聽雪.png",
-      "updatedAt": "2026-06-20T06:03:53+08:00"
+      "updatedAt": "2026-06-21T08:35:08+08:00"
     },
     {
       "id": "ai-18",
@@ -2533,12 +2554,19 @@
           "path": "src/resource/凌晨三點的演算法/文章/第54章 三分鐘協助.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-20T20:42:00+08:00"
+        },
+        {
+          "number": 55,
+          "title": "暫存白路",
+          "path": "src/resource/凌晨三點的演算法/文章/第55章 暫存白路.txt",
+          "charCount": 6432,
+          "generatedAt": "2026-06-21T08:35:08+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "陳停雲專寫城市凌晨最安靜的一秒：通知亮起，命運被系統改寫。他把演算法、職場與人命寫得又快又準，冷笑背後全是生存反擊。",
       "coverImage": "src/resource/凌晨三點的演算法/素材/圖像/主角圖片素材/凌晨三點的演算法-周祈林岫.png",
-      "updatedAt": "2026-06-20T06:03:53+08:00"
+      "updatedAt": "2026-06-21T08:35:08+08:00"
     },
     {
       "id": "ai-26",
@@ -3238,12 +3266,19 @@
           "path": "src/resource/大明墨工/文章/第54章 羅平長匣.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-20T20:42:00+08:00"
+        },
+        {
+          "number": 55,
+          "title": "三問看封",
+          "path": "src/resource/大明墨工/文章/第55章 三問看封.txt",
+          "charCount": 6370,
+          "generatedAt": "2026-06-21T08:35:08+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "蕭墨臣寫墨線，也寫線後的人命。他讓河工、圖籍、糧道與官場在一張紙上暗流翻湧，最痛快的反擊不是喊冤，是把假圖校回真相。",
       "coverImage": "src/resource/大明墨工/素材/圖像/主角圖片素材/大明墨工-沈墨顧清棠.png",
-      "updatedAt": "2026-06-20T06:03:53+08:00"
+      "updatedAt": "2026-06-21T08:35:08+08:00"
     },
     {
       "id": "ai-34",
