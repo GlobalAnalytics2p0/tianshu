@@ -68,7 +68,7 @@ const activeRankingTitles = [
 const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
 const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
 const readingProgressStorageKey = "tianshu-reading-progress-v1";
-const readerSettingsStorageKey = "tianshu-reader-settings-v1";
+const readerSettingsStorageKey = "tianshu-reader-settings-v2";
 const manifestPollIntervalMs = 60000;
 const defaultReaderSettings = {
   size: "medium",
@@ -666,7 +666,6 @@ function renderModal() {
   const book = currentModalBook;
   const activeChapter = book.chapters[currentChapterIndex] || book.chapters[0];
   const displayedChapters = [...book.chapters].sort((a, b) => Number(b.number || 0) - Number(a.number || 0));
-  const readerHook = book.readerHook || book.premise;
   const content = document.getElementById("modalContent");
   const saved = getReadingProgress(book.id);
   const primaryReadLabel = saved?.chapterIndex > 0 ? `繼續 ${book.chapters[saved.chapterIndex]?.displayTitle || "閱讀"}` : "開始閱讀";
@@ -708,10 +707,6 @@ function renderModal() {
               下載整本小說
             </button>
           </div>
-          <div class="status-note reader-hook">
-            <span class="icon" data-icon="info"></span>
-            <span>${escapeHtml(readerHook)}</span>
-          </div>
         </div>
       </section>
       <section class="modal-sections">
@@ -719,6 +714,7 @@ function renderModal() {
           <button class="chapter-drawer__rail" type="button" data-toggle-chapter-list aria-expanded="false">
             <span class="chapter-drawer__arrow">›</span>
             <span class="chapter-drawer__rail-text">章節</span>
+            <small>${escapeHtml(activeChapter.displayTitle)}</small>
           </button>
           <div class="chapter-drawer__panel">
             <div class="chapter-drawer__header">
@@ -750,7 +746,6 @@ function renderModal() {
             </select>
           </label>
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
-          ${renderChapterNav(book, "top")}
           ${renderReaderProgress()}
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}

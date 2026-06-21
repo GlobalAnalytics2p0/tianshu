@@ -1332,20 +1332,6 @@ button {
   color: #d5d8e1;
 }
 
-.status-note {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  margin-top: 18px;
-  border: 1px solid rgba(255, 211, 123, 0.2);
-  border-radius: var(--radius-sm);
-  background: rgba(255, 211, 123, 0.07);
-  color: #e8d5a6;
-  font-size: 12px;
-  line-height: 1.55;
-  padding: 10px 12px;
-}
-
 .modal-sections {
   display: grid;
   grid-template-columns: 28px minmax(0, 1fr);
@@ -1406,6 +1392,10 @@ button {
   font-size: 10px;
   letter-spacing: 0.08em;
   writing-mode: vertical-rl;
+}
+
+.chapter-drawer__rail small {
+  display: none;
 }
 
 .reader-pane h3 {
@@ -1495,10 +1485,6 @@ button {
 .chapter-drawer__scroll button.is-active {
   background: rgba(255, 211, 123, 0.09);
   color: #ffe9b9;
-}
-
-.reader-hook {
-  color: #f0dfba;
 }
 
 .reader-pane {
@@ -2478,9 +2464,22 @@ button {
     border-radius: 16px 16px 0 0;
   }
 
+  .modal__dialog::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    z-index: 3;
+    width: 42px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.24);
+    transform: translateX(-50%);
+  }
+
   .modal-layout {
     max-height: 92vh;
-    padding: 18px 14px calc(18px + env(safe-area-inset-bottom));
+    padding: 24px 14px calc(18px + env(safe-area-inset-bottom));
   }
 
   .modal-hero {
@@ -2526,9 +2525,11 @@ button {
 
   .chapter-drawer__rail {
     width: 100%;
-    min-height: 44px;
-    grid-template-columns: auto auto;
-    justify-content: center;
+    min-height: 48px;
+    grid-template-columns: auto auto minmax(0, 1fr);
+    justify-content: stretch;
+    justify-items: start;
+    gap: 9px;
     border: 1px solid rgba(255, 211, 123, 0.12);
     border-radius: 10px;
     background: rgba(255, 211, 123, 0.06);
@@ -2544,6 +2545,17 @@ button {
     font-size: 12px;
     letter-spacing: 0;
     writing-mode: horizontal-tb;
+  }
+
+  .chapter-drawer__rail small {
+    min-width: 0;
+    display: block;
+    overflow: hidden;
+    color: #aeb3bf;
+    font-size: 12px;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .chapter-drawer.is-open .chapter-drawer__panel {
@@ -2602,7 +2614,7 @@ button {
   .reader-progress i {
     grid-column: 1 / -1;
     width: auto;
-    height: 7px;
+    height: 4px;
     display: block;
   }
 
@@ -2614,7 +2626,7 @@ button {
   }
 
   .reader-settings {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .reader-text {
@@ -2624,12 +2636,19 @@ button {
   }
 
   .chapter-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .chapter-nav__count {
-    order: -1;
-    justify-self: center;
+    display: none;
+  }
+
+  .chapter-nav__button {
+    padding: 10px;
+  }
+
+  .chapter-nav__button small {
+    max-width: 100%;
   }
 }
 
