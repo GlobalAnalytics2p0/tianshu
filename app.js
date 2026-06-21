@@ -57,7 +57,7 @@ const coverPalettes = [
 
 const resourceManifestPath = "src/resource/manifest.json";
 const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
-const youtubeShareText = "來看天書小說：每日 00/06/12/18 原創連載、爆款小說與 YouTube 說書影片";
+const youtubeShareText = "來看天書小說：每日 18 點更新原創連載、爆款小說與 YouTube 說書影片";
 const activeRankingTitles = [
   "星骸王座",
   "灰塔觀測者",
@@ -419,7 +419,7 @@ function renderAiNovels(category = "") {
         <p>${escapeHtml(book.summary)}</p>
         <span class="ai-card__actions">
           <span>${escapeHtml(latestChapterLabel(book))}</span>
-          <span>00 / 06 / 12 / 18</span>
+          <span>每日 18 點更新</span>
           <span>深度連載</span>
           <span>強鉤子</span>
         </span>
