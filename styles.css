@@ -1766,15 +1766,15 @@ button {
 }
 
 .reader-pane--width-narrow .reader-text {
-  width: 80%;
+  width: 85%;
 }
 
 .reader-pane--width-wide .reader-text {
-  width: 90%;
+  width: 98%;
 }
 
 .reader-pane--width-standard .reader-text {
-  width: 85%;
+  width: 95%;
 }
 
 @keyframes spin {
