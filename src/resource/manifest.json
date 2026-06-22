@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T06:00:00+08:00",
+  "generatedAt": "2026-06-22T18:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -441,6 +441,13 @@
           "path": "src/resource/星骸王座/文章/第60章 後廊那雙鞋.txt",
           "charCount": 6093,
           "generatedAt": "2026-06-22T12:00:00+08:00"
+        },
+        {
+          "number": 61,
+          "title": "取鞋手怕髒",
+          "path": "src/resource/星骸王座/文章/第61章 取鞋手怕髒.txt",
+          "charCount": 6364,
+          "generatedAt": "2026-06-22T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1189,6 +1196,13 @@
           "path": "src/resource/灰塔觀測者/文章/第60章 明鐘前簽退.txt",
           "charCount": 6026,
           "generatedAt": "2026-06-22T12:00:00+08:00"
+        },
+        {
+          "number": 61,
+          "title": "第三櫃外袍",
+          "path": "src/resource/灰塔觀測者/文章/第61章 第三櫃外袍.txt",
+          "charCount": 6285,
+          "generatedAt": "2026-06-22T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -1936,6 +1950,13 @@
           "path": "src/resource/雪刃照孤城/文章/第60章 門外誰在.txt",
           "charCount": 6175,
           "generatedAt": "2026-06-22T12:00:00+08:00"
+        },
+        {
+          "number": 61,
+          "title": "灰帽右耳缺",
+          "path": "src/resource/雪刃照孤城/文章/第61章 灰帽右耳缺.txt",
+          "charCount": 6254,
+          "generatedAt": "2026-06-22T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -2683,6 +2704,13 @@
           "path": "src/resource/凌晨三點的演算法/文章/第60章 後門搭手.txt",
           "charCount": 6147,
           "generatedAt": "2026-06-22T12:00:00+08:00"
+        },
+        {
+          "number": 61,
+          "title": "四點補錄",
+          "path": "src/resource/凌晨三點的演算法/文章/第61章 四點補錄.txt",
+          "charCount": 6317,
+          "generatedAt": "2026-06-22T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
@@ -3430,6 +3458,13 @@
           "path": "src/resource/大明墨工/文章/第60章 魚牙巷前.txt",
           "charCount": 6473,
           "generatedAt": "2026-06-22T12:00:00+08:00"
+        },
+        {
+          "number": 61,
+          "title": "牙神廟前",
+          "path": "src/resource/大明墨工/文章/第61章 牙神廟前.txt",
+          "charCount": 6257,
+          "generatedAt": "2026-06-22T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
