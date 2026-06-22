@@ -32,6 +32,14 @@ const REQUIRED_GLOBAL_FILES = [
 const PROHIBITED_META =
   /這一章|讀者會|主角|章末|第一章的安排|第二章會|outline|automation|後續自動化|本章|下一章|爆款|爽點|小高潮|Prompt/g;
 
+const PROHIBITED_WORKFLOW =
+  /第一口小回報|第一口回報|第二口回報|第三口回報|局部回報|早段第一個轉向|第\d+次重報|被放在眾人都能看見的位置|沒有立刻變成答案|真正有用的不是誰更聰明|先想照著直覺處理/g;
+
+const FOREIGN_CHARACTER_TERMS = {
+  雪刃照孤城: ["顧清棠"],
+  灰塔觀測者: ["艾維森"],
+};
+
 const ABSTRACT_ENDING =
   /更大的危險|真正的危險|真正會吃人|更深的黑暗|一切才剛開始|沒有人知道|答案還在後面/g;
 
@@ -80,6 +88,18 @@ function duplicateParagraphs(text) {
     }
   }
   return dupes;
+}
+
+function repeatedSentences(text) {
+  const sentences = text
+    .split(/[。！？!?]/g)
+    .map((sentence) => sentence.replace(/\s+/g, ""))
+    .filter((sentence) => sentence.length >= 18);
+  const counts = new Map();
+  for (const sentence of sentences) counts.set(sentence, (counts.get(sentence) ?? 0) + 1);
+  return [...counts.entries()]
+    .filter(([, count]) => count >= 3)
+    .map(([sentence, count]) => ({ sentence: sentence.slice(0, 60), count }));
 }
 
 function finalThreeLines(text) {
@@ -170,6 +190,26 @@ function main() {
       );
     }
 
+    const maxChapterNumber = Math.max(...book.chapters.map((chapter) => chapter.number));
+    const latestChapter = book.chapters.find((chapter) => chapter.number === maxChapterNumber);
+    if (!book.status.includes("00/06/12/18")) {
+      report.hardIssues.push(`${title}: status cadence is stale or not six-hour Taipei cadence: ${book.status}`);
+    }
+    if (!book.updateNote?.includes(`第${maxChapterNumber}章`)) {
+      report.hardIssues.push(
+        `${title}: updateNote ${JSON.stringify(book.updateNote)} does not match latest chapter ${maxChapterNumber}`,
+      );
+    }
+    if (latestChapter?.generatedAt && book.updatedAt) {
+      const bookUpdatedAt = Date.parse(book.updatedAt);
+      const latestGeneratedAt = Date.parse(latestChapter.generatedAt);
+      if (!Number.isNaN(bookUpdatedAt) && !Number.isNaN(latestGeneratedAt) && bookUpdatedAt < latestGeneratedAt) {
+        report.hardIssues.push(
+          `${title}: updatedAt ${book.updatedAt} is older than latest chapter generatedAt ${latestChapter.generatedAt}`,
+        );
+      }
+    }
+
     for (const chapter of book.chapters) {
       const expectedPrefix = `src/resource/${title}/文章/`;
       if (!chapter.path.startsWith(expectedPrefix)) {
@@ -208,11 +248,33 @@ function main() {
           issue: `Prohibited meta/scaffolding terms: ${[...new Set(metaHits)].join(", ")}`,
         });
       }
+      const workflowHits = [...text.matchAll(PROHIBITED_WORKFLOW)].map((m) => m[0]);
+      if (workflowHits.length) {
+        titleReport.chapterIssues.push({
+          chapter: chapter.number,
+          issue: `Prohibited workflow/template terms: ${[...new Set(workflowHits)].join(", ")}`,
+        });
+      }
+      const foreignTerms = FOREIGN_CHARACTER_TERMS[title] ?? [];
+      const foundForeignTerms = foreignTerms.filter((term) => text.includes(term));
+      if (foundForeignTerms.length) {
+        titleReport.chapterIssues.push({
+          chapter: chapter.number,
+          issue: `Foreign-title character contamination: ${foundForeignTerms.join(", ")}`,
+        });
+      }
       const dupes = duplicateParagraphs(text);
       if (dupes.length) {
         titleReport.chapterIssues.push({
           chapter: chapter.number,
           issue: `Duplicate paragraphs: ${JSON.stringify(dupes.slice(0, 5))}`,
+        });
+      }
+      const repeated = repeatedSentences(text);
+      if (repeated.length) {
+        titleReport.chapterIssues.push({
+          chapter: chapter.number,
+          issue: `Repeated sentence skeletons: ${JSON.stringify(repeated.slice(0, 5))}`,
         });
       }
       const stats = paragraphStats(text);
