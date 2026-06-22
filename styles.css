@@ -1538,8 +1538,6 @@ button {
 }
 
 .reader-focus-bar {
-  position: sticky;
-  top: 0;
   z-index: 4;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1553,15 +1551,7 @@ button {
 }
 
 .modal-layout--reading .reader-focus-bar {
-  position: fixed;
-  top: var(--reader-chrome-top, 0);
-  left: var(--reader-chrome-left, 0);
-  width: var(--reader-chrome-width, 100%);
   border-radius: 0;
-}
-
-.modal-layout--reading .reader-text {
-  padding-top: calc(var(--reader-chrome-height, 37px) + 18px);
 }
 
 .reader-focus-bar span {

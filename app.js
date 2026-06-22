@@ -631,20 +631,6 @@ function updateReaderProgress() {
   });
 }
 
-function updateReadingChromeBounds() {
-  const layout = document.querySelector(".modal-layout--reading");
-  const reader = document.querySelector(".modal-layout--reading .reader-pane");
-  const bar = document.querySelector(".modal-layout--reading .reader-focus-bar");
-  if (!layout || !reader || !bar) return;
-
-  const readerRect = reader.getBoundingClientRect();
-  const barHeight = Math.ceil(bar.getBoundingClientRect().height || 37);
-  layout.style.setProperty("--reader-chrome-left", `${Math.round(readerRect.left)}px`);
-  layout.style.setProperty("--reader-chrome-top", `${Math.round(readerRect.top)}px`);
-  layout.style.setProperty("--reader-chrome-width", `${Math.round(readerRect.width)}px`);
-  layout.style.setProperty("--reader-chrome-height", `${barHeight}px`);
-}
-
 function queueReadingProgressSave() {
   window.clearTimeout(readerProgressSaveTimer);
   readerProgressSaveTimer = window.setTimeout(() => {
@@ -853,12 +839,10 @@ function renderModal() {
   }, { passive: true });
 
   void ensureChapterContent(book, currentChapterIndex).then(() => {
-    updateReadingChromeBounds();
     restoreReaderPositionIfNeeded();
     warmNearbyChapters(book, currentChapterIndex);
   });
   window.requestAnimationFrame(() => {
-    updateReadingChromeBounds();
     updateReaderProgress();
   });
 }
@@ -1119,10 +1103,6 @@ function initEvents() {
     }
   });
 
-  window.addEventListener("resize", updateReadingChromeBounds, { passive: true });
-  window.addEventListener("orientationchange", () => {
-    window.requestAnimationFrame(updateReadingChromeBounds);
-  });
 }
 
 async function checkForLibraryUpdates() {
