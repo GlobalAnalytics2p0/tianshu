@@ -81,6 +81,7 @@ let allBooks = [];
 let currentRankTab = "recommended";
 let currentModalBook = null;
 let currentChapterIndex = 0;
+let currentReaderFocused = false;
 let pendingReaderRestore = null;
 let readerProgressSaveTimer = null;
 let toastTimer = null;
@@ -445,6 +446,7 @@ function openBook(bookId) {
   const lastIndex = Math.max(book.chapters.length - 1, 0);
   currentChapterIndex = Number.isInteger(saved?.chapterIndex) ? Math.min(Math.max(saved.chapterIndex, 0), lastIndex) : 0;
   pendingReaderRestore = saved?.chapterIndex === currentChapterIndex ? saved.readerRatio || 0 : null;
+  currentReaderFocused = false;
   renderModal();
 
   const modal = document.getElementById("bookModal");
@@ -458,6 +460,7 @@ function setModalChapterIndex(index, shouldScroll = true) {
   const lastIndex = Math.max(currentModalBook.chapters.length - 1, 0);
   currentChapterIndex = Math.min(Math.max(index, 0), lastIndex);
   pendingReaderRestore = null;
+  currentReaderFocused = true;
   saveReadingProgress(currentModalBook.id, {
     chapterIndex: currentChapterIndex,
     readerRatio: 0
@@ -535,7 +538,7 @@ async function ensureChapterContent(book, index, { silent = false } = {}) {
 }
 
 function warmNearbyChapters(book, index) {
-  [index + 1, index - 1].forEach((nextIndex) => {
+  [index + 1, index + 2, index - 1].forEach((nextIndex) => {
     if (book.chapters[nextIndex]?.contentState === "idle") {
       void ensureChapterContent(book, nextIndex, { silent: true });
     }
@@ -585,7 +588,7 @@ function renderReaderSettings() {
 
 function renderReaderProgress() {
   return `
-    <div class="reader-progress" aria-label="本章閱讀進度">
+    <div class="reader-progress" aria-label="本章閱讀進度" title="本章進度 0%">
       <span>進度</span>
       <strong data-reader-progress-label>0%</strong>
       <i><b data-reader-progress-bar></b></i>
@@ -623,6 +626,23 @@ function updateReaderProgress() {
     bar.style.height = `${percent}%`;
   });
   if (label) label.textContent = `${percent}%`;
+  document.querySelectorAll(".reader-progress").forEach((progress) => {
+    progress.setAttribute("title", `本章進度 ${percent}%`);
+  });
+}
+
+function updateReadingChromeBounds() {
+  const layout = document.querySelector(".modal-layout--reading");
+  const reader = document.querySelector(".modal-layout--reading .reader-pane");
+  const bar = document.querySelector(".modal-layout--reading .reader-focus-bar");
+  if (!layout || !reader || !bar) return;
+
+  const readerRect = reader.getBoundingClientRect();
+  const barHeight = Math.ceil(bar.getBoundingClientRect().height || 37);
+  layout.style.setProperty("--reader-chrome-left", `${Math.round(readerRect.left)}px`);
+  layout.style.setProperty("--reader-chrome-top", `${Math.round(readerRect.top)}px`);
+  layout.style.setProperty("--reader-chrome-width", `${Math.round(readerRect.width)}px`);
+  layout.style.setProperty("--reader-chrome-height", `${barHeight}px`);
 }
 
 function queueReadingProgressSave() {
@@ -671,13 +691,12 @@ function renderModal() {
   const primaryReadLabel = saved?.chapterIndex > 0 ? `繼續 ${book.chapters[saved.chapterIndex]?.displayTitle || "閱讀"}` : "開始閱讀";
 
   content.innerHTML = `
-    <div class="modal-layout">
+    <div class="modal-layout ${currentReaderFocused ? "modal-layout--reading" : ""}">
       <section class="modal-hero">
         <div class="modal-aside">
           <span class="modal-cover ${book.coverImage ? "modal-cover--image" : ""}" style="${coverStyle(book)}">
             ${renderCoverContent(book)}
           </span>
-          ${renderReaderSettings()}
         </div>
         <div class="modal-meta">
           <h2 id="modalTitle">${escapeHtml(book.title)}</h2>
@@ -737,18 +756,24 @@ function renderModal() {
           </div>
         </aside>
         <div class="${readerPaneClass()}">
-          <label class="chapter-picker">
-            <span>快速跳章</span>
-            <select id="chapterPicker" aria-label="選擇章節">
-              ${book.chapters.map((chapter, index) => `
-                <option value="${index}" ${index === currentChapterIndex ? "selected" : ""}>${escapeHtml(chapter.displayTitle)}</option>
-              `).join("")}
-            </select>
-          </label>
+          <div class="reader-focus-bar">
+            <div>
+              <span>${escapeHtml(book.title)}</span>
+              <strong>${escapeHtml(activeChapter.displayTitle)}</strong>
+            </div>
+            <button class="reader-focus-bar__info" type="button" data-reader-info>作品資訊</button>
+          </div>
+          ${renderReaderSettings()}
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
           ${renderReaderProgress()}
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
+          <nav class="mobile-reader-dock" aria-label="手機閱讀工具列">
+            <button type="button" data-toggle-chapter-list>目錄</button>
+            <button type="button" data-chapter-nav="previous" ${currentChapterIndex === 0 ? "disabled" : ""}>上一章</button>
+            <button type="button" data-chapter-nav="next" ${currentChapterIndex >= book.chapters.length - 1 ? "disabled" : ""}>下一章</button>
+            <button type="button" data-reader-settings-jump>設定</button>
+          </nav>
         </div>
       </section>
     </div>
@@ -762,6 +787,11 @@ function renderModal() {
 
   document.getElementById("downloadBook").addEventListener("click", () => {
     void downloadBook(book);
+  });
+
+  content.querySelector("[data-reader-info]")?.addEventListener("click", () => {
+    currentReaderFocused = false;
+    renderModal();
   });
 
   content.querySelectorAll("[data-chapter-index]").forEach((button) => {
@@ -793,10 +823,6 @@ function renderModal() {
     });
   });
 
-  document.getElementById("chapterPicker").addEventListener("change", (event) => {
-    setModalChapterIndex(Number(event.target.value));
-  });
-
   content.querySelectorAll("[data-reader-setting]").forEach((control) => {
     control.addEventListener("change", () => {
       readerSettings = {
@@ -817,16 +843,24 @@ function renderModal() {
     });
   });
 
+  content.querySelector("[data-reader-settings-jump]")?.addEventListener("click", () => {
+    content.querySelector(".reader-toolbar")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
   content.querySelector(".modal-layout").addEventListener("scroll", () => {
     updateReaderProgress();
     queueReadingProgressSave();
   }, { passive: true });
 
   void ensureChapterContent(book, currentChapterIndex).then(() => {
+    updateReadingChromeBounds();
     restoreReaderPositionIfNeeded();
     warmNearbyChapters(book, currentChapterIndex);
   });
-  window.requestAnimationFrame(updateReaderProgress);
+  window.requestAnimationFrame(() => {
+    updateReadingChromeBounds();
+    updateReaderProgress();
+  });
 }
 
 function closeModal() {
@@ -842,6 +876,7 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   currentModalBook = null;
+  currentReaderFocused = false;
 }
 
 async function downloadBook(book) {
@@ -1082,6 +1117,11 @@ function initEvents() {
     if (event.key === "Escape" && document.getElementById("installGuide").classList.contains("is-open")) {
       closeInstallGuide();
     }
+  });
+
+  window.addEventListener("resize", updateReadingChromeBounds, { passive: true });
+  window.addEventListener("orientationchange", () => {
+    window.requestAnimationFrame(updateReadingChromeBounds);
   });
 }
 

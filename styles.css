@@ -1206,11 +1206,55 @@ button {
   padding: 24px;
 }
 
+.modal-layout--reading .modal-hero {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+}
+
+.modal-layout--reading {
+  padding: 0;
+}
+
+.modal-layout--reading .modal-sections {
+  min-height: min(86vh, 780px);
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 0;
+  margin-top: 0;
+}
+
+.modal-layout--reading .modal-sections.is-chapter-open {
+  grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.modal-layout--reading .chapter-drawer,
+.modal-layout--reading .reader-pane {
+  min-height: min(86vh, 780px);
+  border-radius: 0;
+}
+
+.modal-layout--reading .reader-pane {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background: rgba(15, 17, 26, 0.86);
+}
+
+.modal-layout--reading .chapter-drawer {
+  top: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
 .modal-hero {
   display: grid;
   grid-template-columns: 142px 1fr;
   gap: 20px;
   padding-right: 36px;
+  transition: max-height 180ms ease, opacity 180ms ease, padding 180ms ease;
 }
 
 .modal-aside {
@@ -1493,6 +1537,63 @@ button {
   overflow: visible;
 }
 
+.reader-focus-bar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--stroke);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: rgba(8, 10, 15, 0.94);
+  backdrop-filter: blur(14px);
+  padding: 5px 11px;
+}
+
+.modal-layout--reading .reader-focus-bar {
+  position: fixed;
+  top: var(--reader-chrome-top, 0);
+  left: var(--reader-chrome-left, 0);
+  width: var(--reader-chrome-width, 100%);
+  border-radius: 0;
+}
+
+.modal-layout--reading .reader-text {
+  padding-top: calc(var(--reader-chrome-height, 37px) + 18px);
+}
+
+.reader-focus-bar span {
+  display: inline;
+  margin: 0 8px 0 0;
+  color: #8f96a5;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.reader-focus-bar strong {
+  display: inline;
+  min-width: 0;
+  overflow: hidden;
+  color: #fff1c7;
+  font-size: 12px;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reader-focus-bar__info {
+  border: 1px solid rgba(255, 211, 123, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 211, 123, 0.06);
+  color: #ffe2a4;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 8px;
+}
+
 .chapter-picker {
   display: none;
   gap: 8px;
@@ -1552,13 +1653,31 @@ button {
   white-space: nowrap;
 }
 
+.reader-progress:hover strong,
+.reader-progress:focus-within strong {
+  right: 18px;
+  top: 50%;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  border: 1px solid rgba(255, 211, 123, 0.18);
+  border-radius: 999px;
+  background: rgba(8, 10, 15, 0.92);
+  color: #ffe2a4;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 5px 8px;
+  transform: translateY(-50%);
+}
+
 .reader-toolbar {
   display: grid;
   gap: 12px;
-  border: 1px solid rgba(255, 211, 123, 0.1);
-  border-radius: 12px;
+  border-bottom: 1px solid var(--stroke);
+  border-radius: 0;
   background: rgba(0, 0, 0, 0.12);
-  padding: 11px;
+  padding: 12px 14px;
 }
 
 .reader-progress i {
@@ -1582,7 +1701,7 @@ button {
 
 .reader-settings {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -1742,19 +1861,19 @@ button {
   min-height: 220px;
   border-top: 1px solid var(--stroke);
   color: #dfe1e7;
-  font-size: 14px;
-  line-height: 1.9;
-  padding: 14px 42px 14px 14px;
+  font-size: 15.5px;
+  line-height: 1.98;
+  padding: 18px 42px 18px 14px;
   margin-inline: auto;
   white-space: pre-line;
 }
 
 .reader-pane--size-small .reader-text {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .reader-pane--size-large .reader-text {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .reader-pane--line-compact .reader-text {
@@ -1762,7 +1881,7 @@ button {
 }
 
 .reader-pane--line-wide .reader-text {
-  line-height: 2.12;
+  line-height: 2.18;
 }
 
 .reader-pane--width-narrow .reader-text {
@@ -1775,6 +1894,10 @@ button {
 
 .reader-pane--width-standard .reader-text {
   width: 95%;
+}
+
+.mobile-reader-dock {
+  display: none;
 }
 
 @keyframes spin {
@@ -2484,7 +2607,16 @@ button {
 
   .modal-layout {
     max-height: 92vh;
-    padding: 24px 14px calc(18px + env(safe-area-inset-bottom));
+    padding: 22px 14px calc(48px + env(safe-area-inset-bottom));
+  }
+
+  .modal-layout--reading {
+    padding: 0 0 calc(41px + env(safe-area-inset-bottom));
+  }
+
+  .modal-layout--reading .modal-sections,
+  .modal-layout--reading .reader-pane {
+    min-height: 92vh;
   }
 
   .modal-hero {
@@ -2573,12 +2705,12 @@ button {
   }
 
   .chapter-picker {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    display: none;
   }
 
   .reader-toolbar {
     gap: 10px;
+    padding: 12px;
   }
 
   .reader-progress {
@@ -2597,7 +2729,8 @@ button {
     border-left: 0;
     border-right: 0;
     border-top: 1px solid var(--stroke);
-    padding: 10px 14px;
+    opacity: 0.86;
+    padding: 8px 12px;
   }
 
   .reader-progress span,
@@ -2619,7 +2752,7 @@ button {
   .reader-progress i {
     grid-column: 1 / -1;
     width: auto;
-    height: 4px;
+    height: 3px;
     display: block;
   }
 
@@ -2638,10 +2771,12 @@ button {
     width: 100%;
     min-height: 260px;
     font-size: 14px;
+    line-height: 2.02;
     padding: 16px;
   }
 
   .chapter-nav {
+    display: none;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2655,6 +2790,45 @@ button {
 
   .chapter-nav__button small {
     max-width: 100%;
+  }
+
+  .mobile-reader-dock {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    margin: 0;
+    border: 1px solid rgba(255, 211, 123, 0.16);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    background: rgba(9, 10, 15, 0.9);
+    box-shadow: 0 -12px 28px rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(16px);
+    padding: 5px 8px calc(5px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-reader-dock button {
+    min-width: 0;
+    border: 0;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.055);
+    color: #f6ead1;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 7px 5px;
+  }
+
+  .mobile-reader-dock button:disabled {
+    color: #6f7480;
+    cursor: not-allowed;
+    opacity: 0.45;
   }
 }
 
