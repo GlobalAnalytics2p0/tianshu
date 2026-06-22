@@ -200,6 +200,10 @@
 ## Active-Series Quality Audit
 
 - For broad revision requests across the five active books, run `node scripts/audit-active-novel-quality.mjs` before and after edits. This script checks required Markdown presence, canonical `文章/` paths, manifest/file character counts, prohibited meta terms, duplicate paragraphs, paragraph-shape risk, first-window turn signals, and final-three-line hook risk.
+- For routine six-hour generation, run `node scripts/audit-active-novel-quality.mjs --strict` before publishing, after all chapter and note updates are complete. A strict failure blocks commit/push until fixed.
+- The strict audit is an anti-regression gate for the 2026-06-22 repair class: stale `updateNote`/`updatedAt`, missing latest-chapter note updates, non-canonical paths, latest-chapter length outside 6,000-6,500, workflow/template phrases in fiction, repeated sentence skeletons, cross-title character contamination, and exact long-sentence overlap across the latest chapters.
+- Never accept chapter prose containing internal workflow labels such as `第一口回報`, `第二口回報`, `第三口回報`, `局部回報`, `早段第一個轉向`, or `第xx次重報`. These are private review concepts; in fiction they must become concrete scene action, witness reaction, object movement, or emotional consequence.
+- If multiple active titles in the same run start to share the same procedural engine or wording skeleton, stop and revise before manifest update. A batch is not stable until each title's newest chapter would still read title-specific after removing names.
 - Treat the script as a structural gate, not a replacement for novelist judgment. It cannot prove immersion, addiction pull, small reward quality, 3-5 chapter medium payoff, or author-specific voice fit; those must be checked by reading the chapter against `素材/風格規則.md` and `素材/反思.md`.
 - Full-series rewrites must be split into reviewable batches. Do not rewrite 250 chapters in one unreviewable diff; batch by title, arc, or chapter range, update manifest and notes with each batch, then validate before moving to the next batch.
 

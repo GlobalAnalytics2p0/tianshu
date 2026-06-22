@@ -33,7 +33,7 @@ const PROHIBITED_META =
   /這一章|讀者會|主角|章末|第一章的安排|第二章會|outline|automation|後續自動化|本章|下一章|爆款|爽點|小高潮|Prompt/g;
 
 const PROHIBITED_WORKFLOW =
-  /第一口小回報|第一口回報|第二口回報|第三口回報|局部回報|早段第一個轉向|第\d+次重報|被放在眾人都能看見的位置|沒有立刻變成答案|真正有用的不是誰更聰明|先想照著直覺處理/g;
+  /第一口小回報|第一口回報|第二口回報|第三口回報|局部回報|早段第一個轉向|第[0-9一二三四五六七八九十百千零〇]+次重報|被放在眾人都能看見的位置|沒有立刻變成答案|真正有用的不是誰更聰明|先想照著直覺處理/g;
 
 const FOREIGN_CHARACTER_TERMS = {
   雪刃照孤城: ["顧清棠"],
@@ -102,6 +102,15 @@ function repeatedSentences(text) {
     .map(([sentence, count]) => ({ sentence: sentence.slice(0, 60), count }));
 }
 
+function sentenceKeys(text) {
+  return new Set(
+    text
+      .split(/[。！？!?]/g)
+      .map((sentence) => sentence.replace(/\s+/g, ""))
+      .filter((sentence) => sentence.length >= 28),
+  );
+}
+
 function finalThreeLines(text) {
   return text
     .split(/\n/g)
@@ -145,6 +154,7 @@ function main() {
     warnings: [],
     manualReview: [],
   };
+  const latestChapterSentenceSets = [];
 
   for (const file of REQUIRED_GLOBAL_FILES) {
     const exists = existsSync(file);
@@ -200,6 +210,11 @@ function main() {
         `${title}: updateNote ${JSON.stringify(book.updateNote)} does not match latest chapter ${maxChapterNumber}`,
       );
     }
+    if (latestChapter?.title && !book.updateNote?.includes(latestChapter.title)) {
+      report.hardIssues.push(
+        `${title}: updateNote ${JSON.stringify(book.updateNote)} does not include latest chapter title ${latestChapter.title}`,
+      );
+    }
     if (latestChapter?.generatedAt && book.updatedAt) {
       const bookUpdatedAt = Date.parse(book.updatedAt);
       const latestGeneratedAt = Date.parse(latestChapter.generatedAt);
@@ -207,6 +222,15 @@ function main() {
         report.hardIssues.push(
           `${title}: updatedAt ${book.updatedAt} is older than latest chapter generatedAt ${latestChapter.generatedAt}`,
         );
+      }
+    }
+    for (const noteFile of ["每日寫作狀態.md", "伏筆事件台帳.md", "反思.md"]) {
+      const notePath = join(materialDir, noteFile);
+      if (existsSync(notePath)) {
+        const noteText = readFileSync(notePath, "utf8");
+        if (!noteText.includes(`第${maxChapterNumber}章`)) {
+          report.hardIssues.push(`${title}: ${noteFile} does not mention latest chapter 第${maxChapterNumber}章`);
+        }
       }
     }
 
@@ -236,10 +260,19 @@ function main() {
         });
       }
       if (chars < 6000 || chars > 6500) {
+        if (chapter.number === maxChapterNumber) {
+          titleReport.chapterIssues.push({
+            chapter: chapter.number,
+            issue: `Latest chapter length ${chars} outside required 6000-6500`,
+          });
+        }
         titleReport.chapterWarnings.push({
           chapter: chapter.number,
           issue: `Chapter length ${chars} outside 6000-6500; acceptable only if intentionally locked/published.`,
         });
+      }
+      if (chapter.number === maxChapterNumber) {
+        latestChapterSentenceSets.push({ title, chapter: chapter.number, sentences: sentenceKeys(text) });
       }
       const metaHits = [...text.matchAll(PROHIBITED_META)].map((m) => m[0]);
       if (metaHits.length) {
@@ -305,6 +338,21 @@ function main() {
     }
 
     report.titles.push(titleReport);
+  }
+
+  const latestSentenceOwners = new Map();
+  for (const item of latestChapterSentenceSets) {
+    for (const sentence of item.sentences) {
+      if (!latestSentenceOwners.has(sentence)) latestSentenceOwners.set(sentence, []);
+      latestSentenceOwners.get(sentence).push(`${item.title} 第${item.chapter}章`);
+    }
+  }
+  for (const [sentence, owners] of latestSentenceOwners) {
+    if (owners.length >= 2) {
+      report.hardIssues.push(
+        `Latest chapters share an exact long sentence skeleton across titles (${owners.join(", ")}): ${sentence.slice(0, 80)}`,
+      );
+    }
   }
 
   report.manualReview.push(
