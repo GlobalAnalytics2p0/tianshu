@@ -30,14 +30,25 @@ const REQUIRED_GLOBAL_FILES = [
 ];
 
 const PROHIBITED_META =
-  /這一章|讀者會|主角|章末|第一章的安排|第二章會|outline|automation|後續自動化|本章|下一章|爆款|爽點|小高潮|Prompt/g;
+  /這一章|讀者會|讀者和|讀者們|讀者應|讀者想|主角|章末|第一章的安排|第二章會|outline|automation|後續自動化|本章|下一章|爆款|爽點|小高潮|Prompt/g;
 
 const PROHIBITED_WORKFLOW =
-  /第一口小回報|第一口回報|第二口回報|第三口回報|局部回報|早段第一個轉向|第[0-9一二三四五六七八九十百千零〇]+次重報|被放在眾人都能看見的位置|沒有立刻變成答案|真正有用的不是誰更聰明|先想照著直覺處理/g;
+  /第一口小回報|第一口回報|第二口回報|第三口回報|局部回報|一口[^。！？\n]{0,8}回報|今日第[0-9一二三四五六七八九十百千零〇]+個回報|第一個轉折|第二層轉機|第三層轉機|早段第一個轉向|第[0-9一二三四五六七八九十百千零〇]+次重報|被放在眾人都能看見的位置|沒有立刻變成答案|真正有用的不是誰更聰明|先想照著直覺處理/g;
 
 const FOREIGN_CHARACTER_TERMS = {
-  雪刃照孤城: ["顧清棠"],
-  灰塔觀測者: ["艾維森"],
+  星骸王座: ["周祈", "林岫", "林以晴", "沈墨", "顧清棠", "艾文", "伊芙", "沈照夜", "程聽雪"],
+  灰塔觀測者: ["周祈", "林岫", "林以晴", "沈曜", "沈墨", "顧清棠", "沈照夜", "程聽雪", "艾維森"],
+  雪刃照孤城: ["周祈", "林岫", "林以晴", "沈曜", "沈墨", "顧清棠", "艾文", "伊芙", "北腹"],
+  凌晨三點的演算法: ["沈曜", "顧清棠", "沈墨", "艾文", "伊芙", "沈照夜", "程聽雪", "阿棠"],
+  大明墨工: ["周祈", "林岫", "林以晴", "沈曜", "艾文", "伊芙", "沈照夜", "程聽雪", "阿棠"],
+};
+
+const TITLE_FORBIDDEN_PATTERNS = {
+  凌晨三點的演算法: [
+    /周祈這章走得很準。她/g,
+    /妹妹，我在這裡跑好多年了/g,
+    /周祈[^。！？\n]{0,80}她卻偏偏/g,
+  ],
 };
 
 const ABSTRACT_ENDING =
@@ -294,6 +305,15 @@ function main() {
         titleReport.chapterIssues.push({
           chapter: chapter.number,
           issue: `Foreign-title character contamination: ${foundForeignTerms.join(", ")}`,
+        });
+      }
+      const titlePatternHits = (TITLE_FORBIDDEN_PATTERNS[title] ?? []).flatMap((pattern) =>
+        [...text.matchAll(pattern)].map((match) => match[0]),
+      );
+      if (titlePatternHits.length) {
+        titleReport.chapterIssues.push({
+          chapter: chapter.number,
+          issue: `Title-specific continuity/personal-pronoun risk: ${[...new Set(titlePatternHits)].join(", ")}`,
         });
       }
       const dupes = duplicateParagraphs(text);

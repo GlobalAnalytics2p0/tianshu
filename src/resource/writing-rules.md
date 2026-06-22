@@ -51,6 +51,7 @@
 - Routine novel automation cadence is every 6 hours in Asia/Taipei: 00:00, 06:00, 12:00, and 18:00.
 - Do not run routine novel updates every hour unless the user explicitly changes the cadence again.
 - Each scheduled run should continue only the 5 active category leaders and produce at most one new chapter per active title where feasible.
+- Daily continuity audit cadence is 11:00 Asia/Taipei. Because the same calendar day's 12:00 and 18:00 generation runs have not happened yet at 11:00, the daily audit should default to the latest completed production day, normally the previous Asia/Taipei date, and check the four generated chapters per active title from that completed day.
 - Public copy should describe the cadence as `每日 00/06/12/18 更新` or equivalent, not as `每日 09:00 更新` or hourly updates.
 - If a prior run ended local-only because GitHub was unreachable, the next reachable run should clear that publish debt before adding another batch. Do not normalize an `ahead > 0` branch as ordinary background state.
 
@@ -201,6 +202,7 @@
 
 - For broad revision requests across the five active books, run `node scripts/audit-active-novel-quality.mjs` before and after edits. This script checks required Markdown presence, canonical `文章/` paths, manifest/file character counts, prohibited meta terms, duplicate paragraphs, paragraph-shape risk, first-window turn signals, and final-three-line hook risk.
 - For routine six-hour generation, run `node scripts/audit-active-novel-quality.mjs --strict` before publishing, after all chapter and note updates are complete. A strict failure blocks commit/push until fixed.
+- For the daily 11:00 continuity audit, run `node scripts/audit-todays-active-chapters.mjs --strict` first to identify the completed production day's chapters and catch mechanical regressions before semantic review. Then use five independent title-specific review passes, one per active writer, to compare those chapters against that title's source-of-truth files and all previous chapters for continuity, timeline, memory, author voice, unresolved clues, relationship state, and rule compliance.
 - The strict audit is an anti-regression gate for the 2026-06-22 repair class: stale `updateNote`/`updatedAt`, missing latest-chapter note updates, non-canonical paths, latest-chapter length outside 6,000-6,500, workflow/template phrases in fiction, repeated sentence skeletons, cross-title character contamination, and exact long-sentence overlap across the latest chapters.
 - Never accept chapter prose containing internal workflow labels such as `第一口回報`, `第二口回報`, `第三口回報`, `局部回報`, `早段第一個轉向`, or `第xx次重報`. These are private review concepts; in fiction they must become concrete scene action, witness reaction, object movement, or emotional consequence.
 - If multiple active titles in the same run start to share the same procedural engine or wording skeleton, stop and revise before manifest update. A batch is not stable until each title's newest chapter would still read title-specific after removing names.
