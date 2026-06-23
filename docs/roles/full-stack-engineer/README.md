@@ -30,7 +30,7 @@
 - 每輪標準 gate：
   - 生成前：`node scripts/supervise-ai-flow.mjs --phase preflight --write-ledger`。只有 decision 是 `ready-for-generation` 才進入內容生成。
   - 生成後、commit 前：`node scripts/supervise-ai-flow.mjs --phase post-generation --write-ledger`。只有 decision 是 `ready-to-publish` 才能 commit/push。
-  - push 後：`node scripts/supervise-ai-flow.mjs --phase post-publish --write-ledger`。只有 decision 是 `published-and-verified` 才能對外回報網站已更新。
+  - push 後：`node scripts/supervise-ai-flow.mjs --phase post-publish`。只有 decision 是 `published-and-verified` 才能對外回報網站已更新；這一步不要加 `--write-ledger`，避免驗站後又產生未提交變更。
 - Supervisor 會把最新機器可讀報告寫到 `tmp/automation-supervision/latest.json`，並把可持續檢討紀錄寫到 `src/resource/automation-supervision-log.md`。`tmp/automation-supervision/` 是暫存，不提交；ledger 是耐久檢討檔，可提交。
 - 若 supervisor decision 是 `blocked`，不要繞過它。先處理 `hardIssues` 與 `nextActions`，或把 blocker 清楚回報；警示 `warnings` 不一定阻斷，但必須轉成下一輪寫作或修稿目標。
 - 開始大量生成前先做 GitHub 預檢，不要只看 remote 是否存在。標準做法是先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`：
