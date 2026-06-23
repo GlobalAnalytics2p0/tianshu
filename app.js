@@ -70,7 +70,9 @@ const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
 const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
 const readingProgressStorageKey = "tianshu-reading-progress-v1";
 const readerSettingsStorageKey = "tianshu-reader-settings-v2";
-const authorChatStorageKey = "tianshu-author-chat-v3";
+const authorChatStorageKey = "tianshu-author-chat-v6";
+const authorAgentEndpoint = typeof window !== "undefined" ? window.TIANSHU_AUTHOR_AGENT_ENDPOINT || "" : "";
+const authorAgentRequestTimeoutMs = 12000;
 const maxAuthorChatMessages = 500;
 const manifestPollIntervalMs = 60000;
 const defaultReaderSettings = {
@@ -173,6 +175,8 @@ let manifestPollInFlight = false;
 let readerSettings = loadReaderSettings();
 let authorChatStore = { version: 1, threads: {}, feedback: [] };
 let activeAuthorChatBookId = "";
+let authorChatPendingReplies = new Map();
+let authorChatReplyTimers = new Map();
 const resourceAvailabilityCache = new Map();
 
 function buildShareUrls() {
@@ -693,17 +697,163 @@ function getFeedbackForBook(book) {
     .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
 }
 
-function buildPrimaryAuthorReply(book, readerText) {
+function normalizedReaderText(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[，。！？、,.!?；;：:\s「」『』《》〈〉（）()]/g, "");
+}
+
+function readerTextSimilarity(left, right) {
+  const a = Array.from(new Set(normalizedReaderText(left)));
+  const b = Array.from(new Set(normalizedReaderText(right)));
+  if (!a.length || !b.length) return 0;
+  const bSet = new Set(b);
+  const overlap = a.filter((char) => bSet.has(char)).length;
+  return overlap / Math.max(a.length, b.length);
+}
+
+function findSimilarRecentReaderQuestion(thread, readerText, currentMessageId = "") {
+  if (!thread || !Array.isArray(thread.messages)) return null;
+  const recentReaders = thread.messages
+    .filter((message) => message.role === "reader" && message.id !== currentMessageId)
+    .slice(-5)
+    .reverse();
+
+  return recentReaders.find((message) => readerTextSimilarity(message.text, readerText) >= 0.58) || null;
+}
+
+function bookContextForAgent(book) {
+  const latestChapter = book.chapters?.at(-1);
+  return {
+    id: book.id,
+    title: book.title,
+    author: profileForBook(book).author,
+    category: book.category,
+    tags: book.tags || [],
+    premise: book.premise,
+    summary: buildSummary(book),
+    latestChapter: latestChapter ? {
+      number: latestChapter.number,
+      title: latestChapter.title || latestChapter.displayTitle,
+      displayTitle: latestChapter.displayTitle
+    } : null
+  };
+}
+
+function recentMessagesForAgent(thread) {
+  return (thread?.messages || []).slice(-10).map((message) => ({
+    role: message.role,
+    speaker: message.speaker,
+    text: message.text,
+    createdAt: message.createdAt
+  }));
+}
+
+function sanitizeAgentReply(text) {
+  return String(text || "")
+    .replace(/\s+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+    .slice(0, 900);
+}
+
+async function requestAuthorAgentReply(book, readerText, thread) {
+  if (!authorAgentEndpoint) return "";
+
+  const profile = profileForBook(book);
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), authorAgentRequestTimeoutMs);
+
+  try {
+    const response = await fetch(authorAgentEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "gpt-5.5",
+        agentId: `author-${book.id}`,
+        routePolicy: "primary_author_only",
+        readerMessage: readerText,
+        book: bookContextForAgent(book),
+        authorProfile: {
+          name: profile.author,
+          texture: profile.texture,
+          focus: profile.focus
+        },
+        recentMessages: recentMessagesForAgent(thread),
+        instructions: [
+          "使用繁體中文回覆。",
+          "以該書原作者口吻回答，不要讓其他書的作者代答。",
+          "回答讀者問的具體問題，避免模板句、空話、過度中二或劇透。",
+          "若問題和前一題接近，補充新角度，不要重複同一句。",
+          "回覆長度控制在 2 到 5 句。"
+        ]
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) throw new Error(`Author agent endpoint returned ${response.status}`);
+    const data = await response.json();
+    return sanitizeAgentReply(data.reply || data.text || data.message?.content || data.choices?.[0]?.message?.content || "");
+  } catch (error) {
+    console.warn("Author agent endpoint unavailable; using local fallback.", error);
+    return "";
+  } finally {
+    window.clearTimeout(timer);
+  }
+}
+
+function buildLowStatusReply(book, readerText, previousSimilar) {
+  const text = String(readerText || "");
+  const profile = profileForBook(book);
+  const firstChapterScope = /第一章|開頭|一開始|剛開始/.test(text);
+
+  if (book.title === "星骸王座") {
+    if (previousSimilar) {
+      return "你這題和上一個問題很接近，我補充另一個角度：沈曜不是被設計成一直卑微，而是第一段先讓你看到他沒有資源、沒有靠山時會怎麼活。這種低姿態是生存策略，不是性格終點；後面好看的地方，會是他怎麼一步步把這個位置翻回來。";
+    }
+    if (firstChapterScope) {
+      return "第一章讓沈曜看起來微弱，是為了先把他的起點壓清楚：他在北街沒有話語權，也沒有能直接保護自己的籌碼。這樣後面他每做一個小選擇，讀者才會知道那不是裝酷，而是在很差的位置裡慢慢找回主動權。";
+    }
+    return "他現在看起來卑微，主要是因為故事前段要先呈現他的處境，而不是一開始就讓他開無雙。這本書的主軸不是永遠忍讓，而是看他怎麼從被壓低的位置裡，逐步建立自己的判斷、代價和反擊方式。";
+  }
+
+  if (previousSimilar) {
+    return `這題和前一題接近，我補充說明：我不希望角色的低姿態變成單純受氣，而是要讓讀者看見他在「${profile.focus}」裡暫時沒有好選項。後續如果沒有給出變化，那就會是需要調整的地方。`;
+  }
+
+  return `這種低姿態不是要把角色寫得沒用，而是先交代他在「${profile.focus}」裡受限的位置。只要後續能看到選擇、反擊或代價，它就不是單純憋屈；如果一直停在同一種狀態，我會把它視為節奏問題。`;
+}
+
+function buildOpenQuestionReply(book, readerText, previousSimilar) {
+  const profile = profileForBook(book);
+  const quoted = String(readerText || "").trim().slice(0, 34);
+  if (previousSimilar) {
+    return `你這題和前面那個問題相近，我換個角度補充：目前《${book.title}》會先保留一些答案，但不應該讓讀者覺得作者在敷衍。針對「${quoted}」，我會用後續場景把原因講清楚，而不是一直用同一句話帶過。`;
+  }
+  return `針對「${quoted}」，我可以先用不爆雷的方式說：這個安排和${profile.focus}有關。它不是隨便放的，但後面的關鍵轉折我不會直接說破；如果你指出具體章節或角色動作，我可以再回答得更細。`;
+}
+
+function buildPrimaryAuthorReply(book, readerText, thread = null, currentMessageId = "") {
   const profile = profileForBook(book);
   const text = String(readerText || "");
+  const previousSimilar = findSimilarRecentReaderQuestion(thread, text, currentMessageId);
+
+  if (/卑微|窩囊|憋屈|弱|太弱|被壓|受氣|沒用/.test(text)) {
+    return buildLowStatusReply(book, text, previousSimilar);
+  }
 
   if (/介紹|內容|講什麼|大概|看點|推薦|適合|這本/.test(text)) {
-    return `可以。《${book.title}》是${buildSummary(book)} 如果你想先試讀，我會建議從第一章開始，看主角遇到的第一個麻煩是不是合你的口味。`;
+    const prefix = previousSimilar ? "這題和前面有點接近，我補充得更具體一點。" : "可以。";
+    return `${prefix}《${book.title}》是${buildSummary(book)} 如果你想先試讀，我會建議從第一章開始，看主角遇到的第一個麻煩、世界規則和角色壓力是不是合你的口味。`;
   }
 
   if (/更新|幾點|多久|什麼時候|何時|連載/.test(text)) {
     const latest = book.chapters?.at(-1)?.displayTitle || "最新章節";
     return `目前這批作品以每日 18 點更新為主。《${book.title}》目前最新進度是「${latest}」。如果臨時有調整，首頁會優先同步。`;
+  }
+
+  if (/為什麼|怎麼|誰是|是不是|哪裡|何時|什麼|[？?]/.test(text)) {
+    return buildOpenQuestionReply(book, text, previousSimilar);
   }
 
   const classification = classifyFeedback(readerText);
@@ -712,25 +862,64 @@ function buildPrimaryAuthorReply(book, readerText) {
 }
 
 function generateReaderTriggeredMessages(book, readerText) {
-  const profile = profileForBook(book);
-  const messages = [
+  return [
     createChatMessage({
       role: "reader",
       speaker: "讀者",
       text: readerText,
       bookId: book.id,
       bookTitle: book.title
-    }),
+    })
+  ];
+}
+
+function authorReplyDelayMs(readerText) {
+  const length = Array.from(String(readerText || "")).length;
+  return Math.min(5200, Math.max(1800, 1400 + length * 45));
+}
+
+function clearAuthorReplyTimer(bookId) {
+  const timer = authorChatReplyTimers.get(bookId);
+  if (timer) window.clearTimeout(timer);
+  authorChatReplyTimers.delete(bookId);
+}
+
+async function finishAuthorReply(bookId, readerText, readerMessageId) {
+  const book = allBooks.find((item) => item.id === bookId);
+  if (!book) return;
+
+  const thread = ensureAuthorThread(book);
+  const profile = profileForBook(book);
+  let replyText = await requestAuthorAgentReply(book, readerText, thread);
+  if (!replyText) replyText = buildPrimaryAuthorReply(book, readerText, thread, readerMessageId);
+
+  appendAuthorChatMessages(book, [
     createChatMessage({
       role: "author",
       speaker: profile.author,
-      text: buildPrimaryAuthorReply(book, readerText),
+      text: replyText,
       bookId: book.id,
       bookTitle: book.title
     })
-  ];
+  ]);
 
-  return messages;
+  authorChatPendingReplies.delete(bookId);
+  authorChatReplyTimers.delete(bookId);
+  if (activeAuthorChatBookId === bookId) renderAuthorChat({ scrollEnd: true });
+}
+
+function scheduleAuthorReply(book, readerText, readerMessageId) {
+  const profile = profileForBook(book);
+  clearAuthorReplyTimer(book.id);
+  authorChatPendingReplies.set(book.id, {
+    speaker: profile.author,
+    startedAt: new Date().toISOString()
+  });
+
+  const timer = window.setTimeout(() => {
+    finishAuthorReply(book.id, readerText, readerMessageId);
+  }, authorReplyDelayMs(readerText));
+  authorChatReplyTimers.set(book.id, timer);
 }
 
 function formatAuthorMessageTime(value) {
@@ -782,6 +971,30 @@ function renderAuthorMessage(message) {
   `;
 }
 
+function renderAuthorTyping(book) {
+  const pending = authorChatPendingReplies.get(book.id);
+  if (!pending) return "";
+
+  const profile = profileForBook(book);
+  return `
+    <article class="author-message author-message--typing" style="--message-accent:${profile.accent}" aria-live="polite">
+      <span class="author-message__avatar" aria-hidden="true">${escapeHtml(profile.initial)}</span>
+      <div class="author-message__bubble">
+        <header>
+          <strong>${escapeHtml(profile.author)}</strong>
+          <span>正在回覆</span>
+        </header>
+        <p>
+          <span class="author-typing-line">
+            正在讀取你的問題與作品脈絡
+            <span class="author-typing-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </span>
+        </p>
+      </div>
+    </article>
+  `;
+}
+
 function scrollAuthorChatToEnd() {
   window.requestAnimationFrame(() => {
     const log = document.querySelector("[data-author-chat-log]");
@@ -806,6 +1019,7 @@ function renderAuthorChat({ scrollEnd = false } = {}) {
   const activeBook = books.find((book) => book.id === activeAuthorChatBookId) || books[0];
   const activeProfile = profileForBook(activeBook);
   const thread = ensureAuthorThread(activeBook);
+  const isResponding = authorChatPendingReplies.has(activeBook.id);
 
   root.innerHTML = `
     <div class="author-chat-layout">
@@ -824,13 +1038,14 @@ function renderAuthorChat({ scrollEnd = false } = {}) {
 
         <div class="author-chat-log" data-author-chat-log>
           ${thread.messages.map((message) => renderAuthorMessage(message)).join("")}
+          ${renderAuthorTyping(activeBook)}
         </div>
 
         <form class="author-chat-composer" data-author-chat-form>
-          <textarea name="message" rows="2" maxlength="280" placeholder="給 ${escapeHtml(activeProfile.author)} 留言，或提出節奏、角色、劇情疑問"></textarea>
-          <button type="submit">
+          <textarea name="message" rows="2" maxlength="280" placeholder="給 ${escapeHtml(activeProfile.author)} 留言，或提出節奏、角色、劇情疑問" ${isResponding ? "disabled" : ""}></textarea>
+          <button type="submit" ${isResponding ? "disabled" : ""}>
             <span class="icon" data-icon="send"></span>
-            送出
+            ${isResponding ? "思考中" : "送出"}
           </button>
         </form>
       </section>
@@ -849,6 +1064,11 @@ function renderAuthorChat({ scrollEnd = false } = {}) {
 
   root.querySelector("[data-author-chat-form]")?.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (authorChatPendingReplies.has(activeBook.id)) {
+      showToast(`${activeProfile.author}正在回覆中，稍等一下。`);
+      return;
+    }
+
     const textarea = event.currentTarget.elements.message;
     const message = textarea.value.trim();
     if (!message) {
@@ -856,8 +1076,10 @@ function renderAuthorChat({ scrollEnd = false } = {}) {
       return;
     }
 
-    appendAuthorChatMessages(activeBook, generateReaderTriggeredMessages(activeBook, message));
+    const readerMessages = generateReaderTriggeredMessages(activeBook, message);
+    appendAuthorChatMessages(activeBook, readerMessages);
     textarea.value = "";
+    scheduleAuthorReply(activeBook, message, readerMessages[0]?.id || "");
     renderAuthorChat({ scrollEnd: true });
   });
 
