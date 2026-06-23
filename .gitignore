@@ -4,6 +4,7 @@
 # Local caches
 __pycache__/
 *.pyc
+tmp/automation-supervision/
 
 # Local video production outputs.
 # Keep lightweight plans/metadata/subtitles/thumbnail PNGs trackable, but never commit generated audio/video.

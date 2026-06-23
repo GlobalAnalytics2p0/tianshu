@@ -26,6 +26,13 @@
 ## Automation 與 Git
 
 - 每 6 小時 Asia/Taipei（00:00、06:00、12:00、18:00）的更新目標是五本 active title，各新增一章可行時 6,000-6,500 字。
+- 六小時流程的總入口是 `node scripts/supervise-ai-flow.mjs`。它負責把 GitHub 預檢、deferred publish debt catch-up、本地品質驗證、發布後驗站與檢討紀錄串成同一個閉環。
+- 每輪標準 gate：
+  - 生成前：`node scripts/supervise-ai-flow.mjs --phase preflight --write-ledger`。只有 decision 是 `ready-for-generation` 才進入內容生成。
+  - 生成後、commit 前：`node scripts/supervise-ai-flow.mjs --phase post-generation --write-ledger`。只有 decision 是 `ready-to-publish` 才能 commit/push。
+  - push 後：`node scripts/supervise-ai-flow.mjs --phase post-publish --write-ledger`。只有 decision 是 `published-and-verified` 才能對外回報網站已更新。
+- Supervisor 會把最新機器可讀報告寫到 `tmp/automation-supervision/latest.json`，並把可持續檢討紀錄寫到 `src/resource/automation-supervision-log.md`。`tmp/automation-supervision/` 是暫存，不提交；ledger 是耐久檢討檔，可提交。
+- 若 supervisor decision 是 `blocked`，不要繞過它。先處理 `hardIssues` 與 `nextActions`，或把 blocker 清楚回報；警示 `warnings` 不一定阻斷，但必須轉成下一輪寫作或修稿目標。
 - 開始大量生成前先做 GitHub 預檢，不要只看 remote 是否存在。標準做法是先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`：
   - 若 branch 已經 `ahead > 0` 且遠端可達，先清掉 deferred publish debt，再開始新內容。
   - 若 branch `ahead > 0` 但遠端不可達，必須把「網站仍停在舊版」當成顯式 blocker 寫進記錄與回報。
