@@ -24,6 +24,7 @@ const icons = {
   link: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.91 5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.8 13.12a5 5 0 0 0 7.07 7.07L13.09 19"/></svg>',
   sync: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 2v5h-5"/><path d="M19 9A7 7 0 0 0 6.4 5.8"/><path d="M7 22v-5h5"/><path d="M5 15a7 7 0 0 0 12.6 3.2"/></svg>',
   message: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 5h14v10H8l-4 4V6a1 1 0 0 1 1-1Z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>',
+  send: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m21 3-6.5 18-4-8.5L2 8.5 21 3Z"/><path d="m10.5 12.5 4-4"/></svg>',
   devices: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="13" height="10" rx="1.5"/><rect x="17" y="8" width="4" height="11" rx="1.2"/><path d="M7 19h5"/></svg>',
   compass: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="m15 9-2 5-5 2 2-5 5-2Z"/></svg>',
   user: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>',
@@ -69,11 +70,92 @@ const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
 const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
 const readingProgressStorageKey = "tianshu-reading-progress-v1";
 const readerSettingsStorageKey = "tianshu-reader-settings-v2";
+const authorChatStorageKey = "tianshu-author-chat-v3";
+const maxAuthorChatMessages = 500;
 const manifestPollIntervalMs = 60000;
 const defaultReaderSettings = {
   size: "medium",
   line: "relaxed",
   width: "standard"
+};
+
+const authorVoiceProfiles = {
+  "星骸王座": {
+    author: "顧夜燼",
+    initial: "顧",
+    accent: "#7ea5ff",
+    texture: "邊境求生",
+    focus: "主角處境、北街生活、章節節奏",
+    seed: "你好，我是《星骸王座》的作者。這裡可以問劇情、角色、更新或閱讀順序，我會盡量直接回答，也會避免提前爆雷。",
+    readerReplies: {
+      complaint: "收到，謝謝你直接說。這類問題我會優先回頭看節奏和可讀性，避免只推設定而忽略人物感受。",
+      suggestion: "這個建議我會先記下來。能不能放進正文，要看它會不會讓角色選擇更清楚，而不是只多一個設定。",
+      question: "可以問。這題我會盡量回答到你能理解目前劇情，但不提前把後面的關鍵轉折說破。",
+      general: "我看到了，謝謝留言。我會把這個意見放回後續章節的節奏和角色反應裡檢查。"
+    }
+  },
+  "灰塔觀測者": {
+    author: "霧原",
+    initial: "霧",
+    accent: "#9d8cff",
+    texture: "懸疑觀測",
+    focus: "線索清楚度、懸疑節奏、讀者是否跟得上",
+    seed: "你好，我是《灰塔觀測者》的作者。這裡可以問線索、角色動機或目前看不懂的地方，我會盡量用不爆雷的方式說明。",
+    readerReplies: {
+      complaint: "收到。如果讀起來只是悶，而不是有懸念，那我需要調整線索密度和場景推進。",
+      suggestion: "這個方向可以評估。我會看它是否能讓線索更好讀，而不是讓讀者更困惑。",
+      question: "這個問題可以問。我會先回答目前已經能公開的部分，後面還沒揭露的內容就先不爆雷。",
+      general: "我看到了。這類回饋會幫我確認懸疑感和可理解度有沒有平衡好。"
+    }
+  },
+  "雪刃照孤城": {
+    author: "謝聽寒",
+    initial: "謝",
+    accent: "#8cca73",
+    texture: "武俠舊案",
+    focus: "人物情緒、武打節奏、舊案線索",
+    seed: "你好，我是《雪刃照孤城》的作者。可以問角色關係、舊案線索或哪一段武打看不清楚，我會直接說明。",
+    readerReplies: {
+      complaint: "收到。如果武打或人物反應讀起來不順，我會先檢查動作順序和情緒鋪陳。",
+      suggestion: "這個建議可以先放進待評估清單。只要它能讓角色更清楚，而不是硬加橋段，就有機會用。",
+      question: "可以，這題我會盡量說清楚目前線索。涉及後面反轉的部分，我會先保留。",
+      general: "謝謝留言。我會用這個回饋檢查後續章節的節奏和人物選擇。"
+    }
+  },
+  "凌晨三點的演算法": {
+    author: "陳停雲",
+    initial: "陳",
+    accent: "#35e4dc",
+    texture: "都市科技",
+    focus: "黑箱流程、人物選擇、現實感",
+    seed: "你好，我是《凌晨三點的演算法》的作者。你可以問設定、科技流程或角色動機，我會盡量用白話回答。",
+    readerReplies: {
+      complaint: "收到。科技線如果看起來像在講術語，就需要改得更像人在現場遇到的問題。",
+      suggestion: "這個建議可以考慮。我的原則是先讓流程變好懂，再決定要不要加進情節。",
+      question: "可以，我會先用目前公開的資訊回答。後面涉及案件真相的部分，我會避免提前劇透。",
+      general: "我看到了。這類留言會幫我檢查科技設定是否夠清楚、夠貼近角色處境。"
+    }
+  },
+  "大明墨工": {
+    author: "蕭墨臣",
+    initial: "蕭",
+    accent: "#da9353",
+    texture: "歷史工匠",
+    focus: "工法細節、案件推理、歷史背景",
+    seed: "你好，我是《大明墨工》的作者。這裡可以問歷史背景、工法細節或劇情疑問，我會盡量講清楚。",
+    readerReplies: {
+      complaint: "收到。如果工法或帳冊線讀起來太硬，我會回頭把人物處境和證據關係寫得更清楚。",
+      suggestion: "這個建議可以評估。只要它能讓案件或工法更好理解，而不是硬塞資料，就適合考慮。",
+      question: "可以問。這題我會先用目前章節能看到的線索回答，不會直接把後面謎底講完。",
+      general: "謝謝留言。我會用它檢查後續章節的證據、工法和角色選擇是否夠清楚。"
+    }
+  }
+};
+
+const editorProfile = {
+  author: "主編",
+  initial: "編",
+  accent: "#ffd37b"
 };
 
 let allBooks = [];
@@ -89,6 +171,8 @@ let currentManifestSignature = "";
 let manifestPollTimer = null;
 let manifestPollInFlight = false;
 let readerSettings = loadReaderSettings();
+let authorChatStore = { version: 1, threads: {}, feedback: [] };
+let activeAuthorChatBookId = "";
 const resourceAvailabilityCache = new Map();
 
 function buildShareUrls() {
@@ -432,6 +516,352 @@ function renderAiNovels(category = "") {
   list.querySelectorAll("[data-book-id]").forEach((button) => {
     button.addEventListener("click", () => openBook(button.dataset.bookId));
   });
+}
+
+function makeChatId(prefix) {
+  return `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function profileForBook(book) {
+  return authorVoiceProfiles[book?.title] || {
+    author: book?.author || "天書作者",
+    initial: (book?.author || "書").slice(0, 1),
+    accent: "#ffd37b",
+    texture: "原創長篇",
+    focus: "人物、場景與下一個疑問",
+    seed: "先守住人物，再談下一步。",
+    readerReplies: {
+      complaint: "這個問題我會收下，下一步先讓場景和人物壓力變得更清楚。",
+      suggestion: "這個建議可以先放進下一個場景，不急著把答案講滿。",
+      question: "這個疑問值得留下，也值得在後面用場景回答。",
+      general: "我看到了，會把它先放回作品自己的節奏裡。"
+    }
+  };
+}
+
+function profileByAuthor(author) {
+  return Object.values(authorVoiceProfiles).find((profile) => profile.author === author)
+    || (author === editorProfile.author ? editorProfile : null);
+}
+
+function loadAuthorChatStore() {
+  const stored = safeReadJson(authorChatStorageKey, null);
+  if (!stored || typeof stored !== "object") {
+    return { version: 1, threads: {}, feedback: [] };
+  }
+
+  return {
+    version: 1,
+    threads: stored.threads && typeof stored.threads === "object" ? stored.threads : {},
+    feedback: Array.isArray(stored.feedback) ? stored.feedback : []
+  };
+}
+
+function saveAuthorChatStore() {
+  safeWriteJson(authorChatStorageKey, authorChatStore);
+}
+
+function createChatMessage({ role = "author", speaker, text, bookId = "", bookTitle = "" }) {
+  return {
+    id: makeChatId(role),
+    role,
+    speaker,
+    text,
+    bookId,
+    bookTitle,
+    createdAt: new Date().toISOString()
+  };
+}
+
+function buildSeedMessages(book) {
+  const profile = profileForBook(book);
+  return [
+    {
+      id: `${book.id}-primary-seed`,
+      role: "author",
+      speaker: profile.author,
+      text: profile.seed,
+      bookId: book.id,
+      bookTitle: book.title,
+      createdAt: new Date().toISOString()
+    }
+  ];
+}
+
+function ensureAuthorThread(book) {
+  if (!book) return null;
+  if (!authorChatStore.threads[book.id]) {
+    authorChatStore.threads[book.id] = {
+      id: book.id,
+      title: book.title,
+      author: book.author,
+      messages: buildSeedMessages(book),
+      updatedAt: new Date().toISOString()
+    };
+  }
+
+  const thread = authorChatStore.threads[book.id];
+  if (!Array.isArray(thread.messages)) thread.messages = buildSeedMessages(book);
+  pruneAuthorThread(book);
+  return thread;
+}
+
+function ensureAuthorChatThreads() {
+  const books = getActiveRankingBooks();
+  books.forEach((book) => ensureAuthorThread(book));
+  if (!activeAuthorChatBookId && books[0]) activeAuthorChatBookId = books[0].id;
+  saveAuthorChatStore();
+}
+
+function classifyFeedback(text) {
+  const value = String(text || "");
+  if (!value.trim()) return null;
+
+  if (/太慢|拖|無聊|看不下|混亂|重複|很平|偏平|弱|失望|尷尬|不自然|AI味|看不懂|不懂/.test(value)) {
+    return { type: "complaint", label: "抱怨" };
+  }
+  if (/希望|建議|想看|可不可以|可以讓|多一點|少一點|加強|改|不要|應該|最好/.test(value)) {
+    return { type: "suggestion", label: "建議" };
+  }
+  if (/為什麼|怎麼|誰是|是不是|哪裡|何時|什麼|[？?]/.test(value)) {
+    return { type: "question", label: "疑問" };
+  }
+
+  return null;
+}
+
+function feedbackActionForType(type, book) {
+  const profile = profileForBook(book);
+  if (type === "complaint") return `回到《${book.title}》的下一次場景檢查：${profile.focus}是否夠清楚。`;
+  if (type === "suggestion") return `先放入《${book.title}》的待評估方向，不直接改 canon。`;
+  return `用場景或物證補清楚，不用作者口吻硬解釋。`;
+}
+
+function captureFeedbackFromMessage(book, message, source = "active") {
+  if (!book || message.role !== "reader") return;
+  const classification = classifyFeedback(message.text);
+  if (!classification) return;
+
+  const excerpt = String(message.text).trim().slice(0, 140);
+  const duplicate = authorChatStore.feedback.some((item) => {
+    return item.bookId === book.id && item.excerpt === excerpt && item.type === classification.type;
+  });
+  if (duplicate) return;
+
+  authorChatStore.feedback.push({
+    id: makeChatId("feedback"),
+    bookId: book.id,
+    bookTitle: book.title,
+    author: book.author,
+    type: classification.type,
+    label: classification.label,
+    status: source === "trimmed" ? "已萃取" : "待消化",
+    source,
+    sourceMessageId: message.id,
+    excerpt,
+    action: feedbackActionForType(classification.type, book),
+    createdAt: new Date().toISOString()
+  });
+}
+
+function pruneAuthorThread(book) {
+  const thread = authorChatStore.threads[book.id];
+  if (!thread || !Array.isArray(thread.messages)) return;
+  const overflow = thread.messages.length - maxAuthorChatMessages;
+  if (overflow <= 0) return;
+
+  const removed = thread.messages.splice(0, overflow);
+  removed.forEach((message) => captureFeedbackFromMessage(book, message, "trimmed"));
+}
+
+function appendAuthorChatMessages(book, messages) {
+  const thread = ensureAuthorThread(book);
+  if (!thread) return;
+
+  messages.forEach((message) => {
+    thread.messages.push(message);
+    captureFeedbackFromMessage(book, message, "active");
+  });
+  pruneAuthorThread(book);
+  thread.updatedAt = new Date().toISOString();
+  saveAuthorChatStore();
+}
+
+function getFeedbackForBook(book) {
+  return authorChatStore.feedback
+    .filter((item) => item.bookId === book.id)
+    .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+}
+
+function buildPrimaryAuthorReply(book, readerText) {
+  const profile = profileForBook(book);
+  const text = String(readerText || "");
+
+  if (/介紹|內容|講什麼|大概|看點|推薦|適合|這本/.test(text)) {
+    return `可以。《${book.title}》是${buildSummary(book)} 如果你想先試讀，我會建議從第一章開始，看主角遇到的第一個麻煩是不是合你的口味。`;
+  }
+
+  if (/更新|幾點|多久|什麼時候|何時|連載/.test(text)) {
+    const latest = book.chapters?.at(-1)?.displayTitle || "最新章節";
+    return `目前這批作品以每日 18 點更新為主。《${book.title}》目前最新進度是「${latest}」。如果臨時有調整，首頁會優先同步。`;
+  }
+
+  const classification = classifyFeedback(readerText);
+  const type = classification?.type || "general";
+  return profile.readerReplies[type] || profile.readerReplies.general;
+}
+
+function generateReaderTriggeredMessages(book, readerText) {
+  const profile = profileForBook(book);
+  const messages = [
+    createChatMessage({
+      role: "reader",
+      speaker: "讀者",
+      text: readerText,
+      bookId: book.id,
+      bookTitle: book.title
+    }),
+    createChatMessage({
+      role: "author",
+      speaker: profile.author,
+      text: buildPrimaryAuthorReply(book, readerText),
+      bookId: book.id,
+      bookTitle: book.title
+    })
+  ];
+
+  return messages;
+}
+
+function formatAuthorMessageTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("zh-Hant-TW", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(date);
+}
+
+function renderAuthorThreadButton(book) {
+  const profile = profileForBook(book);
+  const thread = ensureAuthorThread(book);
+  const isActive = book.id === activeAuthorChatBookId;
+
+  return `
+    <button class="author-thread-card ${isActive ? "is-active" : ""}" type="button" data-author-thread="${book.id}" style="--thread-accent:${profile.accent};${coverStyle(book)}">
+      <span class="author-thread-card__cover ${book.coverImage ? "book-card__cover--image" : ""}">
+        ${renderCoverContent(book)}
+      </span>
+      <span class="author-thread-card__body">
+        <strong>${escapeHtml(book.title)}</strong>
+        <small>${escapeHtml(profile.author)} · ${thread.messages.length} 則訊息</small>
+        <em>${escapeHtml(profile.texture)}</em>
+      </span>
+    </button>
+  `;
+}
+
+function renderAuthorMessage(message) {
+  const profile = message.role === "reader"
+    ? { author: "讀者", initial: "讀", accent: "#f0aa3a" }
+    : profileByAuthor(message.speaker) || { author: message.speaker, initial: String(message.speaker).slice(0, 1), accent: "#ffd37b" };
+
+  return `
+    <article class="author-message author-message--${escapeHtml(message.role)}" style="--message-accent:${profile.accent}">
+      <span class="author-message__avatar" aria-hidden="true">${escapeHtml(profile.initial)}</span>
+      <div class="author-message__bubble">
+        <header>
+          <strong>${escapeHtml(message.speaker)}</strong>
+          <span>${escapeHtml(formatAuthorMessageTime(message.createdAt))}</span>
+        </header>
+        <p>${escapeHtml(message.text)}</p>
+      </div>
+    </article>
+  `;
+}
+
+function scrollAuthorChatToEnd() {
+  window.requestAnimationFrame(() => {
+    const log = document.querySelector("[data-author-chat-log]");
+    if (log) log.scrollTop = log.scrollHeight;
+  });
+}
+
+function renderAuthorChat({ scrollEnd = false } = {}) {
+  const root = document.getElementById("authorChatWorkbench");
+  if (!root) return;
+
+  const books = getActiveRankingBooks();
+  if (!books.length) {
+    root.innerHTML = `<p class="load-error">作者聊天室正在等待作品資料。</p>`;
+    return;
+  }
+
+  if (!books.some((book) => book.id === activeAuthorChatBookId)) {
+    activeAuthorChatBookId = books[0].id;
+  }
+
+  const activeBook = books.find((book) => book.id === activeAuthorChatBookId) || books[0];
+  const activeProfile = profileForBook(activeBook);
+  const thread = ensureAuthorThread(activeBook);
+
+  root.innerHTML = `
+    <div class="author-chat-layout">
+      <aside class="author-thread-list" aria-label="小說聊天串">
+        ${books.map((book) => renderAuthorThreadButton(book)).join("")}
+      </aside>
+
+      <section class="author-chat-board" aria-label="${escapeHtml(activeBook.title)} 作者聊天室">
+        <header class="author-chat-board__header" style="--thread-accent:${activeProfile.accent}">
+          <div>
+            <span>${escapeHtml(activeProfile.texture)}</span>
+            <h3>${escapeHtml(activeBook.title)}</h3>
+            <p>${escapeHtml(activeProfile.author)} · ${escapeHtml(activeProfile.focus)}</p>
+          </div>
+        </header>
+
+        <div class="author-chat-log" data-author-chat-log>
+          ${thread.messages.map((message) => renderAuthorMessage(message)).join("")}
+        </div>
+
+        <form class="author-chat-composer" data-author-chat-form>
+          <textarea name="message" rows="2" maxlength="280" placeholder="給 ${escapeHtml(activeProfile.author)} 留言，或提出節奏、角色、劇情疑問"></textarea>
+          <button type="submit">
+            <span class="icon" data-icon="send"></span>
+            送出
+          </button>
+        </form>
+      </section>
+
+    </div>
+  `;
+
+  hydrateIcons(root);
+
+  root.querySelectorAll("[data-author-thread]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeAuthorChatBookId = button.dataset.authorThread;
+      renderAuthorChat({ scrollEnd: true });
+    });
+  });
+
+  root.querySelector("[data-author-chat-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const textarea = event.currentTarget.elements.message;
+    const message = textarea.value.trim();
+    if (!message) {
+      showToast("請先輸入留言。");
+      return;
+    }
+
+    appendAuthorChatMessages(activeBook, generateReaderTriggeredMessages(activeBook, message));
+    textarea.value = "";
+    renderAuthorChat({ scrollEnd: true });
+  });
+
+  if (scrollEnd) scrollAuthorChatToEnd();
 }
 
 function openBook(bookId) {
@@ -898,9 +1328,29 @@ function scrollToTarget(target) {
   return false;
 }
 
+function pageViewForTarget(target) {
+  if (target === "authorChat") return "authorChat";
+  if (["home", "ranking", "ai", "youtube", "categories"].includes(target)) return "home";
+  return "";
+}
+
+function setPageView(view) {
+  if (!view) return;
+  document.querySelectorAll("[data-page-view]").forEach((section) => {
+    section.hidden = section.dataset.pageView !== view;
+  });
+}
+
+function activeNavTarget(target) {
+  if (target === "authorChat") return "authorChat";
+  if (["home", "ranking", "ai", "youtube", "categories"].includes(target)) return "home";
+  return target;
+}
+
 function setActiveNav(target) {
+  const activeTarget = activeNavTarget(target);
   document.querySelectorAll("[data-nav-target]").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.navTarget === target);
+    button.classList.toggle("is-active", button.dataset.navTarget === activeTarget);
   });
 }
 
@@ -1081,6 +1531,8 @@ function initEvents() {
   document.querySelectorAll("[data-nav-target]").forEach((button) => {
     button.addEventListener("click", () => {
       const target = button.dataset.navTarget;
+      const view = pageViewForTarget(target);
+      if (view) setPageView(view);
       setActiveNav(target);
       const moved = scrollToTarget(target);
       if (!moved) showToast("此功能頁後續接入，目前先保留入口佔位。");
@@ -1165,18 +1617,24 @@ function showLoadError(error) {
   document.getElementById("heroDescription").textContent = message;
   document.getElementById("rankingList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
   document.getElementById("aiNovelList").innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
+  const authorChatRoot = document.getElementById("authorChatWorkbench");
+  if (authorChatRoot) authorChatRoot.innerHTML = `<p class="load-error">${escapeHtml(message)}</p>`;
   showToast(message);
 }
 
 async function init() {
   hydrateIcons();
+  setPageView("home");
   initEvents();
   try {
     await loadLibrary();
+    authorChatStore = loadAuthorChatStore();
+    ensureAuthorChatThreads();
     initHero();
     renderRanking();
     renderCategories();
     renderAiNovels();
+    renderAuthorChat({ scrollEnd: true });
     maybeShowInstallGuide();
     consumeAutoRefreshFlag();
     initManifestPolling();

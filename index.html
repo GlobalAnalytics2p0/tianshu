@@ -148,29 +148,13 @@
             <span class="icon" data-icon="home"></span>
             <span>首頁</span>
           </button>
-          <button class="side-nav__item" type="button" data-nav-target="ranking" aria-label="天書小說榜">
-            <span class="icon" data-icon="trophy"></span>
-            <span>天書小說榜</span>
-          </button>
-          <button class="side-nav__item" type="button" data-nav-target="ai" aria-label="天書創作區">
-            <span class="icon" data-icon="bot"></span>
-            <span>天書創作區</span>
-          </button>
-          <button class="side-nav__item" type="button" data-nav-target="youtube" aria-label="YouTube 頻道">
-            <span class="icon" data-icon="youtube"></span>
-            <span>YouTube 頻道</span>
-          </button>
-          <button class="side-nav__item" type="button" data-nav-target="categories" aria-label="分類">
-            <span class="icon" data-icon="grid"></span>
-            <span>分類</span>
+          <button class="side-nav__item" type="button" data-nav-target="authorChat" aria-label="作者聊天室">
+            <span class="icon" data-icon="message"></span>
+            <span>作者聊天室</span>
           </button>
           <button class="side-nav__item" type="button" data-nav-target="shelf" aria-label="書架">
             <span class="icon" data-icon="book"></span>
             <span>書架</span>
-          </button>
-          <button class="side-nav__item" type="button" data-nav-target="history" aria-label="歷史紀錄">
-            <span class="icon" data-icon="clock"></span>
-            <span>歷史紀錄</span>
           </button>
           <button class="side-nav__item" type="button" data-nav-target="alerts" aria-label="追更提醒">
             <span class="icon" data-icon="bell"></span>
@@ -229,14 +213,11 @@
         </header>
 
         <nav class="mobile-tabs" aria-label="手機導覽">
-          <button class="is-active" type="button" data-nav-target="home">推薦</button>
-          <button type="button" data-nav-target="ranking">天書榜單</button>
-          <button type="button" data-nav-target="ai">天書創作區</button>
-          <button type="button" data-nav-target="categories">分類</button>
-          <button type="button" data-nav-target="youtube">YouTube</button>
+          <button class="is-active" type="button" data-nav-target="home">首頁</button>
+          <button type="button" data-nav-target="authorChat">作者聊天室</button>
         </nav>
 
-        <section class="aeo-showcase aeo-showcase--lead" id="youtube" aria-label="天書小說品牌與追更指南">
+        <section class="aeo-showcase aeo-showcase--lead" id="youtube" data-page-view="home" aria-label="天書小說品牌與追更指南">
           <div class="aeo-showcase__intro">
             <div class="channel-strip__identity">
               <img class="channel-strip__avatar" src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
@@ -283,7 +264,7 @@
           </div>
         </section>
 
-        <section class="hero" aria-label="今日天書爆款">
+        <section class="hero" data-page-view="home" aria-label="今日天書爆款">
           <div class="hero__copy">
             <span class="hero__badge">
               <span class="icon" data-icon="flame"></span>
@@ -298,7 +279,7 @@
             <span id="heroHeat">人氣 328 萬</span>
           </button>
         </section>
-        <section class="panel ranking-panel" id="ranking">
+        <section class="panel ranking-panel" id="ranking" data-page-view="home">
           <div class="section-heading">
             <h2>天書小說榜</h2>
             <div class="tabs" role="tablist" aria-label="天書小說榜切換">
@@ -313,7 +294,7 @@
           <div id="rankingList" class="book-strip"></div>
         </section>
 
-        <section class="categories" id="categories" aria-label="熱門分類">
+        <section class="categories" id="categories" data-page-view="home" aria-label="熱門分類">
           <div class="section-heading section-heading--simple">
             <h2>天書熱門分類</h2>
             <button class="ghost-link" type="button" data-nav-target="categories">查看更多</button>
@@ -321,7 +302,7 @@
           <div id="categoryList" class="category-grid"></div>
         </section>
 
-        <section class="panel ai-panel" id="ai">
+        <section class="panel ai-panel" id="ai" data-page-view="home">
           <div class="section-heading">
             <h2>天書原創連載</h2>
             <span class="ai-note">5 部重點更新，其餘作品暫停續更</span>
@@ -329,6 +310,19 @@
             <button class="ghost-link" type="button" data-nav-target="ai">查看更多</button>
           </div>
           <div id="aiNovelList" class="ai-grid"></div>
+        </section>
+
+        <section class="panel author-chat-panel" id="authorChat" data-page-view="authorChat" aria-label="作者聊天室" hidden>
+          <div class="section-heading author-chat-heading">
+            <h2>作者聊天室</h2>
+            <div class="author-chat-status" aria-label="聊天室狀態">
+              <span>五位作者</span>
+              <span>獨立書串</span>
+              <span>原作者優先</span>
+              <span>讀者留言</span>
+            </div>
+          </div>
+          <div id="authorChatWorkbench" class="author-chat-workbench"></div>
         </section>
       </main>
 
@@ -341,13 +335,9 @@
           <span class="icon" data-icon="book"></span>
           <span>書架</span>
         </button>
-        <button type="button" data-nav-target="discover">
-          <span class="icon" data-icon="compass"></span>
-          <span>發現</span>
-        </button>
-        <button type="button" data-nav-target="youtube">
-          <span class="icon" data-icon="youtube"></span>
-          <span>頻道</span>
+        <button type="button" data-nav-target="authorChat">
+          <span class="icon" data-icon="message"></span>
+          <span>作者</span>
         </button>
         <button type="button" data-nav-target="account">
           <span class="icon" data-icon="user"></span>
