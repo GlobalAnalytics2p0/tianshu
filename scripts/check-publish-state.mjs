@@ -11,6 +11,7 @@ const ACTIVE_TITLES = [
   "大明墨工"
 ];
 const ACTIVE_NOTE_NAMES = new Set([
+  "風格規則.md",
   "核心靈魂檔案.md",
   "作者思路.md",
   "人物架構.md",
@@ -70,18 +71,19 @@ function print(result, asJson = false) {
   if (result.message) console.log(`message=${result.message}`);
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 function isActiveContentPath(path) {
   if (path === "src/resource/manifest.json") return true;
 
-  if (/^src\/resource\/星骸王座\/文章\/第\d+章 .+\.txt$/.test(path)) return true;
-  const starThroneNoteMatch = path.match(/^src\/resource\/星骸王座\/素材\/([^/]+)$/);
-  if (starThroneNoteMatch && ACTIVE_NOTE_NAMES.has(starThroneNoteMatch[1])) return true;
-
-  for (const title of ACTIVE_TITLES.filter((item) => item !== "星骸王座")) {
-    const chapterRegex = new RegExp(`^src/resource/${title}/第\\d+章 .+\\.txt$`);
+  for (const title of ACTIVE_TITLES) {
+    const escapedTitle = escapeRegExp(title);
+    const chapterRegex = new RegExp(`^src/resource/${escapedTitle}/文章/第\\d+章 .+\\.txt$`);
     if (chapterRegex.test(path)) return true;
 
-    const noteRegex = new RegExp(`^src/resource/${title}/([^/]+)$`);
+    const noteRegex = new RegExp(`^src/resource/${escapedTitle}/素材/([^/]+)$`);
     const noteMatch = path.match(noteRegex);
     if (noteMatch && ACTIVE_NOTE_NAMES.has(noteMatch[1])) return true;
   }

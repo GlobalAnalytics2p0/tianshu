@@ -390,7 +390,7 @@
           "number": 53,
           "title": "舊勺敲到門前",
           "path": "src/resource/星骸王座/文章/第53章 舊勺敲到門前.txt",
-          "charCount": 6069,
+          "charCount": 6070,
           "generatedAt": "2026-06-20T14:26:29+08:00"
         },
         {
@@ -411,7 +411,7 @@
           "number": 56,
           "title": "後廊伸手來取",
           "path": "src/resource/星骸王座/文章/第56章 後廊伸手來取.txt",
-          "charCount": 6010,
+          "charCount": 6001,
           "generatedAt": "2026-06-21T12:36:37+08:00"
         },
         {
@@ -426,7 +426,7 @@
           "title": "銅鈴戴在井邊",
           "path": "src/resource/星骸王座/文章/第58章 銅鈴戴在井邊.txt",
           "charCount": 6000,
-          "generatedAt": "2026-06-22T06:00:00+08:00"
+          "generatedAt": "2026-06-22T00:00:00+08:00"
         },
         {
           "number": 59,
@@ -1152,7 +1152,7 @@
           "number": 51,
           "title": "無色木簽上桌",
           "path": "src/resource/灰塔觀測者/文章/第51章 無色木簽上桌.txt",
-          "charCount": 6005,
+          "charCount": 6010,
           "generatedAt": "2026-06-20T00:18:38+08:00"
         },
         {
@@ -1173,7 +1173,7 @@
           "number": 54,
           "title": "井底送來空牌",
           "path": "src/resource/灰塔觀測者/文章/第54章 井底送來空牌.txt",
-          "charCount": 6026,
+          "charCount": 6005,
           "generatedAt": "2026-06-20T20:42:00+08:00"
         },
         {
@@ -1194,15 +1194,15 @@
           "number": 57,
           "title": "右軌牆粉未乾",
           "path": "src/resource/灰塔觀測者/文章/第57章 右軌牆粉未乾.txt",
-          "charCount": 6012,
+          "charCount": 6000,
           "generatedAt": "2026-06-21T18:56:08+08:00"
         },
         {
           "number": 58,
           "title": "三號梁後有人",
           "path": "src/resource/灰塔觀測者/文章/第58章 三號梁後有人.txt",
-          "charCount": 6074,
-          "generatedAt": "2026-06-22T06:00:00+08:00"
+          "charCount": 6090,
+          "generatedAt": "2026-06-22T00:00:00+08:00"
         },
         {
           "number": 59,
@@ -1222,7 +1222,7 @@
           "number": 61,
           "title": "第三櫃外袍",
           "path": "src/resource/灰塔觀測者/文章/第61章 第三櫃外袍.txt",
-          "charCount": 6019,
+          "charCount": 6008,
           "generatedAt": "2026-06-22T18:00:00+08:00"
         },
         {
@@ -1977,7 +1977,7 @@
           "title": "第三聲未落",
           "path": "src/resource/雪刃照孤城/文章/第58章 第三聲未落.txt",
           "charCount": 6309,
-          "generatedAt": "2026-06-22T06:00:00+08:00"
+          "generatedAt": "2026-06-22T00:00:00+08:00"
         },
         {
           "number": 59,
@@ -1997,7 +1997,7 @@
           "number": 61,
           "title": "灰帽右耳缺",
           "path": "src/resource/雪刃照孤城/文章/第61章 灰帽右耳缺.txt",
-          "charCount": 6023,
+          "charCount": 6028,
           "generatedAt": "2026-06-22T18:00:00+08:00"
         },
         {
@@ -2723,7 +2723,7 @@
           "number": 54,
           "title": "三分鐘後協助",
           "path": "src/resource/凌晨三點的演算法/文章/第54章 三分鐘後協助.txt",
-          "charCount": 6008,
+          "charCount": 6002,
           "generatedAt": "2026-06-20T20:42:00+08:00"
         },
         {
@@ -2737,14 +2737,14 @@
           "number": 56,
           "title": "端一整夜封住",
           "path": "src/resource/凌晨三點的演算法/文章/第56章 端一整夜封住.txt",
-          "charCount": 6049,
+          "charCount": 6040,
           "generatedAt": "2026-06-21T12:36:37+08:00"
         },
         {
           "number": 57,
           "title": "補簽沒有成功",
           "path": "src/resource/凌晨三點的演算法/文章/第57章 補簽沒有成功.txt",
-          "charCount": 6048,
+          "charCount": 6039,
           "generatedAt": "2026-06-21T18:56:08+08:00"
         },
         {
@@ -2752,7 +2752,7 @@
           "title": "三一七備查",
           "path": "src/resource/凌晨三點的演算法/文章/第58章 三一七備查.txt",
           "charCount": 6470,
-          "generatedAt": "2026-06-22T06:00:00+08:00"
+          "generatedAt": "2026-06-22T00:00:00+08:00"
         },
         {
           "number": 59,
@@ -2772,7 +2772,7 @@
           "number": 61,
           "title": "四點補錄",
           "path": "src/resource/凌晨三點的演算法/文章/第61章 四點補錄.txt",
-          "charCount": 6285,
+          "charCount": 6291,
           "generatedAt": "2026-06-22T18:00:00+08:00"
         },
         {
@@ -3127,14 +3127,14 @@
           "number": 1,
           "title": "墨線畫出鬼河",
           "path": "src/resource/大明墨工/文章/第01章 墨線畫出鬼河.txt",
-          "charCount": 6398,
+          "charCount": 6390,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
           "number": 2,
           "title": "真地滲出墨痕",
           "path": "src/resource/大明墨工/文章/第02章 真地滲出墨痕.txt",
-          "charCount": 6279,
+          "charCount": 6267,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -3197,7 +3197,7 @@
           "number": 11,
           "title": "二風把秤吹偏",
           "path": "src/resource/大明墨工/文章/第11章 二風把秤吹偏.txt",
-          "charCount": 6260,
+          "charCount": 6252,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -3253,7 +3253,7 @@
           "number": 19,
           "title": "晚算只剩灰紙",
           "path": "src/resource/大明墨工/文章/第19章 晚算只剩灰紙.txt",
-          "charCount": 6078,
+          "charCount": 6077,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -3330,7 +3330,7 @@
           "number": 30,
           "title": "回腕試出主人",
           "path": "src/resource/大明墨工/文章/第30章 回腕試出主人.txt",
-          "charCount": 6348,
+          "charCount": 6345,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -3358,7 +3358,7 @@
           "number": 34,
           "title": "淨尺再次亮起",
           "path": "src/resource/大明墨工/文章/第34章 淨尺再次亮起.txt",
-          "charCount": 6178,
+          "charCount": 6176,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -3477,7 +3477,7 @@
           "number": 51,
           "title": "沈尺露出暗痕",
           "path": "src/resource/大明墨工/文章/第51章 沈尺露出暗痕.txt",
-          "charCount": 6033,
+          "charCount": 6032,
           "generatedAt": "2026-06-20T00:18:38+08:00"
         },
         {
@@ -3512,7 +3512,7 @@
           "number": 56,
           "title": "木印沒有斷",
           "path": "src/resource/大明墨工/文章/第56章 木印沒有斷.txt",
-          "charCount": 6050,
+          "charCount": 6055,
           "generatedAt": "2026-06-21T12:36:37+08:00"
         },
         {
@@ -3527,7 +3527,7 @@
           "title": "羅字先封線",
           "path": "src/resource/大明墨工/文章/第58章 羅字先封線.txt",
           "charCount": 6463,
-          "generatedAt": "2026-06-22T06:00:00+08:00"
+          "generatedAt": "2026-06-22T00:00:00+08:00"
         },
         {
           "number": 59,
