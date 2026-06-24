@@ -110,7 +110,6 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
   - Revise chapters or note state until `node scripts/audit-active-novel-quality.mjs --strict` exits cleanly.
 - Durable lessons:
   - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
-
 ## 2026-06-24T06:24:00+08:00 post-generation
 
 - Decision: blocked
@@ -193,7 +192,6 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
   - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
 - Durable lessons:
   - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
-
 ## 2026-06-24T12:23:00+08:00 post-generation
 
 - Decision: blocked
@@ -321,6 +319,64 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
 ## 2026-06-24T18:29:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 雪刃照孤城 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 凌晨三點的演算法 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 大明墨工 第65章: Possible AI-even pacing: paragraph length CV 0.22
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
+## 2026-06-25T00:01:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-06-25T00:20:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Today cadence/content audit failed for 2026-06-25.
+  - 大明墨工: 每日寫作狀態.md mentions 第70章 char count 6444, manifest has 6441
+  - 大明墨工: 每日寫作狀態.md mentions 第70章 char count 6444, manifest has 6441
+  - Command failed: git diff --check
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 雪刃照孤城 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 凌晨三點的演算法 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 大明墨工 第65章: Possible AI-even pacing: paragraph length CV 0.22
+- Recovery actions:
+  - none
+- Next actions:
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+- Durable lessons:
+  - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
+## 2026-06-25T00:21:00+08:00 post-generation
 
 - Decision: ready-to-publish
 - Summary: Local generation validation passed; commit and publish may proceed.
