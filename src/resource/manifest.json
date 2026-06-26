@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T12:00:00+08:00",
+  "generatedAt": "2026-06-26T18:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "第76章《申初南井》已於 2026-06-26 12:00 更新，6005 字。",
+      "updateNote": "第77章《紅粉勺聲》已於 2026-06-26 18:00 更新，6065 字。",
       "score": "9.8",
       "heat": "328 萬",
       "chapters": [
@@ -553,13 +553,20 @@
           "path": "src/resource/星骸王座/文章/第76章 申初南井.txt",
           "charCount": 6005,
           "generatedAt": "2026-06-26T12:00:00+08:00"
+        },
+        {
+          "number": 77,
+          "title": "紅粉勺聲",
+          "path": "src/resource/星骸王座/文章/第77章 紅粉勺聲.txt",
+          "charCount": 6065,
+          "generatedAt": "2026-06-26T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "顧夜燼不寫天命的光，他寫人被逼到雪線下仍肯抬頭。冷硬邊境、說謊星核、每一次死法預見，都被他磨成少年逆命的刀口。",
       "coverImage": "src/resource/星骸王座/素材/圖像/主角圖片素材/星骸王座-沈曜阿棠.png",
       "heroImage": "src/resource/星骸王座/素材/圖像/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png",
-      "updatedAt": "2026-06-26T12:00:00+08:00"
+      "updatedAt": "2026-06-26T18:00:00+08:00"
     },
     {
       "id": "ai-02",
@@ -878,7 +885,7 @@
       "setting": "北境灰塔",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "灰塔的晨光少了一塊，艾文只是在簿冊上補了一筆，整座塔卻像忽然記起某個不該存在的人。",
-      "updateNote": "第76章《末匣活聲》已於 2026-06-26 12:00 更新，6192 字。",
+      "updateNote": "第77章《牆側齒印》已於 2026-06-26 18:00 更新，6205 字。",
       "score": "9.2",
       "heat": "288 萬",
       "chapters": [
@@ -1413,12 +1420,19 @@
           "path": "src/resource/灰塔觀測者/文章/第76章 末匣活聲.txt",
           "charCount": 6192,
           "generatedAt": "2026-06-26T12:00:00+08:00"
+        },
+        {
+          "number": 77,
+          "title": "牆側齒印",
+          "path": "src/resource/灰塔觀測者/文章/第77章 牆側齒印.txt",
+          "charCount": 6205,
+          "generatedAt": "2026-06-26T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "霧原相信恐懼最先出現在缺頁與錯拍之間。他寫灰塔、鐘聲與被刪去的人，像在昏燈下擦一面鏡：越乾淨，越照出不該存在的影子。",
       "coverImage": "src/resource/灰塔觀測者/素材/圖像/主角圖片素材/灰塔觀測者-艾文伊芙.png",
-      "updatedAt": "2026-06-26T12:00:00+08:00"
+      "updatedAt": "2026-06-26T18:00:00+08:00"
     },
     {
       "id": "ai-10",
@@ -1737,7 +1751,7 @@
       "setting": "北雪孤城",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "孤城大雪封門，沈照夜聽見一聲不該存在的刀鳴；那一夜開始，舊案、暗道與欠下的命全都醒了。",
-      "updateNote": "第76章《父鞘到門》已於 2026-06-26 12:00 更新，6362 字。",
+      "updateNote": "第77章《阿蘭藥箱》已於 2026-06-26 18:00 更新，6226 字。",
       "score": "9.2",
       "heat": "248 萬",
       "chapters": [
@@ -2272,12 +2286,19 @@
           "path": "src/resource/雪刃照孤城/文章/第76章 父鞘到門.txt",
           "charCount": 6362,
           "generatedAt": "2026-06-26T12:00:00+08:00"
+        },
+        {
+          "number": 77,
+          "title": "阿蘭藥箱",
+          "path": "src/resource/雪刃照孤城/文章/第77章 阿蘭藥箱.txt",
+          "charCount": 6226,
+          "generatedAt": "2026-06-26T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "謝聽寒的江湖沒有多餘熱鬧，只有雪、刀、舊債和不能退的人。他讓每一次出手都帶著分寸，乾淨到見血，也克制到讓人心口發緊。",
       "coverImage": "src/resource/雪刃照孤城/素材/圖像/主角圖片素材/雪刃照孤城-沈照夜程聽雪.png",
-      "updatedAt": "2026-06-26T12:00:00+08:00"
+      "updatedAt": "2026-06-26T18:00:00+08:00"
     },
     {
       "id": "ai-18",
@@ -2596,7 +2617,7 @@
       "setting": "臨江科技園與服務樓",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "凌晨三點，周祈的手機推送了自己的死訊。真正可怕的不是預測錯誤，而是有人正在讓預測成真。",
-      "updateNote": "第76章《不是三一七》已於 2026-06-26 12:00 更新，6498 字。",
+      "updateNote": "第77章《B桌小卡》已於 2026-06-26 18:00 更新，6131 字。",
       "score": "9.3",
       "heat": "208 萬",
       "chapters": [
@@ -3131,12 +3152,19 @@
           "path": "src/resource/凌晨三點的演算法/文章/第76章 不是三一七.txt",
           "charCount": 6498,
           "generatedAt": "2026-06-26T12:00:00+08:00"
+        },
+        {
+          "number": 77,
+          "title": "B桌小卡",
+          "path": "src/resource/凌晨三點的演算法/文章/第77章 B桌小卡.txt",
+          "charCount": 6131,
+          "generatedAt": "2026-06-26T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "陳停雲專寫城市凌晨最安靜的一秒：通知亮起，命運被系統改寫。他把演算法、職場與人命寫得又快又準，冷笑背後全是生存反擊。",
       "coverImage": "src/resource/凌晨三點的演算法/素材/圖像/主角圖片素材/凌晨三點的演算法-周祈林岫.png",
-      "updatedAt": "2026-06-26T12:00:00+08:00"
+      "updatedAt": "2026-06-26T18:00:00+08:00"
     },
     {
       "id": "ai-26",
@@ -3455,7 +3483,7 @@
       "setting": "大明工部",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "沈墨在御用輿圖下看見一條不存在的河；墨線一動，藏在河工、糧道與官場裡的殺局也跟著浮上來。",
-      "updateNote": "第76章《責簿副頁》已於 2026-06-26 12:00 更新，6495 字。",
+      "updateNote": "第77章《書吏黃膠》已於 2026-06-26 18:00 更新，6495 字。",
       "score": "9.4",
       "heat": "168 萬",
       "chapters": [
@@ -3990,12 +4018,19 @@
           "path": "src/resource/大明墨工/文章/第76章 責簿副頁.txt",
           "charCount": 6495,
           "generatedAt": "2026-06-26T12:00:00+08:00"
+        },
+        {
+          "number": 77,
+          "title": "書吏黃膠",
+          "path": "src/resource/大明墨工/文章/第77章 書吏黃膠.txt",
+          "charCount": 6495,
+          "generatedAt": "2026-06-26T18:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "蕭墨臣寫墨線，也寫線後的人命。他讓河工、圖籍、糧道與官場在一張紙上暗流翻湧，最痛快的反擊不是喊冤，是把假圖校回真相。",
       "coverImage": "src/resource/大明墨工/素材/圖像/主角圖片素材/大明墨工-沈墨顧清棠.png",
-      "updatedAt": "2026-06-26T12:00:00+08:00"
+      "updatedAt": "2026-06-26T18:00:00+08:00"
     },
     {
       "id": "ai-34",
