@@ -1183,3 +1183,106 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
 
+## 2026-06-28T12:39:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-06-28T13:06:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Today cadence/content audit failed for 2026-06-28.
+  - 星骸王座: 每日寫作狀態.md mentions 第84章 char count 6018, manifest has 6020
+  - 星骸王座: 每日寫作狀態.md mentions 第84章 char count 6018, manifest has 6020
+  - 灰塔觀測者: 每日寫作狀態.md mentions 第84章 char count 6002, manifest has 6003
+  - 灰塔觀測者: 每日寫作狀態.md mentions 第84章 char count 6002, manifest has 6003
+  - 雪刃照孤城: 每日寫作狀態.md mentions 第84章 char count 6314, manifest has 6313
+  - 雪刃照孤城: 每日寫作狀態.md mentions 第84章 char count 6314, manifest has 6313
+  - 凌晨三點的演算法: 每日寫作狀態.md mentions 第84章 char count 6001, manifest has 6009
+  - 凌晨三點的演算法: 每日寫作狀態.md mentions 第84章 char count 6001, manifest has 6009
+  - 大明墨工: 每日寫作狀態.md mentions 第84章 char count 6215, manifest has 6201
+  - 大明墨工: 每日寫作狀態.md mentions 第84章 char count 6215, manifest has 6201
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+- Durable lessons:
+  - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
+
+## 2026-06-28T13:07:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
+
+## 2026-06-28T13:07:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - 多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。
+

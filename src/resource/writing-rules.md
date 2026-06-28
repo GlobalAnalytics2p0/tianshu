@@ -231,3 +231,7 @@
 - After writing, perform AI-tell checks: paragraph uniformity, over-short paragraph runs, repeated transition words, hedge words, report-like terms, collective reaction cliches, repeated sentence openings, and cross-chapter phrase reuse.
 - Keep a near-term focus for every active title. The next 1-3 chapters must pull attention back toward a named debt, relationship, object, institution, or emotional wound instead of chasing every new idea.
 - State settlement must update the durable files at the right layer: `伏筆事件台帳.md` for hook status, `每日寫作狀態.md` for next scene focus, `反思.md` for senior-reader criticism, and author/persona files only for durable voice or worldview changes.
+
+## 2026-06-28 Draft Pacing Lesson
+
+- When a batch shows AI-even or over-fragmented rhythm risk, fix it in the draft stage rather than after validation. Each new chapter should deliberately include long and short paragraph contrast, hard stops, cooling beats, renewed pressure, and at least one scene where silence or ordinary work slows the sentence speed before the next spike.
