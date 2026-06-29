@@ -22,6 +22,9 @@ export const MESSAGE_STATUSES = Object.freeze([
   "rejected"
 ]);
 
+const TAIPEI_UTC_OFFSET_MS = 8 * 60 * 60 * 1000;
+const COUNCIL_SLOT_HOURS = Object.freeze([0, 6, 12, 18]);
+
 export function clamp(value, min = 0, max = 100) {
   return Math.min(max, Math.max(min, Number(value) || 0));
 }
@@ -54,17 +57,22 @@ export function formatCountdown(target, now = Date.now()) {
 }
 
 export function nextCouncilSlot(now = new Date()) {
-  const date = new Date(now);
-  const slots = [0, 6, 12, 18];
-  for (const hour of slots) {
-    const candidate = new Date(date);
-    candidate.setHours(hour, 15, 0, 0);
-    if (candidate > date) return candidate;
+  const nowMs = new Date(now).getTime();
+  if (!Number.isFinite(nowMs)) throw new RangeError("nextCouncilSlot requires a valid date");
+
+  // Shift the instant into Taipei's fixed UTC+8 wall clock, then use UTC
+  // accessors so the result is identical in browsers and UTC CI runners.
+  const taipeiClock = new Date(nowMs + TAIPEI_UTC_OFFSET_MS);
+  const year = taipeiClock.getUTCFullYear();
+  const month = taipeiClock.getUTCMonth();
+  const day = taipeiClock.getUTCDate();
+
+  for (const hour of COUNCIL_SLOT_HOURS) {
+    const candidateMs = Date.UTC(year, month, day, hour, 15) - TAIPEI_UTC_OFFSET_MS;
+    if (candidateMs > nowMs) return new Date(candidateMs);
   }
-  const next = new Date(date);
-  next.setDate(next.getDate() + 1);
-  next.setHours(0, 15, 0, 0);
-  return next;
+
+  return new Date(Date.UTC(year, month, day + 1, 0, 15) - TAIPEI_UTC_OFFSET_MS);
 }
 
 export function normalizePublicMessage(message) {

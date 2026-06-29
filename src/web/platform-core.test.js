@@ -18,10 +18,14 @@ describe("platform scoring", () => {
 });
 
 describe("council scheduling", () => {
-  it("returns the next Asia-local six-hour slot shape", () => {
+  it("returns the next Asia/Taipei six-hour slot independent of host timezone", () => {
     const next = nextCouncilSlot(new Date("2026-06-29T06:16:00+08:00"));
-    expect(next.getHours()).toBe(12);
-    expect(next.getMinutes()).toBe(15);
+    expect(next.toISOString()).toBe("2026-06-29T04:15:00.000Z");
+  });
+
+  it("advances to the next day after the final Taipei slot", () => {
+    const next = nextCouncilSlot(new Date("2026-06-29T18:15:00+08:00"));
+    expect(next.toISOString()).toBe("2026-06-29T16:15:00.000Z");
   });
 
   it("formats a stable countdown", () => {
