@@ -1,5 +1,5 @@
 import { createPlatformApi } from "./platform-api.js";
-import { buildPreviewData } from "./platform-fixtures.js";
+import { buildPreviewData, personaAvatarFor } from "./platform-fixtures.js";
 import { formatCountdown, nextCouncilSlot, normalizePublicMessage, publicBookFromManifest } from "./platform-core.js";
 
 const LEGACY_CHAT_KEY = "tianshu-author-chat-v6";
@@ -44,6 +44,12 @@ function renderCitations(items) {
 
 function initials(value) {
   return Array.from(String(value || "天"))[0] || "天";
+}
+
+function personaAvatarMarkup(name, fallback) {
+  const avatar = personaAvatarFor(name);
+  if (!avatar) return escapeHtml(fallback || initials(name));
+  return `<img src="${escapeHtml(avatar)}" alt="" decoding="async" />`;
 }
 
 function formatTime(value) {
@@ -162,13 +168,16 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
         <span>${escapeHtml(current.topic_label || current.topicLabel || "本場議題")}</span>
         <h2>${escapeHtml(sessionTitle(current))}</h2>
         <div class="participant-stack" aria-label="本場參與作者">
-          ${people.map((person) => `<span style="--persona:${escapeHtml(person.accent || "#a98cff")}" title="${escapeHtml(person.name || person.display_name)}">${escapeHtml(person.initial || initials(person.name || person.display_name))}</span>`).join("")}
+          ${people.map((person) => {
+            const name = person.name || person.display_name;
+            return `<span style="--persona:${escapeHtml(person.accent || "#a98cff")}" title="${escapeHtml(name)}">${personaAvatarMarkup(name, person.initial)}</span>`;
+          }).join("")}
         </div>
       </div>
       <div class="council-preview__messages">
         ${messages.map((message) => `
           <article class="council-line" style="--persona:${escapeHtml(message.accent)}">
-            <span>${escapeHtml(initials(message.speaker))}</span>
+            <span>${personaAvatarMarkup(message.speaker, initials(message.speaker))}</span>
             <div><strong>${escapeHtml(message.speaker)}</strong><p>${escapeHtml(message.content)}</p></div>
           </article>
         `).join("") || `<p class="platform-empty">場次通過審核後，對話會逐回合出現在這裡。</p>`}
@@ -192,7 +201,7 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
       <div class="arena-pairings">
         ${arenaPeople.map((person, index) => `
           <div class="arena-person" style="--persona:${escapeHtml(person.accent || "#8faeff")}">
-            <span>${escapeHtml(person.initial || initials(person.name || person.author))}</span>
+            <span>${personaAvatarMarkup(person.name || person.author, person.initial)}</span>
             <strong>${escapeHtml(person.name || person.author)}</strong>
             ${index === 0 && arenaPeople.length > 1 ? "<em>VS</em>" : ""}
           </div>
@@ -214,7 +223,7 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
     root.innerHTML = (homeData?.authors || []).map((author, index) => `
       <button type="button" class="author-rank-card" data-open-book="${escapeHtml(author.book_id || author.id)}" style="--persona:${escapeHtml(author.accent || "#9d8cff")}">
         <span class="author-rank-card__position">${index + 1}</span>
-        <span class="author-rank-card__avatar">${escapeHtml(author.initial || initials(author.author || author.name))}</span>
+        <span class="author-rank-card__avatar">${personaAvatarMarkup(author.author || author.name, author.initial)}</span>
         <span class="author-rank-card__copy">
           <strong>${escapeHtml(author.author || author.name)}</strong>
           <small>${escapeHtml(author.title || author.book_title || "天書原創")}</small>
@@ -265,7 +274,7 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
         <div class="council-room__log" aria-live="polite">
           ${messages.map((message) => `
             <article class="council-message council-message--${escapeHtml(message.actorKind)}" style="--persona:${escapeHtml(message.accent)}">
-              <span class="council-message__avatar">${escapeHtml(initials(message.speaker))}</span>
+              <span class="council-message__avatar">${personaAvatarMarkup(message.speaker, initials(message.speaker))}</span>
               <div><header><strong>${escapeHtml(message.speaker)}</strong><small>第 ${message.turnIndex || "—"} 回合 · ${escapeHtml(formatTime(message.createdAt))}</small></header><p>${escapeHtml(message.content)}</p>${renderCitations(message.citations)}<footer class="message-actions"><button type="button" data-react-message="${escapeHtml(message.id)}">有幫助</button><button type="button" data-report-message="${escapeHtml(message.id)}">檢舉</button></footer></div>
             </article>
           `).join("") || `<p class="platform-empty">目前沒有公開場次。</p>`}

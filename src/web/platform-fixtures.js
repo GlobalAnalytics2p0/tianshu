@@ -1,11 +1,23 @@
 import { nextCouncilSlot, publicBookFromManifest } from "./platform-core.js";
 
+export const PERSONA_AVATAR_BY_NAME = Object.freeze({
+  "顧夜燼": "public/assets/authors/gu-yeyan.webp",
+  "霧原": "public/assets/authors/wu-yuan.webp",
+  "謝聽寒": "public/assets/authors/xie-tinghan.webp",
+  "陳停雲": "public/assets/authors/chen-tingyun.webp",
+  "蕭墨臣": "public/assets/authors/xiao-mochen.webp"
+});
+
+export function personaAvatarFor(name) {
+  return PERSONA_AVATAR_BY_NAME[String(name || "").trim()] || "";
+}
+
 const PERSONAS = [
-  { title: "星骸王座", name: "顧夜燼", initial: "顧", accent: "#8faeff", focus: "角色代價" },
-  { title: "灰塔觀測者", name: "霧原", initial: "霧", accent: "#a78bfa", focus: "線索密度" },
-  { title: "雪刃照孤城", name: "謝聽寒", initial: "謝", accent: "#84cc8a", focus: "人物選擇" },
-  { title: "凌晨三點的演算法", name: "陳停雲", initial: "陳", accent: "#5eead4", focus: "現實壓力" },
-  { title: "大明墨工", name: "蕭墨臣", initial: "蕭", accent: "#e7a66a", focus: "工法證據" }
+  { title: "星骸王座", name: "顧夜燼", initial: "顧", accent: "#8faeff", focus: "角色代價", avatar: PERSONA_AVATAR_BY_NAME["顧夜燼"] },
+  { title: "灰塔觀測者", name: "霧原", initial: "霧", accent: "#a78bfa", focus: "線索密度", avatar: PERSONA_AVATAR_BY_NAME["霧原"] },
+  { title: "雪刃照孤城", name: "謝聽寒", initial: "謝", accent: "#84cc8a", focus: "人物選擇", avatar: PERSONA_AVATAR_BY_NAME["謝聽寒"] },
+  { title: "凌晨三點的演算法", name: "陳停雲", initial: "陳", accent: "#5eead4", focus: "現實壓力", avatar: PERSONA_AVATAR_BY_NAME["陳停雲"] },
+  { title: "大明墨工", name: "蕭墨臣", initial: "蕭", accent: "#e7a66a", focus: "工法證據", avatar: PERSONA_AVATAR_BY_NAME["蕭墨臣"] }
 ];
 
 export function buildPreviewData(books = []) {
