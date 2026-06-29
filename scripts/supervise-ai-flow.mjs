@@ -3,6 +3,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync, appendFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { spawnSync } from "node:child_process";
+import { beginBatch, clearBatch, inspectBatch, readBatchState } from "./automation-batch-state.mjs";
 
 const ACTIVE_TITLES = [
   "星骸王座",
@@ -237,19 +238,23 @@ function readManifestSummary(report) {
   }
 }
 
-function qualityWarningLessons(warnings) {
+function qualityWarningLessons(warnings, currentChapterRefs = new Set()) {
+  const currentWarnings = warnings.filter((warning) => {
+    if (currentChapterRefs.size === 0) return false;
+    return [...currentChapterRefs].some((ref) => warning.startsWith(ref));
+  });
   const lessons = [];
-  const aiEven = warnings.filter((warning) => warning.includes("AI-even pacing"));
-  if (aiEven.length >= 3) {
+  const aiEven = currentWarnings.filter((warning) => warning.includes("AI-even pacing"));
+  if (aiEven.length > 0) {
     lessons.push(
-      "多數新章仍呈現 AI 均速段落風險；下一輪生成時必須在草稿階段加入長短段落、急停、冷卻與再壓回的波形，而不是等驗證後補救。",
+      "本輪新章呈現 AI 均速段落風險；必須在本批次修稿，而不是把舊章警告誤當成本輪結論或留到下一輪。",
     );
   }
-  const hook = warnings.filter((warning) => warning.includes("Final three lines") || warning.includes("final three"));
+  const hook = currentWarnings.filter((warning) => warning.includes("Final three lines") || warning.includes("final three"));
   if (hook.length > 0) {
     lessons.push("章尾鉤子仍需用具體人、物、地、時間或一句話收束；抽象危險感不可作為最後三行。");
   }
-  const firstWindow = warnings.filter((warning) => warning.includes("First 1,800"));
+  const firstWindow = currentWarnings.filter((warning) => warning.includes("First 1,800"));
   if (firstWindow.length > 0) {
     lessons.push("前 1200-1800 字必須有可見壓力轉向或情緒切口，不能只做資訊鋪排。");
   }
@@ -293,6 +298,7 @@ function runPreflight(report, options) {
       detail: publish.ok ? "Published local ahead commit before new generation." : publish.stderr || publish.stdout,
     });
     report.checks.push(publish);
+    if (publish.ok) clearBatch();
 
     const refreshed = commandCheck("node", ["scripts/check-publish-state.mjs", "--json"], [0, 2, 3, 4, 5, 6]);
     report.checks.push({ ...refreshed, parsed: parseJsonMaybe(refreshed.stdout) });
@@ -300,7 +306,22 @@ function runPreflight(report, options) {
   }
 
   const state = report.preflightState;
-  if (state.status !== "clean" && state.status !== "clean-after-autopublish") {
+  if (state.status === "clean" || state.status === "clean-after-autopublish") {
+    report.batch = inspectBatch();
+    if (!report.batch.exists) {
+      beginBatch();
+      report.batch = inspectBatch();
+    }
+  } else if (state.status === "resumable-batch" || state.status === "completed-batch-awaiting-validation") {
+    report.batch = inspectBatch(state.dirtyActivePaths ?? []);
+    if (!report.batch.valid) {
+      report.hardIssues.push(`Batch state is not safely resumable: ${report.batch.issues.join(" | ")}`);
+    } else if (state.status === "resumable-batch") {
+      report.nextActions.push(`Resume only the missing titles: ${report.batch.missingTitles.join(", ")}.`);
+    } else {
+      report.nextActions.push("Run post-generation validation; do not generate a second chapter for this slot.");
+    }
+  } else {
     report.hardIssues.push(`Preflight blocks generation: ${state.status}. ${state.message}`);
     if (state.dirtyActivePaths?.length) {
       report.nextActions.push("Resolve or intentionally publish the listed dirty active content before generating new chapters.");
@@ -312,14 +333,18 @@ function runPreflight(report, options) {
 }
 
 function runLocalValidation(report, options) {
-  const expectedPerTitle = options.expectedPerTitle ?? expectedSlotsForNow();
-  const targetDate = options.date || taipeiDate();
+  const batchState = readBatchState();
+  report.batch = inspectBatch();
+  const expectedPerTitle = options.expectedPerTitle ?? batchState?.expectedDailyCount ?? expectedSlotsForNow();
+  const targetDate = options.date || batchState?.targetDate || taipeiDate();
 
   const checks = [
     commandCheck("node", ["--check", "app.js"], [0]),
     commandCheck("node", ["--check", "scripts/check-publish-state.mjs"], [0]),
     commandCheck("node", ["--check", "scripts/audit-active-novel-quality.mjs"], [0]),
     commandCheck("node", ["--check", "scripts/audit-todays-active-chapters.mjs"], [0]),
+    commandCheck("node", ["--check", "scripts/audit-active-review-receipts.mjs"], [0]),
+    commandCheck("node", ["--check", "scripts/audit-writing-rule-consistency.mjs"], [0]),
     commandCheck("git", ["diff", "--check"], [0]),
   ];
 
@@ -347,9 +372,27 @@ function runLocalValidation(report, options) {
   if (today.status !== 0) {
     report.hardIssues.push(`Today cadence/content audit failed for ${targetDate}.`);
     report.nextActions.push("Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.");
+    if (report.batch?.valid && report.batch.missingTitles?.length) {
+      report.nextActions.push(`Continue the owned batch with only: ${report.batch.missingTitles.join(", ")}.`);
+    }
   }
   if (todayJson?.hardIssues?.length) report.hardIssues.push(...todayJson.hardIssues);
   if (todayJson?.warnings?.length) report.warnings.push(...todayJson.warnings);
+
+  const receipts = commandCheck("node", ["scripts/audit-active-review-receipts.mjs", "--strict"], [0, 1]);
+  const receiptsJson = parseJsonMaybe(receipts.stdout);
+  checks.push({ ...receipts, parsed: receiptsJson });
+  if (receipts.status !== 0) {
+    report.hardIssues.push("Three-layer semantic review receipts failed.");
+    report.nextActions.push("Repair AI-feel, theory-consistency, or continuity evidence in each completed title's 反思.md before publishing.");
+  }
+  if (receiptsJson?.hardIssues?.length) report.hardIssues.push(...receiptsJson.hardIssues);
+
+  const ruleConsistency = commandCheck("node", ["scripts/audit-writing-rule-consistency.mjs", "--strict"], [0, 1]);
+  const ruleJson = parseJsonMaybe(ruleConsistency.stdout);
+  checks.push({ ...ruleConsistency, parsed: ruleJson });
+  if (ruleConsistency.status !== 0) report.hardIssues.push("Writing-rule source files contain contradictory active policy.");
+  if (ruleJson?.hardIssues?.length) report.hardIssues.push(...ruleJson.hardIssues);
 
   for (const check of checks) {
     report.checks.push(check);
@@ -358,7 +401,12 @@ function runLocalValidation(report, options) {
 
   report.expectedPerTitle = expectedPerTitle;
   report.targetDate = targetDate;
-  report.lessons.push(...qualityWarningLessons(report.warnings));
+  const currentChapterRefs = new Set(
+    (todayJson?.titles ?? []).flatMap((title) =>
+      (title.checkedChapters ?? []).map((chapter) => `${title.title} 第${chapter.number}章`),
+    ),
+  );
+  report.lessons.push(...qualityWarningLessons(report.warnings, currentChapterRefs));
 }
 
 function runPublishValidation(report) {
@@ -395,8 +443,16 @@ function decide(report, options) {
   }
 
   if (options.phase === "preflight") {
-    report.decision = "ready-for-generation";
-    report.summary = "Preflight is clean; generation may start.";
+    if (report.preflightState?.status === "resumable-batch") {
+      report.decision = "resume-generation";
+      report.summary = `Resume the owned partial batch; generate only: ${report.batch?.missingTitles?.join(", ")}.`;
+    } else if (report.preflightState?.status === "completed-batch-awaiting-validation") {
+      report.decision = "resume-validation";
+      report.summary = "The owned batch is complete; run post-generation validation without generating another chapter.";
+    } else {
+      report.decision = "ready-for-generation";
+      report.summary = "Preflight is clean; generation may start.";
+    }
   } else if (options.phase === "post-generation") {
     report.decision = "ready-to-publish";
     report.summary = "Local generation validation passed; commit and publish may proceed.";
@@ -466,6 +522,7 @@ function main() {
     git: gitSnapshot(),
     manifest: null,
     preflightState: null,
+    batch: null,
     checks: [],
     recoveryActions: [],
     hardIssues: [],
@@ -482,6 +539,7 @@ function main() {
   if (options.phase === "post-publish") runPublishValidation(report);
 
   decide(report, options);
+  if (report.decision === "published-and-verified") clearBatch();
   writeReport(report, options);
 
   if (options.json) console.log(JSON.stringify(report, null, 2));

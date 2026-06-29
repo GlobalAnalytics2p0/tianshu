@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { execFileSync, spawnSync } from "node:child_process";
+import { inspectBatch } from "./automation-batch-state.mjs";
 
 const PUBLISH_SCRIPT = new URL("./publish-site-update.mjs", import.meta.url);
 const ACTIVE_TITLES = [
@@ -148,9 +149,36 @@ function main() {
   }
 
   if (state.dirtyActivePaths.length > 0) {
+    const batch = inspectBatch(state.dirtyActivePaths);
+    state.batch = batch.exists
+      ? {
+          valid: batch.valid,
+          complete: batch.complete,
+          targetSlot: batch.state?.targetSlot,
+          expectedDailyCount: batch.state?.expectedDailyCount,
+          completedTitles: batch.completedTitles,
+          missingTitles: batch.missingTitles,
+          issues: batch.issues,
+        }
+      : null;
+
+    if (batch.valid && !batch.complete && state.remoteReachable) {
+      state.status = "resumable-batch";
+      state.message = `Automation-owned partial batch may resume safely; missing titles: ${batch.missingTitles.join(", ")}.`;
+      exitWith(0, state, options.json);
+    }
+
+    if (batch.valid && batch.complete && state.remoteReachable) {
+      state.status = "completed-batch-awaiting-validation";
+      state.message = "Automation-owned batch is complete but uncommitted; run post-generation validation, then publish if it passes.";
+      exitWith(0, state, options.json);
+    }
+
     if (state.remoteReachable) {
       state.status = "working-tree-publish-debt";
-      state.message = "Uncommitted active-title site content exists; commit/publish or clear it before new generation.";
+      state.message = batch.exists
+        ? `Uncommitted active-title content does not match its batch state: ${batch.issues.join(" | ")}`
+        : "Uncommitted active-title site content exists without an automation batch owner; commit/publish or clear it before new generation.";
       exitWith(6, state, options.json);
     }
 

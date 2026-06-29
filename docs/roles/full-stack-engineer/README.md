@@ -33,6 +33,7 @@
   - push 後：`node scripts/supervise-ai-flow.mjs --phase post-publish`。只有 decision 是 `published-and-verified` 才能對外回報網站已更新；這一步不要加 `--write-ledger`，避免驗站後又產生未提交變更。
 - Supervisor 會把最新機器可讀報告寫到 `tmp/automation-supervision/latest.json`，並把可持續檢討紀錄寫到 `src/resource/automation-supervision-log.md`。`tmp/automation-supervision/` 是暫存，不提交；ledger 是耐久檢討檔，可提交。
 - 若 supervisor decision 是 `blocked`，不要繞過它。先處理 `hardIssues` 與 `nextActions`，或把 blocker 清楚回報；警示 `warnings` 不一定阻斷，但必須轉成下一輪寫作或修稿目標。
+- 若 decision 是 `resume-generation`，表示 `tmp/automation-supervision/active-batch.json` 已證明 dirty active content 屬於同一個 automation 批次；只生成 `missingTitles`，不可重寫已完成 title。若是 `resume-validation`，五本都已存在，只重跑 post-generation gate，不得再生成。這兩種恢復決策都不代表可發布，仍須等 `ready-to-publish`。
 - 開始大量生成前先做 GitHub 預檢，不要只看 remote 是否存在。標準做法是先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`：
   - 若 branch 已經 `ahead > 0` 且遠端可達，先清掉 deferred publish debt，再開始新內容。
   - 若 branch `ahead > 0` 但遠端不可達，必須把「網站仍停在舊版」當成顯式 blocker 寫進記錄與回報。
@@ -53,7 +54,7 @@
   - raw GitHub 已更新但 live site 未更新：屬於 Pages/CDN 部署延遲，不能說已上站，只能說已 push、等待站點生效。
   - remote/auth 失敗：屬於發佈 blocker，不能把本地完成誤報成網站完成。
 - 工作樹 dirty 與 publish 狀態是兩件事。遇到「看起來又沒推」的質疑時，先用 `git rev-parse HEAD`、`git rev-parse origin/main`、`git rev-list --left-right --count @{upstream}...HEAD` 判定 branch sync，再用 `node scripts/verify-site-publication.mjs` 判定站點狀態，最後才另外列出殘留 dirty paths。不要把不相關短影音或素材髒檔誤報成未 push。
-- `check-publish-state.mjs` 的 active dirty 偵測必須涵蓋五本已遷移作品的 `文章/` 章節與 `素材/` 狀態檔，不得只對 `星骸王座` 使用新路徑、其他作品仍用舊路徑。若 preflight 回報 `working-tree-publish-debt`，先完整列出並解決這批 dirty active content，再生成新章。
+- `check-publish-state.mjs` 的 active dirty 偵測必須涵蓋五本已遷移作品的 `文章/` 章節與 `素材/` 狀態檔，不得只對 `星骸王座` 使用新路徑、其他作品仍用舊路徑。已驗證的 automation-owned partial batch 回報 `resumable-batch`；沒有 owner、HEAD 不符、章號超出預期或 dirty 路徑不符才回報 `working-tree-publish-debt` 並阻擋。
 - 流程檢討重點：最容易反覆卡住的不是 Pages，而是「前一輪 local-only commit 沒先補發佈，下一輪又繼續生成」。這種 backlog 不可視為正常狀態；下一次網路恢復時要優先補推並驗站。
 - commit 時只 stage 當次意圖內的內容；若起始狀態已有 dirty files，要記錄並避免混入不相關變更。
 - `src/resource/backup/` 用來放 35 本暫停更新作品；routine six-hour automation 不應對 backup 內作品做內容改寫。

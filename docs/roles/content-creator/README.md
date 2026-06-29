@@ -69,6 +69,7 @@
 - 是否跑過 `node scripts/audit-active-novel-quality.mjs` 或等價檢查，確認必備 MD 存在、章節路徑正確、字數一致、沒有禁用 meta、沒有重複段落、最後三行有具體追讀鉤子？
 - 是否人工確認腳本無法判斷的語意項：身歷其境、上癮感、小回報是否真正兌現、3-5 章中回報是否存在、該作者 `風格規則.md` 是否真的套用到正文？
 - 六小時 automation 的正式交稿前 gate 是 `node scripts/supervise-ai-flow.mjs --phase post-generation --write-ledger`。如果 decision 不是 `ready-to-publish`，表示仍有硬性問題，正文、manifest 或狀態檔必須先修到過關。
+- 每章還必須在 `反思.md` 留下 `第NN章三層審稿`：用正文中可定位的證據分別檢查 AI 感、作品理論一致性與前後邏輯，再寫出會迫使本章退回的反證條件。只有 `scripts/audit-active-review-receipts.mjs --strict` 通過，才算完成資深讀者審稿。
 - Supervisor 的 warnings 要當成資深讀者的下一輪提醒處理。若它反覆指出 AI 均速、前段缺轉向、章尾鉤子弱或跨書句型重疊，下一輪寫作前要先把這些警示轉成具體修稿動作，必要時寫入該作品 `反思.md` 或共通規則。
 
 ## 與其他角色交接
