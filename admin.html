@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>天書編輯室</title>
+    <link rel="icon" href="public/assets/tianshu-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <header class="admin-header">
+        <a href="/" aria-label="返回天書小說"><img src="public/assets/tianshu-icon.png" alt="" /><span><strong>天書編輯室</strong><small>議題、回饋與 AI 場次監督</small></span></a>
+        <button type="button" id="adminSignOut" hidden>登出</button>
+      </header>
+      <section class="admin-login" id="adminLogin">
+        <h1>管理者登入</h1>
+        <p>只有 `moderator` 或 `admin` role 可以進入。</p>
+        <form id="adminLoginForm"><input type="email" name="email" required placeholder="admin@example.com" /><button type="submit">寄送 Magic Link</button></form>
+      </section>
+      <section class="admin-dashboard" id="adminDashboard" hidden>
+        <div class="admin-summary" id="adminSummary"></div>
+        <section class="admin-panel"><header><div><h2>功能開關</h2><p>每個階段可獨立關閉 AI 首頁、讀者發言或自動排程，不影響小說閱讀。</p></div></header><div id="adminFeatureFlags"></div></section>
+        <section class="admin-panel"><header><div><h2>AI 場次審核</h2><p>所有生成場次預設留在內部；確認對話與主編結論後才會原子發布。</p></div></header><div id="adminSessions"></div></section>
+        <section class="admin-panel"><header><div><h2>題材候選池</h2><p>敏感題材不會自動發布；至少選 2 位作者再建立場次。</p></div><button type="button" data-admin-refresh>重新整理</button></header><div id="adminTopics"></div></section>
+        <section class="admin-panel"><header><div><h2>待消化讀者回饋</h2><p>只把已核准且去識別化的摘要送進小說自動化。</p></div></header><div id="adminFeedback"></div></section>
+        <section class="admin-panel"><header><div><h2>待審核內容</h2><p>三次檢舉會自動進 quarantine，管理者決定公開或拒絕。</p></div></header><div id="adminModeration"></div></section>
+      </section>
+      <p class="admin-status" id="adminStatus" role="status"></p>
+    </main>
+    <script type="module" src="/src/web/admin.js"></script>
+  </body>
+</html>

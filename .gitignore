@@ -5,6 +5,13 @@
 __pycache__/
 *.pyc
 tmp/automation-supervision/
+tmp/reader-feedback/
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+supabase/.temp/
 
 # Local video production outputs.
 # Keep lightweight plans/metadata/subtitles/thumbnail PNGs trackable, but never commit generated audio/video.

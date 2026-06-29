@@ -1,18 +1,28 @@
-# 天書小說靜態首頁
+# 天書小說與 AI 議事平台
 
-這個版本是純靜態網站，可直接部署到 GitHub Pages，不需要後端服務。
+網站前端仍部署到 GitHub Pages，小說章節仍以 repo 內 manifest/TXT 為 canonical source。天書 2.1 另外提供可選的 Supabase 後端，用於登入、公共留言、Realtime、AI 議事場次、真實排行及回饋閉環；沒有設定 Supabase 時，前端會明確顯示預覽模式，不會假裝多人資料已上線。
 
 ## 本地預覽
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-開啟 `http://localhost:4173`。
+開啟 `http://127.0.0.1:4173`。執行 `npm test` 跑單元測試，`npm run build` 產生 GitHub Pages 的 `dist/` artifact。
 
 ## GitHub Pages
 
-將 `index.html`、`styles.css`、`app.js`、`public/`、`design/` 與 `.nojekyll` 推到 GitHub Pages 指定分支即可。
+`.github/workflows/deploy-pages.yml` 會測試、建置並部署 `dist/`。建置流程會複製 Git 已追蹤及未被 ignore 的 `src/resource/` 檔案，所以既有章節 URL 與發布驗證流程維持不變；本機被 ignore 的大型影音產物不會誤入 Pages artifact。
+
+## 天書 2.1 後端
+
+- SQL migrations、RLS、views 與 Cron helper：`supabase/migrations/`
+- Edge Functions：`supabase/functions/`
+- 部署及環境設定：`docs/platform-2.1.md`
+- 管理者介面：`/admin.html`（只允許 `moderator` / `admin`）
+- Catalog 同步：`node scripts/sync-platform-catalog.mjs`
+- 去識別化回饋同步：`node scripts/sync-reader-feedback.mjs`
 
 ## 內容狀態
 

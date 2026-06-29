@@ -257,6 +257,12 @@ function qualityWarningLessons(warnings) {
 }
 
 function runPreflight(report, options) {
+  const feedbackSync = commandCheck("node", ["scripts/sync-reader-feedback.mjs"], [0]);
+  report.checks.push(feedbackSync);
+  if (!feedbackSync.ok) {
+    report.warnings.push("Reader feedback sync failed; generation may continue without new reader context, but the failure must be investigated.");
+  }
+
   let check = null;
   let parsed = null;
   for (let attempt = 1; attempt <= options.preflightRetries; attempt += 1) {
@@ -369,6 +375,13 @@ function runPublishValidation(report) {
   if (!verify.ok) {
     report.hardIssues.push("Live site publication verification failed.");
     report.nextActions.push("Distinguish raw GitHub update from Pages/CDN propagation before claiming the site is live.");
+  }
+
+  const catalogSync = commandCheck("node", ["scripts/sync-platform-catalog.mjs"], [0]);
+  report.checks.push(catalogSync);
+  if (!catalogSync.ok) {
+    report.warnings.push("Live publication passed, but the Supabase catalog sync failed; community book rooms may show stale chapter metadata.");
+    report.nextActions.push("Repair platform catalog sync before claiming community metadata is current.");
   }
 }
 

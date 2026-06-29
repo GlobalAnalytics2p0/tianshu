@@ -1,0 +1,58 @@
+project_id = "tianshu-ai-council"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:4173"
+additional_redirect_urls = ["https://tianshu.petrichor.tw"]
+enable_signup = true
+
+[functions.send-message]
+verify_jwt = true
+
+[functions.request-author-reply]
+verify_jwt = true
+
+[functions.propose-topic]
+verify_jwt = true
+
+[functions.vote-topic]
+verify_jwt = true
+
+[functions.report-content]
+verify_jwt = true
+
+[functions.react-message]
+verify_jwt = true
+
+[functions.track-event]
+verify_jwt = false
+
+[functions.run-ai-session]
+verify_jwt = false
+
+[functions.moderate-content]
+verify_jwt = false
+
+[functions.aggregate-rankings]
+verify_jwt = false
+
+[functions.sync-catalog]
+verify_jwt = false
+
+[functions.ack-feedback]
+verify_jwt = false

@@ -1,3 +1,5 @@
+import { createTianshuPlatform } from "./src/web/platform.js";
+
 const icons = {
   home: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h5v-5h3v5h5v-9.5"/></svg>',
   trophy: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4v2a4 4 0 0 0 4 4"/><path d="M16 6h4v2a4 4 0 0 1-4 4"/><path d="M12 12v5"/><path d="M8 20h8"/><path d="M9 17h6"/></svg>',
@@ -177,6 +179,7 @@ let authorChatStore = { version: 1, threads: {}, feedback: [] };
 let activeAuthorChatBookId = "";
 let authorChatPendingReplies = new Map();
 let authorChatReplyTimers = new Map();
+let platformApp = null;
 const resourceAvailabilityCache = new Map();
 
 function buildShareUrls() {
@@ -423,16 +426,18 @@ function renderBookCover(book, rank = "") {
 
 function getRankedBooks(tab) {
   const rankingBooks = getActiveRankingBooks();
-  if (tab === "hot") return [...rankingBooks].sort((a, b) => parseHeat(b.heat) - parseHeat(a.heat));
-  if (tab === "hook") return [...rankingBooks].sort((a, b) => b.tags.length - a.tags.length || parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "hot") {
+    return [...rankingBooks].sort((a, b) => String(b.chapters.at(-1)?.generatedAt || "").localeCompare(String(a.chapters.at(-1)?.generatedAt || "")));
+  }
+  if (tab === "hook") return [...rankingBooks].sort((a, b) => b.tags.length - a.tags.length);
   if (tab === "new") {
     return [...rankingBooks].sort((a, b) => {
       const latestA = a.chapters.at(-1)?.generatedAt || "";
       const latestB = b.chapters.at(-1)?.generatedAt || "";
-      return latestB.localeCompare(latestA) || parseHeat(b.heat) - parseHeat(a.heat);
+      return latestB.localeCompare(latestA);
     });
   }
-  if (tab === "longform") return [...rankingBooks].sort((a, b) => b.summary.length - a.summary.length || parseHeat(b.heat) - parseHeat(a.heat));
+  if (tab === "longform") return [...rankingBooks].sort((a, b) => b.chapters.length - a.chapters.length);
   return rankingBooks;
 }
 
@@ -456,11 +461,8 @@ function renderRanking() {
         <span class="book-card__author">${escapeHtml(book.author)}</span>
         <span class="book-card__category">${escapeHtml(book.category)}</span>
         <span class="book-card__latest">${escapeHtml(latestChapterLabel(book))}</span>
-        <span class="book-card__score">${escapeHtml(book.score)}分</span>
-        <span class="book-card__heat">
-          <span class="icon" data-icon="flame"></span>
-          ${escapeHtml(book.heat)}
-        </span>
+        <span class="book-card__score">七日資料累積中</span>
+        <span class="book-card__heat"><span class="icon" data-icon="activity"></span>互動統計啟用後顯示</span>
       </span>
     </button>
   `).join("");
@@ -1094,6 +1096,7 @@ function openBook(bookId) {
   }
 
   currentModalBook = book;
+  platformApp?.trackEngagement(book.id);
   const saved = getReadingProgress(book.id);
   const lastIndex = Math.max(book.chapters.length - 1, 0);
   currentChapterIndex = Number.isInteger(saved?.chapterIndex) ? Math.min(Math.max(saved.chapterIndex, 0), lastIndex) : 0;
@@ -1281,6 +1284,10 @@ function updateReaderProgress() {
   document.querySelectorAll(".reader-progress").forEach((progress) => {
     progress.setAttribute("title", `本章進度 ${percent}%`);
   });
+  if (percent >= 90 && currentModalBook) {
+    const chapter = currentModalBook.chapters[currentChapterIndex];
+    platformApp?.trackCompletion(currentModalBook.id, chapter?.number || currentChapterIndex + 1);
+  }
 }
 
 function queueReadingProgressSave() {
@@ -1342,8 +1349,7 @@ function renderModal() {
             <span>${escapeHtml(book.author)}</span>
             <span>${escapeHtml(book.category)}</span>
             <span>${escapeHtml(book.status)}</span>
-            <span>${escapeHtml(book.score)}分</span>
-            <span>人氣 ${escapeHtml(book.heat)}</span>
+            <span>${escapeHtml(latestChapterLabel(book))}</span>
           </div>
           <div class="modal-tags">
             ${book.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
@@ -1362,6 +1368,10 @@ function renderModal() {
             <button class="secondary-action" type="button" id="downloadBook">
               <span class="icon" data-icon="download"></span>
               下載整本小說
+            </button>
+            <button class="secondary-action" type="button" id="openBookComments">
+              <span class="icon" data-icon="message"></span>
+              作品留言區
             </button>
           </div>
         </div>
@@ -1425,6 +1435,11 @@ function renderModal() {
 
   document.getElementById("downloadBook").addEventListener("click", () => {
     void downloadBook(book);
+  });
+
+  document.getElementById("openBookComments").addEventListener("click", () => {
+    closeModal();
+    void platformApp?.openBookComments(book);
   });
 
   content.querySelector("[data-reader-info]")?.addEventListener("click", () => {
@@ -1551,7 +1566,8 @@ function scrollToTarget(target) {
 }
 
 function pageViewForTarget(target) {
-  if (target === "authorChat") return "authorChat";
+  if (["aiCouncil", "topics", "bookComments"].includes(target)) return target;
+  if (target === "legacy") return "legacy";
   if (["home", "ranking", "ai", "youtube", "categories"].includes(target)) return "home";
   return "";
 }
@@ -1561,12 +1577,21 @@ function setPageView(view) {
   document.querySelectorAll("[data-page-view]").forEach((section) => {
     section.hidden = section.dataset.pageView !== view;
   });
+  platformApp?.renderView(view);
 }
 
 function activeNavTarget(target) {
-  if (target === "authorChat") return "authorChat";
-  if (["home", "ranking", "ai", "youtube", "categories"].includes(target)) return "home";
+  if (["youtube", "categories"].includes(target)) return "home";
   return target;
+}
+
+function navigateTo(target) {
+  const view = pageViewForTarget(target);
+  if (view) setPageView(view);
+  setActiveNav(target);
+  const moved = scrollToTarget(target);
+  if (!moved && view && view !== "home") window.scrollTo({ top: 0, behavior: "smooth" });
+  if (!moved && !view) showToast("此功能仍在規劃中。");
 }
 
 function setActiveNav(target) {
@@ -1683,10 +1708,6 @@ function initEvents() {
     renderAiNovels();
   });
 
-  document.getElementById("loginButton").addEventListener("click", () => {
-    showToast("登入介面目前為佔位，後續可接 OAuth、會員系統或自家 API。");
-  });
-
   document.getElementById("subscribeButton").addEventListener("click", () => {
     showToast("正在前往天書小說 YouTube 頻道。");
   });
@@ -1752,12 +1773,7 @@ function initEvents() {
 
   document.querySelectorAll("[data-nav-target]").forEach((button) => {
     button.addEventListener("click", () => {
-      const target = button.dataset.navTarget;
-      const view = pageViewForTarget(target);
-      if (view) setPageView(view);
-      setActiveNav(target);
-      const moved = scrollToTarget(target);
-      if (!moved) showToast("此功能頁後續接入，目前先保留入口佔位。");
+      navigateTo(button.dataset.navTarget);
     });
   });
 
@@ -1822,7 +1838,7 @@ function initHero() {
   const hero = document.querySelector(".hero");
   document.getElementById("heroTitle").textContent = heroBook.title;
   document.getElementById("heroDescription").textContent = heroBook.premise;
-  document.getElementById("heroHeat").textContent = `人氣 ${heroBook.heat}`;
+  document.getElementById("heroHeat").textContent = latestChapterLabel(heroBook);
   document.getElementById("heroTags").innerHTML = heroBook.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   if (hero) {
     const heroImage = heroBook.heroImage || heroBook.coverImage || "public/assets/hero-art.png";
@@ -1857,6 +1873,13 @@ async function init() {
     renderCategories();
     renderAiNovels();
     renderAuthorChat({ scrollEnd: true });
+    document.getElementById("ai")?.after(document.getElementById("youtube"));
+    platformApp = createTianshuPlatform({
+      onOpenBook: openBook,
+      onNavigate: navigateTo,
+      showToast
+    });
+    await platformApp.init(allBooks);
     maybeShowInstallGuide();
     consumeAutoRefreshFlag();
     initManifestPolling();

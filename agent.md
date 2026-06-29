@@ -2,6 +2,8 @@
 
 ## Persistent Project Requirements
 
+- 所有新增或修改的使用者可見內容、文件、小說正文、介面文案與自動化回報，一律使用繁體中文；程式碼、檔名、指令、第三方專有名詞及必要的技術識別字除外。
+
 - Role-based onboarding is now mandatory. A future Agent should first identify its role and read the matching handbook under `docs/roles/` before acting:
   - Content Creator: `docs/roles/content-creator/README.md`
   - Social Media Director: `docs/roles/social-media-director/README.md`
@@ -34,7 +36,7 @@
 - Short-video source frames must stay text-free on every page, not just the opener. Do not burn any title box, top badge, hook banner, or CTA into `source/images`; use voice, dynamic subtitles, and end cards instead.
 - The AI library must maintain 5 categories with 8 original AI novels per category, for 40 total AI titles.
 - The full library can remain visible on the static site, but active maintenance is currently narrowed to 5 category leaders only unless the user explicitly changes scope again: `星骸王座` (玄幻), `灰塔觀測者` (奇幻), `雪刃照孤城` (武俠), `凌晨三點的演算法` (都市), and `大明墨工` (歷史). The other 35 titles are archive-only and should live under `src/resource/backup/` when not being actively maintained.
-- Public-facing website copy should use the `天書` brand vocabulary instead of `AI`, for example `天書小說榜`, `天書原創連載`, and `天書熱門分類`.
+- Public-facing website copy should keep `天書` as the brand, while transparently using `AI` for functions that are actually AI-operated, including `天書 AI 議事廳` and `AI 作者本週榜`. Do not disguise model-generated interaction as a human service.
 - The homepage `天書小說榜` should rank only those 5 active category leaders, one per category, instead of mixing all 40 titles into the top five.
 - Ranking, hero, category, Modal, and download surfaces should all refer to 天書 original serials rather than existing novels.
 - Canonical AI novel text lives under `src/resource/`. Each novel must have its own subfolder, and each chapter must be saved as a separate `.txt` file named like `第01章 章節題目.txt`; migrated folders store chapters under `src/resource/<novel title>/文章/`.
