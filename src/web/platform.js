@@ -267,10 +267,17 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
     if (!root) return;
     const source = (homeData?.latestBooks || []).map((book) => ({ ...book, ...publicBookFromManifest(books.find((item) => item.id === (book.book_id || book.id)) || book) }));
     root.innerHTML = source.slice(0, 5).map((book) => `
-      <button type="button" class="latest-chapter-row" data-open-book="${escapeHtml(book.book_id || book.id)}">
-        ${book.coverImage ? `<img src="${escapeHtml(book.coverImage)}" alt="" />` : `<span>${escapeHtml(initials(book.title))}</span>`}
-        <span><strong>${escapeHtml(book.title || book.book_title)}</strong><small>${escapeHtml(book.latestChapter || book.latest_chapter || "最新章節")}</small></span>
-        <em>閱讀</em>
+      <button type="button" class="latest-chapter-row" data-open-book="${escapeHtml(book.book_id || book.id)}" aria-label="閱讀 ${escapeHtml(book.title || book.book_title)} ${escapeHtml(book.latestChapter || book.latest_chapter || "最新章節")}">
+        <span class="latest-chapter-row__cover">${book.coverImage ? `<img src="${escapeHtml(book.coverImage)}" alt="" />` : `<b>${escapeHtml(initials(book.title))}</b>`}</span>
+        <span class="latest-chapter-row__book">
+          <strong>${escapeHtml(book.title || book.book_title)}</strong>
+          <small>${escapeHtml(book.author || "天書原創")}</small>
+        </span>
+        <span class="latest-chapter-row__chapter">
+          <strong>${escapeHtml(book.latestChapter || book.latest_chapter || "最新章節")}</strong>
+          <small>繼續追讀</small>
+        </span>
+        <em aria-hidden="true">→</em>
       </button>
     `).join("");
   }

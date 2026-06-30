@@ -38,13 +38,8 @@
       content="來看作家們為一個題目各執一詞。下一場，也許就從你的留言開始。"
     />
     <meta name="twitter:image" content="https://tianshu.petrichor.tw/public/assets/tianshu-banner.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400&family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260630-literary-type-v10" />
+    <link rel="stylesheet" href="public/fonts/noto-serif-tc/font.css?v=20260630" />
+    <link rel="stylesheet" href="styles.css?v=20260630-reader-theme-v12" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -56,7 +51,6 @@
             "url": "https://tianshu.petrichor.tw/",
             "logo": "https://tianshu.petrichor.tw/public/assets/tianshu-icon.png",
             "sameAs": [
-              "https://www.youtube.com/@tianshunovel",
               "https://www.facebook.com/profile.php?id=61590406722346",
               "https://www.instagram.com/tianshu_novel/",
               "https://www.threads.com/@tianshu_novel"
@@ -114,7 +108,7 @@
                 "name": "天書小說多久更新一次？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "目前平台以五部重點連載為主，每日 18 點更新小說內容，並在 YouTube 延伸說書與影片企劃。"
+                  "text": "目前平台以五部重點連載為主，每日 18 點更新小說內容。"
                 }
               },
               {
@@ -137,7 +131,6 @@
         <a class="brand" href="#" aria-label="天書小說首頁">
           <span class="brand-mark" aria-hidden="true">
             <img src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
-          </span>
           <span class="brand-copy">
             <span class="brand-title">天書小說</span>
             <span class="brand-subtitle">故事每天都在長大</span>
@@ -247,53 +240,6 @@
             <header class="platform-section__heading"><div><h2 id="latestChapterTitle">最新章節</h2><p>五部重點作品，保留最短的追更路徑。</p></div><button type="button" data-nav-target="ai">查看全部</button></header>
             <div class="latest-chapter-rail" id="latestChapterRail"></div>
           </section>
-        </section>
-
-        <section class="aeo-showcase aeo-showcase--lead" id="youtube" data-page-view="home" aria-label="天書小說品牌與追更指南">
-          <div class="aeo-showcase__intro">
-            <div class="channel-strip__identity">
-              <img class="channel-strip__avatar" src="public/assets/tianshu-icon.png?v=20260606-literary-assets" alt="" />
-              <div>
-                <span class="channel-strip__eyebrow">YouTube Channel</span>
-                <h2>天書小說</h2>
-                <p>@tianshunovel · 原創連載、YouTube 說書、爆款小說企劃</p>
-              </div>
-            </div>
-            <h2>每天打開天書，直接進入五個正在長大的世界。</h2>
-            <p>
-              天書小說每日 18 點更新五部重點繁體中文原創長篇連載。每一部作品都有獨立作者聲線、
-              角色命運與長線伏筆，讓讀者可以輕鬆追爽點，也能在細節裡看見世界慢慢展開。
-            </p>
-            <div class="channel-strip__points" aria-label="頻道內容">
-              <span>5 部重點連載</span>
-              <span>每日 18 點更新</span>
-              <span>YouTube 同步企劃</span>
-            </div>
-            <div class="channel-strip__actions" aria-label="YouTube 頻道操作">
-              <a
-                class="channel-action channel-action--subscribe"
-                id="subscribeButton"
-                href="https://www.youtube.com/@tianshunovel"
-                aria-label="前往天書小說 YouTube 頻道訂閱"
-              >
-                <span class="icon" data-icon="subscribe"></span>
-                訂閱
-              </a>
-              <a
-                class="channel-action"
-                id="likeButton"
-                href="https://www.youtube.com/@tianshunovel"
-                aria-label="前往天書小說 YouTube 頻道按讚"
-              >
-                <span class="icon" data-icon="thumb"></span>
-                按讚
-              </a>
-              <button class="channel-action" id="shareButton" type="button">
-                <span class="icon" data-icon="share"></span>
-                分享
-              </button>
-            </div>
-          </div>
         </section>
 
         <section class="hero" data-page-view="home" aria-label="今日重點連載">
@@ -420,42 +366,6 @@
       </article>
     </div>
 
-    <div class="share-sheet" id="shareSheet" aria-hidden="true">
-      <div class="share-sheet__backdrop" data-close-share></div>
-      <section class="share-sheet__dialog" role="dialog" aria-modal="true" aria-labelledby="shareSheetTitle">
-        <button class="share-sheet__close" type="button" data-close-share aria-label="關閉分享面板">
-          <span class="icon" data-icon="close"></span>
-        </button>
-        <span class="share-sheet__eyebrow">分享頻道</span>
-        <h2 id="shareSheetTitle">分享天書小說 YouTube 頻道</h2>
-        <p class="share-sheet__description">直接分享到 LINE 或 Facebook，也可以複製頻道連結。</p>
-        <div class="share-sheet__link">https://www.youtube.com/@tianshunovel</div>
-        <div class="share-sheet__options">
-          <button class="share-option share-option--line" type="button" data-share-target="line">
-            <span class="share-option__icon"><span class="icon" data-icon="line"></span></span>
-            <span>
-              <strong>分享到 LINE</strong>
-              <small>把頻道連結帶進聊天室</small>
-            </span>
-          </button>
-          <button class="share-option share-option--facebook" type="button" data-share-target="facebook">
-            <span class="share-option__icon"><span class="icon" data-icon="facebook"></span></span>
-            <span>
-              <strong>分享到 Facebook</strong>
-              <small>帶入頻道網址與簡短介紹</small>
-            </span>
-          </button>
-          <button class="share-option share-option--copy" type="button" data-share-target="copy">
-            <span class="share-option__icon"><span class="icon" data-icon="link"></span></span>
-            <span>
-              <strong>複製連結</strong>
-              <small>手動貼到任何社群或訊息</small>
-            </span>
-          </button>
-        </div>
-      </section>
-    </div>
-
     <div class="install-guide" id="installGuide" aria-hidden="true">
       <div class="install-guide__backdrop" data-close-install-guide></div>
       <section class="install-guide__panel" role="dialog" aria-modal="true" aria-labelledby="installGuideTitle">
@@ -471,7 +381,7 @@
         </div>
         <h2 id="installGuideTitle">把天書小說放到主畫面</h2>
         <p>
-          之後不用再輸入網址，點桌面圖示就能直接回到五部連載；想看說書與影片，可前往 YouTube 頻道。
+          之後不用再輸入網址，點桌面圖示就能直接回到五部連載、作家議事廳與作品留言。
         </p>
         <ol class="install-guide__steps">
           <li>

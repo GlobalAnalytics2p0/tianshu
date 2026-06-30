@@ -17,13 +17,7 @@ const icons = {
   spark: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M13 3 9.8 9.8 3 13l6.8 3.2L13 23l3.2-6.8L23 13l-6.8-3.2L13 3Z"/></svg>',
   bag: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg>',
   wave: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 13c2.4 0 2.4-6 4.8-6s2.4 10 4.8 10S15 7 17.4 7 19.8 17 22 17"/></svg>',
-  youtube: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>',
-  subscribe: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>',
-  thumb: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/><path d="M7 10v12"/></svg>',
   share: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>',
-  line: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c4.97 0 9 3.37 9 7.53 0 3.73-3.23 6.83-7.57 7.43L8 22l1.48-3.2C5.8 18.13 3 15.14 3 11.53 3 7.37 7.03 4 12 4Z"/><path d="M8.4 10.2v3.7"/><path d="M10.95 10.2v3.7h2.4"/><path d="M15.15 13.9v-3.7l2.45 3.7v-3.7"/></svg>',
-  facebook: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h2.5V4.8c-.44-.06-1.38-.18-2.48-.18-2.46 0-4.14 1.5-4.14 4.27V11H7v3.58h2.88V21h3.55v-6.42H16.2L16.65 11h-3.22V9.26c0-.98.28-1.66 1.57-1.66Z"/></svg>',
-  link: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.91 5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.8 13.12a5 5 0 0 0 7.07 7.07L13.09 19"/></svg>',
   sync: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 2v5h-5"/><path d="M19 9A7 7 0 0 0 6.4 5.8"/><path d="M7 22v-5h5"/><path d="M5 15a7 7 0 0 0 12.6 3.2"/></svg>',
   message: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 5h14v10H8l-4 4V6a1 1 0 0 1 1-1Z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>',
   send: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m21 3-6.5 18-4-8.5L2 8.5 21 3Z"/><path d="m10.5 12.5 4-4"/></svg>',
@@ -59,8 +53,6 @@ const coverPalettes = [
 ];
 
 const resourceManifestPath = "src/resource/manifest.json";
-const youtubeChannelUrl = "https://www.youtube.com/@tianshunovel";
-const youtubeShareText = "來看天書小說：每日 18 點更新原創連載、爆款小說與 YouTube 說書影片";
 const activeRankingTitles = [
   "星骸王座",
   "灰塔觀測者",
@@ -78,6 +70,7 @@ const authorAgentRequestTimeoutMs = 12000;
 const maxAuthorChatMessages = 500;
 const manifestPollIntervalMs = 60000;
 const defaultReaderSettings = {
+  theme: "dark",
   font: "serif",
   size: "medium",
   line: "relaxed",
@@ -183,14 +176,6 @@ let authorChatReplyTimers = new Map();
 let platformApp = null;
 const resourceAvailabilityCache = new Map();
 
-function buildShareUrls() {
-  const combinedText = `${youtubeShareText} ${youtubeChannelUrl}`;
-  return {
-    line: `https://line.me/R/msg/text/?${encodeURIComponent(combinedText)}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(youtubeChannelUrl)}&quote=${encodeURIComponent(youtubeShareText)}`
-  };
-}
-
 function buildSummary(book) {
   return `天書原創${book.category}連載，以「${book.tags.join("、")}」為核心。${book.premise}`;
 }
@@ -231,10 +216,19 @@ function safeWriteJson(key, value) {
 }
 
 function loadReaderSettings() {
-  return {
-    ...defaultReaderSettings,
-    ...safeReadJson(readerSettingsStorageKey, {})
+  const stored = safeReadJson(readerSettingsStorageKey, {});
+  const allowed = {
+    theme: ["dark", "light"],
+    font: ["serif", "sans"],
+    size: ["small", "medium", "large"],
+    line: ["compact", "relaxed", "wide"],
+    width: ["narrow", "standard", "wide"]
   };
+
+  return Object.fromEntries(Object.entries(defaultReaderSettings).map(([key, fallback]) => [
+    key,
+    allowed[key].includes(stored[key]) ? stored[key] : fallback
+  ]));
 }
 
 function saveReaderSettings() {
@@ -1147,7 +1141,14 @@ function renderLoadingBlock(message = "章節文字載入中") {
 
 function renderChapterText(chapter) {
   if (!chapter) return renderLoadingBlock("章節資料準備中");
-  if (chapter.contentState === "loaded") return escapeHtml(chapter.content);
+  if (chapter.contentState === "loaded") {
+    return String(chapter.content || "")
+      .split(/\n\s*\n/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHtml(paragraph).replace(/\n/g, "<br />")}</p>`)
+      .join("");
+  }
   if (chapter.contentState === "error") {
     return `
       <div class="reader-error">
@@ -1204,9 +1205,8 @@ function warmNearbyChapters(book, index) {
 function renderReaderSettings() {
   const options = {
     font: [
-      ["serif", "明體"],
-      ["kai", "楷書"],
-      ["sans", "黑體"]
+      ["serif", "天書明體"],
+      ["sans", "系統黑體"]
     ],
     size: [
       ["small", "小字"],
@@ -1239,6 +1239,13 @@ function renderReaderSettings() {
   return `
     <div class="reader-toolbar">
       <div class="reader-settings" aria-label="閱讀設定">
+        <fieldset class="reader-theme-control">
+          <legend>主題</legend>
+          <div class="reader-theme-control__options" aria-label="閱讀主題">
+            <button type="button" data-reader-theme="dark" aria-pressed="${readerSettings.theme === "dark"}">深色</button>
+            <button type="button" data-reader-theme="light" aria-pressed="${readerSettings.theme === "light"}">淺色</button>
+          </div>
+        </fieldset>
         ${control("font", "字體")}
         ${control("size", "字級")}
         ${control("line", "行距")}
@@ -1261,11 +1268,19 @@ function renderReaderProgress() {
 function readerPaneClass() {
   return [
     "reader-pane",
+    `reader-pane--theme-${readerSettings.theme}`,
     `reader-pane--font-${readerSettings.font}`,
     `reader-pane--size-${readerSettings.size}`,
     `reader-pane--line-${readerSettings.line}`,
     `reader-pane--width-${readerSettings.width}`
   ].join(" ");
+}
+
+function applyReaderTheme() {
+  const dialog = document.querySelector(".modal__dialog");
+  if (!dialog) return;
+  dialog.dataset.readerTheme = readerSettings.theme;
+  dialog.style.colorScheme = readerSettings.theme;
 }
 
 function calculateReaderRatio() {
@@ -1435,6 +1450,7 @@ function renderModal() {
     </div>
   `;
 
+  applyReaderTheme();
   hydrateIcons(content);
 
   document.getElementById("readFirstChapter").addEventListener("click", () => {
@@ -1492,6 +1508,21 @@ function renderModal() {
       };
       saveReaderSettings();
       document.querySelector(".reader-pane").className = readerPaneClass();
+      updateReaderProgress();
+    });
+  });
+
+  content.querySelectorAll("[data-reader-theme]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const theme = button.dataset.readerTheme;
+      if (!["dark", "light"].includes(theme) || readerSettings.theme === theme) return;
+      readerSettings = { ...readerSettings, theme };
+      saveReaderSettings();
+      content.querySelector(".reader-pane").className = readerPaneClass();
+      content.querySelectorAll("[data-reader-theme]").forEach((option) => {
+        option.setAttribute("aria-pressed", String(option.dataset.readerTheme === theme));
+      });
+      applyReaderTheme();
       updateReaderProgress();
     });
   });
@@ -1578,7 +1609,7 @@ function scrollToTarget(target) {
 function pageViewForTarget(target) {
   if (["aiCouncil", "topics", "bookComments"].includes(target)) return target;
   if (target === "legacy") return "legacy";
-  if (["home", "ranking", "ai", "youtube", "categories"].includes(target)) return "home";
+  if (["home", "ranking", "ai", "categories"].includes(target)) return "home";
   return "";
 }
 
@@ -1591,7 +1622,7 @@ function setPageView(view) {
 }
 
 function activeNavTarget(target) {
-  if (["youtube", "categories"].includes(target)) return "home";
+  if (target === "categories") return "home";
   return target;
 }
 
@@ -1631,7 +1662,6 @@ function consumeAutoRefreshFlag() {
 function isOverlayOpen() {
   return Boolean(
     document.getElementById("bookModal").classList.contains("is-open") ||
-    document.getElementById("shareSheet").classList.contains("is-open") ||
     document.getElementById("installGuide").classList.contains("is-open")
   );
 }
@@ -1640,20 +1670,6 @@ function releaseOverlayScroll() {
   if (!isOverlayOpen()) {
     document.body.style.overflow = "";
   }
-}
-
-function openShareSheet() {
-  const sheet = document.getElementById("shareSheet");
-  sheet.classList.add("is-open");
-  sheet.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-
-function closeShareSheet() {
-  const sheet = document.getElementById("shareSheet");
-  sheet.classList.remove("is-open");
-  sheet.setAttribute("aria-hidden", "true");
-  releaseOverlayScroll();
 }
 
 function isIOSInstallPromptBrowser() {
@@ -1718,47 +1734,11 @@ function initEvents() {
     renderAiNovels();
   });
 
-  document.getElementById("subscribeButton").addEventListener("click", () => {
-    showToast("正在前往天書小說 YouTube 頻道。");
-  });
-
-  document.getElementById("likeButton").addEventListener("click", () => {
-    showToast("正在前往天書小說 YouTube 頻道。");
-  });
-
-  document.getElementById("shareButton").addEventListener("click", openShareSheet);
-
-  document.querySelectorAll("[data-close-share]").forEach((node) => {
-    node.addEventListener("click", closeShareSheet);
-  });
-
   document.querySelectorAll("[data-close-install-guide]").forEach((node) => {
     node.addEventListener("click", closeInstallGuide);
   });
 
   document.getElementById("installGuideNever").addEventListener("click", closeInstallGuide);
-
-  document.querySelectorAll("[data-share-target]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const target = button.dataset.shareTarget;
-      const shareUrls = buildShareUrls();
-
-      if (target === "line" || target === "facebook") {
-        window.open(shareUrls[target], "_blank", "noopener,noreferrer");
-        closeShareSheet();
-        showToast(`已開啟${target === "line" ? " LINE " : " Facebook "}分享。`);
-        return;
-      }
-
-      try {
-        await navigator.clipboard.writeText(youtubeChannelUrl);
-        closeShareSheet();
-        showToast("已複製天書小說 YouTube 頻道連結。");
-      } catch (error) {
-        showToast(`請手動複製：${youtubeChannelUrl}`);
-      }
-    });
-  });
 
   document.getElementById("heroOpenButton").addEventListener("click", () => {
     if (allBooks[0]) openBook(allBooks[0].id);
@@ -1794,9 +1774,6 @@ function initEvents() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && document.getElementById("bookModal").classList.contains("is-open")) {
       closeModal();
-    }
-    if (event.key === "Escape" && document.getElementById("shareSheet").classList.contains("is-open")) {
-      closeShareSheet();
     }
     if (event.key === "Escape" && document.getElementById("installGuide").classList.contains("is-open")) {
       closeInstallGuide();
@@ -1883,7 +1860,6 @@ async function init() {
     renderCategories();
     renderAiNovels();
     renderAuthorChat({ scrollEnd: true });
-    document.getElementById("ai")?.after(document.getElementById("youtube"));
     platformApp = createTianshuPlatform({
       onOpenBook: openBook,
       onNavigate: navigateTo,

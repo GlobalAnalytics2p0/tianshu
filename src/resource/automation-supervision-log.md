@@ -1781,3 +1781,92 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-06-30T12:01:00+08:00 preflight
+
+- Decision: blocked
+- Summary: Generation must not start until preflight blockers are cleared.
+- Hard issues:
+  - Preflight blocks generation: remote-unreachable-blocking. Origin is unreachable. Stop before generation; do not create local-only updates unless --allow-local-only is explicitly approved for this run.
+- Warnings:
+  - none
+- Recovery actions:
+  - retry-preflight-remote-check: ok - Transient remote check failure on attempt 1/3; retrying after 3000ms.
+  - retry-preflight-remote-check: ok - Transient remote check failure on attempt 2/3; retrying after 3000ms.
+- Next actions:
+  - Do not create another silent local-only batch; record remote/auth blocker and retry publish when network returns.
+- Durable lessons:
+  - none
+
+## 2026-06-30T12:21:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Active novel quality audit failed.
+  - 星骸王座 第89章: Prohibited workflow/template terms: 第一個小回報
+  - Today cadence/content audit failed for 2026-06-30.
+  - 星骸王座 第89章: prohibited workflow/template terms: 第一個小回報
+  - 星骸王座: expected 3 chapters for 2026-06-30, found 2
+  - 星骸王座 第89章: prohibited meta/workflow phrase found
+  - 灰塔觀測者: expected 3 chapters for 2026-06-30, found 1
+  - 雪刃照孤城: expected 3 chapters for 2026-06-30, found 1
+  - 凌晨三點的演算法: expected 3 chapters for 2026-06-30, found 1
+  - 大明墨工: expected 3 chapters for 2026-06-30, found 1
+  - Three-layer semantic review receipts failed.
+  - No active batch state exists.
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Revise chapters or note state until `node scripts/audit-active-novel-quality.mjs --strict` exits cleanly.
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+  - Repair AI-feel, theory-consistency, or continuity evidence in each completed title's 反思.md before publishing.
+- Durable lessons:
+  - none
+
+## 2026-06-30T12:24:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Today cadence/content audit failed for 2026-06-30.
+  - 星骸王座: expected 3 chapters for 2026-06-30, found 2
+  - 灰塔觀測者: expected 3 chapters for 2026-06-30, found 1
+  - 雪刃照孤城: expected 3 chapters for 2026-06-30, found 1
+  - 凌晨三點的演算法: expected 3 chapters for 2026-06-30, found 1
+  - 大明墨工: expected 3 chapters for 2026-06-30, found 1
+  - Three-layer semantic review receipts failed.
+  - No active batch state exists.
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+  - Repair AI-feel, theory-consistency, or continuity evidence in each completed title's 反思.md before publishing.
+- Durable lessons:
+  - none
+

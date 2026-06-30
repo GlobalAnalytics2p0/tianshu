@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T00:00:00+08:00",
+  "generatedAt": "2026-06-30T12:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "第88章〈子正不收〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第89章〈乳名不取藥〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -635,13 +635,20 @@
           "path": "src/resource/星骸王座/文章/第88章 子正不收.txt",
           "charCount": 6002,
           "generatedAt": "2026-06-30T00:00:00+08:00"
+        },
+        {
+          "number": 89,
+          "title": "乳名不取藥",
+          "path": "src/resource/星骸王座/文章/第89章 乳名不取藥.txt",
+          "charCount": 6001,
+          "generatedAt": "2026-06-30T12:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "顧夜燼不寫天命的光，他寫人被逼到雪線下仍肯抬頭。冷硬邊境、說謊星核、每一次死法預見，都被他磨成少年逆命的刀口。",
       "coverImage": "src/resource/星骸王座/素材/圖像/主角圖片素材/星骸王座-沈曜阿棠.png",
       "heroImage": "src/resource/星骸王座/素材/圖像/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png",
-      "updatedAt": "2026-06-30T00:00:00+08:00"
+      "updatedAt": "2026-06-30T12:00:00+08:00"
     },
     {
       "id": "ai-02",
