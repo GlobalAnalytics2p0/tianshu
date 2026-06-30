@@ -1237,7 +1237,12 @@ function renderReaderSettings() {
   `;
 
   return `
-    <div class="reader-toolbar">
+    <button class="reader-settings-scrim" type="button" data-close-reader-settings tabindex="-1" aria-hidden="true"></button>
+    <div class="reader-toolbar" id="readerSettingsPanel" aria-labelledby="readerSettingsTitle">
+      <header class="reader-toolbar__header">
+        <strong id="readerSettingsTitle">閱讀設定</strong>
+        <button type="button" data-close-reader-settings>完成</button>
+      </header>
       <div class="reader-settings" aria-label="閱讀設定">
         <fieldset class="reader-theme-control">
           <legend>主題</legend>
@@ -1443,13 +1448,14 @@ function renderModal() {
             <button type="button" data-toggle-chapter-list>目錄</button>
             <button type="button" data-chapter-nav="previous" ${currentChapterIndex === 0 ? "disabled" : ""}>上一章</button>
             <button type="button" data-chapter-nav="next" ${currentChapterIndex >= book.chapters.length - 1 ? "disabled" : ""}>下一章</button>
-            <button type="button" data-reader-settings-jump>設定</button>
+            <button type="button" data-reader-settings-jump aria-expanded="false" aria-controls="readerSettingsPanel">設定</button>
           </nav>
         </div>
       </section>
     </div>
   `;
 
+  document.querySelector(".modal__dialog")?.classList.remove("is-reader-chrome-hidden");
   applyReaderTheme();
   hydrateIcons(content);
 
@@ -1537,13 +1543,36 @@ function renderModal() {
 
   content.querySelector("[data-reader-settings-jump]")?.addEventListener("click", () => {
     const toolbar = content.querySelector(".reader-toolbar");
-    toolbar?.classList.toggle("is-mobile-open");
-    toolbar?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    setReaderSettingsPanelOpen(!toolbar?.classList.contains("is-mobile-open"));
   });
 
-  content.querySelector(".modal-layout").addEventListener("scroll", () => {
+  content.querySelectorAll("[data-close-reader-settings]").forEach((button) => {
+    button.addEventListener("click", () => setReaderSettingsPanelOpen(false, { returnFocus: true }));
+  });
+
+  const modalLayout = content.querySelector(".modal-layout");
+  let chromeScrollAnchor = modalLayout.scrollTop;
+  modalLayout.addEventListener("scroll", () => {
     updateReaderProgress();
     queueReadingProgressSave();
+
+    if (window.matchMedia("(max-width: 780px)").matches) {
+      const nextScrollTop = modalLayout.scrollTop;
+      const readerPane = content.querySelector(".reader-pane");
+      const dialog = document.querySelector(".modal__dialog");
+      const settingsOpen = content.querySelector(".reader-toolbar")?.classList.contains("is-mobile-open");
+      const delta = nextScrollTop - chromeScrollAnchor;
+
+      if (nextScrollTop <= 24 || delta < -14) {
+        readerPane?.classList.remove("is-reader-chrome-hidden");
+        dialog?.classList.remove("is-reader-chrome-hidden");
+      } else if (!settingsOpen && nextScrollTop > 80 && delta > 14) {
+        readerPane?.classList.add("is-reader-chrome-hidden");
+        dialog?.classList.add("is-reader-chrome-hidden");
+      }
+
+      if (Math.abs(delta) > 14) chromeScrollAnchor = nextScrollTop;
+    }
   }, { passive: true });
 
   void ensureChapterContent(book, currentChapterIndex).then(() => {
@@ -1555,7 +1584,28 @@ function renderModal() {
   });
 }
 
+function setReaderSettingsPanelOpen(isOpen, { returnFocus = false } = {}) {
+  const content = document.getElementById("modalContent");
+  const toolbar = content?.querySelector(".reader-toolbar");
+  const scrim = content?.querySelector(".reader-settings-scrim");
+  const trigger = content?.querySelector("[data-reader-settings-jump]");
+  const readerPane = content?.querySelector(".reader-pane");
+  const dialog = document.querySelector(".modal__dialog");
+  if (!toolbar || !trigger) return;
+
+  toolbar.classList.toggle("is-mobile-open", isOpen);
+  scrim?.classList.toggle("is-mobile-open", isOpen);
+  readerPane?.classList.toggle("is-settings-open", isOpen);
+  if (isOpen) readerPane?.classList.remove("is-reader-chrome-hidden");
+  if (isOpen) dialog?.classList.remove("is-reader-chrome-hidden");
+  trigger.setAttribute("aria-expanded", String(isOpen));
+
+  if (returnFocus) trigger.focus({ preventScroll: true });
+}
+
 function closeModal() {
+  setReaderSettingsPanelOpen(false);
+  document.querySelector(".modal__dialog")?.classList.remove("is-reader-chrome-hidden");
   if (currentModalBook) {
     saveReadingProgress(currentModalBook.id, {
       chapterIndex: currentChapterIndex,
@@ -1773,6 +1823,10 @@ function initEvents() {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && document.getElementById("bookModal").classList.contains("is-open")) {
+      if (document.querySelector(".reader-toolbar.is-mobile-open")) {
+        setReaderSettingsPanelOpen(false, { returnFocus: true });
+        return;
+      }
       closeModal();
     }
     if (event.key === "Escape" && document.getElementById("installGuide").classList.contains("is-open")) {

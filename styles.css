@@ -8400,3 +8400,269 @@ body {
     padding-left: 22px;
   }
 }
+/* Tianshu 2.6 — distraction-free reading chrome */
+.reader-settings-scrim,
+.reader-toolbar__header {
+  display: none;
+}
+
+.modal-layout--reading .reader-focus-bar {
+  position: static;
+  min-height: 46px;
+  padding: 6px 16px;
+}
+
+.modal-layout--reading .reader-focus-bar__info {
+  min-height: 32px;
+}
+
+.modal-layout--reading .reader-toolbar {
+  position: static;
+  padding: 7px clamp(18px, 3vw, 36px);
+  backdrop-filter: none;
+}
+
+.modal-layout--reading .reader-progress {
+  top: 0;
+}
+
+.modal-layout--reading .reader-settings {
+  align-items: end;
+  gap: 10px;
+}
+
+.modal-layout--reading .reader-theme-control legend,
+.modal-layout--reading .reader-settings span {
+  margin-bottom: 4px;
+}
+
+.modal-layout--reading .reader-theme-control__options,
+.modal-layout--reading .reader-settings select {
+  min-height: 36px;
+}
+
+@keyframes reader-sheet-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 780px) {
+  .modal-layout--reading {
+    padding-bottom: calc(50px + env(safe-area-inset-bottom));
+  }
+
+  .modal-layout--reading .chapter-drawer.is-open {
+    inset: 44px 8px calc(56px + env(safe-area-inset-bottom));
+  }
+
+  .reader-focus-bar,
+  .modal-layout--reading .reader-focus-bar {
+    position: sticky;
+    top: 0;
+    z-index: 14;
+    min-height: 44px;
+    max-height: 44px;
+    border-bottom-color: var(--reader-line);
+    background: color-mix(in srgb, var(--reader-bg-soft) 94%, transparent);
+    backdrop-filter: blur(16px);
+    padding: 4px 48px 4px 14px;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .reader-focus-bar > div {
+    display: block;
+  }
+
+  .reader-focus-bar span {
+    display: none;
+  }
+
+  .reader-focus-bar strong {
+    display: block;
+    font-size: 13px;
+    line-height: 36px;
+  }
+
+  .modal__close {
+    top: 5px;
+    right: 6px;
+    z-index: 30;
+    width: 34px;
+    height: 34px;
+    border-color: transparent;
+    background: transparent;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .reader-progress,
+  .modal-layout--reading .reader-progress {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    height: 2px;
+  }
+
+  .reader-progress i,
+  .reader-progress b {
+    height: 2px;
+  }
+
+  .reader-settings-scrim.is-mobile-open {
+    position: fixed;
+    inset: 0 0 calc(50px + env(safe-area-inset-bottom));
+    z-index: 17;
+    display: block;
+    border: 0;
+    background: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(2px);
+    cursor: default;
+    padding: 0;
+  }
+
+  .reader-toolbar,
+  .modal-layout--reading .reader-toolbar {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: calc(50px + env(safe-area-inset-bottom));
+    left: 0;
+    z-index: 18;
+    max-height: min(68dvh, 470px);
+    display: none;
+    overflow: auto;
+    border: 1px solid var(--reader-line);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 16px 16px 0 0;
+    background: color-mix(in srgb, var(--reader-bg-soft) 98%, transparent);
+    box-shadow: 0 -18px 58px rgba(0, 0, 0, 0.34);
+    padding: 0;
+    overscroll-behavior: contain;
+  }
+
+  .reader-toolbar.is-mobile-open {
+    display: block;
+    animation: reader-sheet-up 180ms ease-out both;
+  }
+
+  .reader-toolbar__header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--reader-line);
+    background: var(--reader-bg-soft);
+    padding: 0 14px 0 18px;
+  }
+
+  .reader-toolbar__header strong {
+    color: var(--reader-heading);
+    font-family: var(--font-literary);
+    font-size: 15px;
+    font-weight: 650;
+  }
+
+  .reader-toolbar__header button {
+    min-width: 54px;
+    min-height: 34px;
+    border: 0;
+    border-radius: 5px;
+    background: rgba(184, 148, 87, 0.14);
+    color: var(--reader-heading);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 750;
+  }
+
+  .reader-settings,
+  .modal-layout--reading .reader-settings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: max-content;
+    align-content: start;
+    align-items: start;
+    gap: 12px;
+    padding: 14px 14px 16px;
+  }
+
+  .reader-theme-control {
+    grid-column: 1 / -1;
+  }
+
+  .reader-theme-control legend,
+  .reader-settings span,
+  .modal-layout--reading .reader-theme-control legend,
+  .modal-layout--reading .reader-settings span {
+    margin-bottom: 6px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .reader-theme-control__options,
+  .reader-settings select,
+  .modal-layout--reading .reader-theme-control__options,
+  .modal-layout--reading .reader-settings select {
+    min-height: 42px;
+  }
+
+  .reader-pane h3 {
+    padding-top: 54px;
+    padding-bottom: 50px;
+  }
+
+  .mobile-reader-dock {
+    z-index: 20;
+    min-height: calc(50px + env(safe-area-inset-bottom));
+    height: calc(50px + env(safe-area-inset-bottom));
+    border-top-color: var(--reader-line);
+    padding: 0 4px env(safe-area-inset-bottom);
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .mobile-reader-dock button {
+    min-height: 49px;
+    border-right-color: var(--reader-line);
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 650;
+  }
+
+  .reader-pane.is-reader-chrome-hidden .reader-focus-bar,
+  .modal__dialog.is-reader-chrome-hidden .modal__close {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-110%);
+  }
+
+  .reader-pane.is-reader-chrome-hidden .mobile-reader-dock {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(110%);
+  }
+
+  .reader-pane.is-settings-open .reader-focus-bar,
+  .reader-pane.is-settings-open .mobile-reader-dock {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-focus-bar,
+  .modal__close,
+  .mobile-reader-dock,
+  .reader-toolbar.is-mobile-open {
+    animation: none;
+    transition: none;
+  }
+}
