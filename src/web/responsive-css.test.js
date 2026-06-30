@@ -12,9 +12,9 @@ describe("fluid responsive CSS contract", () => {
   });
 
   it("uses percentage-led reader measures instead of fixed pixel columns", () => {
-    expect(styles).toContain("--reader-measure-narrow: min(72%, 48rem)");
-    expect(styles).toContain("--reader-measure-standard: min(84%, 60rem)");
-    expect(styles).toContain("--reader-measure-wide: min(94%, 72rem)");
+    expect(styles).toContain("--reader-measure-narrow: min(68%, 44rem)");
+    expect(styles).toContain("--reader-measure-standard: min(78%, 54rem)");
+    expect(styles).toContain("--reader-measure-wide: min(90%, 66rem)");
 
     const currentReaderTheme = styles.slice(styles.indexOf("/* Tianshu 2.5"));
     expect(currentReaderTheme).not.toMatch(/max-(?:inline-)?size:\s*(?:620|720|860)px/);
@@ -30,5 +30,16 @@ describe("fluid responsive CSS contract", () => {
     const mobileReaderChrome = styles.slice(styles.indexOf("/* Tianshu 2.6"));
     expect(mobileReaderChrome).toContain("grid-template-columns: repeat(2, minmax(0, 1fr))");
     expect(mobileReaderChrome).not.toContain("repeat(auto-fit, minmax(min(100%, 10rem), 1fr))");
+  });
+
+  it("uses content-first desktop reading chrome", () => {
+    const currentReaderChrome = styles.slice(styles.indexOf("/* Tianshu 2.6"));
+    const desktopStart = currentReaderChrome.indexOf("/* Desktop reading follows the same content-first model as mobile. */");
+    const desktopEnd = currentReaderChrome.indexOf("@media (max-width: 780px)", desktopStart);
+    const desktopReaderChrome = currentReaderChrome.slice(desktopStart, desktopEnd);
+    expect(currentReaderChrome).toContain("/* Desktop reading follows the same content-first model as mobile. */");
+    expect(desktopReaderChrome).toContain("top: auto");
+    expect(desktopReaderChrome).toContain("animation: reader-desktop-panel-up 180ms ease-out both");
+    expect(desktopReaderChrome).toContain("width: min(30rem, calc(100% - 8rem))");
   });
 });

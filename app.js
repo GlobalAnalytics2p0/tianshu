@@ -1444,7 +1444,7 @@ function renderModal() {
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
-          <nav class="mobile-reader-dock" aria-label="手機閱讀工具列">
+          <nav class="mobile-reader-dock" aria-label="閱讀工具列">
             <button type="button" data-toggle-chapter-list>目錄</button>
             <button type="button" data-chapter-nav="previous" ${currentChapterIndex === 0 ? "disabled" : ""}>上一章</button>
             <button type="button" data-chapter-nav="next" ${currentChapterIndex >= book.chapters.length - 1 ? "disabled" : ""}>下一章</button>
@@ -1556,23 +1556,21 @@ function renderModal() {
     updateReaderProgress();
     queueReadingProgressSave();
 
-    if (window.matchMedia("(max-width: 780px)").matches) {
-      const nextScrollTop = modalLayout.scrollTop;
-      const readerPane = content.querySelector(".reader-pane");
-      const dialog = document.querySelector(".modal__dialog");
-      const settingsOpen = content.querySelector(".reader-toolbar")?.classList.contains("is-mobile-open");
-      const delta = nextScrollTop - chromeScrollAnchor;
+    const nextScrollTop = modalLayout.scrollTop;
+    const readerPane = content.querySelector(".reader-pane");
+    const dialog = document.querySelector(".modal__dialog");
+    const settingsOpen = content.querySelector(".reader-toolbar")?.classList.contains("is-mobile-open");
+    const delta = nextScrollTop - chromeScrollAnchor;
 
-      if (nextScrollTop <= 24 || delta < -14) {
-        readerPane?.classList.remove("is-reader-chrome-hidden");
-        dialog?.classList.remove("is-reader-chrome-hidden");
-      } else if (!settingsOpen && nextScrollTop > 80 && delta > 14) {
-        readerPane?.classList.add("is-reader-chrome-hidden");
-        dialog?.classList.add("is-reader-chrome-hidden");
-      }
-
-      if (Math.abs(delta) > 14) chromeScrollAnchor = nextScrollTop;
+    if (nextScrollTop <= 24 || delta < -14) {
+      readerPane?.classList.remove("is-reader-chrome-hidden");
+      dialog?.classList.remove("is-reader-chrome-hidden");
+    } else if (!settingsOpen && nextScrollTop > 80 && delta > 14) {
+      readerPane?.classList.add("is-reader-chrome-hidden");
+      dialog?.classList.add("is-reader-chrome-hidden");
     }
+
+    if (Math.abs(delta) > 14) chromeScrollAnchor = nextScrollTop;
   }, { passive: true });
 
   void ensureChapterContent(book, currentChapterIndex).then(() => {
