@@ -78,6 +78,7 @@ const authorAgentRequestTimeoutMs = 12000;
 const maxAuthorChatMessages = 500;
 const manifestPollIntervalMs = 60000;
 const defaultReaderSettings = {
+  font: "serif",
   size: "medium",
   line: "relaxed",
   width: "standard"
@@ -1202,6 +1203,11 @@ function warmNearbyChapters(book, index) {
 
 function renderReaderSettings() {
   const options = {
+    font: [
+      ["serif", "明體"],
+      ["kai", "楷書"],
+      ["sans", "黑體"]
+    ],
     size: [
       ["small", "小字"],
       ["medium", "中字"],
@@ -1233,6 +1239,7 @@ function renderReaderSettings() {
   return `
     <div class="reader-toolbar">
       <div class="reader-settings" aria-label="閱讀設定">
+        ${control("font", "字體")}
         ${control("size", "字級")}
         ${control("line", "行距")}
         ${control("width", "版寬")}
@@ -1254,6 +1261,7 @@ function renderReaderProgress() {
 function readerPaneClass() {
   return [
     "reader-pane",
+    `reader-pane--font-${readerSettings.font}`,
     `reader-pane--size-${readerSettings.size}`,
     `reader-pane--line-${readerSettings.line}`,
     `reader-pane--width-${readerSettings.width}`
@@ -1411,9 +1419,9 @@ function renderModal() {
             </div>
             <button class="reader-focus-bar__info" type="button" data-reader-info>作品資訊</button>
           </div>
+          ${renderReaderProgress()}
           ${renderReaderSettings()}
           <h3>${escapeHtml(activeChapter.displayTitle)}</h3>
-          ${renderReaderProgress()}
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
           <nav class="mobile-reader-dock" aria-label="手機閱讀工具列">
@@ -1497,7 +1505,9 @@ function renderModal() {
   });
 
   content.querySelector("[data-reader-settings-jump]")?.addEventListener("click", () => {
-    content.querySelector(".reader-toolbar")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    const toolbar = content.querySelector(".reader-toolbar");
+    toolbar?.classList.toggle("is-mobile-open");
+    toolbar?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
 
   content.querySelector(".modal-layout").addEventListener("scroll", () => {

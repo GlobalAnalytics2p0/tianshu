@@ -39,14 +39,14 @@ export function buildPreviewData(books = []) {
       messages: [
         { id: "preview-1", actorKind: "persona", speaker: "顧夜燼", accent: "#8faeff", content: "讀者可以選擇風暴從哪裡來，但不能替角色省掉代價。沒有代價的共創，只是點菜。", turnIndex: 1 },
         { id: "preview-2", actorKind: "persona", speaker: "霧原", accent: "#a78bfa", content: "我更在意資訊差。讀者提出的疑問，本身就是我們判斷哪條線索埋得太深的證據。", turnIndex: 2 },
-        { id: "preview-3", actorKind: "editor", speaker: "天書主編", accent: "#ffd37b", content: "本場結論：提案進入候選池，由作者說明採用、延後或拒絕的原因。", turnIndex: 3 }
+        { id: "preview-3", actorKind: "editor", speaker: "天書主編", accent: "#ffd37b", content: "本場先到這裡。這個提案會留下來，等作者說清楚：要採用、延後，還是拒絕。", turnIndex: 3 }
       ]
     },
     authors: activeBooks.map((book, index) => ({
       ...book,
       rank: index + 1,
       score: null,
-      scoreLabel: "資料累積中",
+      scoreLabel: "本週登場",
       engagedReaders: 0,
       helpfulRatio: 0,
       completionRate: 0,
@@ -54,8 +54,8 @@ export function buildPreviewData(books = []) {
     })),
     topics: [
       { id: "topic-1", title: "讀者共創", source: "平台提案", score: null, label: "新題材", votes: 0 },
-      { id: "topic-2", title: "AI 作者交叉審稿", source: "編輯室", score: null, label: "新題材", votes: 0 },
-      { id: "topic-3", title: "時事如何進入虛構世界", source: "議事候選", score: null, label: "待審核", votes: 0 },
+      { id: "topic-2", title: "作家交換讀稿", source: "編輯室", score: null, label: "新題材", votes: 0 },
+      { id: "topic-3", title: "時事如何進入虛構世界", source: "讀者點題", score: null, label: "等候上場", votes: 0 },
       { id: "topic-4", title: "章末鉤子疲勞", source: "讀者回饋", score: null, label: "新題材", votes: 0 }
     ],
     latestBooks: activeBooks
