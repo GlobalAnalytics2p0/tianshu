@@ -3,6 +3,7 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { setTimeout as delay } from "node:timers/promises";
+import { inspectLiveAppShell } from "./live-app-shell.mjs";
 
 const ACTIVE_TITLES = [
   "星骸王座",
@@ -132,6 +133,16 @@ function resolveSiteManifestUrl(owner, repo) {
   return `https://${owner}.github.io${basePath}/src/resource/manifest.json`;
 }
 
+function resolveSiteRootUrl(owner, repo) {
+  if (existsSync(CNAME_PATH)) {
+    const cname = readFileSync(CNAME_PATH, "utf8").trim().replace(/^https?:\/\//, "");
+    if (cname) return `https://${cname}/`;
+  }
+
+  const basePath = repo === `${owner}.github.io` ? "" : `/${repo}`;
+  return `https://${owner}.github.io${basePath}/`;
+}
+
 async function main() {
   const { timeoutMs, pollMs } = parseArgs(process.argv.slice(2));
   const localManifest = loadJsonFile(MANIFEST_PATH);
@@ -160,6 +171,7 @@ async function main() {
 
   const rawManifestUrl = `https://raw.githubusercontent.com/${remote.owner}/${remote.repo}/${headCommit}/src/resource/manifest.json`;
   const siteManifestUrl = resolveSiteManifestUrl(remote.owner, remote.repo);
+  const siteRootUrl = resolveSiteRootUrl(remote.owner, remote.repo);
 
   const rawManifest = await fetchJson(rawManifestUrl);
   const rawMismatches = diffSummary(localSummary, buildSummary(rawManifest), "raw");
@@ -170,16 +182,24 @@ async function main() {
   const deadline = Date.now() + timeoutMs;
   let lastError = "";
   let lastMismatches = [];
+  let lastShellError = "";
 
   while (Date.now() <= deadline) {
     try {
       const siteManifest = await fetchJson(siteManifestUrl);
       const mismatches = diffSummary(localSummary, buildSummary(siteManifest), "live");
       if (mismatches.length === 0) {
-        console.log(`PASS: site manifest matches local manifest for ${ACTIVE_TITLES.length} active titles`);
-        console.log(`site=${siteManifestUrl}`);
-        console.log(`branch=${branch}`);
-        return;
+        try {
+          const shell = await inspectLiveAppShell(siteRootUrl);
+          console.log(`PASS: site manifest matches local manifest for ${ACTIVE_TITLES.length} active titles`);
+          console.log("PASS: live app shell references a reachable Vite hashed bundle");
+          console.log(`site=${siteManifestUrl}`);
+          console.log(`bundle=${shell.bundleUrl}`);
+          console.log(`branch=${branch}`);
+          return;
+        } catch (error) {
+          lastShellError = error instanceof Error ? error.message : String(error);
+        }
       }
       lastMismatches = mismatches;
       lastError = "";
@@ -195,6 +215,13 @@ async function main() {
     fail("live site manifest could not be verified before timeout", [
       `site=${siteManifestUrl}`,
       `error=${lastError}`
+    ]);
+  }
+
+  if (lastMismatches.length === 0 && lastShellError) {
+    fail("live site app shell did not become runnable before timeout", [
+      `site=${siteRootUrl}`,
+      `error=${lastShellError}`
     ]);
   }
 

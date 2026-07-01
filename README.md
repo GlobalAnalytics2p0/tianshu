@@ -51,7 +51,7 @@ npm run dev
 
 每次 six-hour automation 開始前，先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`。這個預檢現在預設是嚴格模式：只要 `origin` 不可達，就直接視為 blocker，不應繼續生成新章。只有使用者明確批准「這一輪接受 local-only、網站暫時看不到」時，才可改用 `--allow-local-only` override。
 
-發佈完成的判定不能只看 commit 或 push。six-hour automation 在 push 後必須再跑 `node scripts/verify-site-publication.mjs`，確認本地 manifest、GitHub raw manifest、實際網站 manifest 三者一致，才可回報網站已更新。
+發佈完成的判定不能只看 commit 或 push。six-hour automation 在 push 後必須再跑 `node scripts/verify-site-publication.mjs`，確認本地 manifest、GitHub raw manifest、實際網站 manifest 三者一致，而且正式首頁引用的是可存取的 Vite hashed bundle、不是原始 `/app.js`，才可回報網站已更新。
 
 另外，`git status --short` 有殘留髒檔不等於「最新 commit 沒推上去」。未來要分開回報三件事：`HEAD 是否等於 origin/main`、網站 verify 是否通過、以及工作樹裡還有哪些不相關殘留修改。
 
