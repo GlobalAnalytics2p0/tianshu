@@ -2293,3 +2293,83 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-02T06:02:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-02T06:19:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Active novel quality audit failed.
+  - 星骸王座: updateNote "第93章〈第十三床不收人〉已更新；每日 00/06/12/18 連載推進。" does not match latest chapter 94
+  - 星骸王座: updateNote "第93章〈第十三床不收人〉已更新；每日 00/06/12/18 連載推進。" does not include latest chapter title 灰叔不還床
+  - 灰塔觀測者: updateNote "第93章〈母票房不收名〉已更新；每日 00/06/12/18 連載推進。" does not match latest chapter 94
+  - 灰塔觀測者: updateNote "第93章〈母票房不收名〉已更新；每日 00/06/12/18 連載推進。" does not include latest chapter title 尼位不接單
+  - 雪刃照孤城: updateNote "第93章〈未還鞘不認刀〉已更新；每日 00/06/12/18 連載推進。" does not match latest chapter 94
+  - 雪刃照孤城: updateNote "第93章〈未還鞘不認刀〉已更新；每日 00/06/12/18 連載推進。" does not include latest chapter title 人未出棚
+  - 凌晨三點的演算法: updateNote "第93章〈收發室不代收〉已更新；每日 00/06/12/18 連載推進。" does not match latest chapter 94
+  - 凌晨三點的演算法: updateNote "第93章〈收發室不代收〉已更新；每日 00/06/12/18 連載推進。" does not include latest chapter title 員工號早到
+  - 大明墨工: updateNote "第93章〈衡七不收砣〉已更新；每日 00/06/12/18 連載推進。" does not match latest chapter 94
+  - 大明墨工: updateNote "第93章〈衡七不收砣〉已更新；每日 00/06/12/18 連載推進。" does not include latest chapter title 女尺不上船
+  - 灰塔觀測者 第94章: Prohibited workflow/template terms: 小回報
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Revise chapters or note state until `node scripts/audit-active-novel-quality.mjs --strict` exits cleanly.
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+  - Repair AI-feel, theory-consistency, or continuity evidence in each completed title's 反思.md before publishing.
+- Durable lessons:
+  - none
+
+## 2026-07-02T06:20:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第65章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第73章: Possible AI-even pacing: paragraph length CV 0.21
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第79章: Possible AI-even pacing: paragraph length CV 0.14
+  - 星骸王座 第81章: Possible AI-even pacing: paragraph length CV 0.21
+  - 灰塔觀測者 第65章: Possible AI-even pacing: paragraph length CV 0.23
+  - 灰塔觀測者 第73章: Possible AI-even pacing: paragraph length CV 0.20
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第79章: Possible AI-even pacing: paragraph length CV 0.15
+  - 灰塔觀測者 第81章: Possible AI-even pacing: paragraph length CV 0.21
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - none
+
