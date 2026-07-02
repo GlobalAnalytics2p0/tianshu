@@ -42,4 +42,12 @@ describe("fluid responsive CSS contract", () => {
     expect(desktopReaderChrome).toContain("animation: reader-desktop-panel-up 180ms ease-out both");
     expect(desktopReaderChrome).toContain("width: min(30rem, calc(100% - 8rem))");
   });
+
+  it("keeps the mobile council preview compact and the reader dock actionable", () => {
+    const mobileUx = styles.slice(styles.indexOf("/* Tianshu 2.7"));
+    expect(mobileUx).toContain("grid-template-columns: minmax(0, 1fr) auto");
+    expect(mobileUx).toContain("min-height: 0");
+    expect(mobileUx).toContain(".modal-layout:not(.modal-layout--reading) .mobile-reader-dock");
+    expect(mobileUx).toContain("pointer-events: auto");
+  });
 });

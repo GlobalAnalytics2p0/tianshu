@@ -1,4 +1,8 @@
 import { createTianshuPlatform } from "./src/web/platform.js";
+import {
+  migrateLegacyReaderSettings,
+  normalizeReaderSettings
+} from "./src/web/reader-settings.js";
 
 const icons = {
   home: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h5v-5h3v5h5v-9.5"/></svg>',
@@ -63,19 +67,13 @@ const activeRankingTitles = [
 const chapterAutoRefreshFlag = "tianshu-auto-refreshed";
 const installGuideStorageKey = "tianshu-ios-safari-install-guide-v1";
 const readingProgressStorageKey = "tianshu-reading-progress-v1";
-const readerSettingsStorageKey = "tianshu-reader-settings-v2";
+const readerSettingsStorageKey = "tianshu-reader-settings-v3";
+const legacyReaderSettingsStorageKey = "tianshu-reader-settings-v2";
 const authorChatStorageKey = "tianshu-author-chat-v6";
 const authorAgentEndpoint = typeof window !== "undefined" ? window.TIANSHU_AUTHOR_AGENT_ENDPOINT || "" : "";
 const authorAgentRequestTimeoutMs = 12000;
 const maxAuthorChatMessages = 500;
 const manifestPollIntervalMs = 60000;
-const defaultReaderSettings = {
-  theme: "dark",
-  font: "serif",
-  size: "medium",
-  line: "relaxed",
-  width: "standard"
-};
 
 const authorVoiceProfiles = {
   "星骸王座": {
@@ -216,19 +214,13 @@ function safeWriteJson(key, value) {
 }
 
 function loadReaderSettings() {
-  const stored = safeReadJson(readerSettingsStorageKey, {});
-  const allowed = {
-    theme: ["dark", "light"],
-    font: ["serif", "sans"],
-    size: ["small", "medium", "large"],
-    line: ["compact", "relaxed", "wide"],
-    width: ["narrow", "standard", "wide"]
-  };
+  const stored = safeReadJson(readerSettingsStorageKey, null);
+  if (stored) return normalizeReaderSettings(stored);
 
-  return Object.fromEntries(Object.entries(defaultReaderSettings).map(([key, fallback]) => [
-    key,
-    allowed[key].includes(stored[key]) ? stored[key] : fallback
-  ]));
+  const legacy = safeReadJson(legacyReaderSettingsStorageKey, {});
+  const migrated = migrateLegacyReaderSettings(legacy);
+  safeWriteJson(readerSettingsStorageKey, migrated);
+  return migrated;
 }
 
 function saveReaderSettings() {
@@ -1119,7 +1111,7 @@ function setModalChapterIndex(index, shouldScroll = true) {
 
   if (shouldScroll) {
     window.requestAnimationFrame(() => {
-      document.querySelector(".reader-pane")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.querySelector(".modal-layout")?.scrollTo({ top: 0, behavior: "auto" });
     });
   }
 }
@@ -1238,7 +1230,7 @@ function renderReaderSettings() {
 
   return `
     <button class="reader-settings-scrim" type="button" data-close-reader-settings tabindex="-1" aria-hidden="true"></button>
-    <div class="reader-toolbar" id="readerSettingsPanel" aria-labelledby="readerSettingsTitle">
+    <div class="reader-toolbar" id="readerSettingsPanel" role="dialog" aria-labelledby="readerSettingsTitle" aria-hidden="true">
       <header class="reader-toolbar__header">
         <strong id="readerSettingsTitle">閱讀設定</strong>
         <button type="button" data-close-reader-settings>完成</button>
@@ -1460,7 +1452,7 @@ function renderModal() {
   hydrateIcons(content);
 
   document.getElementById("readFirstChapter").addEventListener("click", () => {
-    setModalChapterIndex(currentChapterIndex);
+    setModalChapterIndex(currentChapterIndex, false);
   });
 
   document.getElementById("downloadBook").addEventListener("click", () => {
@@ -1541,7 +1533,9 @@ function renderModal() {
     });
   });
 
-  content.querySelector("[data-reader-settings-jump]")?.addEventListener("click", () => {
+  content.querySelector("[data-reader-settings-jump]")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     const toolbar = content.querySelector(".reader-toolbar");
     setReaderSettingsPanelOpen(!toolbar?.classList.contains("is-mobile-open"));
   });
@@ -1592,7 +1586,9 @@ function setReaderSettingsPanelOpen(isOpen, { returnFocus = false } = {}) {
   if (!toolbar || !trigger) return;
 
   toolbar.classList.toggle("is-mobile-open", isOpen);
+  toolbar.setAttribute("aria-hidden", String(!isOpen));
   scrim?.classList.toggle("is-mobile-open", isOpen);
+  scrim?.setAttribute("aria-hidden", String(!isOpen));
   readerPane?.classList.toggle("is-settings-open", isOpen);
   if (isOpen) readerPane?.classList.remove("is-reader-chrome-hidden");
   if (isOpen) dialog?.classList.remove("is-reader-chrome-hidden");

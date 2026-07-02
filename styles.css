@@ -8940,3 +8940,189 @@ body {
     transition: none;
   }
 }
+
+/* Tianshu 2.7 — mobile council preview and reliable reader controls */
+.arena-topic {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.arena-topic > span {
+  color: #8f897f;
+  font-family: var(--font-ui);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.arena-topic > strong {
+  color: inherit;
+  font-family: var(--font-literary);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.modal-layout:not(.modal-layout--reading) .mobile-reader-dock {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .creation-arena {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.75rem 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(184, 148, 87, 0.36);
+    border-top: 3px solid rgba(184, 148, 87, 0.78);
+    border-radius: 0.75rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(126, 100, 177, 0.13), transparent 12rem),
+      linear-gradient(155deg, #12151a, #0b0d11 72%);
+    padding: 1rem;
+  }
+
+  .creation-arena > header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(184, 148, 87, 0.22);
+    padding-bottom: 0.75rem;
+  }
+
+  .creation-arena > header span {
+    color: #e9dbc2;
+    font-family: var(--font-literary);
+    font-size: 0.9375rem;
+    font-weight: 700;
+  }
+
+  .creation-arena > header strong {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.75rem;
+    border: 1px solid rgba(184, 148, 87, 0.28);
+    border-radius: 999px;
+    background: rgba(184, 148, 87, 0.08);
+    color: #d9c49f;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.625rem;
+  }
+
+  .arena-topic {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .arena-topic > strong {
+    color: #f0e3cd;
+    font-size: clamp(1.0625rem, 4.8vw, 1.25rem);
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .arena-pairings {
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.625rem;
+    align-self: stretch;
+    padding: 0;
+  }
+
+  .arena-person {
+    min-height: 4rem;
+    align-content: center;
+    justify-items: center;
+    gap: 0.35rem;
+    border: 1px solid rgba(184, 148, 87, 0.14);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.018);
+    padding: 0.5rem 0.25rem;
+  }
+
+  .arena-person > span {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .arena-person strong {
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 0.625rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .arena-person em {
+    top: 50%;
+    right: -0.625rem;
+    bottom: auto;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(184, 148, 87, 0.28);
+    border-radius: 50%;
+    background: #101318;
+    color: #d9c49f;
+    font-size: 0.5rem;
+    transform: translate(50%, -50%);
+  }
+
+  .arena-countdown {
+    grid-column: 2;
+    grid-row: 3;
+    min-width: 7.25rem;
+    align-self: stretch;
+    align-content: center;
+    justify-items: center;
+    gap: 0.2rem;
+    border: 1px solid rgba(184, 148, 87, 0.25);
+    border-radius: 0.5rem;
+    background: rgba(184, 148, 87, 0.055);
+    margin: 0;
+    padding: 0.625rem 0.75rem;
+  }
+
+  .arena-countdown span,
+  .arena-countdown small {
+    color: #948b7d;
+    font-size: 0.5625rem;
+    letter-spacing: 0.08em;
+  }
+
+  .arena-countdown strong {
+    color: #f1e6d2;
+    font-size: 1.0625rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.06em;
+  }
+
+  .creation-arena > button {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: rgba(184, 148, 87, 0.34);
+    border-radius: 0.5rem;
+    background: rgba(184, 148, 87, 0.07);
+    color: #ddcba9;
+  }
+
+  .modal-layout--reading .mobile-reader-dock,
+  .reader-pane.is-reader-chrome-hidden .mobile-reader-dock,
+  .reader-pane.is-settings-open .mobile-reader-dock {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
