@@ -3,6 +3,10 @@ import {
   migrateLegacyReaderSettings,
   normalizeReaderSettings
 } from "./src/web/reader-settings.js";
+import {
+  hasMeaningfulReadingProgress,
+  shouldAutoEnterReader
+} from "./src/web/reader-entry.js";
 
 const icons = {
   home: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h5v-5h3v5h5v-9.5"/></svg>',
@@ -1088,7 +1092,8 @@ function openBook(bookId) {
   const lastIndex = Math.max(book.chapters.length - 1, 0);
   currentChapterIndex = Number.isInteger(saved?.chapterIndex) ? Math.min(Math.max(saved.chapterIndex, 0), lastIndex) : 0;
   pendingReaderRestore = saved?.chapterIndex === currentChapterIndex ? saved.readerRatio || 0 : null;
-  currentReaderFocused = false;
+  const viewportWidth = window.visualViewport?.width || window.innerWidth;
+  currentReaderFocused = shouldAutoEnterReader(viewportWidth);
   renderModal();
 
   const modal = document.getElementById("bookModal");
@@ -1097,8 +1102,17 @@ function openBook(bookId) {
   document.body.style.overflow = "hidden";
 }
 
+function enterReaderMode() {
+  if (!currentModalBook) return;
+  const saved = getReadingProgress(currentModalBook.id);
+  currentReaderFocused = true;
+  pendingReaderRestore = saved?.chapterIndex === currentChapterIndex ? saved.readerRatio || 0 : null;
+  renderModal();
+}
+
 function setModalChapterIndex(index, shouldScroll = true) {
   if (!currentModalBook) return;
+  window.clearTimeout(readerProgressSaveTimer);
   const lastIndex = Math.max(currentModalBook.chapters.length - 1, 0);
   currentChapterIndex = Math.min(Math.max(index, 0), lastIndex);
   pendingReaderRestore = null;
@@ -1312,11 +1326,15 @@ function updateReaderProgress() {
 
 function queueReadingProgressSave() {
   window.clearTimeout(readerProgressSaveTimer);
+  if (!currentModalBook) return;
+  const bookId = currentModalBook.id;
+  const chapterIndex = currentChapterIndex;
+  const readerRatio = calculateReaderRatio();
   readerProgressSaveTimer = window.setTimeout(() => {
-    if (!currentModalBook) return;
-    saveReadingProgress(currentModalBook.id, {
-      chapterIndex: currentChapterIndex,
-      readerRatio: calculateReaderRatio()
+    if (!currentModalBook || currentModalBook.id !== bookId || currentChapterIndex !== chapterIndex) return;
+    saveReadingProgress(bookId, {
+      chapterIndex,
+      readerRatio
     });
     renderRanking();
   }, 180);
@@ -1353,7 +1371,12 @@ function renderModal() {
   const displayedChapters = [...book.chapters].sort((a, b) => Number(b.number || 0) - Number(a.number || 0));
   const content = document.getElementById("modalContent");
   const saved = getReadingProgress(book.id);
-  const primaryReadLabel = saved?.chapterIndex > 0 ? `繼續 ${book.chapters[saved.chapterIndex]?.displayTitle || "閱讀"}` : "開始閱讀";
+  const primaryReadLabel = hasMeaningfulReadingProgress(saved)
+    ? `繼續 ${book.chapters[saved.chapterIndex]?.displayTitle || "閱讀"}`
+    : "開始閱讀";
+  const readingStatus = hasMeaningfulReadingProgress(saved)
+    ? `上次讀到 ${book.chapters[saved.chapterIndex]?.displayTitle || activeChapter.displayTitle}`
+    : `全書共 ${book.chapters.length} 章`;
 
   content.innerHTML = `
     <div class="modal-layout ${currentReaderFocused ? "modal-layout--reading" : ""}">
@@ -1380,6 +1403,7 @@ function renderModal() {
             <strong>${escapeHtml(book.author)}</strong>
             <p>${escapeHtml(book.authorIntro || "他把故事交給場景、人物和下一個不肯消失的疑問；每一次更新，都像替這個世界再點亮一盞燈。")}</p>
           </section>
+          <p class="modal-reading-status"><span>閱讀狀態</span><strong>${escapeHtml(readingStatus)}</strong></p>
           <div class="modal-actions">
             <button class="primary-action" type="button" id="readFirstChapter">
               <span class="icon" data-icon="reader"></span>
@@ -1415,7 +1439,7 @@ function renderModal() {
               ${displayedChapters.map((chapter) => {
                 const index = book.chapters.indexOf(chapter);
                 return `
-                <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}">
+                <button class="${index === currentChapterIndex ? "is-active" : ""}" type="button" data-chapter-index="${index}" ${index === currentChapterIndex ? 'aria-current="page"' : ""}>
                   ${escapeHtml(chapter.displayTitle)}
                 </button>
               `;
@@ -1429,7 +1453,7 @@ function renderModal() {
               <span>${escapeHtml(book.title)}</span>
               <strong>${escapeHtml(activeChapter.displayTitle)}</strong>
             </div>
-            <button class="reader-focus-bar__info" type="button" data-reader-info>作品資訊</button>
+            <button class="reader-focus-bar__info" type="button" data-reader-info aria-label="查看作品資訊">作品</button>
           </div>
           ${renderReaderProgress()}
           ${renderReaderSettings()}
@@ -1437,10 +1461,18 @@ function renderModal() {
           <div class="reader-text" data-reader-text>${renderChapterText(activeChapter)}</div>
           ${renderChapterNav(book, "bottom")}
           <nav class="mobile-reader-dock" aria-label="閱讀工具列">
-            <button type="button" data-toggle-chapter-list>目錄</button>
-            <button type="button" data-chapter-nav="previous" ${currentChapterIndex === 0 ? "disabled" : ""}>上一章</button>
-            <button type="button" data-chapter-nav="next" ${currentChapterIndex >= book.chapters.length - 1 ? "disabled" : ""}>下一章</button>
-            <button type="button" data-reader-settings-jump aria-expanded="false" aria-controls="readerSettingsPanel">設定</button>
+            <button type="button" data-toggle-chapter-list aria-label="開啟章節目錄">
+              <span class="icon" data-icon="book" aria-hidden="true"></span><span>目錄</span>
+            </button>
+            <button type="button" data-chapter-nav="previous" ${currentChapterIndex === 0 ? "disabled" : ""} aria-label="上一章">
+              <span class="mobile-reader-dock__glyph" aria-hidden="true">←</span><span>上一章</span>
+            </button>
+            <button type="button" data-chapter-nav="next" ${currentChapterIndex >= book.chapters.length - 1 ? "disabled" : ""} aria-label="下一章">
+              <span class="mobile-reader-dock__glyph" aria-hidden="true">→</span><span>下一章</span>
+            </button>
+            <button type="button" data-reader-settings-jump aria-label="開啟閱讀設定" aria-expanded="false" aria-controls="readerSettingsPanel">
+              <span class="icon" data-icon="settings" aria-hidden="true"></span><span>設定</span>
+            </button>
           </nav>
         </div>
       </section>
@@ -1452,7 +1484,7 @@ function renderModal() {
   hydrateIcons(content);
 
   document.getElementById("readFirstChapter").addEventListener("click", () => {
-    setModalChapterIndex(currentChapterIndex, false);
+    enterReaderMode();
   });
 
   document.getElementById("downloadBook").addEventListener("click", () => {
@@ -1465,6 +1497,13 @@ function renderModal() {
   });
 
   content.querySelector("[data-reader-info]")?.addEventListener("click", () => {
+    window.clearTimeout(readerProgressSaveTimer);
+    const readerRatio = calculateReaderRatio();
+    saveReadingProgress(book.id, {
+      chapterIndex: currentChapterIndex,
+      readerRatio
+    });
+    pendingReaderRestore = readerRatio;
     currentReaderFocused = false;
     renderModal();
   });
@@ -1567,13 +1606,15 @@ function renderModal() {
     if (Math.abs(delta) > 14) chromeScrollAnchor = nextScrollTop;
   }, { passive: true });
 
-  void ensureChapterContent(book, currentChapterIndex).then(() => {
-    restoreReaderPositionIfNeeded();
-    warmNearbyChapters(book, currentChapterIndex);
-  });
-  window.requestAnimationFrame(() => {
-    updateReaderProgress();
-  });
+  if (currentReaderFocused) {
+    void ensureChapterContent(book, currentChapterIndex).then(() => {
+      restoreReaderPositionIfNeeded();
+      warmNearbyChapters(book, currentChapterIndex);
+    });
+    window.requestAnimationFrame(() => {
+      updateReaderProgress();
+    });
+  }
 }
 
 function setReaderSettingsPanelOpen(isOpen, { returnFocus = false } = {}) {
@@ -1598,6 +1639,7 @@ function setReaderSettingsPanelOpen(isOpen, { returnFocus = false } = {}) {
 }
 
 function closeModal() {
+  window.clearTimeout(readerProgressSaveTimer);
   setReaderSettingsPanelOpen(false);
   document.querySelector(".modal__dialog")?.classList.remove("is-reader-chrome-hidden");
   if (currentModalBook) {
