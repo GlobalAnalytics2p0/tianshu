@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "第96章〈喉線不認人〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第96章〈第十二床的咳聲〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -673,22 +673,22 @@
         },
         {
           "number": 94,
-          "title": "灰叔不還床",
-          "path": "src/resource/星骸王座/文章/第94章 灰叔不還床.txt",
+          "title": "第十三鉤落地",
+          "path": "src/resource/星骸王座/文章/第94章 第十三鉤落地.txt",
           "charCount": 6131,
           "generatedAt": "2026-07-02T06:00:00+08:00"
         },
         {
           "number": 95,
-          "title": "午娘不認碗",
-          "path": "src/resource/星骸王座/文章/第95章 午娘不認碗.txt",
+          "title": "午位飯十三",
+          "path": "src/resource/星骸王座/文章/第95章 午位飯十三.txt",
           "charCount": 6404,
           "generatedAt": "2026-07-02T12:00:00+08:00"
         },
         {
           "number": 96,
-          "title": "喉線不認人",
-          "path": "src/resource/星骸王座/文章/第96章 喉線不認人.txt",
+          "title": "第十二床的咳聲",
+          "path": "src/resource/星骸王座/文章/第96章 第十二床的咳聲.txt",
           "charCount": 6082,
           "generatedAt": "2026-07-02T18:00:00+08:00"
         }
@@ -1002,7 +1002,7 @@
       "setting": "北境灰塔",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "灰塔的晨光少了一塊，艾文只是在簿冊上補了一筆，整座塔卻像忽然記起某個不該存在的人。",
-      "updateNote": "第96章〈明日飯不發死人〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第96章〈活人舌印〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -1657,22 +1657,22 @@
         },
         {
           "number": 94,
-          "title": "尼位不接單",
-          "path": "src/resource/灰塔觀測者/文章/第94章 尼位不接單.txt",
+          "title": "西七甕停六層",
+          "path": "src/resource/灰塔觀測者/文章/第94章 西七甕停六層.txt",
           "charCount": 6271,
           "generatedAt": "2026-07-02T06:00:00+08:00"
         },
         {
           "number": 95,
-          "title": "伊芙不接音",
-          "path": "src/resource/灰塔觀測者/文章/第95章 伊芙不接音.txt",
+          "title": "門縫裡的初音",
+          "path": "src/resource/灰塔觀測者/文章/第95章 門縫裡的初音.txt",
           "charCount": 6419,
           "generatedAt": "2026-07-02T12:00:00+08:00"
         },
         {
           "number": 96,
-          "title": "明日飯不發死人",
-          "path": "src/resource/灰塔觀測者/文章/第96章 明日飯不發死人.txt",
+          "title": "活人舌印",
+          "path": "src/resource/灰塔觀測者/文章/第96章 活人舌印.txt",
           "charCount": 6005,
           "generatedAt": "2026-07-02T18:00:00+08:00"
         }
@@ -1985,7 +1985,7 @@
       "setting": "北雪孤城",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "孤城大雪封門，沈照夜聽見一聲不該存在的刀鳴；那一夜開始，舊案、暗道與欠下的命全都醒了。",
-      "updateNote": "第96章〈程針不替人認〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第96章〈晨光裂出夜字〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -2640,22 +2640,22 @@
         },
         {
           "number": 94,
-          "title": "人未出棚",
-          "path": "src/resource/雪刃照孤城/文章/第94章 人未出棚.txt",
+          "title": "亥時回棚架",
+          "path": "src/resource/雪刃照孤城/文章/第94章 亥時回棚架.txt",
           "charCount": 6332,
           "generatedAt": "2026-07-02T06:00:00+08:00"
         },
         {
           "number": 95,
-          "title": "四指不取架",
-          "path": "src/resource/雪刃照孤城/文章/第95章 四指不取架.txt",
+          "title": "四指血上車轅",
+          "path": "src/resource/雪刃照孤城/文章/第95章 四指血上車轅.txt",
           "charCount": 6489,
           "generatedAt": "2026-07-02T12:00:00+08:00"
         },
         {
           "number": 96,
-          "title": "程針不替人認",
-          "path": "src/resource/雪刃照孤城/文章/第96章 程針不替人認.txt",
+          "title": "晨光裂出夜字",
+          "path": "src/resource/雪刃照孤城/文章/第96章 晨光裂出夜字.txt",
           "charCount": 6058,
           "generatedAt": "2026-07-02T18:00:00+08:00"
         }
@@ -2968,7 +2968,7 @@
       "setting": "臨江科技園與服務樓",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "凌晨三點，周祈的手機推送了自己的死訊。真正可怕的不是預測錯誤，而是有人正在讓預測成真。",
-      "updateNote": "第96章〈明日確認不算到場〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第96章〈冰箱維修預約〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -3595,8 +3595,8 @@
         },
         {
           "number": 90,
-          "title": "三點零三分，另一個周祈來了",
-          "path": "src/resource/凌晨三點的演算法/文章/第90章 三點零三分，另一個周祈來了.txt",
+          "title": "三點零三分的周祈",
+          "path": "src/resource/凌晨三點的演算法/文章/第90章 三點零三分的周祈.txt",
           "charCount": 6150,
           "generatedAt": "2026-07-01T00:00:00+08:00"
         },
@@ -3616,29 +3616,29 @@
         },
         {
           "number": 93,
-          "title": "扁箱從樣刊底下滑出",
-          "path": "src/resource/凌晨三點的演算法/文章/第93章 扁箱從樣刊底下滑出.txt",
+          "title": "樣刊底下的扁箱",
+          "path": "src/resource/凌晨三點的演算法/文章/第93章 樣刊底下的扁箱.txt",
           "charCount": 6349,
           "generatedAt": "2026-07-01T18:00:00+08:00"
         },
         {
           "number": 94,
-          "title": "員工號早到",
-          "path": "src/resource/凌晨三點的演算法/文章/第94章 員工號早到.txt",
+          "title": "四年前的員工號",
+          "path": "src/resource/凌晨三點的演算法/文章/第94章 四年前的員工號.txt",
           "charCount": 6418,
           "generatedAt": "2026-07-02T06:00:00+08:00"
         },
         {
           "number": 95,
-          "title": "八點半不報到",
-          "path": "src/resource/凌晨三點的演算法/文章/第95章 八點半不報到.txt",
+          "title": "八點半的透明章",
+          "path": "src/resource/凌晨三點的演算法/文章/第95章 八點半的透明章.txt",
           "charCount": 6092,
           "generatedAt": "2026-07-02T12:00:00+08:00"
         },
         {
           "number": 96,
-          "title": "明日確認不算到場",
-          "path": "src/resource/凌晨三點的演算法/文章/第96章 明日確認不算到場.txt",
+          "title": "冰箱維修預約",
+          "path": "src/resource/凌晨三點的演算法/文章/第96章 冰箱維修預約.txt",
           "charCount": 6032,
           "generatedAt": "2026-07-02T18:00:00+08:00"
         }
@@ -3951,7 +3951,7 @@
       "setting": "大明工部",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "沈墨在御用輿圖下看見一條不存在的河；墨線一動，藏在河工、糧道與官場裡的殺局也跟著浮上來。",
-      "updateNote": "第96章〈水旁不領河工〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第96章〈北井第三列〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -4606,22 +4606,22 @@
         },
         {
           "number": 94,
-          "title": "女尺不上船",
-          "path": "src/resource/大明墨工/文章/第94章 女尺不上船.txt",
+          "title": "水下刻出虎口",
+          "path": "src/resource/大明墨工/文章/第94章 水下刻出虎口.txt",
           "charCount": 6432,
           "generatedAt": "2026-07-02T06:00:00+08:00"
         },
         {
           "number": 95,
-          "title": "衡七不領半飯",
-          "path": "src/resource/大明墨工/文章/第95章 衡七不領半飯.txt",
+          "title": "衡七的下半飯",
+          "path": "src/resource/大明墨工/文章/第95章 衡七的下半飯.txt",
           "charCount": 6387,
           "generatedAt": "2026-07-02T12:00:00+08:00"
         },
         {
           "number": 96,
-          "title": "水旁不領河工",
-          "path": "src/resource/大明墨工/文章/第96章 水旁不領河工.txt",
+          "title": "北井第三列",
+          "path": "src/resource/大明墨工/文章/第96章 北井第三列.txt",
           "charCount": 6149,
           "generatedAt": "2026-07-02T18:00:00+08:00"
         }
