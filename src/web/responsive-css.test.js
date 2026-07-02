@@ -50,4 +50,12 @@ describe("fluid responsive CSS contract", () => {
     expect(mobileUx).toContain(".modal-layout:not(.modal-layout--reading) .mobile-reader-dock");
     expect(mobileUx).toContain("pointer-events: auto");
   });
+
+  it("separates book details from reading and strengthens mobile navigation", () => {
+    const readerEntry = styles.slice(styles.indexOf("/* Tianshu 2.8"));
+    expect(readerEntry).toContain(".modal-layout:not(.modal-layout--reading) .modal-sections");
+    expect(readerEntry).toContain("--reader-mobile-dock-height: 3.75rem");
+    expect(readerEntry).toContain(".reader-focus-bar__info");
+    expect(readerEntry).toContain("grid-template-rows: 1.125rem auto");
+  });
 });

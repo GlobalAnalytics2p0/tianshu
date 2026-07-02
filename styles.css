@@ -9126,3 +9126,146 @@ body {
     transform: none;
   }
 }
+
+/* Tianshu 2.8 — coherent mobile reader entry and persistent navigation */
+.modal-layout:not(.modal-layout--reading) .modal-sections {
+  display: none;
+}
+
+.modal-reading-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.modal-reading-status span {
+  color: #8f897f;
+  font-size: 0.625rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.modal-reading-status strong {
+  color: #d9c7a8;
+  font-family: var(--font-literary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.modal-layout--reading .mobile-reader-dock button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+.modal-layout--reading .mobile-reader-dock .icon,
+.mobile-reader-dock__glyph {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 780px) {
+  .modal-layout--reading {
+    --reader-mobile-dock-height: 3.75rem;
+  }
+
+  .modal-layout:not(.modal-layout--reading) {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+
+  .modal-layout:not(.modal-layout--reading) .modal-hero {
+    max-width: 35rem;
+    margin-inline: auto;
+  }
+
+  .modal-layout:not(.modal-layout--reading) .modal-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modal-layout:not(.modal-layout--reading) .modal-actions .primary-action {
+    grid-column: 1 / -1;
+    min-height: 3rem;
+    justify-content: center;
+  }
+
+  .modal-layout:not(.modal-layout--reading) .modal-actions .secondary-action {
+    min-height: 2.75rem;
+    justify-content: center;
+  }
+
+  .modal-layout--reading .chapter-drawer.is-open {
+    top: calc(3rem + env(safe-area-inset-top));
+  }
+
+  .reader-focus-bar,
+  .modal-layout--reading .reader-focus-bar {
+    min-height: calc(3rem + env(safe-area-inset-top));
+    max-height: calc(3rem + env(safe-area-inset-top));
+    padding-right: clamp(6.75rem, 29vw, 7.25rem);
+  }
+
+  .reader-focus-bar strong {
+    line-height: 3rem;
+  }
+
+  .reader-focus-bar__info {
+    position: absolute;
+    top: calc(env(safe-area-inset-top) + 0.375rem);
+    right: 2.75rem;
+    min-width: 3.25rem;
+    min-height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+    background: transparent;
+    color: var(--reader-muted);
+    font-size: 0.6875rem;
+    padding: 0 0.375rem;
+  }
+
+  .reader-focus-bar__info:focus-visible,
+  .reader-focus-bar__info:hover {
+    border-color: var(--reader-line);
+    background: rgba(184, 148, 87, 0.1);
+    color: var(--reader-heading);
+  }
+
+  .modal__close {
+    top: calc(env(safe-area-inset-top) + 0.375rem);
+  }
+
+  .reader-pane h3 {
+    padding-top: clamp(2rem, 5dvh, 2.5rem);
+    padding-bottom: clamp(2.25rem, 4.5dvh, 2.5rem);
+  }
+
+  .mobile-reader-dock button,
+  .modal-layout--reading .mobile-reader-dock button {
+    min-height: calc(var(--reader-mobile-dock-height) - 0.0625rem);
+    display: grid;
+    grid-template-rows: 1.125rem auto;
+    place-items: center;
+    align-content: center;
+    gap: 0.1875rem;
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+
+  .mobile-reader-dock button[aria-expanded="true"] {
+    background: rgba(184, 148, 87, 0.13);
+    color: var(--reader-heading);
+  }
+
+  .mobile-reader-dock button:disabled {
+    opacity: 0.34;
+  }
+}
