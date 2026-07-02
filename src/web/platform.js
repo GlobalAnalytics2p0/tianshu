@@ -215,8 +215,8 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
     const nextTopic = topics.find((topic) => /章末|鉤子/.test(topic.title || topic.topic_title || "")) || topics[0];
     const nextTime = nextSessionTimeLabel(homeData?.nextSessionAt);
     root.innerHTML = `
-      <header><span>下一場</span><strong>${escapeHtml(nextTime)}</strong></header>
-      <p class="arena-topic">${escapeHtml(nextTopic?.title || nextTopic?.topic_title || "下一題，還沒揭曉")}</p>
+      <header><span>下一場預告</span><strong aria-label="${escapeHtml(nextTime)} 開場">${escapeHtml(nextTime)} 開場</strong></header>
+      <p class="arena-topic"><span>議題預告</span><strong>${escapeHtml(nextTopic?.title || nextTopic?.topic_title || "下一題，還沒揭曉")}</strong></p>
       <div class="arena-pairings">
         ${arenaPeople.map((person, index) => `
           <div class="arena-person" style="--persona:${escapeHtml(person.accent || "#8faeff")}">
@@ -226,10 +226,10 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
           </div>
         `).join("")}
       </div>
-      <div class="arena-countdown">
+      <div class="arena-countdown" aria-label="距離開場 ${escapeHtml(formatCountdown(homeData?.nextSessionAt || new Date()))}">
         <span>距離開場</span>
         <strong data-council-countdown>${formatCountdown(homeData?.nextSessionAt || new Date())}</strong>
-        <small>時　分　秒</small>
+        <small>時・分・秒</small>
       </div>
       <button type="button" data-platform-route="aiCouncil">查看下一場議程 <span aria-hidden="true">→</span></button>
     `;
@@ -504,7 +504,9 @@ export function createTianshuPlatform({ onOpenBook, onNavigate, showToast }) {
     window.clearInterval(countdownTimer);
     const update = () => {
       document.querySelectorAll("[data-council-countdown]").forEach((node) => {
-        node.textContent = formatCountdown(homeData?.nextSessionAt || new Date());
+        const value = formatCountdown(homeData?.nextSessionAt || new Date());
+        node.textContent = value;
+        node.closest(".arena-countdown")?.setAttribute("aria-label", `距離開場 ${value}`);
       });
     };
     update();
