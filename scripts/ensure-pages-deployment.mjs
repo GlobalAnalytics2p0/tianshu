@@ -5,7 +5,7 @@ import { setTimeout as delay } from "node:timers/promises";
 
 const DEFAULT_TIMEOUT_MS = Number.parseInt(process.env.PAGES_DEPLOY_TIMEOUT_MS || "", 10) || 180000;
 const DEFAULT_POLL_MS = Number.parseInt(process.env.PAGES_DEPLOY_POLL_MS || "", 10) || 5000;
-const WORKFLOW = "Build and deploy Tianshu Pages";
+const WORKFLOW = "deploy-pages.yml";
 
 function parseArgs(argv) {
   const options = { retry: false, timeoutMs: DEFAULT_TIMEOUT_MS, pollMs: DEFAULT_POLL_MS };
