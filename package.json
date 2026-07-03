@@ -9,7 +9,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "npm run test && npm run build"
+    "check": "npm run test && npm run build && node scripts/verify-deploy-artifact.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.0"

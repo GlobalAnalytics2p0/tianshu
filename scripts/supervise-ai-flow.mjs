@@ -324,6 +324,20 @@ function runPreflight(report, options) {
   const state = report.preflightState;
   if (state.status === "clean" || state.status === "clean-after-autopublish") {
     report.batch = inspectBatch();
+    if (report.batch.exists && !report.batch.valid) {
+      if (report.batch.missingTitles.length === 0) {
+        clearBatch();
+        report.recoveryActions.push({
+          action: "clear-verified-stale-batch",
+          ok: true,
+          detail: "Cleared a fully completed batch only after Pages workflow and live-site verification passed.",
+        });
+        report.batch = inspectBatch();
+      } else {
+        report.hardIssues.push(`Batch state is not safely resumable: ${report.batch.issues.join(" | ")}`);
+        return;
+      }
+    }
     if (!report.batch.exists) {
       beginBatch();
       report.batch = inspectBatch();
