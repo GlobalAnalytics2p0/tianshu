@@ -262,6 +262,22 @@ function qualityWarningLessons(warnings, currentChapterRefs = new Set()) {
 }
 
 function runPreflight(report, options) {
+  const deployment = commandCheck("node", ["scripts/ensure-pages-deployment.mjs", "--retry"], [0]);
+  report.checks.push(deployment);
+  if (!deployment.ok) {
+    report.hardIssues.push("Previous Pages workflow is not successfully deployed.");
+    report.nextActions.push("Restore the Pages deployment before generating another fiction batch.");
+    return;
+  }
+
+  const live = commandCheck("node", ["scripts/verify-site-publication.mjs"], [0]);
+  report.checks.push(live);
+  if (!live.ok) {
+    report.hardIssues.push("Previous publication is not proven live.");
+    report.nextActions.push("Wait for or repair Pages/CDN publication before generating another fiction batch.");
+    return;
+  }
+
   const feedbackSync = commandCheck("node", ["scripts/sync-reader-feedback.mjs"], [0]);
   report.checks.push(feedbackSync);
   if (!feedbackSync.ok) {
@@ -416,6 +432,13 @@ function runPublishValidation(report) {
   if (parsedState?.status !== "clean") {
     report.hardIssues.push(`Post-publish state is not clean: ${parsedState?.status ?? "unknown"}`);
     report.nextActions.push("Push or resolve publish debt, then rerun site publication verification.");
+  }
+
+  const deployment = commandCheck("node", ["scripts/ensure-pages-deployment.mjs", "--retry"], [0]);
+  report.checks.push(deployment);
+  if (!deployment.ok) {
+    report.hardIssues.push("Pages workflow did not complete successfully.");
+    report.nextActions.push("Retry or repair the Pages workflow before claiming publication is live.");
   }
 
   const verify = commandCheck("node", ["scripts/verify-site-publication.mjs"], [0]);

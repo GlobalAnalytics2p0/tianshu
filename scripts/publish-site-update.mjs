@@ -6,6 +6,7 @@ import { setTimeout as delay } from "node:timers/promises";
 const DEFAULT_RETRIES = Number.parseInt(process.env.PUBLISH_RETRIES || "", 10) || 3;
 const DEFAULT_RETRY_DELAY_MS = Number.parseInt(process.env.PUBLISH_RETRY_DELAY_MS || "", 10) || 5000;
 const VERIFY_SCRIPT = new URL("./verify-site-publication.mjs", import.meta.url);
+const ENSURE_PAGES_SCRIPT = new URL("./ensure-pages-deployment.mjs", import.meta.url);
 
 function parseArgs(argv) {
   const result = {
@@ -116,6 +117,12 @@ async function main() {
     await retryGit("git push", ["push", "origin", `HEAD:${branch}`], retries, retryDelayMs);
   } else {
     console.log("INFO: no local-only commits to push");
+  }
+
+  const deployment = spawnSync("node", [ENSURE_PAGES_SCRIPT.pathname, "--retry"], { encoding: "utf8" });
+  if (deployment.stdout.trim()) console.log(deployment.stdout.trim());
+  if (deployment.status !== 0) {
+    fail("Pages workflow did not complete successfully after publish step", [deployment.stderr.trim() || "deployment guard returned non-zero"]);
   }
 
   const verify = spawnSync("node", [VERIFY_SCRIPT.pathname], { encoding: "utf8" });
