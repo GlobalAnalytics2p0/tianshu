@@ -160,9 +160,14 @@
 ## Forbidden Prose Patterns
 
 - Do not write meta or scaffolding phrases in novel bodies, including: `這一章`, `讀者會`, `主角`, `章末`, `第一章的安排`, `第二章會`, `後續自動化`, `故事不再`, `鉤子啟動`, `第一次反咬`.
+- Do not refer to the published reading order from inside the fiction with phrases such as `前一章`, `上一章`, or `第NN章`. Restore the character's lived time, place, action, or remembered object instead.
+- Do not expose private pacing or review labels such as `第一個反咬`, `早段的反咬`, `局部回報`, or `第一口回報`. Dramatize what changed in the room, who paid the cost, and what the witness can now do.
 - Do not explain the chapter's writing intent, structure, hook strategy, or future automation.
 - Do not paste the premise as a summary paragraph. Convert the premise into lived scenes.
 - Do not repeat filler paragraphs to reach length.
+- Do not reuse a full sentence or paragraph across titles, including generic resolve, clue-summary, or emotional-explanation prose. A broad manual audit must scan every manifest-referenced chapter for exact and near-exact cross-title reuse.
+- Any archived title with systemic cross-title template overlap must use `visibility: "quarantined"`. Quarantined books stay in repository history for title-by-title reconstruction but must be excluded from the reader library, generated reader manifest, and Pages artifact until every visible chapter passes exact and near-overlap review.
+- Treat high-frequency verdict skeletons such as `最值錢的是` and `真正有用的不是` as AI-style debt. Keep them exceptional, never use them as a recurring chapter-summary voice, and replace clusters with title-specific action, sensation, work friction, or dialogue.
 - Do not use obvious padding phrases such as numbered repetitions, repeated silence beats, repeated clue-inspection beats, or near-identical paragraph openings to reach length.
 - Do not overpack names or lore terms. Too many proper nouns in early chapters lowers clarity.
 

@@ -2,6 +2,7 @@
 
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
 import { inspectLiveAppShell } from "./live-app-shell.mjs";
 
@@ -18,10 +19,11 @@ const DEFAULT_POLL_MS = Number.parseInt(process.env.PUBLISH_VERIFY_POLL_MS || ""
 const MANIFEST_PATH = new URL("../src/resource/manifest.json", import.meta.url);
 const CNAME_PATH = new URL("../CNAME", import.meta.url);
 
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const result = {
     timeoutMs: DEFAULT_TIMEOUT_MS,
-    pollMs: DEFAULT_POLL_MS
+    pollMs: DEFAULT_POLL_MS,
+    expectedRef: "",
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -34,6 +36,11 @@ function parseArgs(argv) {
     }
     if (arg === "--poll-ms" && nextValue) {
       result.pollMs = Number.parseInt(nextValue, 10) || result.pollMs;
+      index += 1;
+      continue;
+    }
+    if (arg === "--expected-ref" && nextValue) {
+      result.expectedRef = nextValue;
       index += 1;
     }
   }
@@ -107,6 +114,13 @@ function loadJsonFile(url) {
   return JSON.parse(readFileSync(url, "utf8"));
 }
 
+export function loadExpectedManifest(expectedRef, dependencies = {}) {
+  const readLocal = dependencies.readLocal ?? (() => loadJsonFile(MANIFEST_PATH));
+  const readGitRef = dependencies.readGitRef ?? ((ref) => runGit(["show", `${ref}:src/resource/manifest.json`]));
+  if (!expectedRef) return readLocal();
+  return JSON.parse(readGitRef(expectedRef));
+}
+
 async function fetchJson(url) {
   const target = new URL(url);
   target.searchParams.set("ts", String(Date.now()));
@@ -144,11 +158,12 @@ function resolveSiteRootUrl(owner, repo) {
 }
 
 async function main() {
-  const { timeoutMs, pollMs } = parseArgs(process.argv.slice(2));
-  const localManifest = loadJsonFile(MANIFEST_PATH);
-  const localSummary = buildSummary(localManifest);
+  const { timeoutMs, pollMs, expectedRef } = parseArgs(process.argv.slice(2));
+  const expectedManifest = loadExpectedManifest(expectedRef);
+  const expectedSummary = buildSummary(expectedManifest);
   const branch = runGit(["branch", "--show-current"]);
   const headCommit = runGit(["rev-parse", "HEAD"]);
+  const expectedCommit = runGit(["rev-parse", expectedRef || "HEAD"]);
   const upstream = runGit(["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}"]);
   const [behindText, aheadText] = runGit(["rev-list", "--left-right", "--count", `${upstream}...HEAD`]).split(/\s+/);
   const behind = Number.parseInt(behindText, 10) || 0;
@@ -169,12 +184,12 @@ async function main() {
     fail("origin remote is not a supported github.com URL", [`origin=${originUrl}`]);
   }
 
-  const rawManifestUrl = `https://raw.githubusercontent.com/${remote.owner}/${remote.repo}/${headCommit}/src/resource/manifest.json`;
+  const rawManifestUrl = `https://raw.githubusercontent.com/${remote.owner}/${remote.repo}/${expectedCommit}/src/resource/manifest.json`;
   const siteManifestUrl = resolveSiteManifestUrl(remote.owner, remote.repo);
   const siteRootUrl = resolveSiteRootUrl(remote.owner, remote.repo);
 
   const rawManifest = await fetchJson(rawManifestUrl);
-  const rawMismatches = diffSummary(localSummary, buildSummary(rawManifest), "raw");
+  const rawMismatches = diffSummary(expectedSummary, buildSummary(rawManifest), "raw");
   if (rawMismatches.length > 0) {
     fail("raw GitHub manifest does not match local manifest after push", rawMismatches);
   }
@@ -187,7 +202,7 @@ async function main() {
   while (Date.now() <= deadline) {
     try {
       const siteManifest = await fetchJson(siteManifestUrl);
-      const mismatches = diffSummary(localSummary, buildSummary(siteManifest), "live");
+      const mismatches = diffSummary(expectedSummary, buildSummary(siteManifest), "live");
       if (mismatches.length === 0) {
         try {
           const shell = await inspectLiveAppShell(siteRootUrl);
@@ -196,6 +211,7 @@ async function main() {
           console.log(`site=${siteManifestUrl}`);
           console.log(`bundle=${shell.bundleUrl}`);
           console.log(`branch=${branch}`);
+          console.log(`expected=${expectedRef || "working-tree"}`);
           return;
         } catch (error) {
           lastShellError = error instanceof Error ? error.message : String(error);
@@ -231,6 +247,8 @@ async function main() {
   ]);
 }
 
-main().catch((error) => {
-  fail("publication verification crashed", [error instanceof Error ? error.stack || error.message : String(error)]);
-});
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    fail("publication verification crashed", [error instanceof Error ? error.stack || error.message : String(error)]);
+  });
+}

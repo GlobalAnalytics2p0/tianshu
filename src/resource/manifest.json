@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T00:00:00+08:00",
+  "generatedAt": "2026-07-04T06:00:00+08:00",
   "policy": "Tianshu original fiction. Read agent.md and src/resource/writing-rules.md before generation. Each novel has its own folder under src/resource. Chapters are stored as independent txt files.",
   "books": [
     {
@@ -18,7 +18,7 @@
       "setting": "霜河邊境",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "霜河雪線外，沈曜第一次聽見星核說謊，也第一次知道自己每往前一步，都會看見一種死法。",
-      "updateNote": "第100章〈鑰匙不認手〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第101章〈破瓢先過鎖〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -402,7 +402,7 @@
           "number": 55,
           "title": "缺指者問井",
           "path": "src/resource/星骸王座/文章/第55章 缺指者問井.txt",
-          "charCount": 6011,
+          "charCount": 6004,
           "generatedAt": "2026-06-21T08:35:08+08:00"
         },
         {
@@ -451,7 +451,7 @@
           "number": 62,
           "title": "白鞋不認米",
           "path": "src/resource/星骸王座/文章/第62章 白鞋不認米.txt",
-          "charCount": 6095,
+          "charCount": 6083,
           "generatedAt": "2026-06-23T00:00:00+08:00"
         },
         {
@@ -719,17 +719,25 @@
           "path": "src/resource/星骸王座/文章/第100章 鑰匙不認手.txt",
           "charCount": 6034,
           "generatedAt": "2026-07-04T00:00:00+08:00"
+        },
+        {
+          "number": 101,
+          "title": "破瓢先過鎖",
+          "path": "src/resource/星骸王座/文章/第101章 破瓢先過鎖.txt",
+          "charCount": 6002,
+          "generatedAt": "2026-07-04T06:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "顧夜燼不寫天命的光，他寫人被逼到雪線下仍肯抬頭。冷硬邊境、說謊星核、每一次死法預見，都被他磨成少年逆命的刀口。",
       "coverImage": "src/resource/星骸王座/素材/圖像/主角圖片素材/星骸王座-沈曜阿棠.png",
       "heroImage": "src/resource/星骸王座/素材/圖像/首頁爆款素材/星骸王座-霜河戰鬥主視覺.png",
-      "updatedAt": "2026-07-04T00:00:00+08:00"
+      "updatedAt": "2026-07-04T06:00:00+08:00"
     },
     {
       "id": "ai-02",
       "title": "萬相骨匣",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -748,7 +756,7 @@
           "number": 1,
           "title": "骨匣吐出我的臉",
           "path": "src/resource/backup/萬相骨匣/第01章 骨匣吐出我的臉.txt",
-          "charCount": 4163,
+          "charCount": 4146,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -771,6 +779,7 @@
     {
       "id": "ai-03",
       "title": "燼天錄",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -789,7 +798,7 @@
           "number": 1,
           "title": "灰燼裡的刪頁",
           "path": "src/resource/backup/燼天錄/第01章 灰燼裡的刪頁.txt",
-          "charCount": 4174,
+          "charCount": 4148,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -812,6 +821,7 @@
     {
       "id": "ai-04",
       "title": "九劫龍印",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -830,7 +840,7 @@
           "number": 1,
           "title": "第一枚龍印發燙",
           "path": "src/resource/backup/九劫龍印/第01章 第一枚龍印發燙.txt",
-          "charCount": 4115,
+          "charCount": 4086,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -853,6 +863,7 @@
     {
       "id": "ai-05",
       "title": "逆命星河",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -871,7 +882,7 @@
           "number": 1,
           "title": "名字從星圖剝落",
           "path": "src/resource/backup/逆命星河/第01章 名字從星圖剝落.txt",
-          "charCount": 4151,
+          "charCount": 4100,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -894,6 +905,7 @@
     {
       "id": "ai-06",
       "title": "神墟拾荒人",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -912,7 +924,7 @@
           "number": 1,
           "title": "神心在布袋裡跳動",
           "path": "src/resource/backup/神墟拾荒人/第01章 神心在布袋裡跳動.txt",
-          "charCount": 4153,
+          "charCount": 4097,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -935,6 +947,7 @@
     {
       "id": "ai-07",
       "title": "青冥契",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -953,7 +966,7 @@
           "number": 1,
           "title": "劍靈要我弒師",
           "path": "src/resource/backup/青冥契/第01章 劍靈要我弒師.txt",
-          "charCount": 4165,
+          "charCount": 4098,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -976,6 +989,7 @@
     {
       "id": "ai-08",
       "title": "無盡丹城",
+      "visibility": "quarantined",
       "category": "玄幻",
       "author": "天書編劇室",
       "tags": [
@@ -994,7 +1008,7 @@
           "number": 1,
           "title": "丹爐裡有人呼吸",
           "path": "src/resource/backup/無盡丹城/第01章 丹爐裡有人呼吸.txt",
-          "charCount": 4147,
+          "charCount": 4085,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1030,7 +1044,7 @@
       "setting": "北境灰塔",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "灰塔的晨光少了一塊，艾文只是在簿冊上補了一筆，整座塔卻像忽然記起某個不該存在的人。",
-      "updateNote": "第100章〈舊簽沒有回家〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第101章〈半字不替人〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -1162,7 +1176,7 @@
           "number": 19,
           "title": "折梯又回灰",
           "path": "src/resource/灰塔觀測者/文章/第19章 折梯又回灰.txt",
-          "charCount": 6044,
+          "charCount": 6049,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -1575,7 +1589,7 @@
           "number": 78,
           "title": "問席左口",
           "path": "src/resource/灰塔觀測者/文章/第78章 問席左口.txt",
-          "charCount": 6106,
+          "charCount": 6110,
           "generatedAt": "2026-06-27T00:00:00+08:00"
         },
         {
@@ -1731,16 +1745,24 @@
           "path": "src/resource/灰塔觀測者/文章/第100章 舊簽沒有回家.txt",
           "charCount": 6099,
           "generatedAt": "2026-07-04T00:00:00+08:00"
+        },
+        {
+          "number": 101,
+          "title": "半字不替人",
+          "path": "src/resource/灰塔觀測者/文章/第101章 半字不替人.txt",
+          "charCount": 6429,
+          "generatedAt": "2026-07-04T06:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "霧原相信恐懼最先出現在缺頁與錯拍之間。他寫灰塔、鐘聲與被刪去的人，像在昏燈下擦一面鏡：越乾淨，越照出不該存在的影子。",
       "coverImage": "src/resource/灰塔觀測者/素材/圖像/主角圖片素材/灰塔觀測者-艾文伊芙.png",
-      "updatedAt": "2026-07-04T00:00:00+08:00"
+      "updatedAt": "2026-07-04T06:00:00+08:00"
     },
     {
       "id": "ai-10",
       "title": "霧港第十三鐘",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1759,7 +1781,7 @@
           "number": 1,
           "title": "第十三聲鐘響",
           "path": "src/resource/backup/霧港第十三鐘/第01章 第十三聲鐘響.txt",
-          "charCount": 4110,
+          "charCount": 4051,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1782,6 +1804,7 @@
     {
       "id": "ai-11",
       "title": "月鯨航線",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1800,7 +1823,7 @@
           "number": 1,
           "title": "月背來信",
           "path": "src/resource/backup/月鯨航線/第01章 月背來信.txt",
-          "charCount": 4160,
+          "charCount": 4049,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1823,6 +1846,7 @@
     {
       "id": "ai-12",
       "title": "銀燭書店",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1841,7 +1865,7 @@
           "number": 1,
           "title": "買走明日結局",
           "path": "src/resource/backup/銀燭書店/第01章 買走明日結局.txt",
-          "charCount": 4105,
+          "charCount": 3997,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1864,6 +1888,7 @@
     {
       "id": "ai-13",
       "title": "王冠下的烏鴉",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1882,7 +1907,7 @@
           "number": 1,
           "title": "烏鴉落在肩上",
           "path": "src/resource/backup/王冠下的烏鴉/第01章 烏鴉落在肩上.txt",
-          "charCount": 4168,
+          "charCount": 4002,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1905,6 +1930,7 @@
     {
       "id": "ai-14",
       "title": "深藍魔女法庭",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1923,7 +1949,7 @@
           "number": 1,
           "title": "潮汐翻供",
           "path": "src/resource/backup/深藍魔女法庭/第01章 潮汐翻供.txt",
-          "charCount": 4106,
+          "charCount": 4059,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1946,6 +1972,7 @@
     {
       "id": "ai-15",
       "title": "暮色龍語師",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -1964,7 +1991,7 @@
           "number": 1,
           "title": "龍在死前唱童謠",
           "path": "src/resource/backup/暮色龍語師/第01章 龍在死前唱童謠.txt",
-          "charCount": 4183,
+          "charCount": 4082,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -1987,6 +2014,7 @@
     {
       "id": "ai-16",
       "title": "白鹿與黑書",
+      "visibility": "quarantined",
       "category": "奇幻",
       "author": "天書編劇室",
       "tags": [
@@ -2005,7 +2033,7 @@
           "number": 1,
           "title": "白鹿踩過黑頁",
           "path": "src/resource/backup/白鹿與黑書/第01章 白鹿踩過黑頁.txt",
-          "charCount": 4162,
+          "charCount": 4090,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2041,7 +2069,7 @@
       "setting": "北雪孤城",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "孤城大雪封門，沈照夜聽見一聲不該存在的刀鳴；那一夜開始，舊案、暗道與欠下的命全都醒了。",
-      "updateNote": "第100章〈活手不入鞘〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第101章〈琴托先量木〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -2229,7 +2257,7 @@
           "number": 27,
           "title": "櫃口先暖起",
           "path": "src/resource/雪刃照孤城/文章/第27章 櫃口先暖起.txt",
-          "charCount": 6151,
+          "charCount": 6226,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -2726,32 +2754,40 @@
           "number": 98,
           "title": "孤九鞘坐進北檐",
           "path": "src/resource/雪刃照孤城/文章/第98章 孤九鞘坐進北檐.txt",
-          "charCount": 6006,
+          "charCount": 6005,
           "generatedAt": "2026-07-03T12:00:00+08:00"
         },
         {
           "number": 99,
           "title": "秋禾在鞘上留紅",
           "path": "src/resource/雪刃照孤城/文章/第99章 秋禾在鞘上留紅.txt",
-          "charCount": 6001,
+          "charCount": 6013,
           "generatedAt": "2026-07-03T18:00:00+08:00"
         },
         {
           "number": 100,
           "title": "活手不入鞘",
           "path": "src/resource/雪刃照孤城/文章/第100章 活手不入鞘.txt",
-          "charCount": 6001,
+          "charCount": 6007,
           "generatedAt": "2026-07-04T00:00:00+08:00"
+        },
+        {
+          "number": 101,
+          "title": "琴托先量木",
+          "path": "src/resource/雪刃照孤城/文章/第101章 琴托先量木.txt",
+          "charCount": 6057,
+          "generatedAt": "2026-07-04T06:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "謝聽寒的江湖沒有多餘熱鬧，只有雪、刀、舊債和不能退的人。他讓每一次出手都帶著分寸，乾淨到見血，也克制到讓人心口發緊。",
       "coverImage": "src/resource/雪刃照孤城/素材/圖像/主角圖片素材/雪刃照孤城-沈照夜程聽雪.png",
-      "updatedAt": "2026-07-04T00:00:00+08:00"
+      "updatedAt": "2026-07-04T06:00:00+08:00"
     },
     {
       "id": "ai-18",
       "title": "長安不夜劍",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2770,7 +2806,7 @@
           "number": 1,
           "title": "買下一柄記仇劍",
           "path": "src/resource/backup/長安不夜劍/第01章 買下一柄記仇劍.txt",
-          "charCount": 4112,
+          "charCount": 4049,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2793,6 +2829,7 @@
     {
       "id": "ai-19",
       "title": "桃花渡口",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2811,7 +2848,7 @@
           "number": 1,
           "title": "同船的仇人",
           "path": "src/resource/backup/桃花渡口/第01章 同船的仇人.txt",
-          "charCount": 4121,
+          "charCount": 4033,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2834,6 +2871,7 @@
     {
       "id": "ai-20",
       "title": "無名鏢局",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2852,7 +2890,7 @@
           "number": 1,
           "title": "箱中多了一口氣",
           "path": "src/resource/backup/無名鏢局/第01章 箱中多了一口氣.txt",
-          "charCount": 4176,
+          "charCount": 4063,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2875,6 +2913,7 @@
     {
       "id": "ai-21",
       "title": "刀藏春水",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2893,7 +2932,7 @@
           "number": 1,
           "title": "白水客人拔刀",
           "path": "src/resource/backup/刀藏春水/第01章 白水客人拔刀.txt",
-          "charCount": 4151,
+          "charCount": 3985,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2916,6 +2955,7 @@
     {
       "id": "ai-22",
       "title": "雲夢舊盟",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2934,7 +2974,7 @@
           "number": 1,
           "title": "盟約背面的死名",
           "path": "src/resource/backup/雲夢舊盟/第01章 盟約背面的死名.txt",
-          "charCount": 4172,
+          "charCount": 4117,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2957,6 +2997,7 @@
     {
       "id": "ai-23",
       "title": "青衣捕快",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -2975,7 +3016,7 @@
           "number": 1,
           "title": "錯帳簿露出盟主名",
           "path": "src/resource/backup/青衣捕快/第01章 錯帳簿露出盟主名.txt",
-          "charCount": 4166,
+          "charCount": 4023,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -2998,6 +3039,7 @@
     {
       "id": "ai-24",
       "title": "斷橋聽雨",
+      "visibility": "quarantined",
       "category": "武俠",
       "author": "天書編劇室",
       "tags": [
@@ -3016,7 +3058,7 @@
           "number": 1,
           "title": "雨裡排隊尋仇",
           "path": "src/resource/backup/斷橋聽雨/第01章 雨裡排隊尋仇.txt",
-          "charCount": 4130,
+          "charCount": 4022,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3052,7 +3094,7 @@
       "setting": "臨江科技園與服務樓",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "凌晨三點，周祈的手機推送了自己的死訊。真正可怕的不是預測錯誤，而是有人正在讓預測成真。",
-      "updateNote": "第100章〈誰替他確認〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第101章〈序號不住在門上〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -3730,39 +3772,47 @@
           "number": 97,
           "title": "空電梯先到八小時",
           "path": "src/resource/凌晨三點的演算法/文章/第97章 空電梯先到八小時.txt",
-          "charCount": 6438,
+          "charCount": 6427,
           "generatedAt": "2026-07-03T06:00:00+08:00"
         },
         {
           "number": 98,
           "title": "紅蓋罐底的感應貼",
           "path": "src/resource/凌晨三點的演算法/文章/第98章 紅蓋罐底的感應貼.txt",
-          "charCount": 6004,
+          "charCount": 6018,
           "generatedAt": "2026-07-03T12:00:00+08:00"
         },
         {
           "number": 99,
           "title": "誰按了門鈴",
           "path": "src/resource/凌晨三點的演算法/文章/第99章 誰按了門鈴.txt",
-          "charCount": 6000,
+          "charCount": 6001,
           "generatedAt": "2026-07-03T18:00:00+08:00"
         },
         {
           "number": 100,
           "title": "誰替他確認",
           "path": "src/resource/凌晨三點的演算法/文章/第100章 誰替他確認.txt",
-          "charCount": 6003,
+          "charCount": 6002,
           "generatedAt": "2026-07-04T00:00:00+08:00"
+        },
+        {
+          "number": 101,
+          "title": "序號不住在門上",
+          "path": "src/resource/凌晨三點的演算法/文章/第101章 序號不住在門上.txt",
+          "charCount": 6020,
+          "generatedAt": "2026-07-04T06:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "陳停雲專寫城市凌晨最安靜的一秒：通知亮起，命運被系統改寫。他把演算法、職場與人命寫得又快又準，冷笑背後全是生存反擊。",
       "coverImage": "src/resource/凌晨三點的演算法/素材/圖像/主角圖片素材/凌晨三點的演算法-周祈林岫.png",
-      "updatedAt": "2026-07-04T00:00:00+08:00"
+      "updatedAt": "2026-07-04T06:00:00+08:00"
     },
     {
       "id": "ai-26",
       "title": "逆光合夥人",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3781,7 +3831,7 @@
           "number": 1,
           "title": "廣告改掉一段記憶",
           "path": "src/resource/backup/逆光合夥人/第01章 廣告改掉一段記憶.txt",
-          "charCount": 4171,
+          "charCount": 4122,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3804,6 +3854,7 @@
     {
       "id": "ai-27",
       "title": "租屋處有個時間洞",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3822,7 +3873,7 @@
           "number": 1,
           "title": "裂縫吐出求救便利貼",
           "path": "src/resource/backup/租屋處有個時間洞/第01章 裂縫吐出求救便利貼.txt",
-          "charCount": 4179,
+          "charCount": 4090,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3845,6 +3896,7 @@
     {
       "id": "ai-28",
       "title": "失眠便利店",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3863,7 +3915,7 @@
           "number": 1,
           "title": "貨架上販售夢境",
           "path": "src/resource/backup/失眠便利店/第01章 貨架上販售夢境.txt",
-          "charCount": 4107,
+          "charCount": 4052,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3886,6 +3938,7 @@
     {
       "id": "ai-29",
       "title": "第七份離職信",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3904,7 +3957,7 @@
           "number": 1,
           "title": "第七份離職信未送出",
           "path": "src/resource/backup/第七份離職信/第01章 第七份離職信未送出.txt",
-          "charCount": 4179,
+          "charCount": 3977,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3927,6 +3980,7 @@
     {
       "id": "ai-30",
       "title": "雨城心理師",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3945,7 +3999,7 @@
           "number": 1,
           "title": "患者夢裡坐著我",
           "path": "src/resource/backup/雨城心理師/第01章 患者夢裡坐著我.txt",
-          "charCount": 4111,
+          "charCount": 4062,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -3968,6 +4022,7 @@
     {
       "id": "ai-31",
       "title": "熱搜之外",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -3986,7 +4041,7 @@
           "number": 1,
           "title": "熱搜寫出我的人生",
           "path": "src/resource/backup/熱搜之外/第01章 熱搜寫出我的人生.txt",
-          "charCount": 4148,
+          "charCount": 4061,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4009,6 +4064,7 @@
     {
       "id": "ai-32",
       "title": "零點地鐵站",
+      "visibility": "quarantined",
       "category": "都市",
       "author": "天書編劇室",
       "tags": [
@@ -4027,7 +4083,7 @@
           "number": 1,
           "title": "末班車載滿明天",
           "path": "src/resource/backup/零點地鐵站/第01章 末班車載滿明天.txt",
-          "charCount": 4103,
+          "charCount": 4008,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4063,7 +4119,7 @@
       "setting": "大明工部",
       "status": "每日 00/06/12/18 更新",
       "readerHook": "沈墨在御用輿圖下看見一條不存在的河；墨線一動，藏在河工、糧道與官場裡的殺局也跟著浮上來。",
-      "updateNote": "第100章〈七響不成一人〉已更新；每日 00/06/12/18 連載推進。",
+      "updateNote": "第101章〈藍櫃先點空格〉已更新；每日 00/06/12/18 連載推進。",
       "chapters": [
         {
           "number": 1,
@@ -4363,7 +4419,7 @@
           "number": 43,
           "title": "膠氣問到手",
           "path": "src/resource/大明墨工/文章/第43章 膠氣問到手.txt",
-          "charCount": 6291,
+          "charCount": 6290,
           "generatedAt": "2026-06-19T22:23:35+08:00"
         },
         {
@@ -4671,7 +4727,7 @@
           "number": 87,
           "title": "卯初無人代驗",
           "path": "src/resource/大明墨工/文章/第87章 卯初無人代驗.txt",
-          "charCount": 6458,
+          "charCount": 6461,
           "generatedAt": "2026-06-29T18:00:00+08:00"
         },
         {
@@ -4764,16 +4820,24 @@
           "path": "src/resource/大明墨工/文章/第100章 七響不成一人.txt",
           "charCount": 6125,
           "generatedAt": "2026-07-04T00:00:00+08:00"
+        },
+        {
+          "number": 101,
+          "title": "藍櫃先點空格",
+          "path": "src/resource/大明墨工/文章/第101章 藍櫃先點空格.txt",
+          "charCount": 6015,
+          "generatedAt": "2026-07-04T06:00:00+08:00"
         }
       ],
       "tone": "深沉",
       "authorIntro": "蕭墨臣寫墨線，也寫線後的人命。他讓河工、圖籍、糧道與官場在一張紙上暗流翻湧，最痛快的反擊不是喊冤，是把假圖校回真相。",
       "coverImage": "src/resource/大明墨工/素材/圖像/主角圖片素材/大明墨工-沈墨顧清棠.png",
-      "updatedAt": "2026-07-04T00:00:00+08:00"
+      "updatedAt": "2026-07-04T06:00:00+08:00"
     },
     {
       "id": "ai-34",
       "title": "長河鹽商",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4792,7 +4856,7 @@
           "number": 1,
           "title": "密信比鹽更重",
           "path": "src/resource/backup/長河鹽商/第01章 密信比鹽更重.txt",
-          "charCount": 4166,
+          "charCount": 4093,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4815,6 +4879,7 @@
     {
       "id": "ai-35",
       "title": "邊關雪信",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4833,7 +4898,7 @@
           "number": 1,
           "title": "不能送達的家書",
           "path": "src/resource/backup/邊關雪信/第01章 不能送達的家書.txt",
-          "charCount": 4133,
+          "charCount": 4003,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4856,6 +4921,7 @@
     {
       "id": "ai-36",
       "title": "洛陽紙貴局",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4874,7 +4940,7 @@
           "number": 1,
           "title": "暢銷書暗中調兵",
           "path": "src/resource/backup/洛陽紙貴局/第01章 暢銷書暗中調兵.txt",
-          "charCount": 4179,
+          "charCount": 4076,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4897,6 +4963,7 @@
     {
       "id": "ai-37",
       "title": "山河小吏",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4915,7 +4982,7 @@
           "number": 1,
           "title": "河道被人買走",
           "path": "src/resource/backup/山河小吏/第01章 河道被人買走.txt",
-          "charCount": 4141,
+          "charCount": 3973,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4938,6 +5005,7 @@
     {
       "id": "ai-38",
       "title": "金陵夜航",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4956,7 +5024,7 @@
           "number": 1,
           "title": "客人帶來傳國玉印",
           "path": "src/resource/backup/金陵夜航/第01章 客人帶來傳國玉印.txt",
-          "charCount": 4154,
+          "charCount": 4105,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -4979,6 +5047,7 @@
     {
       "id": "ai-39",
       "title": "烽火茶樓",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -4997,7 +5066,7 @@
           "number": 1,
           "title": "敵將點出亡妻茶名",
           "path": "src/resource/backup/烽火茶樓/第01章 敵將點出亡妻茶名.txt",
-          "charCount": 4116,
+          "charCount": 4018,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {
@@ -5020,6 +5089,7 @@
     {
       "id": "ai-40",
       "title": "青史未署名",
+      "visibility": "quarantined",
       "category": "歷史",
       "author": "天書編劇室",
       "tags": [
@@ -5038,7 +5108,7 @@
           "number": 1,
           "title": "空白處浮出姓名",
           "path": "src/resource/backup/青史未署名/第01章 空白處浮出姓名.txt",
-          "charCount": 4102,
+          "charCount": 4035,
           "generatedAt": "2026-06-05T17:34:54.572Z"
         },
         {

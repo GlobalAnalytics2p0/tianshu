@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, copyFileSync, readFileSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, copyFileSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { defineConfig } from "vite";
 
@@ -12,10 +12,14 @@ const passthroughFiles = [
 
 const RESOURCE_ROOT = "src/resource/";
 
-function publishedResourcePaths() {
+function publishedResources() {
   const manifestPath = `${RESOURCE_ROOT}manifest.json`;
-  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-  const paths = new Set([manifestPath]);
+  const sourceManifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const manifest = {
+    ...sourceManifest,
+    books: (sourceManifest.books || []).filter((book) => book.visibility !== "quarantined")
+  };
+  const paths = new Set();
 
   for (const book of manifest.books || []) {
     for (const chapter of book.chapters || []) {
@@ -31,7 +35,7 @@ function publishedResourcePaths() {
       throw new Error(`Published resource path must stay inside ${RESOURCE_ROOT}: ${path}`);
     }
   }
-  return [...paths];
+  return { manifest, manifestPath, paths: [...paths] };
 }
 
 function copyStaticSiteContent() {
@@ -48,7 +52,12 @@ function copyStaticSiteContent() {
         });
       }
 
-      for (const file of publishedResourcePaths()) {
+      const published = publishedResources();
+      const manifestTarget = resolve(dist, published.manifestPath);
+      mkdirSync(dirname(manifestTarget), { recursive: true });
+      writeFileSync(manifestTarget, `${JSON.stringify(published.manifest, null, 2)}\n`);
+
+      for (const file of published.paths) {
         if (!existsSync(file) || file.endsWith(".DS_Store")) continue;
         const target = resolve(dist, file);
         mkdirSync(dirname(target), { recursive: true });

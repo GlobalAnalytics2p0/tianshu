@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname } from "node:path";
 import { execFileSync } from "node:child_process";
 
@@ -69,6 +70,11 @@ function writeBatchState(state) {
   return state;
 }
 
+function fileDigest(path) {
+  if (!existsSync(path)) return "";
+  return createHash("sha256").update(readFileSync(path)).digest("hex");
+}
+
 function buildState({ slot, adoptCurrent }) {
   const manifest = loadManifest();
   const targetDate = slot.slice(0, 10);
@@ -133,6 +139,50 @@ function expectedChapterPath(title, number) {
   return new RegExp(`^src/resource/${title}/文章/第${String(number).padStart(2, "0")}章 .+\\.txt$`);
 }
 
+function isBatchOwnedPath(path, state) {
+  if (path === "src/resource/manifest.json") return true;
+  for (const title of ACTIVE_TITLES) {
+    const expected = state.titles?.[title];
+    if (!expected) continue;
+    if (expectedChapterPath(title, expected.expectedNumber).test(path)) return true;
+    if (path.startsWith(`src/resource/${title}/素材/`)) return true;
+  }
+  return false;
+}
+
+export function classifyDirtyPath(path, state, digestForPath = fileDigest) {
+  if (isBatchOwnedPath(path, state)) return { status: "batch-owned" };
+  const registration = state.coexistingChanges?.[path];
+  if (!registration?.sha256) return { status: "unexpected" };
+  if (registration.sha256 !== digestForPath(path)) return { status: "coexisting-changed" };
+  return { status: "coexisting-approved" };
+}
+
+export function registerCoexistingChanges(paths, reason = "") {
+  const state = readBatchState();
+  if (!state) throw new Error("Cannot register coexisting changes without an active batch.");
+  if (!reason.trim()) throw new Error("A non-empty --reason is required when registering coexisting changes.");
+  const uniquePaths = [...new Set(paths)].sort((left, right) => left.localeCompare(right, "zh-Hant"));
+  if (uniquePaths.length === 0) throw new Error("At least one --path is required when registering coexisting changes.");
+
+  const registrations = { ...(state.coexistingChanges ?? {}) };
+  for (const path of uniquePaths) {
+    if (isBatchOwnedPath(path, state)) {
+      throw new Error(`Batch-owned path cannot be registered as coexisting: ${path}`);
+    }
+    const digest = fileDigest(path);
+    if (!digest) throw new Error(`Cannot register missing path: ${path}`);
+    registrations[path] = { sha256: digest, reason: reason.trim() };
+  }
+
+  return writeBatchState({
+    ...state,
+    version: 2,
+    coexistingRegisteredAt: new Date().toISOString(),
+    coexistingChanges: registrations,
+  });
+}
+
 export function inspectBatch(dirtyActivePaths = []) {
   const state = readBatchState();
   if (!state) return { exists: false, valid: false, issues: ["No active batch state exists."] };
@@ -144,7 +194,7 @@ export function inspectBatch(dirtyActivePaths = []) {
   const titleProgress = [];
   const currentHead = runGit(["rev-parse", "HEAD"]);
 
-  if (state.owner !== "automation:ai" || state.version !== 1) issues.push("Batch state owner/version is not recognized.");
+  if (state.owner !== "automation:ai" || ![1, 2].includes(state.version)) issues.push("Batch state owner/version is not recognized.");
   if (state.baselineHead !== currentHead) {
     issues.push(`Batch baseline HEAD ${state.baselineHead} no longer matches current HEAD ${currentHead}.`);
   }
@@ -193,16 +243,16 @@ export function inspectBatch(dirtyActivePaths = []) {
     });
   }
 
+  const coexistingDirtyPaths = [];
   for (const path of dirtyActivePaths) {
-    if (path === "src/resource/manifest.json") continue;
-    let allowed = false;
-    for (const title of ACTIVE_TITLES) {
-      const expected = state.titles?.[title];
-      if (!expected) continue;
-      if (expectedChapterPath(title, expected.expectedNumber).test(path)) allowed = true;
-      if (path.startsWith(`src/resource/${title}/素材/`)) allowed = true;
+    const classification = classifyDirtyPath(path, state);
+    if (classification.status === "batch-owned") continue;
+    if (classification.status === "coexisting-approved") {
+      coexistingDirtyPaths.push(path);
+      continue;
     }
-    if (!allowed) issues.push(`Unexpected dirty active path for this batch: ${path}`);
+    if (classification.status === "coexisting-changed") issues.push(`Registered coexisting path changed after approval: ${path}`);
+    else issues.push(`Unexpected dirty active path for this batch: ${path}`);
   }
 
   return {
@@ -212,21 +262,27 @@ export function inspectBatch(dirtyActivePaths = []) {
     state,
     completedTitles,
     missingTitles,
+    coexistingDirtyPaths,
     titleProgress,
     issues,
   };
 }
 
 function parseCli(argv) {
-  const options = { command: "status", slot: "", json: false };
+  const options = { command: "status", slot: "", json: false, paths: [], reason: "" };
   for (let index = 2; index < argv.length; index += 1) {
     const arg = argv[index];
     if (arg === "--begin") options.command = "begin";
     else if (arg === "--adopt-current") options.command = "adopt";
     else if (arg === "--clear") options.command = "clear";
+    else if (arg === "--register-coexisting") options.command = "register-coexisting";
     else if (arg === "--status") options.command = "status";
     else if (arg === "--slot") options.slot = argv[++index];
     else if (arg.startsWith("--slot=")) options.slot = arg.slice("--slot=".length);
+    else if (arg === "--path") options.paths.push(argv[++index]);
+    else if (arg.startsWith("--path=")) options.paths.push(arg.slice("--path=".length));
+    else if (arg === "--reason") options.reason = argv[++index];
+    else if (arg.startsWith("--reason=")) options.reason = arg.slice("--reason=".length);
     else if (arg === "--json") options.json = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -239,6 +295,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     let result;
     if (options.command === "begin") result = beginBatch(options.slot || scheduledSlot());
     else if (options.command === "adopt") result = adoptCurrentBatch(options.slot);
+    else if (options.command === "register-coexisting") result = registerCoexistingChanges(options.paths, options.reason);
     else if (options.command === "clear") {
       clearBatch();
       result = { cleared: true, path: BATCH_STATE_PATH };

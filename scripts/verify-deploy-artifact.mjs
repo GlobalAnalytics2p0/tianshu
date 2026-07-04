@@ -27,7 +27,7 @@ function fail(messages) {
 
 if (!existsSync(DIST)) fail(["dist does not exist; run npm run build first."]);
 
-const manifest = JSON.parse(readFileSync(resolve("src/resource/manifest.json"), "utf8"));
+const manifest = JSON.parse(readFileSync(resolve(DIST, "src/resource/manifest.json"), "utf8"));
 const requiredPaths = new Set([`${RESOURCE_ROOT}manifest.json`]);
 for (const book of manifest.books || []) {
   for (const chapter of book.chapters || []) if (chapter?.path) requiredPaths.add(chapter.path);

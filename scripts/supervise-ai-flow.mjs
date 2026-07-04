@@ -270,7 +270,9 @@ function runPreflight(report, options) {
     return;
   }
 
-  const live = commandCheck("node", ["scripts/verify-site-publication.mjs"], [0]);
+  // Preflight proves the last committed publication, not an in-progress working-tree manifest.
+  // Using HEAD prevents a valid partial batch from being compared with the previously published site.
+  const live = commandCheck("node", ["scripts/verify-site-publication.mjs", "--expected-ref", "HEAD"], [0]);
   report.checks.push(live);
   if (!live.ok) {
     report.hardIssues.push("Previous publication is not proven live.");
@@ -391,11 +393,11 @@ function runLocalValidation(report, options) {
   const todayArgs = [
     "scripts/audit-todays-active-chapters.mjs",
     "--strict",
-    "--today",
+    "--date",
+    targetDate,
     "--expected-per-title",
     String(expectedPerTitle),
   ];
-  if (options.date) todayArgs.splice(2, 1, "--date", targetDate);
   const today = commandCheck("node", todayArgs, [0, 1]);
   const todayJson = parseJsonMaybe(today.stdout);
   checks.push({ ...today, parsed: todayJson });

@@ -34,6 +34,8 @@
 - Supervisor 會把最新機器可讀報告寫到 `tmp/automation-supervision/latest.json`，並把可持續檢討紀錄寫到 `src/resource/automation-supervision-log.md`。`tmp/automation-supervision/` 是暫存，不提交；ledger 是耐久檢討檔，可提交。
 - 若 supervisor decision 是 `blocked`，不要繞過它。先處理 `hardIssues` 與 `nextActions`，或把 blocker 清楚回報；警示 `warnings` 不一定阻斷，但必須轉成下一輪寫作或修稿目標。
 - 若 decision 是 `resume-generation`，表示 `tmp/automation-supervision/active-batch.json` 已證明 dirty active content 屬於同一個 automation 批次；只生成 `missingTitles`，不可重寫已完成 title。若是 `resume-validation`，五本都已存在，只重跑 post-generation gate，不得再生成。這兩種恢復決策都不代表可發布，仍須等 `ready-to-publish`。
+- preflight 驗的是「上一個已提交版本是否上站」，必須使用 `node scripts/verify-site-publication.mjs --expected-ref HEAD`；push 後驗站才使用預設的 working-tree manifest。兩者不可混用，否則 partial batch 的未提交 manifest 會被錯拿去比對上一版正式站。
+- active batch 期間若另有使用者明確授權、且已通過驗證的舊章修訂需要共存，可用 `node scripts/automation-batch-state.mjs --register-coexisting --reason <原因> --path <路徑>...` 登記。這不是自動收編髒檔：工具會保存逐檔 SHA-256，任何未登記路徑或登記後內容變動都會再次阻擋。沒有使用者明確授權不得登記；能先完成／提交原批次時，優先避免共用工作樹交錯。
 - 開始大量生成前先做 GitHub 預檢，不要只看 remote 是否存在。標準做法是先跑 `node scripts/check-publish-state.mjs --auto-publish-if-ahead`：
   - 若 branch 已經 `ahead > 0` 且遠端可達，先清掉 deferred publish debt，再開始新內容。
   - 若 branch `ahead > 0` 但遠端不可達，必須把「網站仍停在舊版」當成顯式 blocker 寫進記錄與回報。

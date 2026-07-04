@@ -13,7 +13,9 @@ if (!url || !syncSecret) {
 const manifestSource = readFileSync("src/resource/manifest.json", "utf8");
 const manifest = JSON.parse(manifestSource);
 const idempotencyKey = `catalog-${createHash("sha256").update(manifestSource).digest("hex").slice(0, 32)}`;
-const books = manifest.books.map((book) => {
+const books = manifest.books
+  .filter((book) => book.visibility !== "quarantined")
+  .map((book) => {
   const latestChapter = book.chapters?.at(-1);
   let latestContext = "";
   try {
@@ -21,8 +23,8 @@ const books = manifest.books.map((book) => {
   } catch {
     latestContext = "";
   }
-  return { ...book, latestContext };
-});
+    return { ...book, latestContext };
+  });
 const response = await fetch(new URL("/functions/v1/sync-catalog", url), {
   method: "POST",
   headers: { "Content-Type": "application/json", "Idempotency-Key": idempotencyKey, "x-sync-secret": syncSecret },

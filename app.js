@@ -340,7 +340,9 @@ function syncCategoryCounts() {
 async function loadLibrary() {
   const manifest = await fetchManifest(`library-${Date.now()}`);
   currentManifestSignature = buildManifestSignature(manifest);
-  allBooks = (manifest.books || []).map((book, index) => {
+  allBooks = (manifest.books || [])
+    .filter((book) => book.visibility !== "quarantined")
+    .map((book, index) => {
     const chapters = (book.chapters || []).map((chapter) => ({
       ...chapter,
       displayTitle: chapterDisplayTitle(chapter),
@@ -355,7 +357,7 @@ async function loadLibrary() {
       chapters,
       contentStatus: "天書原創連載"
     };
-  });
+    });
 
   syncCategoryCounts();
 }
