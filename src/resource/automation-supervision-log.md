@@ -3171,3 +3171,18 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-07T06:03:00+08:00 preflight
+
+- Decision: blocked
+- Summary: Generation must not start until preflight blockers are cleared.
+- Hard issues:
+  - Preflight blocks generation: working-tree-publish-debt. Uncommitted active-title site content exists without an automation batch owner; commit/publish or clear it before new generation.
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - Resolve or intentionally publish the listed dirty active content before generating new chapters.
+- Durable lessons:
+  - none
+

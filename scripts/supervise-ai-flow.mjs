@@ -289,7 +289,7 @@ function runPreflight(report, options) {
   let check = null;
   let parsed = null;
   for (let attempt = 1; attempt <= options.preflightRetries; attempt += 1) {
-    check = commandCheck("node", ["scripts/check-publish-state.mjs", "--json"], [0, 2, 3, 4, 5, 6]);
+    check = commandCheck("node", ["scripts/check-publish-state.mjs", "--json"], [0, 2, 3, 4, 5, 6, 7]);
     parsed = parseJsonMaybe(check.stdout);
     report.checks.push({ ...check, parsed, attempt });
 
@@ -318,7 +318,7 @@ function runPreflight(report, options) {
     report.checks.push(publish);
     if (publish.ok) clearBatch();
 
-    const refreshed = commandCheck("node", ["scripts/check-publish-state.mjs", "--json"], [0, 2, 3, 4, 5, 6]);
+    const refreshed = commandCheck("node", ["scripts/check-publish-state.mjs", "--json"], [0, 2, 3, 4, 5, 6, 7]);
     report.checks.push({ ...refreshed, parsed: parseJsonMaybe(refreshed.stdout) });
     report.preflightState = parseJsonMaybe(refreshed.stdout) ?? parsed;
   }
@@ -355,6 +355,9 @@ function runPreflight(report, options) {
     }
   } else {
     report.hardIssues.push(`Preflight blocks generation: ${state.status}. ${state.message}`);
+    if (state.status === "continuity-repair-handoff") {
+      report.nextActions.push("Run the recovery coordinator now; the sealed continuity repair must be committed, pushed, and verified before generation.");
+    }
     if (state.dirtyActivePaths?.length) {
       report.nextActions.push("Resolve or intentionally publish the listed dirty active content before generating new chapters.");
     }

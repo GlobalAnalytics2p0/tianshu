@@ -2,6 +2,7 @@
 
 import { execFileSync, spawnSync } from "node:child_process";
 import { inspectBatch } from "./automation-batch-state.mjs";
+import { inspectRecoveryHandoff } from "./recovery-handoff-state.mjs";
 
 const PUBLISH_SCRIPT = new URL("./publish-site-update.mjs", import.meta.url);
 const ACTIVE_TITLES = [
@@ -172,6 +173,30 @@ function main() {
       state.status = "completed-batch-awaiting-validation";
       state.message = "Automation-owned batch is complete but uncommitted; run post-generation validation, then publish if it passes.";
       exitWith(0, state, options.json);
+    }
+
+    if (!batch.exists) {
+      const recovery = inspectRecoveryHandoff();
+      state.recoveryHandoff = recovery.exists
+        ? {
+            valid: recovery.valid,
+            state: recovery.state,
+            sourceHead: recovery.sourceHead,
+            issues: recovery.issues,
+          }
+        : null;
+
+      if (recovery.valid && state.remoteReachable) {
+        state.status = "continuity-repair-handoff";
+        state.message = "A sealed continuity-repair handoff is ready for the recovery coordinator; close it before generating new chapters.";
+        exitWith(7, state, options.json);
+      }
+
+      if (recovery.exists && state.remoteReachable) {
+        state.status = "invalid-continuity-repair-handoff";
+        state.message = `Continuity-repair files exist, but their handoff is not safely publishable: ${recovery.issues.join(" | ")}`;
+        exitWith(6, state, options.json);
+      }
     }
 
     if (state.remoteReachable) {
