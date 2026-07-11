@@ -1,8 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 這台救命車會自己挑人站左前。
-02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 送病人的車一進北街，大家只想快一點把人推出去。
-03. [shen] zh-CN-YunxiNeural +2% -3Hz 別搶著推。先看車把會往誰那邊偏。
-04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 可不管換幾個人，左前那個位子總先吃力，逼人把肩膀頂上去。
-05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠在車轅下摸到記號。對方不要最強的人，只要最習慣先扛的人。
-06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街第一次把推車位拆成四角輪替，誰也不能一路站左前。
-07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可車一過泥坑，還是有人本能地把最重那一下接回去。
-08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連救命車都知道該去找誰，這條路最後會把誰拖熟？官網看星骸王座。

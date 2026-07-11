@@ -1,8 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 那扇後門不認臉，它先認你摸石頭的手。
-02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 白屋後門前擺上白石和守更牌，誰守夜、誰取號，全都得留名。
-03. [shen] zh-CN-YunxiNeural +2% -3Hz 別先進門。先看誰摸完石頭，又站回原位。
-04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 有人摸石、有人遞牌、有人替人守更，看起來只是幫忙，後門卻把次序全記住。
-05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠翻到舊牌紙，只寫一句：門先認手，再認肩，最後才認人。
-06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街改成先分肩，再進門，誰都不能連摸兩次白石。
-07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可一聲喊藥，第一個把手伸向白石的，還是同一個人。
-08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連後門都學會等那雙手，它下一次開門要吞的是誰？官網看星骸王座。

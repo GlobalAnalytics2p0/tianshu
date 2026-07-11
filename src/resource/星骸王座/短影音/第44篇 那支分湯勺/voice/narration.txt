@@ -1,8 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 這支勺子不是在救人，它在挑誰最像照護那雙手。
-02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街把熱湯、熱布、照護棚全改成輪手，不准誰一個人包辦。
-03. [shen] zh-CN-YunxiNeural +2% -3Hz 先別看病人。先看誰一伸手就去拿那支勺。
-04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 病人一多，大家嘴上說輪手，最後那一口卻還是往熟手那邊遞。
-05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠在勺柄抹灰，第一個留痕的，不是掌櫃，是最會照顧人的那個。
-06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 公勺、熱布架、守棚位，全都拆開報名。
-07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可孩子一咳到彎腰，那支勺子還是自己回到同一雙手上。
-08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連照顧人的那一勺都會認手，下一個被它拖住的人會是誰？官網看星骸王座。

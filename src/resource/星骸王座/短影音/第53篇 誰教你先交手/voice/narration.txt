@@ -1,8 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 北街現在先問的，不是病，是誰教你把藥交給那隻手。
-02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 因為真正可怕的，不是病家亂，是很多戶都被教成同一種亂法。
-03. [shen] zh-CN-YunxiNeural +2% -3Hz 先報哪裡聽的。再報誰碰了第一包。
-04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 周嬸把晨市分成四口，每一口都要先說這句話是誰教你的。
-05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 一戶從磨石攤聽，一戶從豆皮口聽，一戶從粥桶旁又被補了一句。
-06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街把求藥順序也拖成白天工規：先問哪戶，再問哪手。
-07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 最尷尬的是，很多人回頭一想，自己根本說不出第一句是誰塞進來的。
-08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果一條街都忘了是誰先教的，那隻手不是更容易被養成熟路？官網看星骸王座。

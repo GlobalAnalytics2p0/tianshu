@@ -2,6 +2,7 @@
 
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { duplicatedLongSpanIssue } from "./chapter-duplicate-guard.mjs";
 
 const ACTIVE_TITLES = [
   "星骸王座",
@@ -335,6 +336,10 @@ function main() {
           chapter: chapter.number,
           issue: `Duplicate paragraphs: ${JSON.stringify(dupes.slice(0, 5))}`,
         });
+      }
+      const duplicatedSpan = duplicatedLongSpanIssue(text);
+      if (duplicatedSpan) {
+        titleReport.chapterIssues.push({ chapter: chapter.number, issue: duplicatedSpan });
       }
       const repeated = repeatedSentences(text);
       if (repeated.length) {

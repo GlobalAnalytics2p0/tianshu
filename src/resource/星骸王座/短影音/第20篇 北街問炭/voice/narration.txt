@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 半夜來問炭的人，從來不問價。
-02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 他只站在門口問一句：你家這團火，能不能燒到天亮。
-03. [atang] zh-TW-HsiaoChenNeural -1% -5Hz 阿棠一聽就懂，對方不是買炭，是在挑守火的人。
-04. [tags] zh-TW-HsiaoChenNeural +5% -3Hz 北街火鋪牆上，還真掛著一排紅灰炭籤，記著哪戶最會留火。
-05. [shen] zh-TW-YunJheNeural -3% -3Hz 沈曜乾脆把各家火盆全拖到街心，逼那人當眾選。
-06. [street] zh-TW-HsiaoChenNeural +5% -3Hz 周嬸帶著一群人翻炭敲爐，整條街亮得像白天。
-07. [spill] zh-TW-HsiaoChenNeural +5% -3Hz 馮掌櫃剛想藏起一支竹夾，紅灰就先從他袖口灑出來。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 那人要續的不是灶火，是那口怪盆後面還沒斷掉的人情火。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 下一個被他盯上的守火戶是誰，官網看星骸王座。

@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 大家以為只剩一口炭，結果屋簷後面還藏著第二口。
-02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 阿棠在最安靜的板門後，聽見程母當年留下的舊口訣。
-03. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 她當場把北街會暖勺的人全叫進屋裡。
-04. [crowd] zh-TW-HsiaoChenNeural +5% -3Hz 婦人們拖著小爐一擠進來，原本最安靜的角落瞬間全是人聲。
-05. [unseen] zh-TW-HsiaoChenNeural -5% -8Hz 牆後卻有人急了：退開，這裡不是你們能碰的。
-06. [evidence] zh-TW-HsiaoChenNeural +5% -3Hz 沈曜不追臉，只盯那口藥炭、那支試藥的勺子，還有掉下來的灰紙角。
-07. [girl] zh-TW-HsiaoChenNeural +5% -3Hz 最狠的是，一個小丫頭忽然說，後面其實還藏著第三小塊藥炭。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 這表示第二口炭也不是終點，它後面還有人在接。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 第二口炭後頭到底還接著什麼，官網看星骸王座。

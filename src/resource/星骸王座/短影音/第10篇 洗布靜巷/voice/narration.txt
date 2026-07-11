@@ -1,9 +1,0 @@
-01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 他們不在夜裡殺人。他們白天先把證據洗白。
-02. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 洗布院裡，白布一掛，血味、藥味、哭聲，都能被洗成病死外皮。
-03. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 沈曜看見一隻白手。它不洗布，只量長短，只掛繩結。
-04. [zh-TW-HsiaoChenNeural rate=+0% pitch=-4Hz style=Hit] 這灰不對。它在去血味，也在去昨夜醒過的味。
-05. [zh-TW-HsiaoChenNeural rate=+8% pitch=-8Hz style=Hit] 我家濕被呢？你們洗布院，是洗布還是吞布？
-06. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Choice] 周嬸一鬧，整座洗布院都醒了。那隻白手，終於露出白簿芯冊。
-07. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 沈曜沒有追臉。他拿簿芯，看它要先送誰。
-08. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 答案很冷。周戶灰先送，藥門布留乾。
-09. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 想看白日怎麼殺人，去天書小說，看星骸王座。

@@ -3715,3 +3715,227 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-10T18:01:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-11T00:02:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-11T06:00:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-11T12:00:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-11T13:00:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Today cadence/content audit failed for 2026-07-11.
+  - 星骸王座: expected 1 chapters for 2026-07-11, found 0
+  - 灰塔觀測者: expected 1 chapters for 2026-07-11, found 0
+  - 雪刃照孤城: expected 1 chapters for 2026-07-11, found 0
+  - 凌晨三點的演算法: expected 1 chapters for 2026-07-11, found 0
+  - 大明墨工: expected 1 chapters for 2026-07-11, found 0
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第78章: Possible over-fragmented short paragraph run: 14
+  - 凌晨三點的演算法 第80章: Possible over-fragmented short paragraph run: 12
+- Recovery actions:
+  - none
+- Next actions:
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+  - Continue the owned batch with only: 星骸王座, 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Durable lessons:
+  - none
+
+## 2026-07-11T18:01:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-11T19:51:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Active novel quality audit failed.
+  - 星骸王座 第111章: Duplicate paragraphs: [{"first":2,"second":17},{"first":4,"second":18},{"first":8,"second":19},{"first":9,"second":20},{"first":10,"second":21}]
+  - 星骸王座 第111章: Repeated sentence skeletons: [{"sentence":"」她說，「你自己說的，才不讓它替你說","count":6},{"sentence":"只有一枚洗得發白的星形骨釘，釘尖還黏著第七床下的黑泥","count":6},{"sentence":"骨釘旁壓著一條濕紙：「明夜，先補沈曜右腿","count":6},{"sentence":"但他知道，這不是普通的傷，也不是普通的工","count":3},{"sentence":"這是一種訊號，一種他從未見過的，來自過去的訊號","count":3}]
+  - 灰塔觀測者 第111章: Duplicate paragraphs: [{"first":9,"second":26},{"first":3,"second":30},{"first":9,"second":33},{"first":3,"second":34},{"first":2,"second":39}]
+  - 灰塔觀測者 第111章: Repeated sentence skeletons: [{"sentence":"他想問，卻只說：「你這是在把人藏起來","count":4},{"sentence":"他盯著那張工條，盯得久了，連自己手指上的傷都忘了疼","count":13},{"sentence":"他知道，今天他不能替人重說，也不能替人看","count":6},{"sentence":"他只能把豆數記清楚，把人分開，把事分清楚","count":12},{"sentence":"他的背早已痠痛，手上的繩子勒出紅印，連呼吸都像被壓在石板下","count":7}]
+  - 雪刃照孤城 第111章: Duplicate paragraphs: [{"first":15,"second":17},{"first":16,"second":18},{"first":15,"second":19},{"first":16,"second":20},{"first":15,"second":21}]
+  - 雪刃照孤城 第111章: Repeated sentence skeletons: [{"sentence":"他不動，只問差役：「你們要他躺，還是要我走","count":4},{"sentence":"」差役不答，只說：「床牌已定，你若走，便是不認","count":4},{"sentence":"」他說，「我認過一隻鞘，不是照夜，也不是別人","count":4},{"sentence":"」程聽雪不問為何，只說：「那你傷還在，我不能替你治","count":4},{"sentence":"」程聽雪不答，只說：「你腿還痛，我不能治你","count":68}]
+  - 凌晨三點的演算法 第111章: Duplicate paragraphs: [{"first":2,"second":21},{"first":3,"second":22},{"first":5,"second":23},{"first":6,"second":24},{"first":9,"second":25}]
+  - 凌晨三點的演算法 第111章: Repeated sentence skeletons: [{"sentence":"」他沒動，只是把手機往桌面一推，轉頭問林岫：「你還在拍嗎","count":6},{"sentence":"」周祈點點頭，把胃藥包塞進口袋，說：「我得去上廁所","count":6},{"sentence":"」林岫沒說什麼，只說：「你去，我繼續拍","count":6},{"sentence":"他不知道自己是不是真的有父親，還是說，他只是在等一個永遠不會來的人","count":4},{"sentence":"」他說完這句話，手機螢幕突然亮了，一串訊息跳進來","count":6}]
+  - 大明墨工 第111章: Duplicate paragraphs: [{"first":17,"second":23},{"first":19,"second":24},{"first":20,"second":25},{"first":21,"second":26},{"first":4,"second":28}]
+  - 大明墨工 第111章: Repeated sentence skeletons: [{"sentence":"那行字若不照，夜工飯便又能被人說沒寫過","count":7},{"sentence":"他不是不識字，他識字，識得比誰都清楚","count":5},{"sentence":"他不是書手，他只是個為人代筆的匠人，他寫字，不是為了傳承，而是為了討飯吃","count":4}]
+  - Today cadence/content audit failed for 2026-07-11.
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第111章: Possible over-fragmented short paragraph run: 13
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第111章: Possible over-fragmented short paragraph run: 15
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第111章: Possible over-fragmented short paragraph run: 57
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+- Recovery actions:
+  - none
+- Next actions:
+  - Revise chapters or note state until `node scripts/audit-active-novel-quality.mjs --strict` exits cleanly.
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+- Durable lessons:
+  - none
+
+## 2026-07-11T20:02:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Active novel quality audit failed.
+  - 星骸王座 第111章: Duplicate paragraphs: [{"first":2,"second":17},{"first":8,"second":18},{"first":9,"second":19},{"first":11,"second":20},{"first":12,"second":21}]
+  - 星骸王座 第111章: Repeated sentence skeletons: [{"sentence":"骨釘旁壓著一條濕紙：「明夜，先補沈曜右腿","count":6}]
+  - 灰塔觀測者 第111章: Duplicate paragraphs: [{"first":9,"second":26},{"first":3,"second":29},{"first":9,"second":32},{"first":3,"second":33},{"first":2,"second":38}]
+  - 雪刃照孤城 第111章: Duplicate paragraphs: [{"first":2,"second":18},{"first":8,"second":19},{"first":9,"second":20},{"first":10,"second":21},{"first":17,"second":22}]
+  - 凌晨三點的演算法 第111章: Duplicate paragraphs: [{"first":2,"second":21},{"first":11,"second":22},{"first":12,"second":23},{"first":17,"second":24},{"first":2,"second":31}]
+  - 大明墨工 第111章: Duplicate paragraphs: [{"first":17,"second":23},{"first":19,"second":24},{"first":20,"second":25},{"first":4,"second":27},{"first":7,"second":28}]
+  - Today cadence/content audit failed for 2026-07-11.
+  - 星骸王座 第111章: duplicate paragraph(s) 2/17, 8/18, 9/19, 11/20, 12/21, 2/29, 8/30, 9/31, 11/32, 12/33, 2/34, 2/46, 8/48, 9/49, 11/50, 12/51, 2/52, 8/53, 9/54, 11/55, 12/56, 2/63, 8/64, 9/65, 11/66, 12/67, 2/68, 35/69
+  - 星骸王座 第111章: repeated sentence(s) 6x 骨釘旁壓著一條濕紙：「明夜，先補沈曜右腿
+  - 灰塔觀測者 第111章: duplicate paragraph(s) 9/26, 3/29, 9/32, 3/33, 2/38, 3/39, 6/40, 9/41, 12/42, 13/43, 14/44, 16/45, 17/46, 18/47, 19/48, 9/49, 2/54, 3/55, 6/57, 9/58, 12/59, 13/60, 14/61, 16/62, 17/63, 18/64, 19/65, 9/66
+  - 雪刃照孤城 第111章: duplicate paragraph(s) 2/18, 8/19, 9/20, 10/21, 17/22, 2/24, 8/25, 9/26, 10/27, 17/28, 2/30, 8/31, 9/32, 10/33
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 星骸王座 第111章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第111章: Possible over-fragmented short paragraph run: 14
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+- Recovery actions:
+  - none
+- Next actions:
+  - Revise chapters or note state until `node scripts/audit-active-novel-quality.mjs --strict` exits cleanly.
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+- Durable lessons:
+  - none
+
+## 2026-07-11T20:03:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第78章: Possible over-fragmented short paragraph run: 14
+  - 凌晨三點的演算法 第80章: Possible over-fragmented short paragraph run: 12
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - none
+
+## 2026-07-11T20:04:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+

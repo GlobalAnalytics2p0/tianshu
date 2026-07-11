@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他們不是來偷盆，是先讓你家灶火熄掉。
-02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 東槽整條巷子把老盆老罐全拖到路中間，就怕那口裂盆半夜自己被摸走。
-03. [zhou] zh-TW-HsiaoChenNeural +2% -7Hz 周嬸直接下令：誰家有老盆，全搬出來，別讓它躲。
-04. [visitor] zh-TW-HsiaoChenNeural +5% -3Hz 可沈曜和阿棠追到劉寡婦舊屋時，發現有人白天就來看過灶火。
-05. [shen] zh-TW-YunJheNeural -3% -3Hz 那人不是認門，他是在認哪一家最會替這口盆守火。
-06. [rice] zh-TW-HsiaoChenNeural +5% -3Hz 阿棠拿假盆一試，三粒黑米一碰灰，藥甜味立刻翻上來。
-07. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 她這才認出，那真的是她娘留下的裂腹藥盆。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 背柴人夜裡再上門，連裂口藏在哪都知道，還想先把這戶人的火路一起帶走。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 那個人到底替誰來認這口盆，官網看星骸王座。

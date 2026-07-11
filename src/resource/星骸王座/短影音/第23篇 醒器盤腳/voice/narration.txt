@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 他們追到最後，居然在雪裡挖出一只三腳鐵盤。
-02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 更怪的是，盤裡沒有炭，只躺著一片會發熱的舊金屬。
-03. [pan] zh-TW-HsiaoChenNeural +5% -3Hz 那片東西半黑半亮，像有人剛把它從灰裡燒醒。
-04. [shen] zh-TW-YunJheNeural -3% -3Hz 沈曜一碰星核，整個人立刻停手：別碰，這東西會回應。
-05. [seal] zh-TW-HsiaoChenNeural +5% -3Hz 翻過來一看，背面還刻著像沈家的殘缺舊印。
-06. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠這才懂，對方一路偷火，不是為了炭，是在燒醒某樣老東西。
-07. [leg] zh-TW-HsiaoChenNeural +5% -3Hz 更冷的是，三隻盤腳裡，偏北那一隻最先發熱。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 也就是說，更北邊還有一件真正的大傢伙在等著起身。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 那件被偷偷燒醒的老東西到底是什麼，官網看星骸王座。

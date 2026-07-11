@@ -1,9 +1,0 @@
-01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 白天最可怕的，不是搜家。是有人來問：昨夜誰咳過。
-02. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Default] 他們背著藥簍，挨戶收病名。誰咳、誰醒、誰家昨夜開過門。
-03. [zh-TW-HsiaoChenNeural rate=+8% pitch=-8Hz style=Hit] 我家整條巷子都醒了，你記得完嗎？
-04. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Default] 沈曜看見那盞燈。白天不點，手卻一直壓著燈框，像隨時要翻面。
-05. [zh-TW-YunJheNeural rate=-2% pitch=-2Hz style=Hit] 昨夜借過藥的，都要記清楚。
-06. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Choice] 這不是問病。這是在替夜裡找一條最安靜的路。
-07. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Default] 沈曜沒有追人。他讓阿棠熏藥味，讓周嬸把門罵開。
-08. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Choice] 翻燈要的是乾淨。可這條巷子，從白天開始就不乾淨了。
-09. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Choice] 想看沈曜怎麼反咬第七欄，去天書小說，看星骸王座。

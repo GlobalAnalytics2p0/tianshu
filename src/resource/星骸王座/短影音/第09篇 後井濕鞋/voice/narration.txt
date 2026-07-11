@@ -1,9 +1,0 @@
-01. [zh-TW-HsiaoChenNeural rate=+5% pitch=-2Hz style=Hit] 後井不是一口井。是一條專門把人搬走的濕路。
-02. [zh-TW-YunJheNeural rate=-2% pitch=-4Hz style=Hit] 星核提醒沈曜：往東，東邊比較乾淨。
-03. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 沈曜反而停住。這東西越像替他著想，越像在挖坑。
-04. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Default] 他看濕鞋、灰粉、燈片碎角。路不是去北牆，是去洗布院後槽。
-05. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 鬆磚一開，黑水氣衝出來。若直接伸手，人就被拖下去。
-06. [zh-TW-HsiaoChenNeural rate=+1% pitch=-3Hz style=Default] 阿棠先救人。沈曜先記住那條路，因為這不是一次偷襲。
-07. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Choice] 病名、靜戶、翻燈、後井，終於扣成一串。
-08. [zh-TW-HsiaoChenNeural rate=+0% pitch=-3Hz style=Hit] 更冷的是，這條濕路最後通向舊站。下一筆，先補姓沈。
-09. [zh-TW-HsiaoChenNeural rate=+2% pitch=-3Hz style=Choice] 想看沈曜怎麼追後井，去天書小說，看星骸王座。

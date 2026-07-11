@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 她只用手指抹一下鹽箱背板，就知道這戶人家有沒有被盯上。
-02. [setup] zh-TW-HsiaoChenNeural +4% -3Hz 北街把舊鹽箱全搬出來，就等那個賣紙樣的女人自己伸手。
-03. [paper] zh-TW-HsiaoChenNeural +5% -3Hz 她嘴上說量紙，手卻先去摸紋路最深的那口箱子。
-04. [atang] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠直接拆穿：真的賣紙，不會先摸別人家箱背。
-05. [ash] zh-TW-HsiaoChenNeural +5% -3Hz 灰水一潑，紙上立刻浮出一句：先摸鹽箱，再找人。
-06. [shen] zh-TW-YunJheNeural -3% -3Hz 沈曜乾脆不讓她躲，叫整條街都看著她摸。
-07. [star] zh-TW-HsiaoChenNeural +5% -3Hz 濕紙一貼回裂縫，箱背旁邊竟亮出沈家的星角。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 她問的根本不是這戶人，她是在借鹽味和藥味找更早以前的主人。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 她到底想把哪個舊主人找回來，官網看星骸王座。

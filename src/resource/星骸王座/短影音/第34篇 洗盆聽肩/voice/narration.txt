@@ -1,9 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural -2% -4Hz 那口公用藥盆被拖到街心，誰碰一下，全街都聽得見。
-02. [setup] zh-TW-HsiaoChenNeural +5% -3Hz 巷尾的大盆還掛上銅鈴，誰再偷摸就別想裝沒事。
-03. [atang1] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠先看了一眼就說：有人白天來過，他想藏第二下。
-04. [shen] zh-CN-YunxiNeural -3% -3Hz 沈曜也提醒：別在它面前露肩，它等的就是你累到鬆手。
-05. [caught] zh-TW-HsiaoChenNeural +5% -3Hz 夜裡那個偷摸盆邊的女人終於被按住，手上全是繭。
-06. [atang2] zh-TW-HsiaoChenNeural -2% -5Hz 阿棠直接問她：你不是補盆，你是在替別人偷聽。
-07. [woman] zh-TW-HsiaoChenNeural +1% -6Hz 那女人還嘴硬：守住這口盆，明天還有別的盆。
-08. [climax] zh-TW-HsiaoChenNeural +2% -5Hz 結果周嬸一錘把整條街都敲醒，對方最怕的從來不是刀，是所有人一起開口。
-09. [lead] zh-TW-HsiaoChenNeural +4% -3Hz 那件東西到底有多怕整條街一起出聲，官網看星骸王座。

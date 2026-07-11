@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync } from "node:fs";
+import { duplicatedLongSpanIssue } from "./chapter-duplicate-guard.mjs";
 
 const ACTIVE_TITLES = [
   "星骸王座",
@@ -220,6 +221,8 @@ function allChapterTextIssues(title, chapter, text) {
   if (titlePatternHits.length) {
     issues.push(`title-specific continuity/personal-pronoun risk: ${[...new Set(titlePatternHits)].join(", ")}`);
   }
+  const duplicatedSpan = duplicatedLongSpanIssue(text);
+  if (duplicatedSpan) issues.push(duplicatedSpan);
   return issues.map((issue) => `${title} 第${chapter.number}章: ${issue}`);
 }
 

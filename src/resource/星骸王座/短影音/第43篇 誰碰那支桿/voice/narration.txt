@@ -1,8 +1,0 @@
-01. [hook] zh-TW-HsiaoChenNeural +0% -4Hz 最危險的，不是病人，是那支誰都會順手扶正的公用器具。
-02. [setup] zh-TW-HsiaoChenNeural +8% -3Hz 北街把簾桿、水桶、矮凳全掛牌，誰碰先留灰。
-03. [shen] zh-CN-YunxiNeural +2% -3Hz 先別救急。先看今天誰又去扶那支桿。
-04. [scene] zh-TW-HsiaoChenNeural +8% -3Hz 破簾一歪，有人去扶。木桶一滑，又有人順手擺正。
-05. [clue] zh-TW-HsiaoChenNeural +8% -4Hz 阿棠在灰上看見同一種手痕。對方不是追病人，是追最愛補位的人。
-06. [rule] zh-TW-HsiaoChenNeural +8% -3Hz 北街連公用器具都拆手輪，誰扶、誰搬、誰收，全都分開。
-07. [twist] zh-TW-HsiaoChenNeural +2% -5Hz 可風一再起，最先把那支桿扶回去的，還是那個跑腿孩子。
-08. [lead] zh-TW-HsiaoChenNeural +8% -3Hz 如果連公家的東西都開始等同一雙手，這雙手還能躲多久？官網看星骸王座。
