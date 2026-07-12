@@ -4196,3 +4196,44 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-13T06:01:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-13T06:34:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第78章: Possible over-fragmented short paragraph run: 14
+  - 凌晨三點的演算法 第80章: Possible over-fragmented short paragraph run: 12
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - none
+
