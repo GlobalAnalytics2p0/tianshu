@@ -4830,3 +4830,105 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-16T12:02:00+08:00 preflight
+
+- Decision: ready-for-generation
+- Summary: Preflight is clean; generation may start.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
+## 2026-07-16T12:13:00+08:00 preflight
+
+- Decision: resume-generation
+- Summary: Resume the owned partial batch; generate only: 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - Resume only the missing titles: 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Durable lessons:
+  - none
+
+## 2026-07-16T12:16:00+08:00 post-generation
+
+- Decision: blocked
+- Summary: Do not commit or publish until validation blockers are fixed.
+- Hard issues:
+  - Today cadence/content audit failed for 2026-07-16.
+  - 灰塔觀測者: expected 2 chapters for 2026-07-16, found 1
+  - 雪刃照孤城: expected 2 chapters for 2026-07-16, found 1
+  - 凌晨三點的演算法: expected 2 chapters for 2026-07-16, found 1
+  - 大明墨工: expected 2 chapters for 2026-07-16, found 1
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第78章: Possible over-fragmented short paragraph run: 14
+  - 凌晨三點的演算法 第80章: Possible over-fragmented short paragraph run: 12
+- Recovery actions:
+  - none
+- Next actions:
+  - Fix same-day chapter count, note charCount drift, repeated sentences, or missing mandatory note updates before publishing.
+  - Continue the owned batch with only: 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Durable lessons:
+  - none
+
+## 2026-07-16T18:02:00+08:00 preflight
+
+- Decision: resume-generation
+- Summary: Resume the owned partial batch; generate only: 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - Resume only the missing titles: 灰塔觀測者, 雪刃照孤城, 凌晨三點的演算法, 大明墨工.
+- Durable lessons:
+  - none
+
+## 2026-07-16T18:26:00+08:00 post-generation
+
+- Decision: ready-to-publish
+- Summary: Local generation validation passed; commit and publish may proceed.
+- Hard issues:
+  - none
+- Warnings:
+  - 星骸王座 第69章: Possible over-fragmented short paragraph run: 9
+  - 星骸王座 第78章: Possible over-fragmented short paragraph run: 10
+  - 灰塔觀測者 第76章: Possible over-fragmented short paragraph run: 9
+  - 灰塔觀測者 第78章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第71章: Possible over-fragmented short paragraph run: 12
+  - 雪刃照孤城 第80章: Possible over-fragmented short paragraph run: 9
+  - 雪刃照孤城 第84章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第68章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第71章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第76章: Possible over-fragmented short paragraph run: 9
+  - 凌晨三點的演算法 第78章: Possible over-fragmented short paragraph run: 14
+  - 凌晨三點的演算法 第80章: Possible over-fragmented short paragraph run: 12
+- Recovery actions:
+  - none
+- Next actions:
+  - Carry warnings into the next writing pass; warnings are not blockers but should become concrete revision targets.
+- Durable lessons:
+  - none
+
