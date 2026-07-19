@@ -5368,3 +5368,18 @@ This ledger records six-hour AI fiction flow supervision, blockers, recovery act
 - Durable lessons:
   - none
 
+## 2026-07-19T12:48:00+08:00 post-publish
+
+- Decision: published-and-verified
+- Summary: GitHub and live site publication are verified.
+- Hard issues:
+  - none
+- Warnings:
+  - none
+- Recovery actions:
+  - none
+- Next actions:
+  - none
+- Durable lessons:
+  - none
+
